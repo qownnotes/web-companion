@@ -2,6 +2,7 @@
 
 ## 18.12.1
 - fixed the default port
+- the url of the page will now also be written to the note
 - restructured the context menu
 - added an context menu entry to reset the settings
 

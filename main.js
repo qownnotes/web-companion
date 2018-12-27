@@ -78,7 +78,8 @@ function scrapeSelection(info, tab) {
 
     chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
         const headline = tabs[0].title;
-        let data = {type: "newNote", headline: headline, text: info.selectionText, pageUrl: info.pageUrl};
+        const text = "<" + tabs[0].url + ">\n\n" + info.selectionText;
+        const data = {type: "newNote", headline: headline, text: text, pageUrl: info.pageUrl};
         WebSocketClient.sendData(data);
     });
 }
