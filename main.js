@@ -87,6 +87,11 @@ function getServerUrl() {
     return serverUrl + ":" + socketPort;
 }
 
+function resetSettings() {
+    chrome.storage.sync.clear();
+    socketPort = 22222;
+}
+
 // function getSelected() {
 //     var text = "";
 //     if (window.getSelection
@@ -138,13 +143,13 @@ function getServerUrl() {
 //     }
 // }
 
-//chrome.storage.local.clear();
-
 chrome.storage.sync.get( function ( data ) {
     const port = data.socketPort;
 
-    if (port !== null) {
+    if (port !== null && !isNaN(port)) {
         socketPort = parseInt(data.socketPort);
+        console.log("socketPort from settings");
+        console.log(socketPort);
     }
 } );
 
@@ -153,7 +158,7 @@ chrome.storage.sync.get( function ( data ) {
 //     "onclick": genericOnClick
 // });
 
-mainMenu = chrome.contextMenus.create({
+const mainMenu = chrome.contextMenus.create({
     "title": "QOwnNotes", "contexts": ["page", "selection"]
 });
 
@@ -163,8 +168,25 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-    "title": "Set socket port", "parentId": mainMenu, "contexts": ["page", "selection"],
+    "contexts": ["page", "selection"], "type": "separator", "parentId": mainMenu
+});
+
+const settingsMenu = chrome.contextMenus.create({
+    "title": "Settings", "parentId": mainMenu, "contexts": ["page", "selection"]
+});
+
+chrome.contextMenus.create({
+    "title": "Set socket port", "parentId": settingsMenu, "contexts": ["page", "selection"],
     "onclick": setSocketPort
+});
+
+const debugMenu = chrome.contextMenus.create({
+    "title": "Debug", "parentId": mainMenu, "contexts": ["page", "selection"]
+});
+
+chrome.contextMenus.create({
+    "title": "Reset settings", "parentId": debugMenu, "contexts": ["page", "selection"],
+    "onclick": resetSettings
 });
 
 
