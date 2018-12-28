@@ -76,10 +76,85 @@ function scrapeSelection(info, tab) {
     //
     // console.log(html);
 
-    const headline = tab.title;
-    const text = "<" + tab.url + ">\n\n" + info.selectionText;
-    const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
-    WebSocketClient.sendData(data);
+    // chrome.tabs.executeScript( tab.tabId, {
+    //     code: "window.getSelection();"
+    // }, function(selection) {
+    //     console.log("window.getSelection();");
+    //     console.log(selection);
+    // });
+
+    // chrome.extension.sendRequest(window.getSelection().toString(), function(response) {
+    //     console.log(response);
+    // });
+
+    // chrome.tabs.getSelected( null , function(tab) {
+    //     console.log(tab);
+    // });
+
+    // chrome.tabs.executeScript( tab.tabId, {
+    //     code: "window.getSelection();"
+    // }, function(selection) {
+    //     console.log("window.getSelection() 2;");
+    //     console.log(selection.toString());
+    //     console.log(selection[0].rangeCount);
+    //     var html;
+    //
+    //     if (selection.rangeCount) {
+    //         var container = document.createElement("div");
+    //         for (var i = 0, len = selection.rangeCount; i < len; ++i) {
+    //             container.appendChild(selection.getRangeAt(i).cloneContents());
+    //         }
+    //         html = container.innerHTML;
+    //     }
+    //
+    //     console.log(html);
+    // });
+    //
+    //
+    //
+    // chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
+    //     console.log(response);
+    //     return;
+    //     var url=response.url;
+    //     var subject=response.subject;
+    //     var body= response.body;
+    //
+    //     if(body===''){
+    //         body="No text selected";
+    //         //You may choose to pop up a text box allowing the user to enter in a message instead.
+    //     }
+    //     //From here, you can POST the variables to any web service you choose.
+    //
+    //     console.log(body);
+    // });
+
+    // this will get us the selected text with newlines
+    chrome.tabs.executeScript( {
+        code: "window.getSelection().toString();"
+    }, function(selection) {
+        // if you try and inject into an extensions page or the webstore/NTP you'll get an error
+        // we then have to fallback to info.selectionText, which will get us the selected text without newlines (Chrome bug)
+        const selectionText = chrome.runtime.lastError ? info.selectionText : selection[0];
+        const headline = tab.title;
+        const text = "<" + tab.url + ">\n\n" + selectionText;
+        const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+        WebSocketClient.sendData(data);
+    });
+}
+
+/**
+ * Scrape page screenshot callback
+ *
+ * @param info
+ * @param tab
+ */
+function scrapePageScreenshot(info, tab) {
+    chrome.tabs.captureVisibleTab(function(dataUrl) {
+        const headline = tab.title;
+        const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
+        const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+        WebSocketClient.sendData(data);
+    });
 }
 
 /**
@@ -89,9 +164,6 @@ function scrapeSelection(info, tab) {
  * @param tab
  */
 function scrapeHTMLPage(info, tab) {
-    // console.log("info: " + JSON.stringify(info));
-    // console.log("tab: " + JSON.stringify(tab));
-
     chrome.tabs.executeScript(null, {
         file: "functions.js"
     }, function() {
@@ -183,6 +255,11 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
+    "title": "Create note with screenshot of visible page", "contexts": ["page"],
+    "onclick": scrapePageScreenshot, "parentId": mainMenu
+});
+
+chrome.contextMenus.create({
     "title": "Create note from selection", "contexts": ["selection"],
     "onclick": scrapeSelection, "parentId": mainMenu
 });
@@ -209,16 +286,23 @@ chrome.contextMenus.create({
     "onclick": resetSettings
 });
 
-// used by scrapeHTMLPage
 chrome.runtime.onMessage.addListener(function(request, sender) {
+    // used by scrapeHTMLPage
     if (request.action === "getSource") {
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
             const headline = tabs[0].title;
-            const text = "<a href=\"" + tabs[0].url + "\">" + tabs[0].url + "</a>\n\n" + request.source;
-            const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: tabs[0].url};
+            const url = tabs[0].url;
+            const text = "<a href=\"" + url + "\">" + url + "</a><br /><br />" + request.source;
+            const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
             WebSocketClient.sendData(data);
         });
     }
+
+    // if (request.method === "getSelection"){
+    //     var selection = window.getSelectionHTML();
+    //     console.log(selection);
+    //     sendResponse({body: selection, url: window.location.href, subject: document.title});
+    // }
 });
 
 let open = function () {
@@ -286,3 +370,36 @@ WebSocketClient = {
         }
     }
 };
+
+/*
+
+/!**
+ * Gets the HTML of the user's selection
+ *!/
+function getSelectionHTML() {
+    var userSelection;
+    if (window.getSelection) {
+        // W3C Ranges
+        userSelection = window.getSelection ();
+        // Get the range:
+        if (userSelection.getRangeAt)
+            var range = userSelection.getRangeAt (0);
+        else {
+            var range = document.createRange ();
+            range.setStart (userSelection.anchorNode, userSelection.anchorOffset);
+            range.setEnd (userSelection.focusNode, userSelection.focusOffset);
+        }
+        // And the HTML:
+        var clonedSelection = range.cloneContents ();
+        var div = document.createElement ('div');
+        div.appendChild (clonedSelection);
+        return div.innerHTML;
+    } else if (document.selection) {
+        // Explorer selection, return the HTML
+        userSelection = document.selection.createRange ();
+        return userSelection.htmlText;
+    } else {
+        return '';
+    }
+}
+*/
