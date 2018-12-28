@@ -45,11 +45,11 @@ function setSocketPort(info, tab) {
  * @param tab
  */
 function scrapeSelection(info, tab) {
-    console.log("info: " + JSON.stringify(info));
-    console.log("tab: " + JSON.stringify(tab));
-
-    console.log(info.pageUrl);
-    console.log(info.selectionText);
+    // console.log("info: " + JSON.stringify(info));
+    // console.log("tab: " + JSON.stringify(tab));
+    //
+    // console.log(info.pageUrl);
+    // console.log(info.selectionText);
 
     // let selection = window.getSelection();
     // console.log(selection);
@@ -76,11 +76,29 @@ function scrapeSelection(info, tab) {
     //
     // console.log(html);
 
-    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-        const headline = tabs[0].title;
-        const text = "<" + tabs[0].url + ">\n\n" + info.selectionText;
-        const data = {type: "newNote", headline: headline, text: text, pageUrl: info.pageUrl};
-        WebSocketClient.sendData(data);
+    const headline = tab.title;
+    const text = "<" + tab.url + ">\n\n" + info.selectionText;
+    const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+    WebSocketClient.sendData(data);
+}
+
+/**
+ * Scrape html page callback
+ *
+ * @param info
+ * @param tab
+ */
+function scrapeHTMLPage(info, tab) {
+    // console.log("info: " + JSON.stringify(info));
+    // console.log("tab: " + JSON.stringify(tab));
+
+    chrome.tabs.executeScript(null, {
+        file: "functions.js"
+    }, function() {
+        // If you try and inject into an extensions page or the webstore/NTP you'll get an error
+        if (chrome.runtime.lastError) {
+            alert('Error: \n' + chrome.runtime.lastError.message);
+        }
     });
 }
 
@@ -144,6 +162,7 @@ function resetSettings() {
 //     }
 // }
 
+// load settings
 chrome.storage.sync.get( function ( data ) {
     const port = data.socketPort;
 
@@ -154,13 +173,13 @@ chrome.storage.sync.get( function ( data ) {
     }
 } );
 
-// chrome.contextMenus.create({
-//     "title": "Create note from page", "contexts": ["page"],
-//     "onclick": genericOnClick
-// });
-
 const mainMenu = chrome.contextMenus.create({
     "title": "QOwnNotes", "contexts": ["page", "selection"]
+});
+
+chrome.contextMenus.create({
+    "title": "Create note from page (HTML import)", "contexts": ["page"],
+    "onclick": scrapeHTMLPage, "parentId": mainMenu
 });
 
 chrome.contextMenus.create({
@@ -190,6 +209,17 @@ chrome.contextMenus.create({
     "onclick": resetSettings
 });
 
+// used by scrapeHTMLPage
+chrome.runtime.onMessage.addListener(function(request, sender) {
+    if (request.action === "getSource") {
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            const headline = tabs[0].title;
+            const text = "<a href=\"" + tabs[0].url + "\">" + tabs[0].url + "</a>\n\n" + request.source;
+            const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: tabs[0].url};
+            WebSocketClient.sendData(data);
+        });
+    }
+});
 
 let open = function () {
     ws = new WebSocket(getServerUrl());

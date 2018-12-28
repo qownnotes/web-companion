@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 18.12.2
+- added support to import pages as new note in QOwnNotes 18.12.9 and higher
+    - the html will be converted to markdown and images of the page will be downloaded (might take a while)
+
 ## 18.12.1
 - fixed the default port
 - the url of the page will now also be written to the note
