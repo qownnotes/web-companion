@@ -151,8 +151,13 @@ function scrapeSelection(info, tab) {
 function scrapePageScreenshot(info, tab) {
     chrome.tabs.captureVisibleTab(function(dataUrl) {
         const headline = tab.title;
-        const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
-        const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+
+        // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
+        // const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+
+        const url = tab.url;
+        const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
+        const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
         WebSocketClient.sendData(data);
     });
 }

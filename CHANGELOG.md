@@ -3,8 +3,7 @@
 ## 18.12.2
 - added support to import pages as new note in QOwnNotes 18.12.9 and higher
     - the html will be converted to markdown and images of the page will be downloaded (might take a while)
-- added support to add a screenshot of the visible area as new note
-    - the screenshot will be added as `data:image` image as markdown
+- added support to add a screenshot of the visible area as new note in QOwnNotes 18.12.9 and higher
 - selected text will now be created as new note with newlines if possible
 
 ## 18.12.1
