@@ -4,7 +4,7 @@
 [Releases](https://github.com/qownnotes/chrome-web-companion/releases) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
-This companion extension for [QOwnNotes](https://www.qownnotes.org) to interact with the note taking desktop application.
+This is a companion extension for [QOwnNotes](https://www.qownnotes.org) to interact with the note taking desktop application.
 
 [QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **markdown note taking**
 application for GNU/Linux, Mac OS X and Windows, that (optionally) works together with the notes application of

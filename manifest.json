@@ -1,6 +1,6 @@
 {
   "name": "QOwnNotes Web Companion",
-  "description": "This companion extension for QOwnNotes allows you to add selected text as new note.",
+  "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "version": "2018.12.2",
   "permissions": ["contextMenus", "activeTab", "storage"],
   "background": {
