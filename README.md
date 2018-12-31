@@ -23,4 +23,7 @@ application for GNU/Linux, Mac OS X and Windows, that (optionally) works togethe
 Download the latest release from [Releases](https://github.com/qownnotes/chrome-web-companion/releases), visit
 `chrome://extensions/` and drop the extension file into your browser.
 
+Of course you can also use the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+to install the extension.
+
 To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running.
