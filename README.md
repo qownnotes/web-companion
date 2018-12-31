@@ -1,6 +1,6 @@
 # [QOwnNotes](https://www.qownnotes.org "QOwnNotes Official Site") Web Companion Chrome extension
 
-[Changelog](https://github.com/qownnotes/chrome-web-companion/blob/master/CHANGELOG.md) |
+[Changelog](https://github.com/qownnotes/chrome-web-companion/blob/develop/CHANGELOG.md) |
 [Releases](https://github.com/qownnotes/chrome-web-companion/releases) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
