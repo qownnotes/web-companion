@@ -4,10 +4,11 @@
 [Releases](https://github.com/qownnotes/chrome-web-companion/releases) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
-This companion extension for [QOwnNotes](https://www.qownnotes.org) allows you to add selected text or the whole page as
-new note.
+This companion extension for [QOwnNotes](https://www.qownnotes.org) to interact with the note taking desktop application.
 
-[QOwnNotes](https://www.qownnotes.org) is the **open source notepad** with [**markdown support**](https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes/Markdown%20Cheatsheet.md) and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default notes application of [**ownCloud**](https://github.com/owncloud/notes) and [**Nextcloud**](https://github.com/Nextcloud/notes).
+[QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **markdown note taking**
+application for GNU/Linux, Mac OS X and Windows, that (optionally) works together with the notes application of
+[**ownCloud**](https://github.com/owncloud/notes) or [**Nextcloud**](https://github.com/Nextcloud/notes).
 
 ## Features
 
@@ -18,6 +19,7 @@ new note.
 
 ## Installation
 
-Download the latest release from [Releases](https://github.com/qownnotes/chrome-web-companion/releases), visit `chrome://extensions/` and drop the extension file into your browser.
+Download the latest release from [Releases](https://github.com/qownnotes/chrome-web-companion/releases), visit
+`chrome://extensions/` and drop the extension file into your browser.
 
-To use this extension QOwnNotes](https://www.qownnotes.org) needs to be running.
+To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running.
