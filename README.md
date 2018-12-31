@@ -2,6 +2,7 @@
 
 [Changelog](https://github.com/qownnotes/chrome-web-companion/blob/develop/CHANGELOG.md) |
 [Releases](https://github.com/qownnotes/chrome-web-companion/releases) |
+[Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
 This is a companion extension for [QOwnNotes](https://www.qownnotes.org) to interact with the note taking desktop application.
