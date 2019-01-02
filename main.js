@@ -3,6 +3,7 @@ let connected = false;
 const serverUrl = "ws://127.0.0.1";
 let sendText = "";
 let socketPort = 22222;
+var isFirefox = typeof InstallTrigger !== 'undefined';
 
 // A generic onclick callback function.
 function genericOnClick(info, tab) {
@@ -149,17 +150,17 @@ function scrapeSelection(info, tab) {
  * @param tab
  */
 function scrapePageScreenshot(info, tab) {
-    chrome.tabs.captureVisibleTab(function(dataUrl) {
-        const headline = tab.title;
+	chrome.tabs.captureVisibleTab(function(dataUrl) {
+	const headline = tab.title;
 
-        // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
-        // const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+	// const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
+	// const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
 
-        const url = tab.url;
-        const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
-        const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
-        WebSocketClient.sendData(data);
-    });
+	const url = tab.url;
+	const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
+	const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
+	WebSocketClient.sendData(data);
+});
 }
 
 /**
@@ -254,6 +255,7 @@ const mainMenu = chrome.contextMenus.create({
     "title": "QOwnNotes", "contexts": ["page", "selection"]
 });
 
+
 chrome.contextMenus.create({
     "title": "Create note from page (HTML import)", "contexts": ["page"],
     "onclick": scrapeHTMLPage, "parentId": mainMenu
@@ -269,27 +271,29 @@ chrome.contextMenus.create({
     "onclick": scrapeSelection, "parentId": mainMenu
 });
 
-chrome.contextMenus.create({
-    "contexts": ["page", "selection"], "type": "separator", "parentId": mainMenu
-});
+if(!isFirefox) {
+	const settingsMenu = chrome.contextMenus.create({
+		"title": "Settings", "parentId": mainMenu, "contexts": ["page", "selection"]
+	});
+	
+	const debugMenu = chrome.contextMenus.create({
+		"title": "Debug", "parentId": mainMenu, "contexts": ["page", "selection"]
+	});
+	
+	chrome.contextMenus.create({
+		"contexts": ["page", "selection"], "type": "separator", "parentId": mainMenu
+	});
+	
+	chrome.contextMenus.create({
+		"title": "Set socket port", "parentId": settingsMenu, "contexts": ["page", "selection"],
+		"onclick": setSocketPort
+	});
 
-const settingsMenu = chrome.contextMenus.create({
-    "title": "Settings", "parentId": mainMenu, "contexts": ["page", "selection"]
-});
-
-chrome.contextMenus.create({
-    "title": "Set socket port", "parentId": settingsMenu, "contexts": ["page", "selection"],
-    "onclick": setSocketPort
-});
-
-const debugMenu = chrome.contextMenus.create({
-    "title": "Debug", "parentId": mainMenu, "contexts": ["page", "selection"]
-});
-
-chrome.contextMenus.create({
-    "title": "Reset settings", "parentId": debugMenu, "contexts": ["page", "selection"],
-    "onclick": resetSettings
-});
+	chrome.contextMenus.create({
+		"title": "Reset settings", "parentId": debugMenu, "contexts": ["page", "selection"],
+		"onclick": resetSettings
+	});
+}
 
 chrome.runtime.onMessage.addListener(function(request, sender) {
     // used by scrapeHTMLPage
