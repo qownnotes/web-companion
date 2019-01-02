@@ -1,8 +1,14 @@
 {
   "name": "QOwnNotes Web Companion",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
-  "version": "2018.12.2",
-  "permissions": ["contextMenus", "activeTab", "storage"],
+  "version": "2019.01.1",
+  "homepage_url": "https://github.com/Offerel/chrome-web-companion",
+  "permissions": [
+	"contextMenus",
+	"activeTab",
+	"storage",
+	"<all_urls>"
+  ],
   "background": {
     "scripts": ["main.js"]
   },
@@ -12,5 +18,16 @@
     "32": "images/icons/32x32/apps/QOwnNotes.png",
     "48": "images/icons/48x48/apps/QOwnNotes.png",
     "128": "images/icons/128x128/apps/QOwnNotes.png"
-  }
+  },
+  "applications": {
+		"gecko": {
+			"id": "QOwnNotes@offerel.org",
+			"strict_min_version": "57.0"
+		}
+	},
+  "browser_action": {
+		"default_icon": "images/icons/48x48/apps/QOwnNotes.png",
+		"default_title": "QOwnNotes",
+		"default_popup": "popup/popup.html"
+	}
 }

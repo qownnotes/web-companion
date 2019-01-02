@@ -1,0 +1,27 @@
+.popupButton {
+	text-align: left;
+	font: menu;
+	background-color: transparent;
+	width: 100%;
+	min-height: 25px;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+	border: 0;
+	background-position-x: 10px;
+	margin-top: 5px;
+}
+.popupButton:hover {
+	background-color: #f2f2f2;
+}
+.popupButton:active {
+	position: relative;
+	top: 1px;
+	background-color: Highlight;
+}
+#popup-content {
+	min-width: 120px;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
