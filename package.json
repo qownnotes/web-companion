@@ -1,0 +1,12 @@
+{
+  "name": "qownnotes-web-companion",
+  "version": "2019.1.0",
+  "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+  "scripts": {
+    "dev": "webextension-toolbox dev",
+    "build": "webextension-toolbox build"
+  },
+  "devDependencies": {
+    "webextension-toolbox": "latest"
+  }
+}
