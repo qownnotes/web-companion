@@ -2,7 +2,6 @@
   "name": "QOwnNotes Web Companion",
   "short_name": "qownnotes",
   "description": "__MSG_appDescription__",
-  "version": "2019.1.0",
   "homepage_url": "https://github.com/qownnotes/web-companion",
   "manifest_version": 2,
   "default_locale": "en",
@@ -17,7 +16,7 @@
       "scripts/background.js"
     ]
   },
-  "options_page": "pages/options.html",
+  "__chrome__options_page": "pages/options.html",
   "options_ui": {
     "page": "pages/options.html",
     "chrome_style": true
