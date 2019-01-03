@@ -1,7 +1,7 @@
 # [QOwnNotes](https://www.qownnotes.org "QOwnNotes Official Site") Web Companion Chrome extension
 
-[Changelog](https://github.com/qownnotes/chrome-web-companion/blob/develop/CHANGELOG.md) |
-[Releases](https://github.com/qownnotes/chrome-web-companion/releases) |
+[Changelog](https://github.com/qownnotes/web-companion/blob/develop/CHANGELOG.md) |
+[Releases](https://github.com/qownnotes/web-companion/releases) |
 [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
@@ -20,7 +20,7 @@ application for GNU/Linux, Mac OS X and Windows, that (optionally) works togethe
 
 ## Installation
 
-Download the latest release from [Releases](https://github.com/qownnotes/chrome-web-companion/releases), visit
+Download the latest release from [Releases](https://github.com/qownnotes/web-companion/releases), visit
 `chrome://extensions/` and drop the extension file into your browser.
 
 Of course you can also use the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)

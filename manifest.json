@@ -2,7 +2,7 @@
   "name": "QOwnNotes Web Companion",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "version": "2019.1.0",
-  "homepage_url": "https://github.com/qownnotes/chrome-web-companion",
+  "homepage_url": "https://github.com/qownnotes/web-companion",
   "permissions": [
 	"contextMenus",
 	"activeTab",
