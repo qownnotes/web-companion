@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.0
+- added popup menu for setting the port and resetting the settings (for [#1](https://github.com/qownnotes/web-companion/issues/1), thank you @Offerel)
+- added support for Firefox (for [#1](https://github.com/qownnotes/web-companion/issues/1), thank you @Offerel)
+- migrated extension to generator-web-extension scaffold
+
 ## 18.12.2
 - added support to import pages as new note in QOwnNotes 18.12.9 and higher
     - the html will be converted to markdown and images of the page will be downloaded (might take a while)

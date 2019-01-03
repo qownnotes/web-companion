@@ -1,6 +1,6 @@
 {
-  "name": "__MSG_appName__",
-  "short_name": "__MSG_appShortName__",
+  "name": "QOwnNotes Web Companion",
+  "short_name": "qownnotes",
   "description": "__MSG_appDescription__",
   "version": "2019.1.0",
   "homepage_url": "https://github.com/qownnotes/web-companion",

@@ -1,12 +1,4 @@
 {
-  "appName": {
-    "message": "QOwnNotes Web Companion",
-    "description": "The name of the application"
-  },
-  "appShortName": {
-    "message": "qownnotes",
-    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
-  },
   "appDescription": {
     "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
     "description": "The description of the application"
