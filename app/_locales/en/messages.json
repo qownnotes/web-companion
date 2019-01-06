@@ -2,5 +2,8 @@
   "appDescription": {
     "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
     "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes settings"
   }
 }
