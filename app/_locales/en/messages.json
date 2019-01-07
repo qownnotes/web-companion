@@ -5,5 +5,8 @@
   },
   "settingsHeadline": {
     "message": "QOwnNotes settings"
+  },
+  "socketPortLabel": {
+    "message": "Web socket port"
   }
 }

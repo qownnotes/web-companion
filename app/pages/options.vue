@@ -1,17 +1,11 @@
 <template>
     <div id="app">
         <v-app id="options">
-            <v-toolbar flat dark class="transparent mt-3">
-                <v-dialog max-width="940">
-                    <v-card>
-                        <v-toolbar flat dark color="grey darken-4">
-                            <v-card-title
-                                    class="headline spacedLetters upperCase ml-2"
-                                    v-html="getLocale('settingsHeadline')"
-                            />
-                        </v-toolbar>
-                    </v-card>
-                </v-dialog>
+            <v-toolbar flat dark color="grey darken-4">
+                <v-card-title
+                        class="headline spacedLetters upperCase ml-2"
+                        v-html="getLocale('settingsHeadline')"
+                />
             </v-toolbar>
 
             <v-form>
@@ -21,13 +15,14 @@
                         <v-flex xs12 sm6>
 
                             <v-text-field
-                                    label="Socket server port"
-                                    v-model="socketPort"
-                            ></v-text-field>
-                            <p>Message is: {{ socketPort }}</p>
-
-                            <input v-model="message" placeholder="edit me">
-                            <p>Message is: {{ message }}</p>
+                                    type="number"
+                                    v-model.number="socketPort"
+                                    clearable
+                            >
+                                <template slot="label">
+                                    {{ getLocale('socketPortLabel') }}
+                                </template>
+                            </v-text-field>
 
                         </v-flex>
 
@@ -39,18 +34,53 @@
 </template>
 <script>
     import * as util from '../scripts/util';
+    const defaultSocketPort = 22222;
 
     export default {
         methods: {
             getLocale(text) {
                 return util.getLocale(text);
             },
+            loadSettings() {
+                // ES5 workaround to access "this" in the "chrome.storage.sync.get" call
+                var self = this;
+
+                // load settings
+                chrome.storage.sync.get( function ( data ) {
+                    const port = data.socketPort;
+
+                    if (port !== null && !isNaN(port)) {
+                        self.socketPort = parseInt(port);
+                    }
+                } );
+            }
         },
         data() {
             return {
-                socketPort: 22222,
-                message: "All right!"
+                socketPort: defaultSocketPort,
+                socketPortLabel: "Socket server port"
             };
         },
+        mounted() {
+            this.loadSettings();
+        },
+        watch: {
+            socketPort: function(val, oldVal) {
+                if (val === null) {
+                    this.socketPort = defaultSocketPort;
+                    return;
+                }
+
+                let port = parseInt(val);
+
+                if (port === 0 || isNaN(port)) {
+                    port = defaultSocketPort;
+                }
+
+                chrome.storage.sync.set( {
+                    socketPort: port,
+                } );
+            }
+        }
     };
 </script>

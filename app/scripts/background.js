@@ -13,33 +13,6 @@ function genericOnClick(info, tab) {
 }
 
 /**
- *
- * @param info
- * @param tab
- */
-function setSocketPort(info, tab) {
-    const portText = prompt("Please enter the QOwnNotes socket port", socketPort);
-
-    if (portText === null) {
-        return;
-    }
-
-    const port = parseInt(portText);
-
-    if (port === 0) {
-        return;
-    }
-
-    console.log(port);
-    socketPort = port;
-    close();
-
-    chrome.storage.sync.set( {
-        socketPort: port,
-    } );
-}
-
-/**
  * Scrape selection callback
  *
  * @param info
@@ -184,11 +157,6 @@ function getServerUrl() {
     return serverUrl + ":" + socketPort;
 }
 
-function resetSettings() {
-    chrome.storage.sync.clear();
-    socketPort = 22222;
-}
-
 // function getSelected() {
 //     var text = "";
 //     if (window.getSelection
@@ -240,21 +208,31 @@ function resetSettings() {
 //     }
 // }
 
-// load settings
-chrome.storage.sync.get( function ( data ) {
-    const port = data.socketPort;
+/**
+ * Load the settings
+ */
+function loadSettings() {
+    chrome.storage.sync.get( function ( data ) {
+        const port = data.socketPort;
 
-    if (port !== null && !isNaN(port)) {
-        socketPort = parseInt(data.socketPort);
-        console.log("socketPort from settings");
-        console.log(socketPort);
-    }
-} );
+        if (port !== null && !isNaN(port)) {
+            socketPort = parseInt(data.socketPort);
+            console.log("socketPort from settings");
+            console.log(socketPort);
+        }
+    } );
+}
+
+loadSettings();
+
+// load settings they were changed on the options page
+chrome.storage.onChanged.addListener(function () {
+    loadSettings();
+});
 
 const mainMenu = chrome.contextMenus.create({
     "title": "QOwnNotes", "contexts": ["page", "selection"]
 });
-
 
 chrome.contextMenus.create({
     "title": "Create note from page (HTML import)", "contexts": ["page"],
@@ -271,31 +249,9 @@ chrome.contextMenus.create({
     "onclick": scrapeSelection, "parentId": mainMenu
 });
 
-if(!isFirefox) {
-	const settingsMenu = chrome.contextMenus.create({
-		"title": "Settings", "parentId": mainMenu, "contexts": ["page", "selection"]
-	});
-	
-	const debugMenu = chrome.contextMenus.create({
-		"title": "Debug", "parentId": mainMenu, "contexts": ["page", "selection"]
-	});
-	
-	chrome.contextMenus.create({
-		"contexts": ["page", "selection"], "type": "separator", "parentId": mainMenu
-	});
-	
-	chrome.contextMenus.create({
-		"title": "Set socket port", "parentId": settingsMenu, "contexts": ["page", "selection"],
-		"onclick": setSocketPort
-	});
-
-	chrome.contextMenus.create({
-		"title": "Reset settings", "parentId": debugMenu, "contexts": ["page", "selection"],
-		"onclick": resetSettings
-	});
-}
-
 chrome.runtime.onMessage.addListener(function(request, sender) {
+    console.log("request:");
+    console.log(request);
     // used by scrapeHTMLPage
     if (request.action === "getSource") {
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {

@@ -63,11 +63,7 @@ function initVue() {
 
     new Vue({
         el: '#app',
-        render: (h) => h(Options),
-        data: {
-            socketPort: 22222,
-            message: "All right!"
-        }
+        render: (h) => h(Options)
     });
 }
 
