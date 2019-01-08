@@ -7,6 +7,6 @@
     "message": "QOwnNotes settings"
   },
   "socketPortLabel": {
-    "message": "Web socket port"
+    "message": "Server socket port"
   }
 }

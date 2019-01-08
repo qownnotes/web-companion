@@ -2,10 +2,11 @@ import Vue from 'vue';
 // import Vue from 'vue/dist/vue.js';
 import Vuetify from 'vuetify';
 import Options from '../pages/options.vue'
+import "material-design-icons-iconfont/dist/material-design-icons.css"
+import 'vuetify/dist/vuetify.css'
 import '../styles/options.css';
 
-
-console.log("Go!");
+console.log("QOwnNotes options page");
 
 // var app = new Vue(vmApp).$mount('#app');
 // app.data({message: 'Hello Vue!'});
