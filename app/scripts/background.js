@@ -144,7 +144,7 @@ function scrapePageScreenshot(info, tab) {
  */
 function scrapeHTMLPage(info, tab) {
     chrome.tabs.executeScript(null, {
-        file: "functions.js"
+        file: "scripts/functions.js"
     }, function() {
         // If you try and inject into an extensions page or the webstore/NTP you'll get an error
         if (chrome.runtime.lastError) {
@@ -323,7 +323,7 @@ let addMessage = function (data, type) {
     console.log(data);
 };
 
-WebSocketClient = {
+let WebSocketClient = {
     sendData: function (data) {
         sendText = JSON.stringify(data);
 
