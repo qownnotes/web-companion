@@ -23,7 +23,7 @@
     "chrome_style": true
   },
   "minimum_chrome_version": "10.0",
-  "devtools_page": "pages/devtools.html",
+  "__edge__devtools_page": "pages/devtools.html",
   "__firefox__applications": {
     "gecko": {
       "id": "WebCompanion@qownnotes.org",
@@ -33,7 +33,7 @@
   "browser_action": {
     "default_icon": "images/icons/48x48/apps/QOwnNotes.png",
     "default_title": "QOwnNotes",
-    "default_popup": "popup/popup.html"
+    "__edge__default_popup": "popup/popup.html"
   },
   "__chrome__permissions": [
     "activeTab",
