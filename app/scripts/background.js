@@ -3,6 +3,7 @@ let connected = false;
 const serverUrl = "ws://127.0.0.1";
 let sendText = "";
 let socketPort = 22222;
+import * as util from '../scripts/util';
 var isFirefox = typeof InstallTrigger !== 'undefined';
 
 // A generic onclick callback function.
@@ -231,22 +232,22 @@ chrome.storage.onChanged.addListener(function () {
 });
 
 const mainMenu = chrome.contextMenus.create({
-    "title": "QOwnNotes", "contexts": ["page", "selection"]
+    "title": "QOwnNotes", "contexts": ["page"]
 });
 
 chrome.contextMenus.create({
-    "title": "Create note from page (HTML import)", "contexts": ["page"],
+    "title": util.getLocale('createNoteFromPage'), "contexts": ["page"],
     "onclick": scrapeHTMLPage, "parentId": mainMenu
 });
 
 chrome.contextMenus.create({
-    "title": "Create note with screenshot of visible page", "contexts": ["page"],
+    "title": util.getLocale('createScreenshotNote'), "contexts": ["page"],
     "onclick": scrapePageScreenshot, "parentId": mainMenu
 });
 
 chrome.contextMenus.create({
-    "title": "Create note from selection", "contexts": ["selection"],
-    "onclick": scrapeSelection, "parentId": mainMenu
+    "title": util.getLocale('createSelectionNote'), "contexts": ["selection"],
+    "onclick": scrapeSelection, "parentId": null
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender) {
@@ -315,7 +316,7 @@ let onMessage = function (event) {
 };
 
 let onError = function (event) {
-    alert("Connection to QOwnNotes failed!\n" + event.data);
+    alert(util.getLocale('connectionFailed') + "\n" + event.data);
 };
 
 let addMessage = function (data, type) {

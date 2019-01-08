@@ -1,9 +1,16 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.1
+- reimplementation of extension with webextension-toolbox, webpack and VueJS for Google Chrome and Mozilla Firefox
+    - creating notes from the current selection, the whole page and as screenshot now works with Firefox and Chrome again 
+- there now is a browser option page to set and reset the server socket port
+- the text of the extension can now be translated
+    - visit [QOwnNotes translations](https://crowdin.com/project/qownnotes) if you want to help to translate the
+      interface to your language
+
 ## 19.1.0
 - added popup menu for setting the port and resetting the settings (for [#1](https://github.com/qownnotes/web-companion/issues/1), thank you @Offerel)
 - added support for Firefox (for [#1](https://github.com/qownnotes/web-companion/issues/1), thank you @Offerel)
-- migrated extension to generator-web-extension scaffold
 
 ## 18.12.2
 - added support to import pages as new note in QOwnNotes 18.12.9 and higher

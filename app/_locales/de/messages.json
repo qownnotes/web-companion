@@ -1,16 +1,16 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Dies ist eine Companion-Erweiterung für QOwnNotes um mit den Notizen der Desktop-Anwendung zu interagieren.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes Einstellungen"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Server-Socket port"
   },
   "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+    "message": "Notiz von ganzer Seite erstellen (HTML-Import)"
   },
   "createScreenshotNote": {
     "message": "Create note with screenshot of visible page"
