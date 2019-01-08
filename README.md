@@ -3,6 +3,7 @@
 [Changelog](https://github.com/qownnotes/web-companion/blob/develop/CHANGELOG.md) |
 [Releases](https://github.com/qownnotes/web-companion/releases) |
 [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
+[Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
 This is a companion browser extension for [QOwnNotes](https://www.qownnotes.org) to interact with the note taking desktop application.
@@ -27,7 +28,7 @@ Download the latest release from [Releases](https://github.com/qownnotes/web-com
 `chrome://extensions/` (for Chrome) and drop the extension file into your browser.
 
 You can also use the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-or the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) to install the extension.
+or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) to install the extension.
 
 To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running.
 
