@@ -24,10 +24,10 @@ The extension currently works for Google Chrome and Mozilla Firefox.
 ## Installation
 
 Download the latest release from [Releases](https://github.com/qownnotes/web-companion/releases), visit
-`chrome://extensions/` and drop the extension file into your browser.
+`chrome://extensions/` (for Chrome) and drop the extension file into your browser.
 
-Of course you can also use the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
-to install the extension.
+You can also use the [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp)
+or the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/qownnotes-web-companion/) to install the extension.
 
 To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running.
 
