@@ -12,7 +12,7 @@ This is a companion browser extension for [QOwnNotes](https://www.qownnotes.org)
 application for GNU/Linux, macOS and Windows, that (optionally) works together with the notes application of
 [**ownCloud**](https://github.com/owncloud/notes) or [**Nextcloud**](https://github.com/Nextcloud/notes).
 
-The extension currently works for Google Chrome and Mozilla Firefox.
+The extension is currently tested for Google Chrome and Mozilla Firefox.
 
 ## Features
 

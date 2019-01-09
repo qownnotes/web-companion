@@ -1,41 +1,33 @@
-// let socketPort = 22222;
-//
-// function resetSettings() {
-//     chrome.storage.sync.clear();
-//     socketPort = 22222;
-// }
-//
-// /**
-//  *
-//  * @param info
-//  * @param tab
-//  */
-// function setSocketPort(info, tab) {
-//     const portText = prompt("Please enter the QOwnNotes socket port", socketPort);
-//
-//     if (portText === null) {
-//         return;
-//     }
-//
-//     const port = parseInt(portText);
-//
-//     if (port === 0) {
-//         return;
-//     }
-//
-//     console.log(port);
-//     socketPort = port;
-//     close();
-//
-//     chrome.storage.sync.set( {
-//         socketPort: port,
-//     } );
-// }
-//
-// document.getElementById("sport").addEventListener("click", setSocketPort);
-// document.getElementById("rsettings").addEventListener("click", resetSettings);
-
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import Popup from '../pages/popup.vue'
 import "material-design-icons-iconfont/dist/material-design-icons.css"
 import 'vuetify/dist/vuetify.css'
+import '../styles/popup.css';
 
-console.log("test");
+console.log("QOwnNotes popup page");
+
+/*
+ * Initialize Popup
+ */
+function initPopup() {
+    try {
+        initVue();
+    } catch (e) {
+        throw new Error(`Error Initializing Popup | ${e}`);
+    }
+}
+
+/*
+ * Initialize Vue
+ */
+function initVue() {
+    Vue.use(Vuetify, {});
+
+    new Vue({
+        el: '#app',
+        render: (h) => h(Popup)
+    });
+}
+
+initPopup();

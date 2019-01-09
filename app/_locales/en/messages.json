@@ -20,5 +20,8 @@
   },
   "connectionFailed": {
     "message": "Connection to QOwnNotes failed!"
+  },
+  "popupHeadline": {
+    "message": "Bookmarks"
   }
 }
