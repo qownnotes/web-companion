@@ -9,7 +9,7 @@
 This is a companion browser extension for [QOwnNotes](https://www.qownnotes.org) to interact with the note taking desktop application.
 
 [QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **markdown note taking**
-application for GNU/Linux, Mac OS X and Windows, that (optionally) works together with the notes application of
+application for GNU/Linux, macOS and Windows, that (optionally) works together with the notes application of
 [**ownCloud**](https://github.com/owncloud/notes) or [**Nextcloud**](https://github.com/Nextcloud/notes).
 
 The extension currently works for Google Chrome and Mozilla Firefox.
