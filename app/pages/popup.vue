@@ -25,13 +25,20 @@
 </template>
 <script>
     import * as util from '../scripts/util';
+    import * as ws from '../scripts/services/qwebsocket';
 
     export default {
         methods: {
             getLocale(text) {
                 return util.getLocale(text);
             },
-            loadSettings() {
+            loadBookmarks() {
+                console.log("send test");
+
+                const data = {type: "getBookmarks"};
+                this.webSocket.send(data, function () {
+                    console.log("Message was sent:" + data);
+                });
             }
         },
         data() {
@@ -60,7 +67,27 @@
             }
         },
         mounted() {
-            this.loadSettings();
+            let that = this;
+
+            this.webSocket = new ws.QWebSocket(function (event) {
+                const data = event.data;
+
+                if (typeof data === 'string' || data instanceof String) {
+                    // create a JSON object
+                    const jsonObject = JSON.parse(data);
+
+                    console.log("Got a new message: " + data);
+                    console.log("Got a new message: " + jsonObject);
+                    console.log(jsonObject.type);
+                    const type = jsonObject.type;
+
+                    if (type === "bookmarks") {
+                        that.bookmarks = jsonObject.data;
+                    }
+                }
+            });
+
+            this.loadBookmarks();
         },
         watch: {
         }
