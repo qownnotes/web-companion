@@ -1,7 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 19.1.2
-- you can now see a **list of all links of the current note** if you click on the QOwnNotes icon in the browser toolbar
+- you can now browse a **list of all links in the current note** if you click on the QOwnNotes icon in the browser toolbar
     - you can **search for links** on the popup
     - clicking a line opens the url in a new browser tab
     - clicking on the headline items of the table sorts the items in the table
