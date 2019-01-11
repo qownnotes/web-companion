@@ -5,6 +5,7 @@
     - you can **search for links** on the popup
     - clicking a line opens the url in a new browser tab
     - clicking on the headline items of the table sorts the items in the table
+    - you need QOwnNotes 19.1.2 or higher for this feature
 - added more German translation (thank you rakekniven)
 
 ## 19.1.1
