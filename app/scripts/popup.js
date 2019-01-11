@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+import VueTruncate from 'vue-truncate-filter';
 import Popup from '../pages/popup.vue'
 import "material-design-icons-iconfont/dist/material-design-icons.css"
 import 'vuetify/dist/vuetify.css'
@@ -22,7 +23,8 @@ function initPopup() {
  * Initialize Vue
  */
 function initVue() {
-    Vue.use(Vuetify, {});
+    Vue.use(Vuetify);
+    Vue.use(VueTruncate);
 
     new Vue({
         el: '#app',

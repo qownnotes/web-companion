@@ -1,5 +1,12 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.2
+- you can now see a **list of all links of the current note** if you click on the QOwnNotes icon in the browser toolbar
+    - you can **search for links** on the popup
+    - clicking a line opens the url in a new browser tab
+    - clicking on the headline items of the table sorts the items in the table
+- added more German translation (thank you rakekniven)
+
 ## 19.1.1
 - reimplementation of extension with webextension-toolbox, webpack and VueJS for Google Chrome and Mozilla Firefox
     - creating notes from the current selection, the whole page and as screenshot now works with Firefox and Chrome again 

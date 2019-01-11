@@ -6,18 +6,37 @@
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('popupHeadline')"
                 />
+                <v-spacer></v-spacer>
+                <v-text-field
+                        v-model="search"
+                        append-icon="search"
+                        :label="getLocale('popupSearchLabel')"
+                        single-line
+                        hide-details
+                ></v-text-field>
             </v-toolbar>
 
             <v-data-table
                     :headers="headers"
                     :items="bookmarks"
-                    class="elevation-1"
+                    :loading="loadingBookmarks"
+                    :search="search"
+                    :rows-per-page-items="[8,10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
+                    :disable-initial-sort="true"
+                    class="elevation-1 bookmark-list"
             >
-                <template slot="items" slot-scope="props">
-                    <td class="text-no-wrap">{{ props.item.name }}</td>
-                    <td>{{ props.item.url }}</td>
-                    <!--<td><a href="{{ props.item.url }}">{{ props.item.name }}</a></td>-->
-                    <!--<td class="text-xs-right"><a href="{{ props.item.url }}">{{ props.item.url }}</a></td>-->
+                <template slot="items" slot-scope="props" :title="props.item.url">
+                    <tr v-if="props.item.name" :title="props.item.name + '\n' + props.item.url" @click="openUrl(props.item.url)">
+                        <td class="text-no-wrap">
+                            <strong><a :href="props.item.url" target="_blank">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                        </td>
+                        <td>{{ props.item.url | truncate(50, '…') }}</td>
+                    </tr>
+                    <tr v-else="props.item.name" :title="props.item.url" @click="openUrl(props.item.url)">
+                        <td colspan="2" class="text-no-wrap">
+                            <a :href="props.item.url" target="_blank">{{ props.item.url | truncate(100, '…') }}</a>
+                        </td>
+                    </tr>
                 </template>
             </v-data-table>
         </v-app>
@@ -33,12 +52,15 @@
                 return util.getLocale(text);
             },
             loadBookmarks() {
-                console.log("send test");
+                this.loadingBookmarks = true;
 
                 const data = {type: "getBookmarks"};
                 this.webSocket.send(data, function () {
-                    console.log("Message was sent:" + data);
+                    console.log("Loading bookmarks:" + data);
                 });
+            },
+            openUrl(url) {
+                chrome.tabs.create({ url: url });
             }
         },
         data() {
@@ -47,23 +69,9 @@
                     { text: 'Name', align: 'left', value: 'name' },
                     { text: 'Url', value: 'url' },
                 ],
-                bookmarks: [
-                    {
-                        value: false,
-                        name: 'QOwnNotes',
-                        url: 'https://www.qownnotes.org',
-                    },
-                    {
-                        value: false,
-                        name: 'Getting Started Tutorial',
-                        url: 'https://developer.chrome.com/extensions/getstarted',
-                    },
-                    {
-                        value: false,
-                        name: 'Test',
-                        url: '123',
-                    },
-                ]
+                bookmarks: [],
+                loadingBookmarks: false,
+                search: ''
             }
         },
         mounted() {
@@ -75,14 +83,15 @@
                 if (typeof data === 'string' || data instanceof String) {
                     // create a JSON object
                     const jsonObject = JSON.parse(data);
-
-                    console.log("Got a new message: " + data);
-                    console.log("Got a new message: " + jsonObject);
-                    console.log(jsonObject.type);
                     const type = jsonObject.type;
+
+                    // console.log("Got a new message: " + data);
+                    // console.log("Got a new message: " + jsonObject);
+                    // console.log(jsonObject.type);
 
                     if (type === "bookmarks") {
                         that.bookmarks = jsonObject.data;
+                        that.loadingBookmarks = false;
                     }
                 }
             });
@@ -93,3 +102,19 @@
         }
     };
 </script>
+<style scoped lang="scss">
+    #app {
+        min-width: 500px;
+    }
+
+    .bookmark-list {
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        td {
+            cursor: pointer;
+        }
+    }
+</style>

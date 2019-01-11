@@ -13,12 +13,18 @@
     "message": "Notiz von ganzer Seite erstellen (HTML-Import)"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Notiz mit Screenshot der sichtbaren Seite erstellen"
   },
   "createSelectionNote": {
-    "message": "Create note from selection"
+    "message": "Notiz aus Auswahl erstellen"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "Verbindung zu QOwnNotes ist fehlgeschlagen!"
+  },
+  "popupHeadline": {
+    "message": "Lesezeichen"
+  },
+  "popupSearchLabel": {
+    "message": "Suche"
   }
 }

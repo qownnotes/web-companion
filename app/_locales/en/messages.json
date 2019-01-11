@@ -23,5 +23,8 @@
   },
   "popupHeadline": {
     "message": "Bookmarks"
+  },
+  "popupSearchLabel": {
+    "message": "Search"
   }
 }
