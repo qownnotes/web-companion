@@ -44,6 +44,5 @@ npm run dev firefox
 ## Building packages
 
 ```bash
-npm run build chrome
-npm run build firefox
+./build.sh
 ```
