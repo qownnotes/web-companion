@@ -2,7 +2,9 @@
 
 ## 19.1.3
 - preventing opening of two new tabs when clicking a bookmark
-- added support for the new tag and description attributes in bookmarks
+- added support for the new **tag** and **description** attributes in **bookmarks**
+    - the syntax for using this bookmark links in notes is `- [name](http://link) #tag1 #tag2 some description`
+    - tags will be shown in the list and the description will be shown in a new tooltip
 
 ## 19.1.2
 - you can now browse a **list of all links in the current note** if you click on the QOwnNotes icon in the browser toolbar
