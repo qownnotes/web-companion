@@ -25,18 +25,28 @@
                     :disable-initial-sort="true"
                     class="elevation-1 bookmark-list"
             >
-                <template slot="items" slot-scope="props" :title="props.item.url">
-                    <tr v-if="props.item.name" :title="props.item.name + '\n' + props.item.url" @click="openUrl(props.item.url)">
-                        <td class="text-no-wrap">
-                            <strong><a :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
-                        </td>
-                        <td>{{ props.item.url | truncate(50, '…') }}</td>
-                    </tr>
-                    <tr v-else="props.item.name" :title="props.item.url" @click="openUrl(props.item.url)">
-                        <td colspan="2" class="text-no-wrap">
-                            <a :href="props.item.url" target="_blank">{{ props.item.url | truncate(100, '…') }}</a>
-                        </td>
-                    </tr>
+                <template slot="items" slot-scope="props">
+                        <tr @click="openUrl(props.item.url)">
+                            <td v-if="props.item.name" class="text-no-wrap">
+                                <v-tooltip bottom>
+                                    <strong slot="activator"><a :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                                    <span>
+                                        <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br /></template>
+                                        {{ props.item.url }}
+                                        <template v-if="props.item.description"><br /><em>{{ props.item.description }}</em></template>
+                                    </span>
+                                </v-tooltip>
+                            </td>
+                            <td v-if="props.item.name" >{{ props.item.url | truncate(50, '…') }}</td>
+                            <td v-if="props.item.name === ''" colspan="3" class="text-no-wrap">
+                                <a @click="$event.stopPropagation()" :href="props.item.url" target="_blank">{{ props.item.url | truncate(100, '…') }}</a>
+                            </td>
+                            <td v-if="props.item.name">
+                                <span class="tag" v-for="tag in props.item.tags">
+                                    {{ tag }}
+                                </span>
+                            </td>
+                        </tr>
                 </template>
             </v-data-table>
         </v-app>
@@ -67,7 +77,8 @@
             return {
                 headers: [
                     { text: 'Name', align: 'left', value: 'name' },
-                    { text: 'Url', value: 'url' },
+                    { text: 'Url', align: 'left', value: 'url' },
+                    { text: 'Tags', value: 'tags' },
                 ],
                 bookmarks: [],
                 loadingBookmarks: false,
@@ -115,6 +126,21 @@
 
         td {
             cursor: pointer;
+        }
+
+        span.tag {
+            background: #444;
+            padding: 3px;
+            color: white;
+            border-radius: 3px;
+            margin: 1px;
+            display: inline-block;
+            font-size: 0.8em;
+        }
+
+        v-table tbody td, v-table tbody th {
+            height: 36px;
+            padding: 0 18px !important;
         }
     }
 </style>
