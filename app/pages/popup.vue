@@ -28,7 +28,7 @@
                 <template slot="items" slot-scope="props" :title="props.item.url">
                     <tr v-if="props.item.name" :title="props.item.name + '\n' + props.item.url" @click="openUrl(props.item.url)">
                         <td class="text-no-wrap">
-                            <strong><a :href="props.item.url" target="_blank">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                            <strong><a :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
                         </td>
                         <td>{{ props.item.url | truncate(50, '…') }}</td>
                     </tr>

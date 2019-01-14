@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.3
+- preventing opening of two new tabs when clicking a bookmark
+
 ## 19.1.2
 - you can now browse a **list of all links in the current note** if you click on the QOwnNotes icon in the browser toolbar
     - you can **search for links** on the popup
