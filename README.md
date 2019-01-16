@@ -25,6 +25,10 @@ The extension is currently tested for Google Chrome and Mozilla Firefox.
       [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 - you can change the server socket port in the extension *Option page*
 
+## Screenshot
+
+![Screenhot](screenshots/bookmarks.png)
+
 ## Installation
 
 Download the latest release from [Releases](https://github.com/qownnotes/web-companion/releases), visit

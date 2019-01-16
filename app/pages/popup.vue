@@ -13,6 +13,7 @@
                         :label="getLocale('popupSearchLabel')"
                         single-line
                         hide-details
+                        clearable
                 ></v-text-field>
             </v-toolbar>
 
@@ -86,6 +87,10 @@
         mounted() {
             let that = this;
 
+            chrome.storage.sync.get( function ( data ) {
+                that.search = data.search;
+            } );
+
             this.webSocket = new ws.QWebSocket(function (event) {
                 const data = event.data;
 
@@ -108,6 +113,11 @@
             this.loadBookmarks();
         },
         watch: {
+            search: function (val, oldVal) {
+                chrome.storage.sync.set( {
+                    search: val
+                } );
+            }
         }
     };
 </script>
