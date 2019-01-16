@@ -2,6 +2,10 @@
 
 ## 19.1.4
 - bookmarks styling changes
+- bookmarks of the current note will now have the tag `bookmarks`
+    - you can change that tag name in the QOwnNotes settings
+- for more information about the **bookmarks feature** please visit
+  [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 
 ## 19.1.3
 - preventing opening of two new tabs when clicking a bookmark

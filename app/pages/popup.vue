@@ -21,7 +21,7 @@
                     :items="bookmarks"
                     :loading="loadingBookmarks"
                     :search="search"
-                    :rows-per-page-items="[8,10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
+                    :rows-per-page-items="[10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
                     :disable-initial-sort="true"
                     class="elevation-1 bookmark-list"
             >
