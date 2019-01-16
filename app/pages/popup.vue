@@ -22,6 +22,7 @@
                     :items="bookmarks"
                     :loading="loadingBookmarks"
                     :search="search"
+                    :pagination.sync="pagination"
                     :rows-per-page-items="[10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
                     :disable-initial-sort="true"
                     class="elevation-1 bookmark-list"
@@ -40,7 +41,7 @@
                             </td>
                             <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
                             <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
-                                <a @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(100, '…') }}</a>
+                                <a @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
                             </td>
                             <td class="link-tags">
                                 <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
@@ -81,7 +82,10 @@
                 ],
                 bookmarks: [],
                 loadingBookmarks: false,
-                search: ''
+                search: '',
+                pagination: {
+                    rowsPerPage: 10
+                }
             }
         },
         mounted() {
@@ -106,6 +110,13 @@
                     if (type === "bookmarks") {
                         that.bookmarks = jsonObject.data;
                         that.loadingBookmarks = false;
+
+                        chrome.storage.sync.get( function ( data ) {
+                            // console.log("after load");
+                            // console.log(that.pagination.page);
+                            that.pagination.page = data.pagination.page;
+                        } );
+
                     }
                 }
             });
@@ -116,6 +127,14 @@
             search: function (val, oldVal) {
                 chrome.storage.sync.set( {
                     search: val
+                } );
+            },
+            // this seems to be also executed when the popup disappears and reset the values that way
+            pagination: function (val, oldVal) {
+                // console.log("pagination watch");
+                // console.log(val.page);
+                chrome.storage.sync.set( {
+                    pagination: val
                 } );
             }
         }
