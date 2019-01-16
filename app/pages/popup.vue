@@ -37,14 +37,12 @@
                                     </span>
                                 </v-tooltip>
                             </td>
-                            <td v-if="props.item.name" >{{ props.item.url | truncate(50, '…') }}</td>
-                            <td v-if="props.item.name === ''" colspan="3" class="text-no-wrap">
-                                <a @click="$event.stopPropagation()" :href="props.item.url" target="_blank">{{ props.item.url | truncate(100, '…') }}</a>
+                            <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
+                            <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
+                                <a @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(100, '…') }}</a>
                             </td>
-                            <td v-if="props.item.name">
-                                <span class="tag" v-for="tag in props.item.tags">
-                                    {{ tag }}
-                                </span>
+                            <td class="link-tags">
+                                <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
                             </td>
                         </tr>
                 </template>
@@ -113,7 +111,7 @@
         }
     };
 </script>
-<style scoped lang="scss">
+<style lang="scss">
     #app {
         min-width: 500px;
     }
@@ -132,15 +130,39 @@
             background: #444;
             padding: 3px;
             color: white;
-            border-radius: 3px;
+            border-radius: 5px;
             margin: 1px;
             display: inline-block;
             font-size: 0.8em;
         }
 
-        v-table tbody td, v-table tbody th {
-            height: 36px;
-            padding: 0 18px !important;
+        table.v-table {
+            tr {
+                height: 30px;
+            }
+
+            tbody td, tbody th, thead th, tbody td:first-child, thead th:first-child {
+                height: 30px;
+                padding: 0 10px;
+
+                span {
+                    line-height: 3em;
+                    display: inline-block;
+                }
+            }
+
+            tbody td.link-tags {
+                white-space: nowrap;
+
+                span {
+                    line-height: inherit;
+                }
+
+                span::first-letter {
+                    /*display: none;*/
+                    /*color: red;*/
+                }
+            }
         }
     }
 </style>

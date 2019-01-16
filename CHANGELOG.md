@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.4
+- bookmarks styling changes
+
 ## 19.1.3
 - preventing opening of two new tabs when clicking a bookmark
 - added support for the new **tag** and **description** attributes in **bookmarks**
