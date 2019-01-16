@@ -1,10 +1,11 @@
 # QOwnNotes Web Companion Changelog
 
 ## 19.1.4
-- bookmarks styling changes and the search field can now be reset
-- the content of the bookmarks search field will now be persisted
-- bookmarks of the current note will now have the tag `bookmarks`
-    - you can change that tag name in the QOwnNotes settings
+- bookmarks styling changes and the **search field** can now be **reset**
+- the content of the bookmarks **search field** will now be **persisted**
+- links in the **current note** will now have the tag `current`
+- special **bookmark links** of **all notes tagged** with `bookmarks` will be shown
+    - you can change that tag name in the *QOwnNotes settings*
 - for more information about the **bookmarks feature** please visit
   [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 
