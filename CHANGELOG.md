@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.5
+- the previously entered search text in the bookmark popup is now automatically selected and focused,
+  so that you can overwrite it and start to search immediately
+- the tab-order was now adapted, so that you can navigate the links with <kbd>Tab</kbd> easily
+
 ## 19.1.4
 - bookmarks styling changes and the **search field** can now be **reset**
 - the content of the bookmarks **search field** will now be **persisted**

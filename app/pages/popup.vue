@@ -9,6 +9,9 @@
                 <v-spacer></v-spacer>
                 <v-text-field
                         v-model="search"
+                        ref="searchText"
+                        id="searchText"
+                        tabindex="1"
                         append-icon="search"
                         :label="getLocale('popupSearchLabel')"
                         single-line
@@ -31,7 +34,7 @@
                         <tr @click="openUrl(props.item.url)">
                             <td v-if="props.item.name" class="text-no-wrap">
                                 <v-tooltip bottom>
-                                    <strong slot="activator"><a :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                                    <strong slot="activator"><a tabindex="2" :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
                                     <span>
                                         <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br /></template>
                                         {{ props.item.url }}
@@ -41,7 +44,7 @@
                             </td>
                             <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
                             <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
-                                <a @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
+                                <a tabindex="2" @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
                             </td>
                             <td class="link-tags">
                                 <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
@@ -90,9 +93,16 @@
         },
         mounted() {
             let that = this;
+            this.$refs.searchText.focus();
 
             chrome.storage.sync.get( function ( data ) {
                 that.search = data.search;
+
+                // select all the text to be able to overwrite it easily
+                setTimeout(function () {
+                    $("#searchText").select();
+                }, 50);
+
             } );
 
             this.webSocket = new ws.QWebSocket(function (event) {
@@ -116,7 +126,6 @@
                             // console.log(that.pagination.page);
                             that.pagination.page = data.pagination.page;
                         } );
-
                     }
                 }
             });
