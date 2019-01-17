@@ -6,6 +6,11 @@
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('popupHeadline')"
                 />
+                <v-card-title
+                        class="subheading"
+                        v-html="noteFolderName"
+                        title="current note folder"
+                />
                 <v-spacer></v-spacer>
                 <v-text-field
                         v-model="search"
@@ -31,25 +36,25 @@
                     class="elevation-1 bookmark-list"
             >
                 <template slot="items" slot-scope="props">
-                        <tr @click="openUrl(props.item.url)">
-                            <td v-if="props.item.name" class="text-no-wrap">
-                                <v-tooltip bottom>
-                                    <strong slot="activator"><a tabindex="2" :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
-                                    <span>
-                                        <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br /></template>
-                                        {{ props.item.url }}
-                                        <template v-if="props.item.description"><br /><em>{{ props.item.description }}</em></template>
-                                    </span>
-                                </v-tooltip>
-                            </td>
-                            <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
-                            <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
-                                <a tabindex="2" @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
-                            </td>
-                            <td class="link-tags">
-                                <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
-                            </td>
-                        </tr>
+                    <tr @click="openUrl(props.item.url)">
+                        <td v-if="props.item.name" class="text-no-wrap">
+                            <v-tooltip bottom>
+                                <strong slot="activator"><a tabindex="2" :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                                <span>
+                                    <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br /></template>
+                                    {{ props.item.url }}
+                                    <template v-if="props.item.description"><br /><em>{{ props.item.description }}</em></template>
+                                </span>
+                            </v-tooltip>
+                        </td>
+                        <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
+                        <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
+                            <a tabindex="2" @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
+                        </td>
+                        <td class="link-tags">
+                            <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
+                        </td>
+                    </tr>
                 </template>
             </v-data-table>
         </v-app>
@@ -86,6 +91,7 @@
                 bookmarks: [],
                 loadingBookmarks: false,
                 search: '',
+                noteFolderName: '',
                 pagination: {
                     rowsPerPage: 10
                 }
@@ -119,6 +125,7 @@
 
                     if (type === "bookmarks") {
                         that.bookmarks = jsonObject.data;
+                        that.noteFolderName = jsonObject.noteFolderName;
                         that.loadingBookmarks = false;
 
                         chrome.storage.sync.get( function ( data ) {

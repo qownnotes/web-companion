@@ -5,6 +5,7 @@
   so that you can overwrite it and start to search immediately
 - the tab-order was now adapted, so that you can **navigate the links** with <kbd>Tab</kbd> easily
 - there now is a **default shortcut** <kbd>Ctrl + B</kbd> for **opening the bookmarks popup**
+- the name of the **current note folder** will now be displayed in the top toolbar of the **bookmark popup**
 
 ## 19.1.4
 - bookmarks styling changes and the **search field** can now be **reset**
