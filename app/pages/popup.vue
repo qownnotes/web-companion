@@ -33,6 +33,7 @@
                         <!--vertical-->
                 <!--&gt;</v-divider>-->
                 <v-spacer></v-spacer>
+                <v-btn @click="openAllVisibleBookmarks" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>open_in_new</v-icon></v-btn>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
                     <v-btn slot="activator" @click="openBookmarkDialog" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
                     <v-card>
@@ -73,6 +74,7 @@
                     :pagination.sync="pagination"
                     :rows-per-page-items="[10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
                     :disable-initial-sort="true"
+                    id="bookmark-list"
                     class="elevation-1 bookmark-list"
             >
                 <template slot="items" slot-scope="props">
@@ -119,6 +121,12 @@
             },
             openUrl(url) {
                 chrome.tabs.create({ url: url });
+            },
+            openAllVisibleBookmarks() {
+                let that = this;
+                $("#bookmark-list tr a").each(function () {
+                    that.openUrl($(this).attr("href"));
+                });
             },
             openBookmarkDialog () {
                 this.bookmarkEditDialog = true;
