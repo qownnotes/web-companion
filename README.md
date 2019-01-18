@@ -16,13 +16,13 @@ The extension is currently tested for Google Chrome and Mozilla Firefox.
 
 ## Features
 
+- **managing bookmarks** with QOwnNotes notes
+    - for more information about the **bookmarks feature** please visit
+      [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 - creating a new note (only text) from the **current selection** by right-clicking it
 - creating a new note from the content of the **current webpage** by right-clicking on the page
     - the html will be converted to markdown and images of the page will be downloaded (might take a while)
 - creating a new note with a **screenshot** of the visible part of the current webpage by right-clicking on the page
-- **managing bookmarks** with QOwnNotes notes
-    - for more information about the **bookmarks feature** please visit
-      [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 - you can change the server socket port in the extension *Option page*
 
 ## Screenshot

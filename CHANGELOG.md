@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.6
+- you can now **add new bookmarks** with a button in the **bookmark popup**
+    - you need QOwnNotes 19.1.6 or higher for this feature
+
 ## 19.1.5
 - the previously entered **search text** in the **bookmark popup** is now **automatically selected and focused**,
   so that you can overwrite it and start to search immediately

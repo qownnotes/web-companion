@@ -25,6 +25,46 @@
                 ></v-text-field>
             </v-toolbar>
 
+            <v-toolbar flat color="white">
+                <!--<v-toolbar-title>name</v-toolbar-title>-->
+                <!--<v-divider-->
+                        <!--class="mx-2"-->
+                        <!--inset-->
+                        <!--vertical-->
+                <!--&gt;</v-divider>-->
+                <v-spacer></v-spacer>
+                <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
+                    <v-btn slot="activator" @click="openBookmarkDialog" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
+                    <v-card>
+                        <v-card-title>
+                            <span class="headline">New bookmark</span>
+                        </v-card-title>
+
+                        <v-card-text>
+                            <v-container grid-list-md>
+                                <v-layout wrap>
+                                    <v-flex xs12 sm6>
+                                        <v-text-field ref="editedBookmarkName" id="editedBookmarkName" tabindex="10" v-model="editedBookmark.name" label="Link name"></v-text-field>
+                                    </v-flex>
+                                    <v-flex xs12 sm6>
+                                        <v-text-field tabindex="12" v-model="editedBookmark.description" label="Description"></v-text-field>
+                                    </v-flex>
+                                    <v-flex xs12 sm12>
+                                        <v-text-field tabindex="11" v-model="editedBookmark.url" label="URL"></v-text-field>
+                                    </v-flex>
+                                </v-layout>
+                            </v-container>
+                        </v-card-text>
+
+                        <v-card-actions>
+                            <v-spacer></v-spacer>
+                            <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">Cancel</v-btn>
+                            <v-btn color="blue darken-1" flat @click="saveBookmark">Save</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-dialog>
+            </v-toolbar>
+
             <v-data-table
                     :headers="headers"
                     :items="bookmarks"
@@ -79,6 +119,25 @@
             },
             openUrl(url) {
                 chrome.tabs.create({ url: url });
+            },
+            openBookmarkDialog () {
+                this.bookmarkEditDialog = true;
+                // focus and select all the text to be able to overwrite it easily
+                this.$nextTick(() => this.$refs.editedBookmarkName.focus());
+                this.$nextTick(() => $("#editedBookmarkName").select());
+            },
+            closeBookmarkDialog () {
+                this.bookmarkEditDialog = false;
+
+                // reset the dialog form
+                this.$nextTick(() => this.editedBookmark = Object.assign({}, this.defaultBookmark));
+            },
+            saveBookmark () {
+                const data = {type: "newBookmark", data: this.editedBookmark};
+                this.webSocket.send(data, function () {
+                    console.log("Storing bookmark:" + data);
+                });
+                this.closeBookmarkDialog()
             }
         },
         data() {
@@ -92,6 +151,17 @@
                 loadingBookmarks: false,
                 search: '',
                 noteFolderName: '',
+                bookmarkEditDialog: false,
+                editedBookmark: {
+                    name: '',
+                    url: '',
+                    description: ''
+                },
+                defaultBookmark: {
+                    name: '',
+                    url: '',
+                    description: ''
+                },
                 pagination: {
                     rowsPerPage: 10
                 }
@@ -105,10 +175,7 @@
                 that.search = data.search;
 
                 // select all the text to be able to overwrite it easily
-                setTimeout(function () {
-                    $("#searchText").select();
-                }, 50);
-
+                that.$nextTick(() => $("#searchText").select());
             } );
 
             this.webSocket = new ws.QWebSocket(function (event) {
@@ -138,6 +205,13 @@
             });
 
             this.loadBookmarks();
+
+            chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+                that.defaultBookmark.name = tabs[0].title;
+                that.editedBookmark.name = tabs[0].title;
+                that.defaultBookmark.url = tabs[0].url;
+                that.editedBookmark.url = tabs[0].url;
+            });
         },
         watch: {
             search: function (val, oldVal) {
@@ -152,13 +226,19 @@
                 chrome.storage.sync.set( {
                     pagination: val
                 } );
+            },
+            bookmarkEditDialog (val) {
+                this.$refs.editedBookmarkName.focus();
+
+                val || this.closeBookmarkDialog()
             }
         }
     };
 </script>
 <style lang="scss">
     #app {
-        min-width: 500px;
+        min-width: 600px;
+        min-height: 500px;
     }
 
     .bookmark-list {
