@@ -39,6 +39,13 @@ or the [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes
 
 To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running.
 
+## Shortcuts
+
+- use <kbd>Ctrl + B</kbd> to open the bookmarks popup
+    - access key <kbd>A</kbd> to add a new bookmarks (for example press <kbd>Alt + A</kbd> in Chrome)
+    - access key <kbd>S</kbd> to search for bookmarks
+    - access key <kbd>O</kbd> to open all visible bookmarks
+
 ## Development
 
 ```bash

@@ -18,6 +18,7 @@
                         id="searchText"
                         tabindex="1"
                         append-icon="search"
+                        accesskey="s"
                         :label="getLocale('popupSearchLabel')"
                         single-line
                         hide-details
@@ -33,9 +34,9 @@
                         <!--vertical-->
                 <!--&gt;</v-divider>-->
                 <v-spacer></v-spacer>
-                <v-btn @click="openAllVisibleBookmarks" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>open_in_new</v-icon></v-btn>
+                <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>open_in_new</v-icon></v-btn>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
-                    <v-btn slot="activator" @click="openBookmarkDialog" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
+                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
                     <v-card>
                         <v-card-title>
                             <span class="headline">New bookmark</span>
@@ -81,7 +82,7 @@
                     <tr @click="openUrl(props.item.url)">
                         <td v-if="props.item.name" class="text-no-wrap">
                             <v-tooltip bottom>
-                                <strong slot="activator"><a tabindex="2" :href="props.item.url" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                                <strong slot="activator"><a tabindex="2" :href="props.item.url" :accesskey="props.index + 1" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
                                 <span>
                                     <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br /></template>
                                     {{ props.item.url }}
@@ -91,7 +92,7 @@
                         </td>
                         <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
                         <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
-                            <a tabindex="2" @click="$event.stopPropagation()" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
+                            <a tabindex="2" @click="$event.stopPropagation()" :accesskey="props.index + 1" :href="props.item.url" target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
                         </td>
                         <td class="link-tags">
                             <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>

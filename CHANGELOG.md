@@ -1,5 +1,11 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.7
+- added **access keys** to some **bookmark popup** actions
+    - access key <kbd>A</kbd> to add a new bookmarks (for example press <kbd>Alt + A</kbd> in Chrome)
+    - access key <kbd>S</kbd> to search for bookmarks
+    - access key <kbd>O</kbd> to open all visible bookmarks
+
 ## 19.1.6
 - you can now **add new bookmarks** with a button in the **bookmark popup**
     - you need QOwnNotes 19.1.6 or higher for this feature
