@@ -4,6 +4,9 @@
 - you can now **filter bookmarks by tags**
     - use access key <kbd>T</kbd> to jump to the tag selector
     - the selected tags will be persisted and restored the next time the bookmarks popup is opened
+- changed the **default shortcut** for the **bookmarks popup** in **Firefox** to <kbd>Alt + Shift + B</kbd>,
+  because <kbd>Ctrl + B</kbd> is blocked
+    - these shortcuts will only work in Firefox 66 and newer 
 
 ## 19.1.7
 - added **access keys** to some **bookmark popup** actions
