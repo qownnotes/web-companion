@@ -221,6 +221,7 @@
                             // console.log("after load");
                             // console.log(that.pagination.page);
                             that.pagination.page = data.pagination.page;
+                            that.selectedTags = data.selectedTags;
                         } );
                     }
                 }
@@ -239,6 +240,11 @@
             search: function (val, oldVal) {
                 chrome.storage.sync.set( {
                     search: val
+                } );
+            },
+            selectedTags: function (val, oldVal) {
+                chrome.storage.sync.set( {
+                    selectedTags: val
                 } );
             },
             // this seems to be also executed when the popup disappears and reset the values that way

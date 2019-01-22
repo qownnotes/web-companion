@@ -3,6 +3,7 @@
 ## 19.1.8
 - you can now **filter bookmarks by tags**
     - use access key <kbd>T</kbd> to jump to the tag selector
+    - the selected tags will be persisted and restored the next time the bookmarks popup is opened
 
 ## 19.1.7
 - added **access keys** to some **bookmark popup** actions
