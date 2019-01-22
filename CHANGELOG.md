@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.8
+- you can now **filter bookmarks by tags**
+    - use access key <kbd>T</kbd> to jump to the tag selector
+
 ## 19.1.7
 - added **access keys** to some **bookmark popup** actions
     - access key <kbd>A</kbd> to add a new bookmarks (for example press <kbd>Alt + A</kbd> in Chrome)

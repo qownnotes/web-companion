@@ -27,6 +27,18 @@
             </v-toolbar>
 
             <v-toolbar flat color="white">
+                <v-autocomplete
+                        v-model="selectedTags"
+                        accesskey="t"
+                        :items="allTags"
+                        multiple
+                        small-chips
+                        single-line
+                        deletable-chips
+                        clearable
+                        label="Tags"
+                >
+                </v-autocomplete>
                 <!--<v-toolbar-title>name</v-toolbar-title>-->
                 <!--<v-divider-->
                         <!--class="mx-2"-->
@@ -69,7 +81,7 @@
 
             <v-data-table
                     :headers="headers"
-                    :items="bookmarks"
+                    :items="filteredBookmarks"
                     :loading="loadingBookmarks"
                     :search="search"
                     :pagination.sync="pagination"
@@ -173,7 +185,8 @@
                 },
                 pagination: {
                     rowsPerPage: 10
-                }
+                },
+                selectedTags: []
             }
         },
         mounted() {
@@ -240,6 +253,39 @@
                 this.$refs.editedBookmarkName.focus();
 
                 val || this.closeBookmarkDialog()
+            }
+        },
+        computed: {
+            // creates a list of all tags of bookmarks
+            allTags: function () {
+                let allTags = [];
+
+                this.bookmarks.forEach(function(bookmark) {
+                    bookmark.tags.forEach(function(tag) {
+                        if (allTags.indexOf(tag) === -1) {
+                            allTags.push(tag);
+                        }
+                    });
+                });
+
+                return allTags.sort();
+            },
+            // creates a list of all bookmarks filtered by selectedBookmarks
+            filteredBookmarks: function () {
+                if (this.selectedTags.length === 0) {
+                    return this.bookmarks;
+                }
+
+                let filteredBookmarks = [];
+                let that = this;
+
+                this.bookmarks.forEach(function(bookmark) {
+                    if (that.selectedTags.every(elem => bookmark.tags.indexOf(elem) > -1)) {
+                        filteredBookmarks.push(bookmark);
+                    }
+                });
+
+                return filteredBookmarks;
             }
         }
     };

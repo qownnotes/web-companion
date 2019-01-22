@@ -45,6 +45,7 @@ To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running
     - access key <kbd>A</kbd> to add a new bookmarks (for example press <kbd>Alt + A</kbd> in Chrome)
     - access key <kbd>S</kbd> to search for bookmarks
     - access key <kbd>O</kbd> to open all visible bookmarks
+    - access key <kbd>T</kbd> to jump to the tag selector
 
 ## Development
 
