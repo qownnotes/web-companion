@@ -35,12 +35,7 @@
     "default_title": "QOwnNotes",
     "default_popup": "pages/popup.html"
   },
-  "__chrome__permissions": [
-    "activeTab",
-    "contextMenus",
-    "storage"
-  ],
-  "__firefox__permissions": [
+  "permissions": [
     "activeTab",
     "contextMenus",
     "storage",

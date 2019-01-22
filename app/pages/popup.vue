@@ -47,6 +47,7 @@
                 <!--&gt;</v-divider>-->
                 <v-spacer></v-spacer>
                 <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>open_in_new</v-icon></v-btn>
+                <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
                     <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
                     <v-card>
@@ -118,8 +119,12 @@
 <script>
     import * as util from '../scripts/util';
     import * as ws from '../scripts/services/qwebsocket';
+    import BookmarkAllTabsButton from '../components/bookmark-all-tabs-button'
 
     export default {
+        components: {
+            BookmarkAllTabsButton: BookmarkAllTabsButton
+        },
         methods: {
             getLocale(text) {
                 return util.getLocale(text);
@@ -154,7 +159,7 @@
                 this.$nextTick(() => this.editedBookmark = Object.assign({}, this.defaultBookmark));
             },
             saveBookmark () {
-                const data = {type: "newBookmark", data: this.editedBookmark};
+                const data = {type: "newBookmarks", data: [this.editedBookmark]};
                 this.webSocket.send(data, function () {
                     console.log("Storing bookmark:" + data);
                 });
