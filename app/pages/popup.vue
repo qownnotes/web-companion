@@ -191,7 +191,8 @@
                 pagination: {
                     rowsPerPage: 10
                 },
-                selectedTags: []
+                selectedTags: [],
+                webSocket: null
             }
         },
         mounted() {

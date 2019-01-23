@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.9
+- fixed `tabs` permissions
+
 ## 19.1.8
 - you can now **filter bookmarks by tags**
     - use access key <kbd>T</kbd> to jump to the tag selector
