@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Dit is een aanvullende extensie voor QOwnNotes om te communiceren met de bureaubladtoepassing voor notities.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes instellingen"
+  },
+  "socketPortLabel": {
+    "message": "Server socket poort"
+  },
+  "createNoteFromPage": {
+    "message": "Notitie maken vanuit pagina (HTML-import)"
+  },
+  "createScreenshotNote": {
+    "message": "Notitie maken met screenshot van zichtbare pagina"
+  },
+  "createSelectionNote": {
+    "message": "Notitie maken vanuit selectie"
+  },
+  "connectionFailed": {
+    "message": "Verbinding met QOwnNotes mislukt!"
+  },
+  "popupHeadline": {
+    "message": "Bladwijzers"
+  },
+  "popupSearchLabel": {
+    "message": "Zoek"
+  }
+}

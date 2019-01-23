@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Это расширение для взаимодействия с десктопным приложением для заметок QOwnNotes.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Настройки QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Порт веб-сокет сервера"
+  },
+  "createNoteFromPage": {
+    "message": "Создать заметку из страницы (HTML-импорт)"
+  },
+  "createScreenshotNote": {
+    "message": "Создать заметку со скриншотом видимой страницы"
+  },
+  "createSelectionNote": {
+    "message": "Создать заметку из выбранного"
+  },
+  "connectionFailed": {
+    "message": "Не удалось подключиться к QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Закладки"
+  },
+  "popupSearchLabel": {
+    "message": "Поиск"
+  }
+}
