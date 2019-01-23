@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.10
+- added a lot of translation
+
 ## 19.1.9
 - fixed `tabs` permissions
 

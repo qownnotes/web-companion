@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "此擴充功能可讓QOwnNotes與桌面端筆記應用程式互動。",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes 設定"
+  },
+  "socketPortLabel": {
+    "message": "伺服器 Socket 通訊埠"
+  },
+  "createNoteFromPage": {
+    "message": "從網頁建立筆記（HTML匯入）"
+  },
+  "createScreenshotNote": {
+    "message": "擷取網頁可視範圍的畫面建立筆記"
+  },
+  "createSelectionNote": {
+    "message": "由選取的部份建立筆記"
+  },
+  "connectionFailed": {
+    "message": "連線到 QOwnNotes 失敗！"
+  },
+  "popupHeadline": {
+    "message": "書籤"
+  },
+  "popupSearchLabel": {
+    "message": "搜尋"
+  }
+}

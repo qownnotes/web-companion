@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes settings"
+  },
+  "socketPortLabel": {
+    "message": "Server socket port"
+  },
+  "createNoteFromPage": {
+    "message": "Create note from page (HTML import)"
+  },
+  "createScreenshotNote": {
+    "message": "Create note with screenshot of visible page"
+  },
+  "createSelectionNote": {
+    "message": "Create note from selection"
+  },
+  "connectionFailed": {
+    "message": "Connection to QOwnNotes failed!"
+  },
+  "popupHeadline": {
+    "message": "Bookmarks"
+  },
+  "popupSearchLabel": {
+    "message": "Search"
+  }
+}

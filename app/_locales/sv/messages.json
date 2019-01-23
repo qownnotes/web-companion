@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Detta är en kompanionsförlängning för QOwnNotes att interagera med noteringen som tar skrivbordsapplikation.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes inställningar"
+  },
+  "socketPortLabel": {
+    "message": "Serversocket port"
+  },
+  "createNoteFromPage": {
+    "message": "Skapa anteckning från sidan (HTML-import)"
+  },
+  "createScreenshotNote": {
+    "message": "Skapa anteckning med skärmdump av synlig sida"
+  },
+  "createSelectionNote": {
+    "message": "Skapa anteckning från urvalet"
+  },
+  "connectionFailed": {
+    "message": "Anslutning till QOwnNotes misslyckades!"
+  },
+  "popupHeadline": {
+    "message": "Bokmärken"
+  },
+  "popupSearchLabel": {
+    "message": "Sök"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Esta é uma extensão para QOwnNotes para interagir com o aplicativo desktop.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Configurações QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Porta do servidor"
+  },
+  "createNoteFromPage": {
+    "message": "Criar nota de página (importação HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Criar nota com screenshot da página visível"
+  },
+  "createSelectionNote": {
+    "message": "Criar nota a partir da seleção"
+  },
+  "connectionFailed": {
+    "message": "Falha de Conexão com o QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Marcadores"
+  },
+  "popupSearchLabel": {
+    "message": "Pesquisa"
+  }
+}

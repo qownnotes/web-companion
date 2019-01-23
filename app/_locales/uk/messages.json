@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Це розширення для взаємодії з програмою для нотаток QOwnNotes.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Параметри QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Socket порт сервера"
+  },
+  "createNoteFromPage": {
+    "message": "Створити нотатку зі сторінки (імпорт HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Створити нотатку зі скріншоту видимої сторінки"
+  },
+  "createSelectionNote": {
+    "message": "Створити нотатку з виділеного"
+  },
+  "connectionFailed": {
+    "message": "Не вдалося підключитися до QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Закладки"
+  },
+  "popupSearchLabel": {
+    "message": "Пошук"
+  }
+}

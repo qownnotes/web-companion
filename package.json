@@ -1,6 +1,6 @@
 {
   "name": "qownnotes-web-companion",
-  "version": "19.1.9",
+  "version": "19.1.10",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "author": "Patrizio Bekerle <patrizio@bekerle.com>",
   "license": "GPL",
