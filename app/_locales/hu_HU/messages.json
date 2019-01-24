@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Ez egy társ kiterjesztés a QOwnNotes számára, hogy akcióba léphessen az asztali alkalmazással rendelkező jegyzettel.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes beállítások"
+  },
+  "socketPortLabel": {
+    "message": "Szerver csatlakozóaljzat"
+  },
+  "createNoteFromPage": {
+    "message": "Jegyzet létrehozása az oldalról (HTML importálás)"
+  },
+  "createScreenshotNote": {
+    "message": "Hozzon létre jegyzetet a látható oldal képernyőképével"
+  },
+  "createSelectionNote": {
+    "message": "Jegyzet létrehozása a kiválasztásból"
+  },
+  "connectionFailed": {
+    "message": "Sikertelen kapcsolódás a QOwnNotes-hoz!"
+  },
+  "popupHeadline": {
+    "message": "Könyvjelzők"
+  },
+  "popupSearchLabel": {
+    "message": "Keresés"
+  }
+}

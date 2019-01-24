@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Esta es una extensión compañera de QOwnNotes para interactuar con la aplicación de notas para escritorio.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Configuración de QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Puerto del servidor de sockets"
+  },
+  "createNoteFromPage": {
+    "message": "Crear nota desde página (importar HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Crear nota con captura de pantalla de la página visible"
+  },
+  "createSelectionNote": {
+    "message": "Crear nota desde la selección"
+  },
+  "connectionFailed": {
+    "message": "¡Error en la conexión a QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Marcadores"
+  },
+  "popupSearchLabel": {
+    "message": "Buscar"
+  }
+}

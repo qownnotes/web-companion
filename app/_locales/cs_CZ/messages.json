@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Tämä on QOwnNotesin lisäosa, joka toimii vuorovaikutuksessa työpöytäsovelluksen kanssa.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes nastavení"
+  },
+  "socketPortLabel": {
+    "message": "Port serveru soketu"
+  },
+  "createNoteFromPage": {
+    "message": "Vytvoření poznámky ze stránky (import HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Vytvořte poznámku se snímkem obrazovky viditelné stránky"
+  },
+  "createSelectionNote": {
+    "message": "Vytvoření poznámky z výběru"
+  },
+  "connectionFailed": {
+    "message": "Připojení ke službě QOwnNotes se nezdařilo!"
+  },
+  "popupHeadline": {
+    "message": "Záložky"
+  },
+  "popupSearchLabel": {
+    "message": "Hledat"
+  }
+}

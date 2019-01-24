@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Tämä on QOwnNotesin lisäosa, joka toimii vuorovaikutuksessa työpöytäsovelluksen kanssa.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes-asetukset"
+  },
+  "socketPortLabel": {
+    "message": "Palvelimen liitäntäportti"
+  },
+  "createNoteFromPage": {
+    "message": "Luo muistiinpano sivulta (HTML-tuonti)"
+  },
+  "createScreenshotNote": {
+    "message": "Luo huomautus näkyvän sivun kuvakaappauksesta"
+  },
+  "createSelectionNote": {
+    "message": "Luo muistiinpano valinnasta"
+  },
+  "connectionFailed": {
+    "message": "Yhteys QOwnNotesiin epäonnistui!"
+  },
+  "popupHeadline": {
+    "message": "Kirjanmerkit"
+  },
+  "popupSearchLabel": {
+    "message": "Etsi"
+  }
+}

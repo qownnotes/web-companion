@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Questa è un'estensione complementare per QOwnNotes per interagire con l'applicazione desktop per le note.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Impostazioni QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Porta server socket"
+  },
+  "createNoteFromPage": {
+    "message": "Crea note dalla pagina (importazione HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Crea una nota con uno screenshot della pagina visibile"
+  },
+  "createSelectionNote": {
+    "message": "Crea una nota dalla selezione"
+  },
+  "connectionFailed": {
+    "message": "Connessione a QOwnNotes fallita!"
+  },
+  "popupHeadline": {
+    "message": "Segnalibri"
+  },
+  "popupSearchLabel": {
+    "message": "Cerca"
+  }
+}

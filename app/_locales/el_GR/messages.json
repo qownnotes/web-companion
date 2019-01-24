@@ -1,0 +1,30 @@
+{
+  "appDescription": {
+    "message": "Αυτή είναι μια επέκταση συνοδού για το QOwnNotes για να αλληλεπιδράσει με τη σημείωση που λαμβάνει την επιφάνεια εργασίας.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Ρυθμίσεις QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Θύρα υποδοχής διακομιστή"
+  },
+  "createNoteFromPage": {
+    "message": "Δημιουργία σημείωσης από τη σελίδα (εισαγωγή HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Δημιουργήστε τη σημείωση με το στιγμιότυπο της ορατής σελίδας"
+  },
+  "createSelectionNote": {
+    "message": "Δημιουργία σημείωσης από την επιλογή"
+  },
+  "connectionFailed": {
+    "message": "Η σύνδεση με το QOwnNotes απέτυχε!"
+  },
+  "popupHeadline": {
+    "message": "Σελιδοδείκτες"
+  },
+  "popupSearchLabel": {
+    "message": "Αναζήτηση"
+  }
+}

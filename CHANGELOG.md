@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.1.11
+- added more translation
+
 ## 19.1.10
 - added a lot of translation
 
