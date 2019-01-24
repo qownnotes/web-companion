@@ -47,6 +47,10 @@ To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running
     - access key <kbd>O</kbd> to open all visible bookmarks
     - access key <kbd>T</kbd> to jump to the tag selector
 
+## Permissions
+
+- the extension uses the `tabs` permission that may be interpreted as permission to `Read your browsing history` to be able to store bookmarks for all open tabs in a window with a single click
+
 ## Development
 
 ```bash
