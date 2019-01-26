@@ -39,6 +39,18 @@
                         label="Tags"
                 >
                 </v-autocomplete>
+                <v-snackbar
+                        v-model="snackbar"
+                        color="success"
+                >
+                    {{ snackbarText }}
+                    <v-btn
+                            flat
+                            @click="snackbar = false"
+                    >
+                        Close
+                    </v-btn>
+                </v-snackbar>
                 <!--<v-toolbar-title>name</v-toolbar-title>-->
                 <!--<v-divider-->
                         <!--class="mx-2"-->
@@ -192,7 +204,9 @@
                     rowsPerPage: 10
                 },
                 selectedTags: [],
-                webSocket: null
+                webSocket: null,
+                snackbar: false,
+                snackbarText: ''
             }
         },
         mounted() {
@@ -229,6 +243,9 @@
                             that.pagination.page = data.pagination.page;
                             that.selectedTags = data.selectedTags;
                         } );
+                    } else if (type === "flashMessage") {
+                        that.snackbar = true;
+                        that.snackbarText = jsonObject.message;
                     }
                 }
             });
