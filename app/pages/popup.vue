@@ -241,7 +241,17 @@
                             // console.log("after load");
                             // console.log(that.pagination.page);
                             that.pagination.page = data.pagination.page;
-                            that.selectedTags = data.selectedTags;
+                            that.selectedTags = [];
+                            const tags = that.allTags;
+
+                            // check if we can add stored selected tags
+                            if (data.selectedTags !== undefined && data.selectedTags.length > 0 && tags.length > 0) {
+                                data.selectedTags.forEach(function (tag) {
+                                    if (tags.indexOf(tag) > -1) {
+                                        that.selectedTags.push(tag);
+                                    }
+                                });
+                            }
                         } );
                     } else if (type === "flashMessage") {
                         that.snackbar = true;

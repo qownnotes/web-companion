@@ -3,6 +3,7 @@
 ## 19.1.11
 - added support to show a success message from QOwnNotes if bookmarks were created
     - you need QOwnNotes 19.1.9 or higher for this feature
+- fixed restoring of previously selected tags
 - added more translation
 
 ## 19.1.10
