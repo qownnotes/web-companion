@@ -7,7 +7,7 @@ echo "Downloading translation from Crowdin..."
 java -jar /opt/crowdin-cli/crowdin-cli.jar download translations
 echo
 
-// no renaming needed
+# no renaming needed
 
 ## we have to do this because this currently doesn't work in crowdin-cli
 #echo "Renaming translation folders..."

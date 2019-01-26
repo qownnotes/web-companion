@@ -13,6 +13,6 @@ base_path: "."
 files:
   -
     # source files filter
-    source: '/app/_locales/*/messages.json'
+    source: '/app/_locales/en/messages.json'
     # where translations live
     translation: '/app/_locales/%locale_with_underscore%/messages.json'

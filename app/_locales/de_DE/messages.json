@@ -26,5 +26,17 @@
   },
   "popupSearchLabel": {
     "message": "Suche"
+  },
+  "NewBookmark": {
+    "message": "Neues Lesezeichen"
+  },
+  "Cancel": {
+    "message": "Abbrechen"
+  },
+  "Save": {
+    "message": "Speichern"
+  },
+  "BookmarkAllTabs": {
+    "message": "Alle Tabs als Lesezeichen hinzufügen"
   }
 }

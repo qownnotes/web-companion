@@ -64,7 +64,7 @@
                     <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
                     <v-card>
                         <v-card-title>
-                            <span class="headline">New bookmark</span>
+                            <span class="headline">{{ getLocale('NewBookmark') }}</span>
                         </v-card-title>
 
                         <v-card-text>
@@ -85,8 +85,8 @@
 
                         <v-card-actions>
                             <v-spacer></v-spacer>
-                            <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">Cancel</v-btn>
-                            <v-btn color="blue darken-1" flat @click="saveBookmark">Save</v-btn>
+                            <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">{{ getLocale('Cancel') }}</v-btn>
+                            <v-btn color="blue darken-1" flat @click="saveBookmark">{{ getLocale('Save') }}</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-dialog>

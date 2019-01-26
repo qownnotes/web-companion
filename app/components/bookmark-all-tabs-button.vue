@@ -3,7 +3,7 @@
         <v-btn slot="activator" @click="openBookmarkDialog" accesskey="b" color="primary" flat icon title="Bookmark all tabs"><v-icon>input</v-icon></v-btn>
         <v-card>
             <v-card-title>
-                <span class="headline">Bookmark all tabs</span>
+                <span class="headline">{{ getLocale('BookmarkAllTabs') }}</span>
             </v-card-title>
 
             <v-card-text>
@@ -18,8 +18,8 @@
 
             <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">Cancel</v-btn>
-                <v-btn color="blue darken-1" flat @click="saveBookmarks">Save</v-btn>
+                <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">{{ getLocale('Cancel') }}</v-btn>
+                <v-btn color="blue darken-1" flat @click="saveBookmarks">{{ getLocale('Save') }}</v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+    import * as util from '../scripts/util';
+
     export default {
         name: "BookmarkAllTabsButton",
         props: ['webSocket'],
@@ -42,6 +44,9 @@
             }
         },
         methods: {
+            getLocale(text) {
+                return util.getLocale(text);
+            },
             openBookmarkDialog () {
                 this.bookmarkEditDialog = true;
                 // focus and select all the text to be able to overwrite it easily

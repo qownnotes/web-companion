@@ -26,5 +26,17 @@
   },
   "popupSearchLabel": {
     "message": "Αναζήτηση"
+  },
+  "NewBookmark": {
+    "message": "New bookmark"
+  },
+  "Cancel": {
+    "message": "Cancel"
+  },
+  "Save": {
+    "message": "Save"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bookmark all tabs"
   }
 }
