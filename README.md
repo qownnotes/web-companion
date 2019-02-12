@@ -51,7 +51,6 @@ To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running
 
 ### Firefox
 
-- since <kbd>Ctrl + B</kbd> does not work in Firefox 65 and earlier shortcuts are not available
 - in Firefox 66 and newer ([Bugreport, fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=1303384)) you can set a shortcut like <kbd>Alt + Shift + B</kbd> in the settings for extensions
 
 ## Permissions
