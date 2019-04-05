@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.4.0
+- you can now **change** the **current note folder** in a select box in the toolbar of the **bookmarks popup**
+    - you need QOwnNotes 19.4.1 or higher for this feature
+
 ## 19.1.11
 - added support to show a success message from QOwnNotes if bookmarks were created
     - you need QOwnNotes 19.1.9 or higher for this feature

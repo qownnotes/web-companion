@@ -1,16 +1,19 @@
 <template>
     <div id="app">
         <v-app id="options">
-            <v-toolbar flat dark color="grey darken-4">
+            <v-toolbar flat dark color="grey darken-4" height="56">
                 <v-card-title
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('popupHeadline')"
                 />
-                <v-card-title
-                        class="subheading"
-                        v-html="noteFolderName"
-                        title="current note folder"
-                />
+                <v-select
+                        accesskey="f"
+                        v-model="selectedNoteFolderId"
+                        :items="noteFolders"
+                        label="Note folder"
+                        style="padding-right: 20px; margin-top: 8px;"
+                        single-line
+                ></v-select>
                 <v-spacer></v-spacer>
                 <v-text-field
                         v-model="search"
@@ -23,6 +26,7 @@
                         single-line
                         hide-details
                         clearable
+                        style="padding-top: 0"
                 ></v-text-field>
             </v-toolbar>
 
@@ -189,6 +193,9 @@
                 loadingBookmarks: false,
                 search: '',
                 noteFolderName: '',
+                noteFolders: [],
+                selectedNoteFolderId: null,
+                selectedNoteFolderIdWatchEnabled: true,
                 bookmarkEditDialog: false,
                 editedBookmark: {
                     name: '',
@@ -235,6 +242,10 @@
                     if (type === "bookmarks") {
                         that.bookmarks = jsonObject.data;
                         that.noteFolderName = jsonObject.noteFolderName;
+                        that.noteFolders = jsonObject.noteFolders;
+                        that.selectedNoteFolderIdWatchEnabled = false;
+                        that.selectedNoteFolderId = jsonObject.noteFolderId;
+                        that.selectedNoteFolderIdWatchEnabled = true;
                         that.loadingBookmarks = false;
 
                         chrome.storage.sync.get( function ( data ) {
@@ -292,6 +303,16 @@
                 this.$refs.editedBookmarkName.focus();
 
                 val || this.closeBookmarkDialog()
+            },
+            selectedNoteFolderId (val) {
+                if (!this.selectedNoteFolderIdWatchEnabled) {
+                    return;
+                }
+
+                const data = {type: "switchNoteFolder", data: val};
+                this.webSocket.send(data, function () {
+                    console.log("Switching to note folder:" + data);
+                });
             }
         },
         computed: {
