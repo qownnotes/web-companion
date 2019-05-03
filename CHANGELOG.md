@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.5.1
+- fixed a bookmark filtering problem
+
 ## 19.5.0
 - you can now also **search** for the **description of bookmarks**
 - a **loading progressbar** will now be shown while bookmarks are loaded when the **note folder is switched** by the user 

@@ -353,7 +353,7 @@
                 let filteredBookmarks2 = filteredBookmarks;
 
                 // filter by search text
-                if (this.search !== null && this.search !== '') {
+                if (this.search !== undefined && this.search !== null && this.search !== '') {
                     filteredBookmarks2 = [];
                     const search = this.search.toLocaleLowerCase();
 
