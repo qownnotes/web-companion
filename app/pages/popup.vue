@@ -100,7 +100,6 @@
                     :headers="headers"
                     :items="filteredBookmarks"
                     :loading="loadingBookmarks"
-                    :search="search"
                     :pagination.sync="pagination"
                     :rows-per-page-items="[10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
                     :disable-initial-sort="true"
@@ -332,20 +331,37 @@
             },
             // creates a list of all bookmarks filtered by selectedBookmarks
             filteredBookmarks: function () {
-                if (this.selectedTags.length === 0) {
-                    return this.bookmarks;
-                }
-
-                let filteredBookmarks = [];
+                let filteredBookmarks = this.bookmarks;
                 let that = this;
 
-                this.bookmarks.forEach(function(bookmark) {
-                    if (that.selectedTags.every(elem => bookmark.tags.indexOf(elem) > -1)) {
-                        filteredBookmarks.push(bookmark);
-                    }
-                });
+                // filter by tags
+                if (this.selectedTags.length > 0) {
+                    filteredBookmarks = [];
 
-                return filteredBookmarks;
+                    this.bookmarks.forEach(function (bookmark) {
+                        if (that.selectedTags.every(elem => bookmark.tags.indexOf(elem) > -1)) {
+                            filteredBookmarks.push(bookmark);
+                        }
+                    });
+                }
+
+                let filteredBookmarks2 = filteredBookmarks;
+
+                // filter by search text
+                if (this.search !== null && this.search !== '') {
+                    filteredBookmarks2 = [];
+                    const search = this.search.toLocaleLowerCase();
+
+                    filteredBookmarks.forEach(function (bookmark) {
+                        if (bookmark.name.toLowerCase().indexOf(search) !== -1 ||
+                            bookmark.url.toLowerCase().indexOf(search) !== -1 ||
+                            bookmark.description.toLowerCase().indexOf(search) !== -1) {
+                            filteredBookmarks2.push(bookmark);
+                        }
+                    });
+                }
+
+                return filteredBookmarks2;
             }
         }
     };

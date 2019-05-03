@@ -1,6 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 19.5.0
+- you can now also search for the description of bookmarks
 - added a lot of translation
 
 ## 19.4.0
