@@ -1,0 +1,42 @@
+{
+  "appDescription": {
+    "message": "Toto je doplnok sprievodcu pre službu QOwnNotes na interakciu s aplikáciou na prácu s poznámkami.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes nastavenia"
+  },
+  "socketPortLabel": {
+    "message": "Port soketu server"
+  },
+  "createNoteFromPage": {
+    "message": "Vytvoriť poznámku zo stránky (import HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Vytvorte poznámku so snímkou viditeľnej stránky"
+  },
+  "createSelectionNote": {
+    "message": "Vytvorte poznámku z výberu"
+  },
+  "connectionFailed": {
+    "message": "Pripojenie k službe QOwnNotes zlyhalo!"
+  },
+  "popupHeadline": {
+    "message": "Záložky"
+  },
+  "popupSearchLabel": {
+    "message": "Hľadať"
+  },
+  "NewBookmark": {
+    "message": "Nová záložka"
+  },
+  "Cancel": {
+    "message": "Zrušiť"
+  },
+  "Save": {
+    "message": "Uložiť"
+  },
+  "BookmarkAllTabs": {
+    "message": "Záložku všetky karty"
+  }
+}

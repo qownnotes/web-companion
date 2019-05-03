@@ -28,15 +28,15 @@
     "message": "Cerca"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nova adreça d'interès"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Cancel·la"
   },
   "Save": {
-    "message": "Save"
+    "message": "Desa"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Marca totes les pestanyes"
   }
 }

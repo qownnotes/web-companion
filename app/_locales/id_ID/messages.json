@@ -28,15 +28,15 @@
     "message": "Cari"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Markah baru"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "Save": {
-    "message": "Save"
+    "message": "Simpan"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Markah semua tab"
   }
 }

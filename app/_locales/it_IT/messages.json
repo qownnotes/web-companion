@@ -28,15 +28,15 @@
     "message": "Cerca"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nuovo segnalibro"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "Save": {
-    "message": "Save"
+    "message": "Salva"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Metti un segnalibro a tutte le schede"
   }
 }

@@ -28,15 +28,15 @@
     "message": "Buscar"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nuevo marcador"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Cancelar"
   },
   "Save": {
-    "message": "Save"
+    "message": "Guardar"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Guardar todas las pestañas como marcadores"
   }
 }

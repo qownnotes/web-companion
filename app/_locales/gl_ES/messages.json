@@ -1,42 +1,42 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Esta é unha extensión de acompañante para QOwnNotes para interactuar coa aplicación de escritorio que leva a nota.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "Configuración de QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Servidor do porto de socket"
   },
   "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+    "message": "Crear nota de páxina (importación de HTML)"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Crea nota coa captura de pantalla da páxina visible"
   },
   "createSelectionNote": {
-    "message": "Create note from selection"
+    "message": "Crea unha nota da selección"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "Non se puido conectar a QOwnNotes!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Marcadores"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Busca"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Novo favorito"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Cancelar"
   },
   "Save": {
-    "message": "Save"
+    "message": "Gardar"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Marcar todas as pestañas"
   }
 }

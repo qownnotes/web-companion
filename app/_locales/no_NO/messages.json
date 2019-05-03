@@ -1,0 +1,42 @@
+{
+  "appDescription": {
+    "message": "Dette er en følgesvennutvidelse for QOwnNotes å samhandle med notatet som tar skrivebordsapplikasjon.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes innstillinger"
+  },
+  "socketPortLabel": {
+    "message": "Server socket port"
+  },
+  "createNoteFromPage": {
+    "message": "Opprett notat fra side (HTML-import)"
+  },
+  "createScreenshotNote": {
+    "message": "Lag notat med skjermbilde av synlig side"
+  },
+  "createSelectionNote": {
+    "message": "Lag notat fra utvalg"
+  },
+  "connectionFailed": {
+    "message": "Tilkobling til QOwnNotes mislyktes!"
+  },
+  "popupHeadline": {
+    "message": "Bokmerker"
+  },
+  "popupSearchLabel": {
+    "message": "Søk"
+  },
+  "NewBookmark": {
+    "message": "Nytt bokmerke"
+  },
+  "Cancel": {
+    "message": "Avbryt"
+  },
+  "Save": {
+    "message": "Lagre"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bokmerk alle faner"
+  }
+}

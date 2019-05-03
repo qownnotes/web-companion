@@ -28,15 +28,15 @@
     "message": "Пошук"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Нова закладка"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Скасувати"
   },
   "Save": {
-    "message": "Save"
+    "message": "Зберегти"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Закласти всі вкладки"
   }
 }

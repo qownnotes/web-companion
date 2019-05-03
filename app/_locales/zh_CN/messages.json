@@ -1,42 +1,42 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "此拓展程序用于与桌面笔记程序 QOwnNotes 交互。",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes 设置"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "服务器套接字端口"
   },
   "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+    "message": "从网页创建笔记（HTML 导入）"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "从可见页截图创建笔记"
   },
   "createSelectionNote": {
-    "message": "Create note from selection"
+    "message": "从选择项中创建笔记"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "连接至 QOwnNotes 失败！"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "收藏"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "搜索"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "新收藏"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "取消"
   },
   "Save": {
-    "message": "Save"
+    "message": "保存"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "收藏所有标签页"
   }
 }

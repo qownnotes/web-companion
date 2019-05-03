@@ -1,0 +1,42 @@
+{
+  "appDescription": {
+    "message": "To je spremljevalna razširitev za QOwnNotes za interakcijo z namizno aplikacijo za beleženje.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Nastavitve QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Vrata vtičnice strežnika"
+  },
+  "createNoteFromPage": {
+    "message": "Ustvari opombo s strani (uvoz HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Ustvarite beležko s posnetkom zaslona vidne strani"
+  },
+  "createSelectionNote": {
+    "message": "Ustvarite beležko iz izbire"
+  },
+  "connectionFailed": {
+    "message": "Povezava z QOwnNotes ni uspela!"
+  },
+  "popupHeadline": {
+    "message": "Zaznamki"
+  },
+  "popupSearchLabel": {
+    "message": "Iskanje"
+  },
+  "NewBookmark": {
+    "message": "Nov zaznamek"
+  },
+  "Cancel": {
+    "message": "Prekliči"
+  },
+  "Save": {
+    "message": "Shrani"
+  },
+  "BookmarkAllTabs": {
+    "message": "Zaznamujte vse zavihke"
+  }
+}

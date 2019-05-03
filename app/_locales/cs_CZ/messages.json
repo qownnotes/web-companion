@@ -28,15 +28,15 @@
     "message": "Hledat"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nová záložka"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Zrušit"
   },
   "Save": {
-    "message": "Save"
+    "message": "Uložit"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Záložka všech záložek"
   }
 }

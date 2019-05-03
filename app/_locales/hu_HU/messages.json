@@ -28,15 +28,15 @@
     "message": "Keresés"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Új könyvjelző"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Mégse"
   },
   "Save": {
-    "message": "Save"
+    "message": "Mentés"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Minden lapot könyvjelzövel ellátok"
   }
 }

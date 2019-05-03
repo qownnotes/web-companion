@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.5.0
+- added a lot of translation
+
 ## 19.4.0
 - you can now **change** the **current note folder** in a select box in the toolbar of the **bookmarks popup**
     - you need QOwnNotes 19.4.1 or higher for this feature

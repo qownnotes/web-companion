@@ -28,15 +28,15 @@
     "message": "Sök"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nytt bokmärke"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Avbryt"
   },
   "Save": {
-    "message": "Save"
+    "message": "Spara"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Bokmärk alla flikar"
   }
 }

@@ -1,0 +1,42 @@
+{
+  "appDescription": {
+    "message": "Aceasta este o extensie însoțitoare pentru QOwnNotes pentru a interacționa cu nota care folosește aplicația desktop.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Configurații QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Server socket port"
+  },
+  "createNoteFromPage": {
+    "message": "Creați o notă din pagină (import HTML)"
+  },
+  "createScreenshotNote": {
+    "message": "Creați notă cu captura de ecran a paginii vizibile"
+  },
+  "createSelectionNote": {
+    "message": "Creați o notă din selecție"
+  },
+  "connectionFailed": {
+    "message": "Conectarea la QOwnNotes nu a reușit!"
+  },
+  "popupHeadline": {
+    "message": "Marcaje"
+  },
+  "popupSearchLabel": {
+    "message": "Căutare"
+  },
+  "NewBookmark": {
+    "message": "Marcaj nou"
+  },
+  "Cancel": {
+    "message": "Revocare"
+  },
+  "Save": {
+    "message": "Salva"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bookmark all tabs"
+  }
+}

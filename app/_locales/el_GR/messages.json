@@ -28,15 +28,15 @@
     "message": "Αναζήτηση"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Νέο σελιδοδείκτη"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Άκυρο"
   },
   "Save": {
-    "message": "Save"
+    "message": "Αποθήκευση"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Marcar todas as pestañas"
   }
 }

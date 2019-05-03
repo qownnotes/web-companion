@@ -28,15 +28,15 @@
     "message": "Pesquisa"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Novo bookmark"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Cancelar"
   },
   "Save": {
-    "message": "Save"
+    "message": "Salvar"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Marcar todas as guias"
   }
 }

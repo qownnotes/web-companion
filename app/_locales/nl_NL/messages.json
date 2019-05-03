@@ -28,15 +28,15 @@
     "message": "Zoek"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nieuwe bladwijzer"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Annuleren"
   },
   "Save": {
-    "message": "Save"
+    "message": "Opslaan"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Bladwijzer voor alle tabbladen"
   }
 }

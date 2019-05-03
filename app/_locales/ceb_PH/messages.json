@@ -1,42 +1,42 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Kini usa ka extension sa kauban alang sa QOwnNotes aron makig-uban sa tala nga pagkuha sa desktop application.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "Mga setting sa QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Port socket sa server"
   },
   "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+    "message": "Paghimo og sulat gikan sa panid (import sa HTML)"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Paghimo og nota uban sa screenshot sa makita nga pahina"
   },
   "createSelectionNote": {
-    "message": "Create note from selection"
+    "message": "Paghimo og mubo nga sulat gikan sa pagpili"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "Napakyas ang koneksyon sa QOwnNotes!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Mga Bookmark"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Pagpangita"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Bag-ong bookmark"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Kanselahon"
   },
   "Save": {
-    "message": "Save"
+    "message": "Luwasa"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "I-bookmark ang tanang mga tab"
   }
 }
