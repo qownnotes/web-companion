@@ -1,7 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
 ## 19.5.0
-- you can now also search for the description of bookmarks
+- you can now also **search** for the **description of bookmarks**
+- a **loading progressbar** will now be shown while bookmarks are loaded when the **note folder is switched** by the user 
+    - you need QOwnNotes 19.5.1 or higher for this feature
 - added a lot of translation
 
 ## 19.4.0

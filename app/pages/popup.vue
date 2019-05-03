@@ -263,6 +263,10 @@
                                 });
                             }
                         } );
+                    } else if (type === "switchedNoteFolder") {
+                        if (jsonObject.data === false) {
+                            that.loadingBookmarks = false;
+                        }
                     } else if (type === "flashMessage") {
                         that.snackbar = true;
                         that.snackbarText = jsonObject.message;
@@ -309,6 +313,7 @@
                 }
 
                 const data = {type: "switchNoteFolder", data: val};
+                this.loadingBookmarks = true;
                 this.webSocket.send(data, function () {
                     console.log("Switching to note folder:" + data);
                 });
