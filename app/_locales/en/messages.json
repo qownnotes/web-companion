@@ -38,5 +38,14 @@
   },
   "BookmarkAllTabs": {
     "message": "Bookmark all tabs"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Import browser bookmarks"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Do you want to import all browser bookmarks?"
   }
 }

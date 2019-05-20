@@ -1,7 +1,47 @@
 <template>
     <div id="app">
-        <v-app id="options">
+        <v-app id="popup">
+            <v-navigation-drawer
+                    v-model="menuDrawer"
+                    absolute
+                    dark
+                    temporary
+            >
+                <v-list class="pa-1">
+
+                    <v-list-tile tag="div">
+                        <v-list-tile-content>
+                            <v-list-tile-title>Menu</v-list-tile-title>
+                        </v-list-tile-content>
+
+                        <v-list-tile-action>
+                            <v-btn icon @click.stop="menuDrawer = !menuDrawer">
+                                <v-icon>chevron_left</v-icon>
+                            </v-btn>
+                        </v-list-tile-action>
+                    </v-list-tile>
+                </v-list>
+
+                <v-list class="pt-0" dense>
+                    <v-divider light></v-divider>
+
+                    <v-list-tile
+                            v-for="item in drawerItems"
+                            :key="item.title"
+                            @click.stop="item.dialog"
+                    >
+                        <v-list-tile-action>
+                            <v-icon>{{ item.icon }}</v-icon>
+                        </v-list-tile-action>
+
+                        <v-list-tile-content>
+                            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
+                </v-list>
+            </v-navigation-drawer>
             <v-toolbar flat dark color="grey darken-4" height="56">
+                <v-toolbar-side-icon @click.stop="menuDrawer = !menuDrawer"></v-toolbar-side-icon>
                 <v-card-title
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('popupHeadline')"
@@ -128,6 +168,9 @@
                     </tr>
                 </template>
             </v-data-table>
+
+            <ImportBrowserBookmarksDialog v-bind:webSocket="this.webSocket" v-bind:showDialog="this.importBrowserBookmarksDialog"></ImportBrowserBookmarksDialog>
+
         </v-app>
     </div>
 </template>
@@ -135,12 +178,17 @@
     import * as util from '../scripts/util';
     import * as ws from '../scripts/services/qwebsocket';
     import BookmarkAllTabsButton from '../components/bookmark-all-tabs-button'
+    import ImportBrowserBookmarksDialog from '../components/import-browser-bookmarks-dialog'
 
     export default {
         components: {
-            BookmarkAllTabsButton: BookmarkAllTabsButton
+            BookmarkAllTabsButton: BookmarkAllTabsButton,
+            ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog
         },
         methods: {
+            toggleImportBrowserBookmarksDialog() {
+                this.importBrowserBookmarksDialog = !this.importBrowserBookmarksDialog;
+            },
             getLocale(text) {
                 return util.getLocale(text);
             },
@@ -212,7 +260,12 @@
                 selectedTags: [],
                 webSocket: null,
                 snackbar: false,
-                snackbarText: ''
+                snackbarText: '',
+                menuDrawer: null,
+                importBrowserBookmarksDialog: false,
+                drawerItems: [
+                    { title: this.getLocale('ImportBrowserBookmarks'), icon: 'import_export', dialog: this.toggleImportBrowserBookmarksDialog }
+                ]
             }
         },
         mounted() {

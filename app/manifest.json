@@ -39,13 +39,15 @@
     "tabs",
     "activeTab",
     "contextMenus",
-    "storage"
+    "storage",
+    "bookmarks"
   ],
   "__firefox__permissions": [
     "tabs",
     "activeTab",
     "contextMenus",
     "storage",
+    "bookmarks",
     "<all_urls>"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
