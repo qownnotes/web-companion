@@ -40,7 +40,8 @@
                 let bookmarks = [];
 
                 function addBookmark(bookmarkItem) {
-                    if (bookmarkItem.url && bookmarkItem.type === 'bookmark') {
+                    // Chrome has no bookmarkItem.type
+                    if (bookmarkItem.url && (bookmarkItem.type === 'bookmark' || !bookmarkItem.type)) {
                         bookmarks.push({"name": bookmarkItem.title, "url": bookmarkItem.url, "description": ""});
                     }
 
