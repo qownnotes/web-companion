@@ -169,8 +169,7 @@
                 </template>
             </v-data-table>
 
-            <ImportBrowserBookmarksDialog v-bind:webSocket="this.webSocket" v-bind:showDialog="this.importBrowserBookmarksDialog"></ImportBrowserBookmarksDialog>
-
+            <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" v-bind:webSocket="this.webSocket"></ImportBrowserBookmarksDialog>
         </v-app>
     </div>
 </template>

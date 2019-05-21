@@ -1,5 +1,5 @@
 <template>
-    <v-dialog v-model="showDialog" @keydown.esc="closeDialog" @keydown.enter="importBookmarks" max-width="500px">
+    <v-dialog :value="value" @input="$emit('input')" max-width="500px">
         <v-card>
             <v-card-title>
                 <span class="headline">{{ getLocale('ImportBrowserBookmarks') }}</span>
@@ -17,7 +17,7 @@
 
             <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" flat @click="closeDialog">{{ getLocale('Cancel') }}</v-btn>
+                <v-btn color="blue darken-1" flat @click.native="$emit('input')">{{ getLocale('Cancel') }}</v-btn>
                 <v-btn color="blue darken-1" flat @click="importBookmarks">{{ getLocale('Import') }}</v-btn>
             </v-card-actions>
         </v-card>
@@ -30,69 +30,47 @@
 
     export default {
         name: "ImportBrowserBookmarksDialog",
-        props: ['webSocket', 'showDialog'],
-        data() {
-            return {
-                showDialog: false
-            }
-        },
+        props: ['webSocket', 'value'],
         methods: {
             getLocale(text) {
                 return util.getLocale(text);
             },
-            closeDialog () {
-                this.showDialog = false;
-                console.log("close!");
-            },
             importBookmarks () {
                 let that = this;
-                chrome.tabs.query({currentWindow: true}, function (tabs) {
-                    let bookmarks = [];
-                    tabs.forEach(function (tab) {
-                        bookmarks.push({"name": tab.title, "url": tab.url, "description": that.editedBookmark.description});
-                    });
-                    const data = {type: "newBookmarks", data: bookmarks};
+                let bookmarks = [];
 
-                    // that.webSocket.send(data, function () {
-                    //     console.log("Storing bookmarks:" + data);
-                    // });
+                function addBookmark(bookmarkItem) {
+                    if (bookmarkItem.url && bookmarkItem.type === 'bookmark') {
+                        bookmarks.push({"name": bookmarkItem.title, "url": bookmarkItem.url, "description": ""});
+                    }
 
-                    that.closeDialog()
-                });
-            }
-        },
-        mounted() {
-            function makeIndent(indentLength) {
-                return ".".repeat(indentLength);
-            }
-
-            function logItems(bookmarkItem, indent) {
-                console.log(bookmarkItem);
-                if (bookmarkItem.url) {
-                    console.log(makeIndent(indent) + bookmarkItem.url);
-                } else {
-                    console.log(makeIndent(indent) + "Folder");
-                    indent++;
-                }
-                if (bookmarkItem.children) {
-                    let child;
-                    for (child of bookmarkItem.children) {
-                        logItems(child, indent);
+                    if (bookmarkItem.children) {
+                        let child;
+                        for (child of bookmarkItem.children) {
+                            addBookmark(child);
+                        }
                     }
                 }
-                indent--;
-            }
 
-            function logTree(bookmarkItems) {
-                logItems(bookmarkItems[0], 0);
-            }
+                function addBookmarks(bookmarkItems) {
+                    addBookmark(bookmarkItems[0]);
 
-            function onRejected(error) {
-                console.log(`An error: ${error}`);
-            }
+                    const data = {type: "newBookmarks", data: bookmarks};
 
-            var gettingTree = browser.bookmarks.getTree();
-            gettingTree.then(logTree, onRejected);
+                    that.webSocket.send(data, function () {
+                        console.log("Storing imported bookmarks...");
+                        that.$emit('input');
+                    });
+                }
+
+                function onRejected(error) {
+                    console.warn(`An error: ${error}`);
+                    that.$emit('input');
+                }
+
+                const gettingTree = browser.bookmarks.getTree();
+                gettingTree.then(addBookmarks, onRejected);
+            }
         }
     }
 </script>
