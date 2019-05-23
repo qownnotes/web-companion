@@ -170,6 +170,7 @@
             </v-data-table>
 
             <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" v-bind:webSocket="this.webSocket"></ImportBrowserBookmarksDialog>
+            <InputTokenDialog v-model="inputTokenDialog" v-bind:webSocket="this.webSocket"></InputTokenDialog>
         </v-app>
     </div>
 </template>
@@ -178,11 +179,13 @@
     import * as ws from '../scripts/services/qwebsocket';
     import BookmarkAllTabsButton from '../components/bookmark-all-tabs-button'
     import ImportBrowserBookmarksDialog from '../components/import-browser-bookmarks-dialog'
+    import InputTokenDialog from '../components/input-token-dialog'
 
     export default {
         components: {
             BookmarkAllTabsButton: BookmarkAllTabsButton,
-            ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog
+            ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
+            InputTokenDialog: InputTokenDialog
         },
         methods: {
             toggleImportBrowserBookmarksDialog() {
@@ -264,7 +267,8 @@
                 importBrowserBookmarksDialog: false,
                 drawerItems: [
                     { title: this.getLocale('ImportBrowserBookmarks'), icon: 'import_export', dialog: this.toggleImportBrowserBookmarksDialog }
-                ]
+                ],
+                inputTokenDialog: false
             }
         },
         mounted() {
@@ -322,6 +326,8 @@
                     } else if (type === "flashMessage") {
                         that.snackbar = true;
                         that.snackbarText = jsonObject.message;
+                    } else if (type === "tokenQuery") {
+                        that.inputTokenDialog = true;
                     }
                 }
             });

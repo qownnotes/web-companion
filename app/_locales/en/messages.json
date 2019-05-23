@@ -33,6 +33,9 @@
   "Cancel": {
     "message": "Cancel"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Save"
   },
@@ -47,5 +50,14 @@
   },
   "ImportAllBrowserBookmarks": {
     "message": "Do you want to import all browser bookmarks?"
+  },
+  "InputTokenHeadline": {
+    "message": "Input security token"
+  },
+  "InputToken": {
+    "message": "Please input the security token that now is shown in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Security token"
   }
 }
