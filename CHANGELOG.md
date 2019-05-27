@@ -1,5 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.5.3
+
 ## 19.5.2
 - you now can **import all browser bookmarks** (for [#8](https://github.com/qownnotes/web-companion/issues/8))
 

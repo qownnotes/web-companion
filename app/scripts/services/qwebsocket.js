@@ -6,6 +6,7 @@ export class QWebSocket {
         this.socket = null;
         this.socketPort = 22222;
         this.sendQueue = "";
+        this.token = "";
         this.messageCallback = messageCallback;
 
         // ES5 workaround to access "this" in the "chrome.storage.sync.get" call
@@ -13,6 +14,7 @@ export class QWebSocket {
 
         chrome.storage.sync.get( function ( data ) {
             const port = data.socketPort;
+            that.token = data.token;
 
             if (port !== null && !isNaN(port)) {
                 that.socketPort = parseInt(data.socketPort);
@@ -103,9 +105,10 @@ export class QWebSocket {
 
     send = function (message, callback) {
         let that = this;
-        message = JSON.stringify(message);
 
         this.waitForConnection(function () {
+            message.token = that.token;
+            message = JSON.stringify(message);
             that.socket.send(message);
 
             if (typeof callback !== 'undefined') {
