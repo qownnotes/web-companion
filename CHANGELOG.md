@@ -1,6 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
 ## 19.5.3
+- you are now able to enter a **security token** to communicate with QOwnNotes 
+    - QOwnNotes 19.5.4 or higher needs this feature to ensure no other website or application can access your bookmarks
+- added a lot of translation
 
 ## 19.5.2
 - you now can **import all browser bookmarks** (for [#8](https://github.com/qownnotes/web-companion/issues/8))

@@ -7,7 +7,7 @@
     "message": "Configurații QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Server priză port"
   },
   "createNoteFromPage": {
     "message": "Creați o notă din pagină (import HTML)"
@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Revocare"
   },
+  "Ok": {
+    "message": "O.K."
+  },
   "Save": {
     "message": "Salva"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Marcați toate filele"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importă marcajele browserului"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Doriți să importați toate marcajele browserului?"
+  },
+  "InputTokenHeadline": {
+    "message": "Introduceți jetonul de securitate"
+  },
+  "InputToken": {
+    "message": "Introduceți simbolul de securitate care este afișat acum în QOwnNotes!"
+  },
+  "Token": {
+    "message": "Token de securitate"
   }
 }

@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Mégse"
   },
+  "Ok": {
+    "message": "Rendben"
+  },
   "Save": {
     "message": "Mentés"
   },
   "BookmarkAllTabs": {
     "message": "Minden lapot könyvjelzövel ellátok"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Böngésző könyvjelzőinek importálása"
+  },
+  "Import": {
+    "message": "Importálás"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Importálja az összes böngésző könyvjelzőjét?"
+  },
+  "InputTokenHeadline": {
+    "message": "Bemeneti biztonsági token"
+  },
+  "InputToken": {
+    "message": "Kérjük, adja meg a biztonsági jelképet, amelyet most a QOwnNotes mutat!"
+  },
+  "Token": {
+    "message": "Biztonsági jelkép"
   }
 }

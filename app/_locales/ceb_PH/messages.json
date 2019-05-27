@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Kanselahon"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Luwasa"
   },
   "BookmarkAllTabs": {
     "message": "I-bookmark ang tanang mga tab"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Import ang mga bookmark sa browser"
+  },
+  "Import": {
+    "message": "Angkat"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Buot ba nimo nga i-import ang tanang mga bookmark sa browser?"
+  },
+  "InputTokenHeadline": {
+    "message": "Isulat ang seguridad nga token"
+  },
+  "InputToken": {
+    "message": "Palihug i-input ang token sa seguridad nga karon gipakita sa QOwnNotes!"
+  },
+  "Token": {
+    "message": "Tanan nga kasigurohan"
   }
 }

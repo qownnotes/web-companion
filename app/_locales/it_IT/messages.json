@@ -4,13 +4,13 @@
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "Impostazioni QOwnNotes"
+    "message": "Impostazioni di QOwnNotes"
   },
   "socketPortLabel": {
     "message": "Porta server socket"
   },
   "createNoteFromPage": {
-    "message": "Crea note dalla pagina (importazione HTML)"
+    "message": "Crea nota dalla pagina (importazione HTML)"
   },
   "createScreenshotNote": {
     "message": "Crea una nota con uno screenshot della pagina visibile"
@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Annulla"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Salva"
   },
   "BookmarkAllTabs": {
     "message": "Metti un segnalibro a tutte le schede"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importa i preferiti del browser"
+  },
+  "Import": {
+    "message": "Importa"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Importare tutti i preferiti del browser?"
+  },
+  "InputTokenHeadline": {
+    "message": "Inserire il token di sicurezza"
+  },
+  "InputToken": {
+    "message": "Inserisre il token di sicurezza che ora è mostrato in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Token di sicurezza"
   }
 }

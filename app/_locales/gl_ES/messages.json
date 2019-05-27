@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Cancelar"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Gardar"
   },
   "BookmarkAllTabs": {
     "message": "Marcar todas as pestañas"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Import browser bookmarks"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Do you want to import all browser bookmarks?"
+  },
+  "InputTokenHeadline": {
+    "message": "Input security token"
+  },
+  "InputToken": {
+    "message": "Please input the security token that now is shown in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Security token"
   }
 }

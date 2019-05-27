@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Cancelar"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Salvar"
   },
   "BookmarkAllTabs": {
     "message": "Marcar todas as guias"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importar bookmarks do navegador"
+  },
+  "Import": {
+    "message": "Importar"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Você deseja importar todos os bookmarks do navegador?"
+  },
+  "InputTokenHeadline": {
+    "message": "Importar token de segurança"
+  },
+  "InputToken": {
+    "message": "Por favor entre com o token de segurança que aparece no QOwnNotes!"
+  },
+  "Token": {
+    "message": "Token de Segurança"
   }
 }

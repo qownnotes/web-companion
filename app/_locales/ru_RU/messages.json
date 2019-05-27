@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Отменить"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Сохранить"
   },
   "BookmarkAllTabs": {
     "message": "Добавить все вкладки в закладки"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Импорт закладок браузера"
+  },
+  "Import": {
+    "message": "Импорт"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Импортировать все закладки браузера?"
+  },
+  "InputTokenHeadline": {
+    "message": "Введите токен безопасности"
+  },
+  "InputToken": {
+    "message": "Пожалуйста, введите токен безопасности, который теперь отображается в QOwnNotes!"
+  },
+  "Token": {
+    "message": "Токен безопасности"
   }
 }

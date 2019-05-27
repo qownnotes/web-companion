@@ -22,21 +22,42 @@
     "message": "Połączenie QOwnNotes nie powiodło się!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Zakładki"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Szukaj"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nowa zakładka"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Anuluj"
+  },
+  "Ok": {
+    "message": "Dobrze"
   },
   "Save": {
-    "message": "Save"
+    "message": "Zapisz"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Zakładka wszystkie zakładki"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importuj zakładki przeglądarki"
+  },
+  "Import": {
+    "message": "Importuj"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Czy chcesz zaimportować wszystkie zakładki przeglądarki?"
+  },
+  "InputTokenHeadline": {
+    "message": "Wprowadź token bezpieczeństwa"
+  },
+  "InputToken": {
+    "message": "Wprowadź token bezpieczeństwa, który jest teraz wyświetlany w QOwnNotes!"
+  },
+  "Token": {
+    "message": "Token bezpieczeństwa"
   }
 }

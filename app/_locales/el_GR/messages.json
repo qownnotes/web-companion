@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Άκυρο"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Αποθήκευση"
   },
   "BookmarkAllTabs": {
     "message": "Marcar todas as pestañas"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Εισαγωγή σελιδοδεικτών προγράμματος περιήγησης"
+  },
+  "Import": {
+    "message": "Εισαγωγή"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Θέλετε να εισαγάγετε όλους τους σελιδοδείκτες του προγράμματος περιήγησης;"
+  },
+  "InputTokenHeadline": {
+    "message": "Ετικέτα ασφαλείας εισόδου"
+  },
+  "InputToken": {
+    "message": "Εισαγάγετε το κουπόνι ασφαλείας που εμφανίζεται τώρα στο QOwnNotes!"
+  },
+  "Token": {
+    "message": "Ετικέτα ασφαλείας"
   }
 }

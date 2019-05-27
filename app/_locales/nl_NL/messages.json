@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Annuleren"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Opslaan"
   },
   "BookmarkAllTabs": {
     "message": "Bladwijzer voor alle tabbladen"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importeer browserbladwijzers"
+  },
+  "Import": {
+    "message": "Importeren"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Wilt u alle browserbladwijzers importeren?"
+  },
+  "InputTokenHeadline": {
+    "message": "Voer beveiligingstoken in"
+  },
+  "InputToken": {
+    "message": "Voer het beveiligingstoken in dat nu wordt weergegeven in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Beveiligingstoken"
   }
 }

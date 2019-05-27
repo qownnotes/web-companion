@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Zrušiť"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Uložiť"
   },
   "BookmarkAllTabs": {
     "message": "Záložku všetky karty"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importovať záložky prehliadača"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Chcete importovať všetky záložky prehliadača?"
+  },
+  "InputTokenHeadline": {
+    "message": "Zadajte token zabezpečenia"
+  },
+  "InputToken": {
+    "message": "Zadajte token zabezpečenia, ktorý je teraz zobrazený v QOwnNotes!"
+  },
+  "Token": {
+    "message": "Bezpečnostný kľúč"
   }
 }

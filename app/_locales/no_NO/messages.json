@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Avbryt"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Lagre"
   },
   "BookmarkAllTabs": {
     "message": "Bokmerk alle faner"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importer nettleserbokmerker"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Vil du importere alle nettleser bokmerker?"
+  },
+  "InputTokenHeadline": {
+    "message": "Inngang sikkerhetskort"
+  },
+  "InputToken": {
+    "message": "Vennligst skriv inn sikkerhetstokenet som nå vises i QOwnNotes!"
+  },
+  "Token": {
+    "message": "Sikkerhetstoken"
   }
 }

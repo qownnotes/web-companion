@@ -28,15 +28,36 @@
     "message": "Etsi"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Uusi kirjanmerkki"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Peruuta"
+  },
+  "Ok": {
+    "message": "Ok"
   },
   "Save": {
-    "message": "Save"
+    "message": "Tallentaa"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Merkitse kaikki välilehdet"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Tuo selaimen kirjanmerkit"
+  },
+  "Import": {
+    "message": "Tuonti"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Haluatko tuoda kaikki selaimen kirjanmerkit?"
+  },
+  "InputTokenHeadline": {
+    "message": "Syötä suojausmerkki"
+  },
+  "InputToken": {
+    "message": "Anna tietoturvatunnus, joka näkyy nyt QOwnNotesissa!"
+  },
+  "Token": {
+    "message": "Suojausmerkki"
   }
 }

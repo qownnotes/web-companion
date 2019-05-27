@@ -1,42 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Ovo je popratni nastavak za QOwnNotes za interakciju s aplikacijom za pisanje bilješki.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "Postavke QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Port socket poslužitelja"
   },
   "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+    "message": "Izrada bilješke sa stranice (HTML uvoz)"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Napravite bilješku s snimkom zaslona vidljive stranice"
   },
   "createSelectionNote": {
-    "message": "Create note from selection"
+    "message": "Stvorite bilješku iz odabira"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "Veza s QOwnNotes nije uspjela!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Oznake"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Traži"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nova oznaka"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Odustani"
+  },
+  "Ok": {
+    "message": "Ok"
   },
   "Save": {
-    "message": "Save"
+    "message": "Uštedjeti"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Označite sve kartice"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Uvezite oznake preglednika"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Želite li uvesti sve oznake preglednika?"
+  },
+  "InputTokenHeadline": {
+    "message": "Input security token"
+  },
+  "InputToken": {
+    "message": "Please input the security token that now is shown in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Security token"
   }
 }

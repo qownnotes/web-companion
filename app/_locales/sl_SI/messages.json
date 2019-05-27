@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Prekliči"
   },
+  "Ok": {
+    "message": "v redu"
+  },
   "Save": {
     "message": "Shrani"
   },
   "BookmarkAllTabs": {
     "message": "Zaznamujte vse zavihke"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Uvozite zaznamke brskalnika"
+  },
+  "Import": {
+    "message": "Uvoz"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Ali želite uvoziti vse zaznamke brskalnika?"
+  },
+  "InputTokenHeadline": {
+    "message": "Vhodni varnostni žeton"
+  },
+  "InputToken": {
+    "message": "Vnesite varnostni žeton, ki je zdaj prikazan v QOwnNotes!"
+  },
+  "Token": {
+    "message": "Varnostni žeton"
   }
 }

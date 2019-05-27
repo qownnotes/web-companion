@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Annuller"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Redde"
   },
   "BookmarkAllTabs": {
     "message": "Bookmark al tabs"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importer browser bogmærker"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Vil du importere alle browser bogmærker?"
+  },
+  "InputTokenHeadline": {
+    "message": "Indtast sikkerhedstoken"
+  },
+  "InputToken": {
+    "message": "Indtast venligst det sikkerhedstoken, der nu vises i QOwnNotes!"
+  },
+  "Token": {
+    "message": "Sikkerhedsbogstav"
   }
 }

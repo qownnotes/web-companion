@@ -7,7 +7,7 @@
     "message": "QOwnNotes Einstellungen"
   },
   "socketPortLabel": {
-    "message": "Server-Socket port"
+    "message": "Server-Socket-Port"
   },
   "createNoteFromPage": {
     "message": "Notiz von ganzer Seite erstellen (HTML-Import)"
@@ -33,10 +33,31 @@
   "Cancel": {
     "message": "Abbrechen"
   },
+  "Ok": {
+    "message": "Ok"
+  },
   "Save": {
     "message": "Speichern"
   },
   "BookmarkAllTabs": {
     "message": "Alle Tabs als Lesezeichen hinzufügen"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Import browser bookmarks"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Do you want to import all browser bookmarks?"
+  },
+  "InputTokenHeadline": {
+    "message": "Input security token"
+  },
+  "InputToken": {
+    "message": "Please input the security token that now is shown in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Security token"
   }
 }
