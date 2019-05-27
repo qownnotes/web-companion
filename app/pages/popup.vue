@@ -170,7 +170,7 @@
             </v-data-table>
 
             <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" v-bind:webSocket="this.webSocket"></ImportBrowserBookmarksDialog>
-            <InputTokenDialog v-model="inputTokenDialog" v-bind:webSocket="this.webSocket"></InputTokenDialog>
+            <InputTokenDialog v-model="inputTokenDialog" v-bind:webSocket="this.webSocket" v-on:input="onInputTokenDialogClose"></InputTokenDialog>
         </v-app>
     </div>
 </template>
@@ -229,6 +229,9 @@
                     console.log("Storing bookmark:" + data);
                 });
                 this.closeBookmarkDialog()
+            },
+            onInputTokenDialogClose() {
+                window.close();
             }
         },
         data() {

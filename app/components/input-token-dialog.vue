@@ -13,9 +13,11 @@
                         </v-flex>
                         <v-flex xs12 sm12>
                             <v-text-field
+                                    ref="tokenText"
                                     v-model="token"
                                     :label="getLocale('Token')"
                                     required
+                                    clearable
                             ></v-text-field>
                         </v-flex>
                     </v-layout>
@@ -48,6 +50,8 @@
 
             chrome.storage.sync.get(['token'], function(result) {
                 that.token = result.token;
+                // doesn't seem to do anything
+                that.$nextTick(() => that.$refs.tokenText.focus());
             });
         },
         methods: {
