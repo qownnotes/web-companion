@@ -34,7 +34,7 @@
     "message": "Cancel·la"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "D'acord"
   },
   "Save": {
     "message": "Desa"
@@ -43,21 +43,21 @@
     "message": "Marca totes les pestanyes"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Importa les adreces d'interès del navegador"
   },
   "Import": {
-    "message": "Import"
+    "message": "Importa"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Voleu importar totes les adreces d'interès del navegador?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Entra un testimoni de seguretat"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Entreu el testimoni de seguretat que s'està mostrant al QOwnNotes."
   },
   "Token": {
-    "message": "Security token"
+    "message": "Testimoni de seguretat"
   }
 }

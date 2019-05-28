@@ -2,6 +2,7 @@
 
 ## 19.5.4
 - you are now also able to enter the **security token** in the browser extension options
+- added more translation
 
 ## 19.5.3
 - you are now able to enter a **security token** to communicate with QOwnNotes 
