@@ -11,9 +11,7 @@
             <v-form>
                 <v-container>
                     <v-layout row wrap>
-
                         <v-flex xs12 sm6>
-
                             <v-text-field
                                     type="number"
                                     v-model.number="socketPort"
@@ -23,9 +21,18 @@
                                     {{ getLocale('socketPortLabel') }}
                                 </template>
                             </v-text-field>
-
                         </v-flex>
-
+                        <v-flex xs12 sm6>
+                            <v-text-field
+                                    type="text"
+                                    v-model.number="token"
+                                    clearable
+                            >
+                                <template slot="label">
+                                    {{ getLocale('Token') }}
+                                </template>
+                            </v-text-field>
+                        </v-flex>
                     </v-layout>
                 </v-container>
             </v-form>
@@ -43,22 +50,25 @@
             },
             loadSettings() {
                 // ES5 workaround to access "this" in the "chrome.storage.sync.get" call
-                var self = this;
+                const that = this;
 
                 // load settings
                 chrome.storage.sync.get( function ( data ) {
                     const port = data.socketPort;
 
                     if (port !== null && !isNaN(port)) {
-                        self.socketPort = parseInt(port);
+                        that.socketPort = parseInt(port);
                     }
+
+                    that.token = data.token;
                 } );
             }
         },
         data() {
             return {
                 socketPort: defaultSocketPort,
-                socketPortLabel: "Socket server port"
+                socketPortLabel: "Socket server port",
+                token: ""
             };
         },
         mounted() {
@@ -79,6 +89,15 @@
 
                 chrome.storage.sync.set( {
                     socketPort: port,
+                } );
+            },
+            token: function(val, oldVal) {
+                if (val === null) {
+                    return;
+                }
+
+                chrome.storage.sync.set( {
+                    token: val,
                 } );
             }
         }

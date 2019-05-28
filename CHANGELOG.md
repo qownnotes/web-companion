@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.5.4
+- you are now also able to enter the **security token** in the browser extension options
+
 ## 19.5.3
 - you are now able to enter a **security token** to communicate with QOwnNotes 
     - QOwnNotes 19.5.4 or higher needs this feature to ensure no other website or application can access your bookmarks
