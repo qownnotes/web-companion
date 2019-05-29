@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.5.5
+- the **security token** will now be sent correctly to QOwnNotes for context menu operations
+  (for [#10](https://github.com/qownnotes/web-companion/issues/10))
+
 ## 19.5.4
 - you are now also able to enter the **security token** in the browser extension options
 - added more translation

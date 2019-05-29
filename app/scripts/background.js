@@ -3,6 +3,7 @@ let connected = false;
 const serverUrl = "ws://127.0.0.1";
 let sendText = "";
 let socketPort = 22222;
+let token = "";
 import * as util from '../scripts/util';
 var isFirefox = typeof InstallTrigger !== 'undefined';
 
@@ -214,6 +215,7 @@ function getServerUrl() {
  */
 function loadSettings() {
     chrome.storage.sync.get( function ( data ) {
+        token = data.token;
         const port = data.socketPort;
 
         if (port !== null && !isNaN(port)) {
@@ -326,6 +328,7 @@ let addMessage = function (data, type) {
 
 let WebSocketClient = {
     sendData: function (data) {
+        data.token = token;
         sendText = JSON.stringify(data);
 
         if (!connected) {
