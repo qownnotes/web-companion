@@ -413,15 +413,26 @@
 
                 let filteredBookmarks2 = filteredBookmarks;
 
-                // filter by search text
+                // filter by all parts of the search text
                 if (this.search !== undefined && this.search !== null && this.search !== '') {
                     filteredBookmarks2 = [];
-                    const search = this.search.toLocaleLowerCase();
+                    const search = this.search.toLocaleLowerCase().trim();
+                    const searchParts = search.split(' ');
+                    const searchPartsLength = searchParts.length;
+                    let searchCount;
 
-                    filteredBookmarks.forEach(function (bookmark) {
-                        if (bookmark.name.toLowerCase().indexOf(search) !== -1 ||
-                            bookmark.url.toLowerCase().indexOf(search) !== -1 ||
-                            bookmark.description.toLowerCase().indexOf(search) !== -1) {
+                    filteredBookmarks.forEach((bookmark) => {
+                        searchCount = 0;
+
+                        searchParts.forEach((searchPart) => {
+                            if (bookmark.name.toLowerCase().indexOf(searchPart) !== -1 ||
+                                bookmark.url.toLowerCase().indexOf(searchPart) !== -1 ||
+                                bookmark.description.toLowerCase().indexOf(searchPart) !== -1) {
+                                searchCount++;
+                            }
+                        });
+
+                        if (searchCount === searchPartsLength) {
                             filteredBookmarks2.push(bookmark);
                         }
                     });

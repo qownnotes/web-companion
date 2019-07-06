@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 19.7.0
+- you can now substring search for all parts of your search text, for example `qo sto` will find `Firefox Store Page QOwnNotes`
+
 ## 19.5.5
 - the **security token** will now be sent correctly to QOwnNotes for context menu operations
   (for [#10](https://github.com/qownnotes/web-companion/issues/10))
