@@ -7,7 +7,7 @@
     "message": "Pengaturan QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Porta soket peladen"
+    "message": "Porta soket server"
   },
   "createNoteFromPage": {
     "message": "Buat catatan dari halaman (impor HTML)"
@@ -34,7 +34,7 @@
     "message": "Batal"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "Oke"
   },
   "Save": {
     "message": "Simpan"
@@ -43,21 +43,21 @@
     "message": "Markah semua tab"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Impor markah peramban"
   },
   "Import": {
-    "message": "Import"
+    "message": "Impor"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Apakah anda ingin mengimpor semua markah peramban?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Masukkan token keamanan"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Silakan masukkan token keamanan yang saat ini sedang ditampilkan di QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Token keamanan"
   }
 }

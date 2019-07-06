@@ -43,21 +43,21 @@
     "message": "Alle Tabs als Lesezeichen hinzufügen"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Lesezeichen des Browsers importieren"
   },
   "Import": {
-    "message": "Import"
+    "message": "Importieren"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Sollen alle Lesezeichen des Browsers importiert werden?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Sicherheits-Token eingeben"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Bitte das Sicherheits-Token eingeben, das gerade in QOwnNotes angezeigt wird!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Sicherheits-Token"
   }
 }

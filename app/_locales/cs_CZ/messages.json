@@ -34,7 +34,7 @@
     "message": "Zrušit"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "OK"
   },
   "Save": {
     "message": "Uložit"
@@ -52,12 +52,12 @@
     "message": "Chcete importovat všechny záložky prohlížeče?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Vstupní token zabezpečení"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Zadejte token zabezpečení, který je nyní zobrazen v QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Bezpečnostní token"
   }
 }
