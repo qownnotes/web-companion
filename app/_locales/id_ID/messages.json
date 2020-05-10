@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Porta soket server"
   },
-  "createNoteFromPage": {
-    "message": "Buat catatan dari halaman (impor HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Buat catatan dengan tangkapan layar halaman yang tampak"
   },
-  "createSelectionNote": {
-    "message": "Buat catatan dari pemilihan teks"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Koneksi ke QOwnNotes gagal!"

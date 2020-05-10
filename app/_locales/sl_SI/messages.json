@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Vrata vtičnice strežnika"
   },
-  "createNoteFromPage": {
-    "message": "Ustvari opombo s strani (uvoz HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Ustvarite beležko s posnetkom zaslona vidne strani"
   },
-  "createSelectionNote": {
-    "message": "Ustvarite beležko iz izbire"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Povezava z QOwnNotes ni uspela!"

@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "هذا امتداد ملحق لـ QOwnNotes للتفاعل مع تطبيق تدوين الملاحظات لسطح المكتب.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "إعدادات QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "خادم منفذ المقبس"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "إنشاء ملاحظة مع لقطة شاشة للصفحة المرئية"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "فشل الاتصال بـ QOwnNotes!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "إرسال"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "بحث"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "إشارة مرجعية جديدة"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "إلغاء"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "حسنا"
   },
   "Save": {
-    "message": "Save"
+    "message": "حفظ"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "إشارة مرجعية جميع علامات التبويب"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "استيراد الإشارات المرجعية في المتصفح"
   },
   "Import": {
-    "message": "Import"
+    "message": "استورد"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "هل تريد استيراد جميع الإشارات المرجعية في المتصفح؟"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "رمز أمان الإدخال"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "الرجاء إدخال رمز الأمان الذي يظهر الآن في QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "رمز الأمان"
   }
 }

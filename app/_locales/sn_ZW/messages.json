@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ichi chiwedzero cheshamwari cheQOwnNotes kuti chipindirane nechinyorwa chinotora desktop application.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes marongero"
+  },
+  "socketPortLabel": {
+    "message": "Server masokisi port"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Gadzira noti nepikicha ye peji inooneka"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Kubatanidza kuQOwnNotes kwakundikana!"
+  },
+  "popupHeadline": {
+    "message": "Mabhukumaka"
+  },
+  "popupSearchLabel": {
+    "message": "Tsvaga"
+  },
+  "NewBookmark": {
+    "message": "New bookmark"
+  },
+  "Cancel": {
+    "message": "Kanzura"
+  },
+  "Ok": {
+    "message": "Zvakanaka"
+  },
+  "Save": {
+    "message": "Chengetedza"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bhukumaka ma tabo ese"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Ngenisa mabhuki mabhukumaki"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Iwe unoda kuendesa mabhurawuza ose mabhurawuza?"
+  },
+  "InputTokenHeadline": {
+    "message": "Input kuchengetedza chiratidzo"
+  },
+  "InputToken": {
+    "message": "Ndokumbirawo uise chiratidzo chekuchengetedza icho chave kuratidzwa muQOwnNotes!"
+  },
+  "Token": {
+    "message": "Chengetedzo chiratidzo"
+  }
+}

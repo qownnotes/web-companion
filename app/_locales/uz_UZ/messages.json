@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "QOwnNotes-ning yozuvlarni ish stoli bilan ishlashi uchun o'zaro ishlashi uchun kengaytma.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes sozlamalari"
+  },
+  "socketPortLabel": {
+    "message": "Server soket porti"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Ko'rinadigan sahifaning skrinshot bilan qayd yarating"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "QOwnNotes-ga ulanish muvaffaqiyatsiz tugadi!"
+  },
+  "popupHeadline": {
+    "message": "Xatcho'plar"
+  },
+  "popupSearchLabel": {
+    "message": "Qidirmoq"
+  },
+  "NewBookmark": {
+    "message": "Yangi xatcho'p"
+  },
+  "Cancel": {
+    "message": "Bekor qilish"
+  },
+  "Ok": {
+    "message": "Ok"
+  },
+  "Save": {
+    "message": "Saqlash"
+  },
+  "BookmarkAllTabs": {
+    "message": "Barcha ichki oynalarni belgilab qo'ying"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Brauzer xatcho'plarini import qiling"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Brauzerning barcha xatcho'plarini import qilmoqchimisiz?"
+  },
+  "InputTokenHeadline": {
+    "message": "Kiritish xavfsizligi tokeni"
+  },
+  "InputToken": {
+    "message": "Iltimos, endi QOwnNotes-da ko'rsatilgan xavfsizlik tokenini kiriting!"
+  },
+  "Token": {
+    "message": "Xavfsizlik belgisi"
+  }
+}

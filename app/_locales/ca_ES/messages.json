@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Port del socket de servidor"
   },
-  "createNoteFromPage": {
-    "message": "Crear nota des d'una pàgina web (importació d'HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Crear nota amb una captura de la pàgina visible"
   },
-  "createSelectionNote": {
-    "message": "Crear nota des de la selecció"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "La connexió amb el QOwnNotes ha fallat!"

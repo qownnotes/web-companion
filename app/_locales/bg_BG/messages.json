@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Това е придружително разширение за QOwnNotes да взаимодейства с приложението за вземане на бележки за десктоп.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Настройки на QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Порт за гнездо на сървър"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Създайте бележка с екранна снимка на видимата страница"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Връзката с QOwnNotes не бе успешна!"
+  },
+  "popupHeadline": {
+    "message": "Отметки"
+  },
+  "popupSearchLabel": {
+    "message": "Търсене"
+  },
+  "NewBookmark": {
+    "message": "Нова отметка"
+  },
+  "Cancel": {
+    "message": "Отказ"
+  },
+  "Ok": {
+    "message": "Добре"
+  },
+  "Save": {
+    "message": "Запази"
+  },
+  "BookmarkAllTabs": {
+    "message": "Маркирайте всички раздели"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Импортиране на отметки в браузъра"
+  },
+  "Import": {
+    "message": "Внос"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Искате ли да импортирате всички отметки на браузъра?"
+  },
+  "InputTokenHeadline": {
+    "message": "Маркер за сигурност на входа"
+  },
+  "InputToken": {
+    "message": "Моля, въведете маркера за сигурност, който сега е показан в QOwnNotes!"
+  },
+  "Token": {
+    "message": "Маркер за сигурност"
+  }
+}

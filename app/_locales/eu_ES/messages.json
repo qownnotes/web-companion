@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Hau QOwnNotes-en laguntzailearen luzapena da, mahaigaineko aplikazioaren oharrekin elkarreragiteko.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes ezarpenak"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Zerbitzariaren socket ataka"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Sortu ohar ikusgai dagoen pantailako pantaila-argazkiarekin"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "QOwnNotes-ekin konexioa huts egin du!"
   },
   "popupHeadline": {
     "message": "Bookmarks"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Bilaketa"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Laster-marka berria"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Utzi"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "Ados"
   },
   "Save": {
-    "message": "Save"
+    "message": "Gorde"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Markatu fitxa guztiak"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Inportatu arakatzailearen laster-markak"
   },
   "Import": {
-    "message": "Import"
+    "message": "Inportazio"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Arakatzailearen laster-marka guztiak inportatu nahi dituzu?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Sartu segurtasun token-a"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Mesedez idatzi orain QOwnNotes-en agertzen den segurtasun tokenari!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Segurtasun token"
   }
 }

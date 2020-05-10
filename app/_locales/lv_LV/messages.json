@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Šis ir papildinājums QOwnNotes, lai mijiedarbotos ar darbvirsmas lietojumprogrammu.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes iestatījumi"
+  },
+  "socketPortLabel": {
+    "message": "Servera ligzdas ports"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Izveidojiet piezīmi ar redzamas lapas ekrānuzņēmumu"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Neizdevās izveidot savienojumu ar QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Grāmatzīmes"
+  },
+  "popupSearchLabel": {
+    "message": "Meklēt"
+  },
+  "NewBookmark": {
+    "message": "Jauna grāmatzīme"
+  },
+  "Cancel": {
+    "message": "Atcelt"
+  },
+  "Ok": {
+    "message": "Labi"
+  },
+  "Save": {
+    "message": "Saglabāt"
+  },
+  "BookmarkAllTabs": {
+    "message": "Pievienojiet grāmatzīmēm visas cilnes"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importējiet pārlūka grāmatzīmes"
+  },
+  "Import": {
+    "message": "Importēt"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Vai vēlaties importēt visas pārlūka grāmatzīmes?"
+  },
+  "InputTokenHeadline": {
+    "message": "Ievades drošības marķieris"
+  },
+  "InputToken": {
+    "message": "Lūdzu, ievadiet drošības marķieri, kas tagad tiek parādīts pakalpojumā QOwnNotes!"
+  },
+  "Token": {
+    "message": "Drošības marķieris"
+  }
+}

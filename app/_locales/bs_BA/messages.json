@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ovo je popratno proširenje za QOwnNotes za interakciju s aplikacijom za primanje bilješki.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Podešavanja QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Port utičnice servera"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Kreirajte bilješku sa snimkom zaslona vidljive stranice"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Veza s QOwnNotes nije uspjela!"
+  },
+  "popupHeadline": {
+    "message": "Oznake"
+  },
+  "popupSearchLabel": {
+    "message": "Traži"
+  },
+  "NewBookmark": {
+    "message": "Nova oznaka"
+  },
+  "Cancel": {
+    "message": "Otkaži"
+  },
+  "Ok": {
+    "message": "Uredu"
+  },
+  "Save": {
+    "message": "Spremi"
+  },
+  "BookmarkAllTabs": {
+    "message": "Označi sve kartice"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Uvezi oznake pregledača"
+  },
+  "Import": {
+    "message": "Uvoz"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Želite li uvesti sve oznake preglednika?"
+  },
+  "InputTokenHeadline": {
+    "message": "Ulazni sigurnosni token"
+  },
+  "InputToken": {
+    "message": "Unesite sigurnosni token koji je sada prikazan u QOwnNotes!"
+  },
+  "Token": {
+    "message": "Bezbednosni token"
+  }
+}

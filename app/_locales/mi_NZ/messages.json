@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "He toronga hoa mo QOwnNotes kia taunekeneke me te tuhi tuhipoka ki te tono papamahi.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Tautuhinga QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "He tauranga pouara"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Waihangahia te panui me te mata o te whaarangi e kitea ana"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "I rahua te hononga ki QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Tohuwhera"
+  },
+  "popupSearchLabel": {
+    "message": "Rapu"
+  },
+  "NewBookmark": {
+    "message": "Pukapuka hou"
+  },
+  "Cancel": {
+    "message": "Whakakore"
+  },
+  "Ok": {
+    "message": "Ok"
+  },
+  "Save": {
+    "message": "Whakaora"
+  },
+  "BookmarkAllTabs": {
+    "message": "Papaarangi nga ripa katoa"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Kawemai tohuwhera tohunga tirotiro"
+  },
+  "Import": {
+    "message": "Kawemai"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Kei te hiahia ki te kawemai i nga tohuwhera tirotiro katoa?"
+  },
+  "InputTokenHeadline": {
+    "message": "Ko te tohu haumaru whakauru"
+  },
+  "InputToken": {
+    "message": "Tena koa whakauru te tohu haumaru kei te whakaatuhia inaianei ki QOwnNotes!"
+  },
+  "Token": {
+    "message": "Ko te tohu Haumaru"
+  }
+}

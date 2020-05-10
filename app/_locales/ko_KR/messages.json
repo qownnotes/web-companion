@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "QOwnNotes가 메모 작성 데스크탑 애플리케이션과 상호 작용하기위한 동반자 확장입니다.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes 설정"
+  },
+  "socketPortLabel": {
+    "message": "서버 소켓 포트"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "보이는 페이지의 스크린 샷으로 메모 작성"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "QOwnNotes에 연결하지 못했습니다!"
+  },
+  "popupHeadline": {
+    "message": "북마크"
+  },
+  "popupSearchLabel": {
+    "message": "검색"
+  },
+  "NewBookmark": {
+    "message": "새로운 북마크"
+  },
+  "Cancel": {
+    "message": "취소"
+  },
+  "Ok": {
+    "message": "승인"
+  },
+  "Save": {
+    "message": "저장하기"
+  },
+  "BookmarkAllTabs": {
+    "message": "모든 탭 북마크"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "브라우저 북마크 가져 오기"
+  },
+  "Import": {
+    "message": "수입"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "모든 브라우저 책갈피를 가져 오시겠습니까?"
+  },
+  "InputTokenHeadline": {
+    "message": "입력 보안 토큰"
+  },
+  "InputToken": {
+    "message": "QOwnNotes에 표시된 보안 토큰을 입력하십시오!"
+  },
+  "Token": {
+    "message": "보안 토큰"
+  }
+}

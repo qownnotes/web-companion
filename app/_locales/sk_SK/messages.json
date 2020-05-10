@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Port soketu server"
   },
-  "createNoteFromPage": {
-    "message": "Vytvoriť poznámku zo stránky (import HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Vytvorte poznámku so snímkou viditeľnej stránky"
   },
-  "createSelectionNote": {
-    "message": "Vytvorte poznámku z výberu"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Pripojenie k službe QOwnNotes zlyhalo!"

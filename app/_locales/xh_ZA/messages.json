@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Esi sisongezelelo seQOwnNotes sokunxibelelana nenqaku lithatha isicelo sedesktop.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Useto lwe-QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Iserver port"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Yenza inqaku ngomfanekiso wephepha elibonakalayo"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Unxibelelwano kwiQOwnNotes luhlulekile!"
+  },
+  "popupHeadline": {
+    "message": "Iibhukumaka"
+  },
+  "popupSearchLabel": {
+    "message": "Khangela"
+  },
+  "NewBookmark": {
+    "message": "Ibhukumaki entsha"
+  },
+  "Cancel": {
+    "message": "Rhoxisa"
+  },
+  "Ok": {
+    "message": "Kulungile\n"
+  },
+  "Save": {
+    "message": "Gcina"
+  },
+  "BookmarkAllTabs": {
+    "message": "Yenza i-bookmark kuzo zonke iithebhu"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Ngenisa iibhukumaki zebrawuza"
+  },
+  "Import": {
+    "message": "Ngenisa"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Ngaba uyafuna ukungenisa zonke ii-bookmark?"
+  },
+  "InputTokenHeadline": {
+    "message": "Ithokheni yokhuselo yokhetho"
+  },
+  "InputToken": {
+    "message": "Nceda ufake ithokheni yokhuseleko eboniswe kuQOwnNotes!"
+  },
+  "Token": {
+    "message": "Ithokheni yokhuseleko"
+  }
+}

@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "یہ نوٹ لینے والے ڈیسک ٹاپ کی اطلاق کے ساتھ بات چیت کے لئے QOwnNotes کے ساتھی توسیع ہے۔.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes کی ترتیبات"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "سرور ساکٹ پورٹ"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "مرئی صفحے کے اسکرین شاٹ کے ساتھ نوٹ بنائیں"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "QOwnNotes سے رابطہ ناکام!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "بُک مارکس"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "تلاش کریں"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "نیا بُک مارک"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "منسوخ کریں"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "ٹھیک ہے"
   },
   "Save": {
-    "message": "Save"
+    "message": "محفوظ کریں"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "تمام ٹیبز کو بُک مارک کریں"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "براؤزر کے بُک مارکس کو درآمد کریں"
   },
   "Import": {
-    "message": "Import"
+    "message": "درآمد کرنا"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "کیا آپ براؤزر کے تمام بُک مارکس کو درآمد کرنا چاہتے ہیں؟"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "ان پٹ سیکیورٹی ٹوکن"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "براہ کرم سیکیورٹی ٹوکن ان پٹ کریں جو اب کیو نوٹس میں دکھایا گیا ہے!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "سیکیورٹی ٹوکن"
   }
 }

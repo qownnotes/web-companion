@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Servidor do porto de socket"
   },
-  "createNoteFromPage": {
-    "message": "Crear nota de páxina (importación de HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Crea nota coa captura de pantalla da páxina visible"
   },
-  "createSelectionNote": {
-    "message": "Crea unha nota da selección"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Non se puido conectar a QOwnNotes!"
@@ -43,21 +43,21 @@
     "message": "Marcar todas as pestañas"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Importar os marcadores do navegador"
   },
   "Import": {
-    "message": "Import"
+    "message": "Importar"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Desexa importar todos os marcadores do navegador?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Introduza o token de seguridade"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Introduza o símbolo de seguridade que agora se mostra en QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Token de seguridade"
   }
 }

@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Ito ay isang kasamang extension para sa QOwnNotes upang makipag-ugnay sa tala sa pagkuha ng desktop application.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "Mga setting ng QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Port ng socket ng server"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Lumikha ng tala gamit ang screenshot ng nakikitang pahina"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "Nabigo ang koneksyon sa QOwnNotes!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Mga bookmark"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Paghahanap"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Bagong bookmark"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Kanselahin"
   },
   "Ok": {
     "message": "Ok"
   },
   "Save": {
-    "message": "Save"
+    "message": "Maliban kung"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "I-bookmark ang lahat ng mga tab"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Mag-import ng mga bookmark ng browser"
   },
   "Import": {
-    "message": "Import"
+    "message": "Paglabas"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Nais mo bang i-import ang lahat ng mga bookmark ng browser?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Ang token ng seguridad sa pag-input"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Mangyaring i-input ang token ng seguridad na ngayon ay ipinapakita sa QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Ang token ng seguridad"
   }
 }

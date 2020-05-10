@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Server socket port"
   },
-  "createNoteFromPage": {
-    "message": "Opprett notat fra side (HTML-import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Lag notat med skjermbilde av synlig side"
   },
-  "createSelectionNote": {
-    "message": "Lag notat fra utvalg"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Tilkobling til QOwnNotes mislyktes!"

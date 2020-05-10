@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ev dirêjkirina hevalbendê ye ku ji bo QOwnNotes bi têkiliya daneya serlêdana sermasê re têkildar e.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Mîhengên QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Porta sokerê ya serverê"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Bi rûpelê xuyangê re nîşa çêbikin"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Têkildarî QOwnNotes têk çû!"
+  },
+  "popupHeadline": {
+    "message": "Dîmender"
+  },
+  "popupSearchLabel": {
+    "message": "Gerr"
+  },
+  "NewBookmark": {
+    "message": "Pirtûka nû"
+  },
+  "Cancel": {
+    "message": "Bişûndekirin"
+  },
+  "Ok": {
+    "message": "Baş e"
+  },
+  "Save": {
+    "message": "Rizgarkirin"
+  },
+  "BookmarkAllTabs": {
+    "message": "Hemû tabloyan nîşankirin"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Nîşaneyên gerokêşê barkirin"
+  },
+  "Import": {
+    "message": "Anîn"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Ma hûn dixwazin hemî nîşankerên geroka?"
+  },
+  "InputTokenHeadline": {
+    "message": "Nîşana ewlehiya navîn"
+  },
+  "InputToken": {
+    "message": "Ji kerema xwe nîşana ewlehiyê binivîse ku nuha di QOwnNotes de tê nîşandan!"
+  },
+  "Token": {
+    "message": "Nîşana ewlehiyê"
+  }
+}

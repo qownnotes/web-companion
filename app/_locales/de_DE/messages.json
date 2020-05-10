@@ -1,6 +1,6 @@
 {
   "appDescription": {
-    "message": "Dies ist eine Companion-Erweiterung für QOwnNotes um mit den Notizen der Desktop-Anwendung zu interagieren.",
+    "message": "Dies ist eine begleitende Erweiterung für QOwnNotes für die Interaktion mit den Notizen der Desktop-Anwendung.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Server-Socket-Port"
   },
-  "createNoteFromPage": {
-    "message": "Notiz von ganzer Seite erstellen (HTML-Import)"
+  "sendPageToQOwnNotes": {
+    "message": "Seite zu QOwnNotes senden"
   },
   "createScreenshotNote": {
     "message": "Notiz mit Screenshot der sichtbaren Seite erstellen"
   },
-  "createSelectionNote": {
-    "message": "Notiz aus Auswahl erstellen"
+  "sendSelectionToQOwnNotes": {
+    "message": "Ausgewählten Text zu QOwnNotes senden"
   },
   "connectionFailed": {
     "message": "Verbindung zu QOwnNotes ist fehlgeschlagen!"

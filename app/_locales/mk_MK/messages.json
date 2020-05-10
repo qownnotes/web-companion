@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ова е придружник за придружба QOwnNotes да комуницира со белешката што зема десктоп апликација.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Подесувања за QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Сервер приклучница"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Создадете белешка со слика од екранот на видлива страница"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Врската со QOwnNotes не успеа!"
+  },
+  "popupHeadline": {
+    "message": "Обележувачи"
+  },
+  "popupSearchLabel": {
+    "message": "Пребарај"
+  },
+  "NewBookmark": {
+    "message": "Нов обележувач"
+  },
+  "Cancel": {
+    "message": "Откажи"
+  },
+  "Ok": {
+    "message": "Добро"
+  },
+  "Save": {
+    "message": "Зачувај"
+  },
+  "BookmarkAllTabs": {
+    "message": "Обележете ги сите јазичиња"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Увезете обележувачи на прелистувачи"
+  },
+  "Import": {
+    "message": "Увоз"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Дали сакате да ги увезете сите обележувачи на прелистувачот?"
+  },
+  "InputTokenHeadline": {
+    "message": "Влезен безбедносен знак"
+  },
+  "InputToken": {
+    "message": "Ве молиме внесете го безбедносниот знак што сега е прикажан во QOwnNotes!"
+  },
+  "Token": {
+    "message": "Безбедносен знак"
+  }
+}

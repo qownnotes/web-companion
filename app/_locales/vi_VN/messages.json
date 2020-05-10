@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Đây là tiện ích mở rộng đồng hành để QOwnNotes tương tác với ứng dụng ghi chú trên máy tính để bàn.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Cài đặt QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Cổng ổ cắm máy chủ"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Tạo ghi chú với ảnh chụp màn hình của trang hiển thị"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Kết nối với QOwnNotes không thành công!"
+  },
+  "popupHeadline": {
+    "message": "Dấu trang"
+  },
+  "popupSearchLabel": {
+    "message": "Tìm kiếm"
+  },
+  "NewBookmark": {
+    "message": "Dấu trang mới"
+  },
+  "Cancel": {
+    "message": "Hủy bỏ"
+  },
+  "Ok": {
+    "message": "Đồng ý"
+  },
+  "Save": {
+    "message": "Lưu lại"
+  },
+  "BookmarkAllTabs": {
+    "message": "Đánh dấu tất cả các tab"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Nhập dấu trang trình duyệt"
+  },
+  "Import": {
+    "message": "Nhập khẩu"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Bạn có muốn nhập tất cả dấu trang trình duyệt?"
+  },
+  "InputTokenHeadline": {
+    "message": "Mã thông báo bảo mật đầu vào"
+  },
+  "InputToken": {
+    "message": "Vui lòng nhập mã thông báo bảo mật hiện được hiển thị trong QOwnNotes!"
+  },
+  "Token": {
+    "message": "Thẻ bảo mật"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "នេះគឺជាផ្នែកបន្ថែមនៃដៃគូសម្រាប់ QOwnNotes ដើម្បីធ្វើអន្តរកម្មជាមួយកម្មវិធីកុំព្យូទ័រលើតុ។",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "ការកំណត់ QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "រន្ធរន្ធរបស់ម៉ាស៊ីនមេ"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "បង្កើតកំណត់ត្រាជាមួយរូបថតអេក្រង់នៃទំព័រដែលអាចមើលឃើញ"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "ការភ្ជាប់ទៅ QOwnNotes បានបរាជ័យ!"
+  },
+  "popupHeadline": {
+    "message": "ចំណាំ"
+  },
+  "popupSearchLabel": {
+    "message": "ស្វែងរក"
+  },
+  "NewBookmark": {
+    "message": "ចំណាំថ្មី"
+  },
+  "Cancel": {
+    "message": "បោះបង់"
+  },
+  "Ok": {
+    "message": "យល់ព្រម"
+  },
+  "Save": {
+    "message": "រក្សាទុក"
+  },
+  "BookmarkAllTabs": {
+    "message": "ចំណាំផ្ទាំងទាំងអស់"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "នាំចូលចំណាំរបស់កម្មវិធីរុករក"
+  },
+  "Import": {
+    "message": "នាំចូល"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "តើអ្នកចង់នាំចូលចំណាំរបស់កម្មវិធីរុករកទាំងអស់ទេ?"
+  },
+  "InputTokenHeadline": {
+    "message": "បញ្ចូលនិមិត្តសញ្ញាសុវត្ថិភាព"
+  },
+  "InputToken": {
+    "message": "សូមបញ្ចូលនិមិត្តសញ្ញាសុវត្ថិភាពដែលឥឡូវត្រូវបានបង្ហាញនៅក្នុង QOwnNotes!"
+  },
+  "Token": {
+    "message": "និមិត្តសញ្ញាសន្តិសុខ"
+  }
+}

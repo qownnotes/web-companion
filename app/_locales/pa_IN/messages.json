@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "ਇਹ QOwnNotes ਲਈ ਨੋਟਬੰਦੀ ਵਾਲੇ ਡੈਸਕਟੌਪ ਐਪਲੀਕੇਸ਼ਨ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਲਈ ਸਹਿਯੋਗੀ ਵਿਸਥਾਰ ਹੈ.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes ਸੈਟਿੰਗਾਂ"
+  },
+  "socketPortLabel": {
+    "message": "ਸਰਵਰ ਸਾਕਟ ਪੋਰਟ"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "ਵੇਖਣ ਵਾਲੇ ਪੇਜ ਦੇ ਸਕਰੀਨ ਸ਼ਾਟ ਨਾਲ ਨੋਟ ਬਣਾਓ"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "QOwnNotes ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਫੇਲ੍ਹ ਹੋਇਆ!"
+  },
+  "popupHeadline": {
+    "message": "ਬੁੱਕਮਾਰਕ"
+  },
+  "popupSearchLabel": {
+    "message": "ਖੋਜ"
+  },
+  "NewBookmark": {
+    "message": "ਨਵਾਂ ਬੁੱਕਮਾਰਕ"
+  },
+  "Cancel": {
+    "message": "ਰੱਦ ਕਰੋ"
+  },
+  "Ok": {
+    "message": "ਠੀਕ ਹੈ"
+  },
+  "Save": {
+    "message": "ਸੇਵ"
+  },
+  "BookmarkAllTabs": {
+    "message": "ਸਾਰੀਆਂ ਟੈਬਾਂ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "ਬਰਾ browserਜ਼ਰ ਬੁੱਕਮਾਰਕ ਇੰਪੋਰਟ ਕਰੋ"
+  },
+  "Import": {
+    "message": "ਆਯਾਤ"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "ਤੁਹਾਨੂੰ ਸਭ ਨੂੰ ਬਰਾਊਜ਼ਰ ਬੁੱਕਮਾਰਕ ਆਯਾਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
+  },
+  "InputTokenHeadline": {
+    "message": "ਇੰਪੁੱਟ ਸੁਰੱਖਿਆ ਟੋਕਨ"
+  },
+  "InputToken": {
+    "message": "ਕਿਰਪਾ ਕਰਕੇ ਸੁਰੱਖਿਆ ਟੋਕਨ ਨੂੰ ਇੰਪੁੱਟ ਕਰੋ ਜੋ ਹੁਣ QOwnNotes ਵਿੱਚ ਦਿਖਾਇਆ ਗਿਆ ਹੈ!"
+  },
+  "Token": {
+    "message": "ਸੁਰੱਖਿਆ ਟੋਕਨ"
+  }
+}

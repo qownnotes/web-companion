@@ -7,16 +7,16 @@
     "message": "Настройки QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Порт веб-сокет сервера"
+    "message": "Порт веб-сокета сервера"
   },
-  "createNoteFromPage": {
-    "message": "Создать заметку из страницы (HTML-импорт)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Создать заметку со скриншотом видимой страницы"
   },
-  "createSelectionNote": {
-    "message": "Создать заметку из выбранного"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Не удалось подключиться к QOwnNotes!"

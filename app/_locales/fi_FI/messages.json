@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Palvelimen liitäntäportti"
   },
-  "createNoteFromPage": {
-    "message": "Luo muistiinpano sivulta (HTML-tuonti)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Luo huomautus näkyvän sivun kuvakaappauksesta"
   },
-  "createSelectionNote": {
-    "message": "Luo muistiinpano valinnasta"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Yhteys QOwnNotesiin epäonnistui!"

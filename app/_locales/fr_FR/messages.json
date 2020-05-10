@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Il s'agit d'une extension complémentaire permettant à QOwnNotes d'interagir avec l'application de bureau de prise de notes.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "Paramètres QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Port du serveur"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Créer une note avec capture d'écran de la page visible"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "La connexion à QOwnNotes a échoué !"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Signets"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Chercher"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Nouveau signet"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Annuler"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "D'accord"
   },
   "Save": {
-    "message": "Save"
+    "message": "Enregistrer"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Ajouter tous les onglets aux signets"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Importer les signets du navigateur"
   },
   "Import": {
-    "message": "Import"
+    "message": "Importer"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Voulez-vous importer tous les signets du navigateur ?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Jeton de sécurité d'entrée"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Veuillez saisir le jeton de sécurité qui est maintenant affiché dans QOwnNotes !"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Jeton de sécurité"
   }
 }

@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Θύρα υποδοχής διακομιστή"
   },
-  "createNoteFromPage": {
-    "message": "Δημιουργία σημείωσης από τη σελίδα (εισαγωγή HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Δημιουργήστε τη σημείωση με το στιγμιότυπο της ορατής σελίδας"
   },
-  "createSelectionNote": {
-    "message": "Δημιουργία σημείωσης από την επιλογή"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Η σύνδεση με το QOwnNotes απέτυχε!"
@@ -28,7 +28,7 @@
     "message": "Αναζήτηση"
   },
   "NewBookmark": {
-    "message": "Νέο σελιδοδείκτη"
+    "message": "Νέος σελιδοδείκτης"
   },
   "Cancel": {
     "message": "Άκυρο"
@@ -40,7 +40,7 @@
     "message": "Αποθήκευση"
   },
   "BookmarkAllTabs": {
-    "message": "Marcar todas as pestañas"
+    "message": "Όλες οι καρτέλες να προστεθούν στους σελιδοδείκτες"
   },
   "ImportBrowserBookmarks": {
     "message": "Εισαγωγή σελιδοδεικτών προγράμματος περιήγησης"

@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "זוהי תוסף לוויה של QOwnNotes לקיים אינטראקציה עם היישום לשולחן העבודה.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "הגדרות QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "יציאת שקע שרת"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "צור הערה עם צילום מסך של העמוד הגלוי"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "החיבור ל- QOwnNotes נכשל!"
+  },
+  "popupHeadline": {
+    "message": "סימניות"
+  },
+  "popupSearchLabel": {
+    "message": "לחפש"
+  },
+  "NewBookmark": {
+    "message": "סימניה חדשה"
+  },
+  "Cancel": {
+    "message": "בטל"
+  },
+  "Ok": {
+    "message": "בסדר"
+  },
+  "Save": {
+    "message": "שמירה"
+  },
+  "BookmarkAllTabs": {
+    "message": "הוסף את כל הכרטיסיות לסימניות"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "ייבא סימניות דפדפן"
+  },
+  "Import": {
+    "message": "יבוא"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "האם ברצונך לייבא את כל סימניות הדפדפן?"
+  },
+  "InputTokenHeadline": {
+    "message": "אסימון אבטחת קלט"
+  },
+  "InputToken": {
+    "message": "הזן את אסימון האבטחה שמוצג כעת ב- QOwnNotes!"
+  },
+  "Token": {
+    "message": "אסימון אבטחה"
+  }
+}

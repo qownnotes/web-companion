@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "伺服器 Socket 通訊埠"
   },
-  "createNoteFromPage": {
-    "message": "從網頁建立筆記（HTML匯入）"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "擷取網頁可視範圍的畫面建立筆記"
   },
-  "createSelectionNote": {
-    "message": "由選取的部份建立筆記"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "連線到 QOwnNotes 失敗！"
@@ -28,36 +28,36 @@
     "message": "搜尋"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "新書籤"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "取消"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "行"
   },
   "Save": {
-    "message": "Save"
+    "message": "儲存"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "為所有標籤添加書籤"
   },
   "ImportBrowserBookmarks": {
     "message": "Import browser bookmarks"
   },
   "Import": {
-    "message": "Import"
+    "message": "匯入"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "是否要導入所有瀏覽器書籤？"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "輸入安全令牌"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "請輸入現在在QOwnNotes中顯示的安全令牌！"
   },
   "Token": {
-    "message": "Security token"
+    "message": "安全令牌"
   }
 }

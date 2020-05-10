@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Þetta er meðfylgjandi viðbót fyrir QOwnNotes til að hafa samskipti við athugasemdina sem tekur skrifborðsforrit.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes stillingar"
+  },
+  "socketPortLabel": {
+    "message": "Tengi netþjóns"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Búðu til athugasemd með skjámynd af sýnilegri síðu"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Tenging við QOwnNotes mistókst!"
+  },
+  "popupHeadline": {
+    "message": "Bókamerki"
+  },
+  "popupSearchLabel": {
+    "message": "Leitaðu"
+  },
+  "NewBookmark": {
+    "message": "Nýtt bókamerki"
+  },
+  "Cancel": {
+    "message": "Hætta við"
+  },
+  "Ok": {
+    "message": "Allt í lagi"
+  },
+  "Save": {
+    "message": "Vista"
+  },
+  "BookmarkAllTabs": {
+    "message": "Settu bókamerki við alla flipa"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Flytja inn bókamerki vafra"
+  },
+  "Import": {
+    "message": "Flytja inn"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Viltu flytja inn öll bókamerki vafra?"
+  },
+  "InputTokenHeadline": {
+    "message": "Inntak öryggismerki"
+  },
+  "InputToken": {
+    "message": "Vinsamlegast settu inn öryggismerkið sem nú er sýnt í QOwnNotes!"
+  },
+  "Token": {
+    "message": "Öryggistákn"
+  }
+}

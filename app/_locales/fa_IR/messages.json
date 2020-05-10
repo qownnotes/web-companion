@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "این یک برنامه افزودنی همراه برای QOwnNotes برای تعامل با برنامه استفاده از رایانه رومیزی است.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "تنظیمات QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "درگاه سوکت سرور"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "ایجاد یادداشت با تصویر صفحه قابل مشاهده"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "اتصال به QOwnNotes انجام نشد!"
+  },
+  "popupHeadline": {
+    "message": "نشانک ها"
+  },
+  "popupSearchLabel": {
+    "message": "جستجو کردن"
+  },
+  "NewBookmark": {
+    "message": "نشانک جدید"
+  },
+  "Cancel": {
+    "message": "لغو"
+  },
+  "Ok": {
+    "message": "خوب"
+  },
+  "Save": {
+    "message": "صرفه جویی"
+  },
+  "BookmarkAllTabs": {
+    "message": "همه برگه ها را علامت گذاری کنید"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "نشانک های مرورگر را وارد کنید"
+  },
+  "Import": {
+    "message": "وارد كردن"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "آیا می خواهید تمام نشانک های مرورگر را وارد کنید؟"
+  },
+  "InputTokenHeadline": {
+    "message": "نشانه امنیتی ورودی"
+  },
+  "InputToken": {
+    "message": "لطفاً نماد امنیتی را که اکنون در QOwnNotes نشان داده شده است وارد کنید!"
+  },
+  "Token": {
+    "message": "رمز امنیتی"
+  }
+}

@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Socket порт сервера"
   },
-  "createNoteFromPage": {
-    "message": "Створити нотатку зі сторінки (імпорт HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Створити нотатку зі скріншоту видимої сторінки"
   },
-  "createSelectionNote": {
-    "message": "Створити нотатку з виділеного"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Не вдалося підключитися до QOwnNotes!"
@@ -34,7 +34,7 @@
     "message": "Скасувати"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "Гаразд"
   },
   "Save": {
     "message": "Зберегти"
@@ -43,21 +43,21 @@
     "message": "Закласти всі вкладки"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Імпортуйте закладки браузера"
   },
   "Import": {
-    "message": "Import"
+    "message": "Імпорт"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Ви хочете імпортувати всі закладки браузера?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Маркер безпеки введення"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Будь ласка, введіть маркер безпеки, який зараз відображається в QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Маркер безпеки"
   }
 }

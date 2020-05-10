@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Gniazdo portu serwera"
   },
-  "createNoteFromPage": {
-    "message": "Utwórz notatkę ze strony (import HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Utwórz notatkę ze zrzutem widocznej strony"
   },
-  "createSelectionNote": {
-    "message": "Utwórz notatkę z zaznaczenia"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Połączenie QOwnNotes nie powiodło się!"

@@ -9,6 +9,7 @@
   (for [#16](https://github.com/qownnotes/web-companion/issues/16) and [#17](https://github.com/qownnotes/web-companion/issues/17))
     - you need QOwnNotes 20.5.7 or higher for this feature
     - the default behavior is still that a new note is created with the page or selection text
+- added more translation
 
 ## 19.7.0
 - you can now substring search for all parts of your search text, for example `qo sto` will find `Firefox Store Page QOwnNotes`

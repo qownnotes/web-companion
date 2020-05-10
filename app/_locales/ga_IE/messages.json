@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Is é seo an síneadh compánach do QOwnNotes chun idirghníomhú leis an nóta ag cur feidhmchlár deisce.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Socruithe QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Calafort soicéad freastalaí"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Cruthaigh nóta le screenshot den leathanach infheicthe"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Theip ar nascadh le QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Leabharmharcanna"
+  },
+  "popupSearchLabel": {
+    "message": "Cuardaigh"
+  },
+  "NewBookmark": {
+    "message": "Leabharmharc nua"
+  },
+  "Cancel": {
+    "message": "Cealaigh"
+  },
+  "Ok": {
+    "message": "Ok"
+  },
+  "Save": {
+    "message": "Sábháil"
+  },
+  "BookmarkAllTabs": {
+    "message": "Cuir gach cluaisín in áirithe"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Leabharmharcanna an iompórtálaí"
+  },
+  "Import": {
+    "message": "Iompórtáil"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Ar mhaith leat na leabharmharcanna go léir a iompórtáil?"
+  },
+  "InputTokenHeadline": {
+    "message": "Cuir comhartha slándála isteach"
+  },
+  "InputToken": {
+    "message": "Cuir isteach an chomhartha slándála a thaispeántar anois i QOwnNotes!"
+  },
+  "Token": {
+    "message": "Comhartha slándála"
+  }
+}

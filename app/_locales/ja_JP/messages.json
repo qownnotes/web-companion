@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "これは、QOwnNotesがノートブックデスクトップアプリケーションと対話するためのコンパニオン拡張です。",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes設定"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "サーバーソケットポート"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "表示されているページのスクリーンショットでメモを作成する"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "QOwnNotesへの接続に失敗しました！"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "しおり"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "探す"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "新しいブックマーク"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "中止"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "わかった"
   },
   "Save": {
-    "message": "Save"
+    "message": "保存"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "すべてのタブをブックマークする"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "ブラウザのブックマークをインポートする"
   },
   "Import": {
-    "message": "Import"
+    "message": "インポート"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "すべてのブラウザブックマークをインポートしますか？"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "入力セキュリティトークン"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "QOwnNotesに表示されているセキュリティトークンを入力してください！"
   },
   "Token": {
-    "message": "Security token"
+    "message": "セキュリティトークン"
   }
 }

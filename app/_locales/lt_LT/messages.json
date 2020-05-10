@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Tai yra papildomas QOwnNotes plėtinys, kad būtų galima sąveikauti su užrašų darbalaukio programa.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes nustatymai"
+  },
+  "socketPortLabel": {
+    "message": "Serverio lizdo prievadas"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Sukurkite užrašą su matomo puslapio ekrano kopija"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Nepavyko prisijungti prie QOwnNotes!"
+  },
+  "popupHeadline": {
+    "message": "Žymos"
+  },
+  "popupSearchLabel": {
+    "message": "Paieška"
+  },
+  "NewBookmark": {
+    "message": "Nauja žymė"
+  },
+  "Cancel": {
+    "message": "Atšaukti"
+  },
+  "Ok": {
+    "message": "Gerai"
+  },
+  "Save": {
+    "message": "Sutaupyti"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bookmark all tabs"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importuoti naršyklės žymes"
+  },
+  "Import": {
+    "message": "Importuoti"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Ar norite importuoti visas naršyklės žymes?"
+  },
+  "InputTokenHeadline": {
+    "message": "Įvesties saugos raktas"
+  },
+  "InputToken": {
+    "message": "Įveskite saugos ženklą, kuris dabar rodomas QOwnNotes!"
+  },
+  "Token": {
+    "message": "Apsaugos ženklas"
+  }
+}

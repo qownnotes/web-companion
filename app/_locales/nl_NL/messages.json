@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Server socket poort"
   },
-  "createNoteFromPage": {
-    "message": "Notitie maken vanuit pagina (HTML-import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Notitie maken met screenshot van zichtbare pagina"
   },
-  "createSelectionNote": {
-    "message": "Notitie maken vanuit selectie"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Verbinding met QOwnNotes mislukt!"

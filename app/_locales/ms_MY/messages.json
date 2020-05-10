@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ini adalah sambungan teman untuk QOwnNotes untuk berinteraksi dengan aplikasi desktop mengambil nota.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Tetapan QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Port soket pelayan"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Cipta nota dengan tangkapan skrin halaman yang kelihatan"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Sambungan ke QOwnNotes gagal!"
+  },
+  "popupHeadline": {
+    "message": "Penanda buku"
+  },
+  "popupSearchLabel": {
+    "message": "Carian"
+  },
+  "NewBookmark": {
+    "message": "Penanda buku baharu"
+  },
+  "Cancel": {
+    "message": "Batalkan"
+  },
+  "Ok": {
+    "message": "Okey"
+  },
+  "Save": {
+    "message": "Simpan"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bookmark semua tab"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Import penanda buku pelayar"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Adakah anda mahu mengimport semua penanda buku pelayar?"
+  },
+  "InputTokenHeadline": {
+    "message": "Token keselamatan masukan"
+  },
+  "InputToken": {
+    "message": "Sila masukkan token keselamatan yang kini ditunjukkan dalam QOwnNotes!"
+  },
+  "Token": {
+    "message": "Token Keselamatan"
+  }
+}

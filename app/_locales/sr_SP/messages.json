@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ово је пратеће проширење за QOwnNotes за интеракцију са апликацијом за узимање белешки на радну површину.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes подеаавања"
+  },
+  "socketPortLabel": {
+    "message": "Порт за утичницу сервера"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Креирајте белешку са снимком екрана видљиве странице"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Веза са QOwnNotes није успела!"
+  },
+  "popupHeadline": {
+    "message": "Боокмаркс"
+  },
+  "popupSearchLabel": {
+    "message": "Претраживање"
+  },
+  "NewBookmark": {
+    "message": "Нова ознака"
+  },
+  "Cancel": {
+    "message": "Отказати"
+  },
+  "Ok": {
+    "message": "Ок"
+  },
+  "Save": {
+    "message": "Саве"
+  },
+  "BookmarkAllTabs": {
+    "message": "Означи све картице"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Увези ознаке прегледача"
+  },
+  "Import": {
+    "message": "Увоз"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Да ли желите да увезете све маркере прегледача?"
+  },
+  "InputTokenHeadline": {
+    "message": "Улазни заштитни токен"
+  },
+  "InputToken": {
+    "message": "Унесите сигурносни код који је сада приказан у QOwnNotes!"
+  },
+  "Token": {
+    "message": "Безбедносни токен"
+  }
+}

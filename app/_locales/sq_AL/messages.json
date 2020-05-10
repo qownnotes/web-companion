@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Ky është një zgjatim shoqërues për QOwnNotes për të bashkëvepruar me shënimin që merr aplikacionin për desktop.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Cilësimet QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Porti i prizës së serverit"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Krijoni shënim me pamje nga faqja e dukshme"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Lidhja me QOwnNota dështoi!"
+  },
+  "popupHeadline": {
+    "message": "Faqerojtësa"
+  },
+  "popupSearchLabel": {
+    "message": "Kërko"
+  },
+  "NewBookmark": {
+    "message": "Faqerojtës i ri"
+  },
+  "Cancel": {
+    "message": "Anuloj"
+  },
+  "Ok": {
+    "message": "Ne rregull"
+  },
+  "Save": {
+    "message": "Ruaj"
+  },
+  "BookmarkAllTabs": {
+    "message": "Shënoni të gjitha skedat"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importoni faqerojtësit e shfletuesit"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Dëshiron të importosh të gjithë faqeshënuesit e shfletuesit?"
+  },
+  "InputTokenHeadline": {
+    "message": "Shenja e sigurisë së hyrjes"
+  },
+  "InputToken": {
+    "message": "Ju lutemi shënoni shenjën e sigurisë që tani është treguar në QOwnNotes!"
+  },
+  "Token": {
+    "message": "Shenjë sigurie"
+  }
+}

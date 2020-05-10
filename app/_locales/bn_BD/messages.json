@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "QOwnNotes এর ডেস্কটপ অ্যাপ্লিকেশনটির সাথে নোট গ্রহণের সাথে ইন্টারঅ্যাক্ট করার জন্য এটি একটি সহযোগী এক্সটেনশন।.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes সেটিংস"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "সার্ভার সকেট পোর্ট"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "দৃশ্যমান পৃষ্ঠার স্ক্রিনশট সহ নোট তৈরি করুন"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "QOwnNotes এর সাথে সংযোগ ব্যর্থ হয়েছে!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "বুকমার্ক"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "অনুসন্ধান করুন"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "নতুন বুকমার্ক"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "বাতিল"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "ঠিক আছে"
   },
   "Save": {
-    "message": "Save"
+    "message": "সংরক্ষণ করুন"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "সমস্ত ট্যাব বুকমার্ক করুন"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "ব্রাউজার বুকমার্ক আমদানি করুন"
   },
   "Import": {
-    "message": "Import"
+    "message": "আমদানি করুন"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "আপনি কি সমস্ত ব্রাউজার বুকমার্ক আমদানি করতে চান?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "সুরক্ষা টোকেন ইনপুট"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "দয়া করে এখন সুরক্ষা টোকেনটি ইনপুট করুন যা এখন QOwnNotes এ দেখানো হয়েছে!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "নিরাপত্তা পাস"
   }
 }

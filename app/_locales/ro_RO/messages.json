@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Server priză port"
   },
-  "createNoteFromPage": {
-    "message": "Creați o notă din pagină (import HTML)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Creați notă cu captura de ecran a paginii vizibile"
   },
-  "createSelectionNote": {
-    "message": "Creați o notă din selecție"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Conectarea la QOwnNotes nu a reușit!"

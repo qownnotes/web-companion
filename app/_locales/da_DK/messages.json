@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Server stikkontakt port"
   },
-  "createNoteFromPage": {
-    "message": "Opret note fra side (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Opret note med skærmbillede af synlig side"
   },
-  "createSelectionNote": {
-    "message": "Opret note fra valg"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Forbindelse til QOwnNotes mislykkedes!"

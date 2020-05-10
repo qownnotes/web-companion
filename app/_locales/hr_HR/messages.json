@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Port socket poslužitelja"
   },
-  "createNoteFromPage": {
-    "message": "Izrada bilješke sa stranice (HTML uvoz)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Napravite bilješku s snimkom zaslona vidljive stranice"
   },
-  "createSelectionNote": {
-    "message": "Stvorite bilješku iz odabira"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Veza s QOwnNotes nije uspjela!"
@@ -34,7 +34,7 @@
     "message": "Odustani"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "U redu"
   },
   "Save": {
     "message": "Uštedjeti"
@@ -52,12 +52,12 @@
     "message": "Želite li uvesti sve oznake preglednika?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Ulazni sigurnosni žeton"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Unesite sigurnosni žeton koji je sada prikazan u QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Sigurnostni žeton"
   }
 }

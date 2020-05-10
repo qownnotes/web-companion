@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "Lesi isengezo somngane se-QOwnNotes ukuze uhlanganyele nohlelo lokuthatha ideskithophu.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "Izilungiselelo ze-QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "Imbobo yesokhethi yeserver"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Dala inothi ngesithombe sekhasi elibonakalayo"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Ukuxhumeka ku-QOwnNotes kuhlulekile!"
+  },
+  "popupHeadline": {
+    "message": "Amabhukumaka"
+  },
+  "popupSearchLabel": {
+    "message": "Sesha"
+  },
+  "NewBookmark": {
+    "message": "Ibhukumaka elisha"
+  },
+  "Cancel": {
+    "message": "Khansela"
+  },
+  "Ok": {
+    "message": "Kulungile"
+  },
+  "Save": {
+    "message": "Gcina"
+  },
+  "BookmarkAllTabs": {
+    "message": "Beka i-bookmark kuwo wonke amathebhu"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Ngenisa amabhukumaka wesiphequluli"
+  },
+  "Import": {
+    "message": "Ngenisa"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Ngabe ufuna ukungenisa wonke amabhukumaka esiphequluli?"
+  },
+  "InputTokenHeadline": {
+    "message": "Ithokheni yokuphepha kokufaka"
+  },
+  "InputToken": {
+    "message": "Sicela ufake ithokheni lokuphepha manje elikhonjisiwe ku-QOwnNotes!"
+  },
+  "Token": {
+    "message": "Ithokheni yezokuphepha"
+  }
+}

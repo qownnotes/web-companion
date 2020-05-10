@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "Wannan haɓakar aboki ne don QOwnNotes don hulɗa tare da bayanin kula shan aikace-aikacen tebur.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "Saitin QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Tashar jiragen ruwa na soket"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "Noteirƙiri bayanin kula tare da hoton allo na bayyane shafin"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "Haɗin zuwa QOwnNotes ya kasa!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "Alamomin"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "Bincika"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "Sabuwar alamar"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "Soke"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "Ko"
   },
   "Save": {
-    "message": "Save"
+    "message": "Ajiye"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "Yi alamar shafi duk shafuka"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "Shigo da alamomin bincike"
   },
   "Import": {
-    "message": "Import"
+    "message": "Shigo"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "Shin kana son shigo da dukkan alamomin binciken?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "Alamar tsaro shigarwa"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "Da fatan za a shigar da alamar alamar tsaro wanda a yanzu ake nunawa a QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Alamar tsaro"
   }
 }

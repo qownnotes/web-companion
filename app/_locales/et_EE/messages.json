@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "See on ettevõtte QOwnNotes kaaslaiendus töölauarakendusega märkmetega suhtlemiseks.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes'i seaded"
+  },
+  "socketPortLabel": {
+    "message": "Serveri pesa port"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Märkme loomine nähtava lehe ekraanipildiga"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Ühenduse loomine QOwnNotes'iga ebaõnnestus!"
+  },
+  "popupHeadline": {
+    "message": "Järjehoidjad"
+  },
+  "popupSearchLabel": {
+    "message": "Otsing"
+  },
+  "NewBookmark": {
+    "message": "Uus järjehoidja"
+  },
+  "Cancel": {
+    "message": "Tühista"
+  },
+  "Ok": {
+    "message": "Okei"
+  },
+  "Save": {
+    "message": "Salvesta"
+  },
+  "BookmarkAllTabs": {
+    "message": "Lisage kõik vahelehed järjehoidjate hulka"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Importige brauseri järjehoidjaid"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Kas soovite importida kõik brauseri järjehoidjad?"
+  },
+  "InputTokenHeadline": {
+    "message": "Sisestage turvatunnus"
+  },
+  "InputToken": {
+    "message": "Sisestage turvatunnus, mida nüüd kuvatakse rakenduses QOwnNotes!"
+  },
+  "Token": {
+    "message": "Turvamärk"
+  }
+}

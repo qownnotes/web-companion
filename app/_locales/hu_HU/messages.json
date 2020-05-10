@@ -9,14 +9,14 @@
   "socketPortLabel": {
     "message": "Szerver csatlakozóaljzat"
   },
-  "createNoteFromPage": {
-    "message": "Jegyzet létrehozása az oldalról (HTML importálás)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Hozzon létre jegyzetet a látható oldal képernyőképével"
   },
-  "createSelectionNote": {
-    "message": "Jegyzet létrehozása a kiválasztásból"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
     "message": "Sikertelen kapcsolódás a QOwnNotes-hoz!"

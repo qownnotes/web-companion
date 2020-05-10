@@ -1,63 +1,63 @@
 {
   "appDescription": {
-    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "message": "यह QOwnNotes का डेस्कटॉप एप्लिकेशन लेने वाले नोट के साथ बातचीत करने के लिए एक साथी एक्सटेंशन है।",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "QOwnNotes settings"
+    "message": "QOwnNotes सेटिंग"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "सर्वर सॉकेट पोर्ट"
   },
-  "createNoteFromPage": {
-    "message": "Create note from page (HTML import)"
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Create note with screenshot of visible page"
+    "message": "दृश्य पृष्ठ के स्क्रीनशॉट के साथ नोट बनाएं"
   },
-  "createSelectionNote": {
-    "message": "Create note from selection"
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Connection to QOwnNotes failed!"
+    "message": "QOwnNotes से कनेक्शन विफल!"
   },
   "popupHeadline": {
-    "message": "Bookmarks"
+    "message": "बुकमार्क"
   },
   "popupSearchLabel": {
-    "message": "Search"
+    "message": "खोज"
   },
   "NewBookmark": {
-    "message": "New bookmark"
+    "message": "नया बुकमार्क"
   },
   "Cancel": {
-    "message": "Cancel"
+    "message": "रद्दकरना"
   },
   "Ok": {
-    "message": "Ok"
+    "message": "ठीक"
   },
   "Save": {
-    "message": "Save"
+    "message": "सहेजें"
   },
   "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+    "message": "सभी टैब को बुकमार्क करें"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "ब्राउज़र बुकमार्क आयात करें"
   },
   "Import": {
-    "message": "Import"
+    "message": "आयात"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Do you want to import all browser bookmarks?"
+    "message": "क्या आप सभी ब्राउज़र बुकमार्क आयात करना चाहते हैं?"
   },
   "InputTokenHeadline": {
-    "message": "Input security token"
+    "message": "इनपुट सुरक्षा टोकन"
   },
   "InputToken": {
-    "message": "Please input the security token that now is shown in QOwnNotes!"
+    "message": "कृपया सुरक्षा टोकन इनपुट करें जो अब QOwnNotes में दिखाया गया है!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "सुरक्षा टोकन"
   }
 }
