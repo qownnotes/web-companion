@@ -1,5 +1,15 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.5.0
+- screenshots are now captured as png instead of the browser's default format to capture screenshots
+  (for [#17](https://github.com/qownnotes/web-companion/issues/17))
+- the context menu entries `Create note from page (HTML import)` and `Create note from selection`
+  where renamed to `Send page to QOwnNotes` and `Send selection to QOwnNotes`, because now a screenshot
+  of the current page will also be sent to QOwnNotes so you are able to use them in scripts
+  (for [#16](https://github.com/qownnotes/web-companion/issues/16) and [#17](https://github.com/qownnotes/web-companion/issues/17))
+    - you need QOwnNotes 20.5.7 or higher for this feature
+    - the default behavior is still that a new note is created with the page or selection text
+
 ## 19.7.0
 - you can now substring search for all parts of your search text, for example `qo sto` will find `Firefox Store Page QOwnNotes`
 - added more German, Indonesian and Czech translation

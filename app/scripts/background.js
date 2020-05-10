@@ -113,8 +113,16 @@ function scrapeSelection(info, tab) {
         const selectionText = chrome.runtime.lastError ? info.selectionText : selection[0];
         const headline = tab.title;
         const text = "<" + tab.url + ">\n\n" + selectionText;
-        const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
-        WebSocketClient.sendData(data);
+
+        // also take a screenshot to be able to use it in the QOwnNotes scripting hook
+        chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+            const data = {
+                type: "handleRawData", requestType: "selection", contentType: "markdown", rawData: selectionText,
+                headline: headline, text: text, pageUrl: info.pageUrl, pageTitle: headline, screenshotDataUrl: dataUrl
+            };
+
+            WebSocketClient.sendData(data);
+        });
     });
 }
 
@@ -125,17 +133,17 @@ function scrapeSelection(info, tab) {
  * @param tab
  */
 function scrapePageScreenshot(info, tab) {
-	chrome.tabs.captureVisibleTab(function(dataUrl) {
-	const headline = tab.title;
+	chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+        const headline = tab.title;
 
-	// const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
-	// const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+        // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
+        // const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
 
-	const url = tab.url;
-	const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
-	const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
-	WebSocketClient.sendData(data);
-});
+        const url = tab.url;
+        const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
+        const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
+        WebSocketClient.sendData(data);
+    });
 }
 
 /**
@@ -238,7 +246,7 @@ const mainMenu = chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-    "title": util.getLocale('createNoteFromPage'), "contexts": ["page"],
+    "title": util.getLocale('sendPageToQOwnNotes'), "contexts": ["page"],
     "onclick": scrapeHTMLPage, "parentId": mainMenu
 });
 
@@ -248,7 +256,7 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.create({
-    "title": util.getLocale('createSelectionNote'), "contexts": ["selection"],
+    "title": util.getLocale('sendSelectionToQOwnNotes'), "contexts": ["selection"],
     "onclick": scrapeSelection, "parentId": null
 });
 
@@ -258,11 +266,20 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
     // used by scrapeHTMLPage
     if (request.action === "getSource") {
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-            const headline = tabs[0].title;
-            const url = tabs[0].url;
+            const tab = tabs[0];
+            const headline = tab.title;
+            const url = tab.url;
+            // default text for creating a note
             const text = "<a href=\"" + url + "\">" + url + "</a><br /><br />" + request.source;
-            const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
-            WebSocketClient.sendData(data);
+
+            // also take a screenshot to be able to use it in the QOwnNotes scripting hook
+            chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+                const data = {
+                    type: "handleRawData", requestType: "page", contentType: "html", rawData: request.source,
+                    headline: headline, text: text, pageTitle: headline, pageUrl: url, screenshotDataUrl: dataUrl
+                };
+                WebSocketClient.sendData(data);
+            });
         });
     }
 
