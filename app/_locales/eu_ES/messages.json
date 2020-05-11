@@ -10,13 +10,13 @@
     "message": "Zerbitzariaren socket ataka"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Bidali orria QOwnNotes-era\n"
   },
   "createScreenshotNote": {
     "message": "Sortu ohar ikusgai dagoen pantailako pantaila-argazkiarekin"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Bidali hautapena QOwnNotes-i"
   },
   "connectionFailed": {
     "message": "QOwnNotes-ekin konexioa huts egin du!"

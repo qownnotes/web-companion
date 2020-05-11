@@ -10,13 +10,13 @@
     "message": "Port soketu server"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Poslať stránku na QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Vytvorte poznámku so snímkou viditeľnej stránky"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Poslať výber do QOwnNotes"
   },
   "connectionFailed": {
     "message": "Pripojenie k službe QOwnNotes zlyhalo!"

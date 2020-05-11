@@ -10,13 +10,13 @@
     "message": "Iserver port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Thumela iphepha kwi-QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Yenza inqaku ngomfanekiso wephepha elibonakalayo"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Thumela ukhetho kwiQOwnNotes"
   },
   "connectionFailed": {
     "message": "Unxibelelwano kwiQOwnNotes luhlulekile!"

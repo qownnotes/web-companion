@@ -10,13 +10,13 @@
     "message": "서버 소켓 포트"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "QOwnNotes로 페이지 보내기\n"
   },
   "createScreenshotNote": {
     "message": "보이는 페이지의 스크린 샷으로 메모 작성"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "QOwnNotes로 선택 보내기"
   },
   "connectionFailed": {
     "message": "QOwnNotes에 연결하지 못했습니다!"

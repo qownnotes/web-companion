@@ -10,13 +10,13 @@
     "message": "Porta sokerê ya serverê"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Rûpel bişînin QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Bi rûpelê xuyangê re nîşa çêbikin"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Hilbijartinê bişînin QOwnNotes"
   },
   "connectionFailed": {
     "message": "Têkildarî QOwnNotes têk çû!"

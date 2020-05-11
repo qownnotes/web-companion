@@ -10,13 +10,13 @@
     "message": "服务器套接字端口"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "发送页面到QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "从可见页截图创建笔记"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "将选择发送到QOwnNotes"
   },
   "connectionFailed": {
     "message": "连接至 QOwnNotes 失败！"

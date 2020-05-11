@@ -10,13 +10,13 @@
     "message": "Calafort soicéad freastalaí"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Seol leathanach chuig QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Cruthaigh nóta le screenshot den leathanach infheicthe"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Seol roghnú chuig QOwnNotes"
   },
   "connectionFailed": {
     "message": "Theip ar nascadh le QOwnNotes!"

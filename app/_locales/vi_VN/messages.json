@@ -10,13 +10,13 @@
     "message": "Cổng ổ cắm máy chủ"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Gửi trang tới QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Tạo ghi chú với ảnh chụp màn hình của trang hiển thị"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Gửi lựa chọn đến QOwnNotes"
   },
   "connectionFailed": {
     "message": "Kết nối với QOwnNotes không thành công!"

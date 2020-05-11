@@ -10,13 +10,13 @@
     "message": "Server masokisi port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Tumira peji kuQOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Gadzira noti nepikicha ye peji inooneka"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Tumira kusarudzwa kuQOwnNotes"
   },
   "connectionFailed": {
     "message": "Kubatanidza kuQOwnNotes kwakundikana!"

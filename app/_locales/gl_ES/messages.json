@@ -10,13 +10,13 @@
     "message": "Servidor do porto de socket"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Enviar páxina a QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Crea nota coa captura de pantalla da páxina visible"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Enviar selección a QOwnNotes"
   },
   "connectionFailed": {
     "message": "Non se puido conectar a QOwnNotes!"

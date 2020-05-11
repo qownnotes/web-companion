@@ -10,13 +10,13 @@
     "message": "Porta soket server"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Kirim halaman ke QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Buat catatan dengan tangkapan layar halaman yang tampak"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Kirim pilihan ke QOwnNotes"
   },
   "connectionFailed": {
     "message": "Koneksi ke QOwnNotes gagal!"

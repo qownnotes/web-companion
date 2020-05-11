@@ -10,13 +10,13 @@
     "message": "サーバーソケットポート"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "QOwnNotesにページを送信する\n"
   },
   "createScreenshotNote": {
     "message": "表示されているページのスクリーンショットでメモを作成する"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "選択範囲をQOwnNotesに送信"
   },
   "connectionFailed": {
     "message": "QOwnNotesへの接続に失敗しました！"

@@ -10,13 +10,13 @@
     "message": "Serveri pesa port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Saada leht aadressile QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Märkme loomine nähtava lehe ekraanipildiga"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Saada valik aadressile QOwnNotes"
   },
   "connectionFailed": {
     "message": "Ühenduse loomine QOwnNotes'iga ebaõnnestus!"

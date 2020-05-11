@@ -10,13 +10,13 @@
     "message": "Gniazdo portu serwera"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Wyślij stronę do QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Utwórz notatkę ze zrzutem widocznej strony"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Wyślij wybór do QOwnNotes"
   },
   "connectionFailed": {
     "message": "Połączenie QOwnNotes nie powiodło się!"

@@ -10,13 +10,13 @@
     "message": "Порт веб-сокета сервера"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Отправить страницу в QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Создать заметку со скриншотом видимой страницы"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Отправить выбранное в QOwnNotes"
   },
   "connectionFailed": {
     "message": "Не удалось подключиться к QOwnNotes!"

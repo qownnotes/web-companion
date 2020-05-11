@@ -10,13 +10,13 @@
     "message": "Szerver csatlakozóaljzat"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Küldje el az oldalt a QOwnNotes-nak"
   },
   "createScreenshotNote": {
     "message": "Hozzon létre jegyzetet a látható oldal képernyőképével"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Küldje el ezt a kiválasztást a QOwnNotes-nak"
   },
   "connectionFailed": {
     "message": "Sikertelen kapcsolódás a QOwnNotes-hoz!"

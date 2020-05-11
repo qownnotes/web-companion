@@ -10,13 +10,13 @@
     "message": "Vrata vtičnice strežnika"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Pošlji stran na QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Ustvarite beležko s posnetkom zaslona vidne strani"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Izbira pošljite na QOwnNotes"
   },
   "connectionFailed": {
     "message": "Povezava z QOwnNotes ni uspela!"

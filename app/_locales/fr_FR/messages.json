@@ -10,13 +10,13 @@
     "message": "Port du serveur"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Envoyer la page vers QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Créer une note avec capture d'écran de la page visible"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Envoyer la sélection vers QOwnNotes"
   },
   "connectionFailed": {
     "message": "La connexion à QOwnNotes a échoué !"
@@ -52,7 +52,7 @@
     "message": "Voulez-vous importer tous les signets du navigateur ?"
   },
   "InputTokenHeadline": {
-    "message": "Jeton de sécurité d'entrée"
+    "message": "Saisir le jeton de sécurité"
   },
   "InputToken": {
     "message": "Veuillez saisir le jeton de sécurité qui est maintenant affiché dans QOwnNotes !"

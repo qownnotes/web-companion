@@ -10,13 +10,13 @@
     "message": "Port utičnice servera"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Pošaljite stranicu na QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Kreirajte bilješku sa snimkom zaslona vidljive stranice"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Pošaljite izbor na QOwnNotes"
   },
   "connectionFailed": {
     "message": "Veza s QOwnNotes nije uspjela!"

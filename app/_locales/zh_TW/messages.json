@@ -10,13 +10,13 @@
     "message": "伺服器 Socket 通訊埠"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "發送頁面到QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "擷取網頁可視範圍的畫面建立筆記"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "將選擇發送到QOwnNotes"
   },
   "connectionFailed": {
     "message": "連線到 QOwnNotes 失敗！"

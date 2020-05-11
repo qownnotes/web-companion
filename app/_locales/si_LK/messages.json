@@ -10,13 +10,13 @@
     "message": "සේවාදායක සොකට් වරාය"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "QOwnNotes වෙත පිටුව යවන්න\n"
   },
   "createScreenshotNote": {
     "message": "දෘශ්‍ය පිටුවේ තිර රුවක් සමඟ සටහනක් සාදන්න"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "QOwnNotes වෙත තේරීම යවන්න"
   },
   "connectionFailed": {
     "message": "QOwnNotes වෙත සම්බන්ධතාවය අසාර්ථක විය!"

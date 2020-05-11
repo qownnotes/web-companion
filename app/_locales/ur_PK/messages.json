@@ -10,13 +10,13 @@
     "message": "سرور ساکٹ پورٹ"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "صفحہ QOwnNotes پر بھیجیں\n"
   },
   "createScreenshotNote": {
     "message": "مرئی صفحے کے اسکرین شاٹ کے ساتھ نوٹ بنائیں"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "انتخاب QOwnNotes کو بھیجیں"
   },
   "connectionFailed": {
     "message": "QOwnNotes سے رابطہ ناکام!"

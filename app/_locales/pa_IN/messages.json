@@ -10,13 +10,13 @@
     "message": "ਸਰਵਰ ਸਾਕਟ ਪੋਰਟ"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "ਪੇਜ QOwnNotes ਨੂੰ ਭੇਜੋ\n"
   },
   "createScreenshotNote": {
     "message": "ਵੇਖਣ ਵਾਲੇ ਪੇਜ ਦੇ ਸਕਰੀਨ ਸ਼ਾਟ ਨਾਲ ਨੋਟ ਬਣਾਓ"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "ਚੋਣ QOwnNotes ਨੂੰ ਭੇਜੋ"
   },
   "connectionFailed": {
     "message": "QOwnNotes ਨਾਲ ਕੁਨੈਕਸ਼ਨ ਫੇਲ੍ਹ ਹੋਇਆ!"

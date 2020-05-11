@@ -10,13 +10,13 @@
     "message": "Socket порт сервера"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Надіслати сторінку на QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Створити нотатку зі скріншоту видимої сторінки"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Надіслати вибір на QOwnNotes"
   },
   "connectionFailed": {
     "message": "Не вдалося підключитися до QOwnNotes!"

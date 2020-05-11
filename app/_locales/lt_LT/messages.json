@@ -10,13 +10,13 @@
     "message": "Serverio lizdo prievadas"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Siųsti puslapį „QOwnNotes“\n"
   },
   "createScreenshotNote": {
     "message": "Sukurkite užrašą su matomo puslapio ekrano kopija"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Siųsti pasirinkimą „QOwnNotes“"
   },
   "connectionFailed": {
     "message": "Nepavyko prisijungti prie QOwnNotes!"

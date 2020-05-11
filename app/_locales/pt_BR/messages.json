@@ -10,13 +10,13 @@
     "message": "Porta do servidor"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Enviar página para QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Criar nota com screenshot da página visível"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Enviar seleção para QOwnNotes"
   },
   "connectionFailed": {
     "message": "Falha de Conexão com o QOwnNotes!"

@@ -10,13 +10,13 @@
     "message": "Tengi netþjóns"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Sendu síðu til QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Búðu til athugasemd með skjámynd af sýnilegri síðu"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Sendu val til QOwnNotes"
   },
   "connectionFailed": {
     "message": "Tenging við QOwnNotes mistókst!"

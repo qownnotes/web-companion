@@ -10,13 +10,13 @@
     "message": "Порт за утичницу сервера"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Пошаљите страницу на КОвнНотес\n"
   },
   "createScreenshotNote": {
     "message": "Креирајте белешку са снимком екрана видљиве странице"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Пошаљите избор на КОвнНотес"
   },
   "connectionFailed": {
     "message": "Веза са QOwnNotes није успела!"

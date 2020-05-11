@@ -10,13 +10,13 @@
     "message": "Imbobo yesokhethi yeserver"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Thumela ikhasi ku-QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Dala inothi ngesithombe sekhasi elibonakalayo"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Thumela ukukhetha ku-QOwnNotes"
   },
   "connectionFailed": {
     "message": "Ukuxhumeka ku-QOwnNotes kuhlulekile!"

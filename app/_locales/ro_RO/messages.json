@@ -10,13 +10,13 @@
     "message": "Server priză port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Trimite pagina către QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Creați notă cu captura de ecran a paginii vizibile"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Trimiteți selecția la QOwnNotes"
   },
   "connectionFailed": {
     "message": "Conectarea la QOwnNotes nu a reușit!"

@@ -10,13 +10,13 @@
     "message": "Puerto del servidor de sockets"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Enviar página a QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Crear nota con captura de pantalla de la página visible"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Enviar selección a QOwnNotes"
   },
   "connectionFailed": {
     "message": "¡Error en la conexión a QOwnNotes!"

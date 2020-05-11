@@ -10,13 +10,13 @@
     "message": "خادم منفذ المقبس"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "إرسال الصفحة إلى QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "إنشاء ملاحظة مع لقطة شاشة للصفحة المرئية"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "إرسال التحديد إلى QOwnNotes"
   },
   "connectionFailed": {
     "message": "فشل الاتصال بـ QOwnNotes!"

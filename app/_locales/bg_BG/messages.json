@@ -10,13 +10,13 @@
     "message": "Порт за гнездо на сървър"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Изпращане на страница до QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Създайте бележка с екранна снимка на видимата страница"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Изпратете селекцията до QOwnNotes"
   },
   "connectionFailed": {
     "message": "Връзката с QOwnNotes не бе успешна!"

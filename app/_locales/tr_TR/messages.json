@@ -10,13 +10,13 @@
     "message": "Sunucu soketi bağlantı noktası"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Sayfayı QOwnNotes'a gönder\n"
   },
   "createScreenshotNote": {
     "message": "Görünür sayfanın ekran görüntüsüyle not oluştur"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Seçimi QOwnNotes'a gönder"
   },
   "connectionFailed": {
     "message": "QOwnNotes bağlantısı kurulamadı!"

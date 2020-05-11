@@ -10,13 +10,13 @@
     "message": "יציאת שקע שרת"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "שלח דף ל- QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "צור הערה עם צילום מסך של העמוד הגלוי"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "שלח בחירה ל- QOwnNotes"
   },
   "connectionFailed": {
     "message": "החיבור ל- QOwnNotes נכשל!"

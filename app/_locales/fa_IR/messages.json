@@ -10,13 +10,13 @@
     "message": "درگاه سوکت سرور"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "ارسال صفحه به QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "ایجاد یادداشت با تصویر صفحه قابل مشاهده"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "انتخاب را به QOwnNotes ارسال کنید"
   },
   "connectionFailed": {
     "message": "اتصال به QOwnNotes انجام نشد!"

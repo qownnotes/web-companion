@@ -10,13 +10,13 @@
     "message": "Server soket porti"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "QOwnNotes-ga sahifani yuboring\n"
   },
   "createScreenshotNote": {
     "message": "Ko'rinadigan sahifaning skrinshot bilan qayd yarating"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "QOwnNotes-ga tanlovni yuboring"
   },
   "connectionFailed": {
     "message": "QOwnNotes-ga ulanish muvaffaqiyatsiz tugadi!"

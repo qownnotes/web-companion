@@ -10,13 +10,13 @@
     "message": "Θύρα υποδοχής διακομιστή"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Αποστολή σελίδας στο QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Δημιουργήστε τη σημείωση με το στιγμιότυπο της ορατής σελίδας"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Αποστολή επιλογής στο QOwnNotes"
   },
   "connectionFailed": {
     "message": "Η σύνδεση με το QOwnNotes απέτυχε!"

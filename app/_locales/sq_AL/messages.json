@@ -10,13 +10,13 @@
     "message": "Porti i prizës së serverit"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Dërgoni faqe tek QOwnNote\n"
   },
   "createScreenshotNote": {
     "message": "Krijoni shënim me pamje nga faqja e dukshme"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Dërgoni përzgjedhjen në QOwnNotes"
   },
   "connectionFailed": {
     "message": "Lidhja me QOwnNota dështoi!"

@@ -10,13 +10,13 @@
     "message": "Server socket port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Send side til QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Lag notat med skjermbilde av synlig side"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Send valg til QOwnNotes"
   },
   "connectionFailed": {
     "message": "Tilkobling til QOwnNotes mislyktes!"

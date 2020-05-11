@@ -10,13 +10,13 @@
     "message": "Servera ligzdas ports"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Nosūtīt lapu vietnei QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Izveidojiet piezīmi ar redzamas lapas ekrānuzņēmumu"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Nosūtiet atlasi vietnei QOwnNotes"
   },
   "connectionFailed": {
     "message": "Neizdevās izveidot savienojumu ar QOwnNotes!"

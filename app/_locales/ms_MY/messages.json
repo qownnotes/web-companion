@@ -10,13 +10,13 @@
     "message": "Port soket pelayan"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "QOwnNotes ലേക്ക് പേജ് അയയ്‌ക്കുക\n"
   },
   "createScreenshotNote": {
     "message": "Cipta nota dengan tangkapan skrin halaman yang kelihatan"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "QOwnNotes ലേക്ക് തിരഞ്ഞെടുക്കൽ അയയ്‌ക്കുക"
   },
   "connectionFailed": {
     "message": "Sambungan ke QOwnNotes gagal!"

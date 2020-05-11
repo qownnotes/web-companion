@@ -10,13 +10,13 @@
     "message": "រន្ធរន្ធរបស់ម៉ាស៊ីនមេ"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "ផ្ញើទំព័រទៅ QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "បង្កើតកំណត់ត្រាជាមួយរូបថតអេក្រង់នៃទំព័រដែលអាចមើលឃើញ"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "ផ្ញើការជ្រើសរើសទៅ QOwnNotes"
   },
   "connectionFailed": {
     "message": "ការភ្ជាប់ទៅ QOwnNotes បានបរាជ័យ!"

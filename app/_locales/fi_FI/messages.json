@@ -10,13 +10,13 @@
     "message": "Palvelimen liitäntäportti"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Lähetä sivu osoitteeseen QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Luo huomautus näkyvän sivun kuvakaappauksesta"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Lähetä valinta QOwnNotes -palveluun"
   },
   "connectionFailed": {
     "message": "Yhteys QOwnNotesiin epäonnistui!"

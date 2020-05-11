@@ -10,13 +10,13 @@
     "message": "Server socket poort"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Stuur pagina naar QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Notitie maken met screenshot van zichtbare pagina"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Stuur selectie naar QOwnNotes"
   },
   "connectionFailed": {
     "message": "Verbinding met QOwnNotes mislukt!"

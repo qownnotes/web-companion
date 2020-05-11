@@ -10,13 +10,13 @@
     "message": "He tauranga pouara"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Tukuna he whārangi ki te QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Waihangahia te panui me te mata o te whaarangi e kitea ana"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Tukuna he tohu ki te QOwnNotes"
   },
   "connectionFailed": {
     "message": "I rahua te hononga ki QOwnNotes!"

@@ -10,13 +10,13 @@
     "message": "सर्वर सॉकेट पोर्ट"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "QOwnNotes पर पेज भेजें\n"
   },
   "createScreenshotNote": {
     "message": "दृश्य पृष्ठ के स्क्रीनशॉट के साथ नोट बनाएं"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "QOwnNotes में चयन भेजें"
   },
   "connectionFailed": {
     "message": "QOwnNotes से कनेक्शन विफल!"

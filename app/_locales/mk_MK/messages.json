@@ -10,13 +10,13 @@
     "message": "Сервер приклучница"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Испратете страница до QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Создадете белешка со слика од екранот на видлива страница"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Испратете избор на QOwnNotes"
   },
   "connectionFailed": {
     "message": "Врската со QOwnNotes не успеа!"
