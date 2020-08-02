@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.8.0
+- building is now done with GitHub actions
+- library security updates were made
+
 ## 20.5.0
 - screenshots are now captured as png instead of the browser's default format to capture screenshots
   (for [#17](https://github.com/qownnotes/web-companion/issues/17))
