@@ -1,0 +1,68 @@
+name: Build release
+
+on:
+  push:
+    branches: [ master ]
+#    branches: [ develop ]
+    tags-ignore:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set Env
+      run: |
+        export VERSION=$(cat package.json  | python3 -c "import sys, json; print(json.load(sys.stdin)['version'])")
+        export TAG=v${VERSION}.${GITHUB_RUN_ID}.${GITHUB_RUN_NUMBER}
+        #export TAG=v${VERSION}
+        export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" CHANGELOG.md | sed '$ d')
+        RELEASE_TEXT="${RELEASE_TEXT//'%'/'%25'}"
+        RELEASE_TEXT="${RELEASE_TEXT//$'\n'/'%0A'}"
+        RELEASE_TEXT="${RELEASE_TEXT//$'\r'/'%0D'}"
+        echo "::set-env name=VERSION::${VERSION}"
+        echo "::set-env name=TAG::${TAG}"
+        echo "::set-env name=RELEASE_TEXT::${RELEASE_TEXT}"
+    - name: Printenv
+      run: |
+        echo "VERSION=${VERSION}"
+        echo "TAG=${TAG}"
+        echo "RELEASE_TEXT=${RELEASE_TEXT}"
+        printenv
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: npm install
+    # packages/qownnotes-web-companion.v2020.5.0.chrome.zip
+    # packages/qownnotes-web-companion.v20.5.0.firefox.xpi.zip
+    - run: ./build.sh
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ env.TAG }}
+        release_name: Release v${{ env.VERSION }}
+        body: ${{ env.RELEASE_TEXT }}
+    - name: Upload Chrome package
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: packages/qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
+        asset_name: qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
+        asset_content_type: application/zip
+    - name: Upload Firefox package
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: packages/qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
+        asset_name: qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
+        asset_content_type: application/zip
