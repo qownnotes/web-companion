@@ -1,7 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 20.8.0
-- building is now done with GitHub actions
+- building is now done with GitHub Actions
 - library security updates were made
 
 ## 20.5.0
