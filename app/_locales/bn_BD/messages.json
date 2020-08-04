@@ -10,13 +10,13 @@
     "message": "সার্ভার সকেট পোর্ট"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "কিউঅউননোটস এ খুলুন"
   },
   "createScreenshotNote": {
     "message": "দৃশ্যমান পৃষ্ঠার স্ক্রিনশট সহ নোট তৈরি করুন"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "কিউঅউননোটস এ অংশটুকু পাঠান"
   },
   "connectionFailed": {
     "message": "QOwnNotes এর সাথে সংযোগ ব্যর্থ হয়েছে!"

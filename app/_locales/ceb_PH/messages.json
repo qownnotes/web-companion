@@ -10,13 +10,13 @@
     "message": "Port socket sa server"
   },
   "sendPageToQOwnNotes": {
-    "message": "Send page to QOwnNotes"
+    "message": "Magpadala ka panid sa QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Paghimo og nota uban sa screenshot sa makita nga pahina"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Send selection to QOwnNotes"
+    "message": "Pagpili pagpili sa QOwnNotes"
   },
   "connectionFailed": {
     "message": "Napakyas ang koneksyon sa QOwnNotes!"

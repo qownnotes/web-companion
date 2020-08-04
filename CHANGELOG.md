@@ -2,6 +2,7 @@
 
 ## 20.8.1
 - changed Firefox default shortcut to <kbd>Ctrl + Shift + B</kbd>
+- added more translation
 
 ## 20.8.0
 - building is now done with GitHub Actions

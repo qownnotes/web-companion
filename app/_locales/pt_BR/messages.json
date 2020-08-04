@@ -7,16 +7,16 @@
     "message": "Configurações QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Porta do servidor"
+    "message": "Server socket port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Enviar página para QOwnNotes\n"
+    "message": "Enviar página para o QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Criar nota com screenshot da página visível"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Enviar seleção para QOwnNotes"
+    "message": "Enviar seleção para o QOwnNotes"
   },
   "connectionFailed": {
     "message": "Falha de Conexão com o QOwnNotes!"
@@ -28,7 +28,7 @@
     "message": "Pesquisa"
   },
   "NewBookmark": {
-    "message": "Novo bookmark"
+    "message": "Novo marcador"
   },
   "Cancel": {
     "message": "Cancelar"
@@ -40,22 +40,22 @@
     "message": "Salvar"
   },
   "BookmarkAllTabs": {
-    "message": "Marcar todas as guias"
+    "message": "Salvar todas as abas na lista de marcadores"
   },
   "ImportBrowserBookmarks": {
-    "message": "Importar bookmarks do navegador"
+    "message": "Importar lista de favoritos do navegador"
   },
   "Import": {
     "message": "Importar"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Você deseja importar todos os bookmarks do navegador?"
+    "message": "Você deseja importar todos os favoritos do navegador?"
   },
   "InputTokenHeadline": {
     "message": "Importar token de segurança"
   },
   "InputToken": {
-    "message": "Por favor entre com o token de segurança que aparece no QOwnNotes!"
+    "message": "Por favor, entre com o token de segurança que aparece no QOwnNotes!"
   },
   "Token": {
     "message": "Token de Segurança"

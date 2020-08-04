@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "דאָס איז אַ באַגלייטער געשפּרייט פֿאַר QNwnNotes צו ינטעראַקט מיט די צעטל גענומען דעסקטאַפּ אַפּלאַקיישאַן.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes סעטטינגס"
+  },
+  "socketPortLabel": {
+    "message": "סערווער כאָלעל פּאָרט"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "שיקן בלאַט צו QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "שאַפֿן צעטל מיט סקרעענשאָט פון קענטיק בלאַט"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "שיקן סעלעקציע צו QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "קשר צו קוואָננאָטעס ניט אַנדערש!"
+  },
+  "popupHeadline": {
+    "message": "בוקמאַרקס"
+  },
+  "popupSearchLabel": {
+    "message": "זוך"
+  },
+  "NewBookmark": {
+    "message": "ניו לייענ - צייכן"
+  },
+  "Cancel": {
+    "message": "באָטל מאַכן"
+  },
+  "Ok": {
+    "message": "אקעי"
+  },
+  "Save": {
+    "message": "היט"
+  },
+  "BookmarkAllTabs": {
+    "message": "לייענ - צייכן אַלע טאַבס"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "אַרייַנפיר בלעטערער בוקמאַרקס"
+  },
+  "Import": {
+    "message": "אַרייַנפיר"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "צי איר ווילן צו אַרייַנפיר אַלע בלעטערער בוקמאַרקס?"
+  },
+  "InputTokenHeadline": {
+    "message": "אַרייַנשרייַב זיכערהייט סימען"
+  },
+  "InputToken": {
+    "message": "ביטע אַרייַן די זיכערהייט סימען וואָס איז געוויזן אין QNwnNotes!"
+  },
+  "Token": {
+    "message": "זיכערהייט סימען"
+  }
+}

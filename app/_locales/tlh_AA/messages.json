@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "QOwnNotes settings"
+  },
+  "socketPortLabel": {
+    "message": "Server socket port"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "Send page to QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "Create note with screenshot of visible page"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "Send selection to QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "Connection to QOwnNotes failed!"
+  },
+  "popupHeadline": {
+    "message": "Bookmarks"
+  },
+  "popupSearchLabel": {
+    "message": "Search"
+  },
+  "NewBookmark": {
+    "message": "New bookmark"
+  },
+  "Cancel": {
+    "message": "Cancel"
+  },
+  "Ok": {
+    "message": "Ok"
+  },
+  "Save": {
+    "message": "Save"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bookmark all tabs"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "Import browser bookmarks"
+  },
+  "Import": {
+    "message": "Import"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "Do you want to import all browser bookmarks?"
+  },
+  "InputTokenHeadline": {
+    "message": "Input security token"
+  },
+  "InputToken": {
+    "message": "Please input the security token that now is shown in QOwnNotes!"
+  },
+  "Token": {
+    "message": "Security token"
+  }
+}

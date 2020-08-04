@@ -1,0 +1,63 @@
+{
+  "appDescription": {
+    "message": "นี่เป็นส่วนเสริมที่ช่วยให้ QOwnNotes โต้ตอบกับโน้ตที่ใช้แอปพลิเคชันเดสก์ท็อป",
+    "description": "The description of the application"
+  },
+  "settingsHeadline": {
+    "message": "การตั้งค่า QOwnNotes"
+  },
+  "socketPortLabel": {
+    "message": "พอร์ตซ็อกเก็ตเซิร์ฟเวอร์"
+  },
+  "sendPageToQOwnNotes": {
+    "message": "ส่งหน้าไปที่ QOwnNotes"
+  },
+  "createScreenshotNote": {
+    "message": "สร้างบันทึกย่อที่มีภาพหน้าจอของหน้าที่มองเห็นได้"
+  },
+  "sendSelectionToQOwnNotes": {
+    "message": "ส่งการเลือกไปยัง QOwnNotes"
+  },
+  "connectionFailed": {
+    "message": "การเชื่อมต่อกับ QOwnNotes ล้มเหลว!"
+  },
+  "popupHeadline": {
+    "message": "ที่คั่น"
+  },
+  "popupSearchLabel": {
+    "message": "ค้นหา"
+  },
+  "NewBookmark": {
+    "message": "บุ๊คมาร์คใหม่"
+  },
+  "Cancel": {
+    "message": "ยกเลิก"
+  },
+  "Ok": {
+    "message": "ตกลง"
+  },
+  "Save": {
+    "message": "บันทึก"
+  },
+  "BookmarkAllTabs": {
+    "message": "คั่นแท็บทั้งหมด"
+  },
+  "ImportBrowserBookmarks": {
+    "message": "นำเข้าบุ๊คมาร์คของเบราว์เซอร์"
+  },
+  "Import": {
+    "message": "นำเข้า"
+  },
+  "ImportAllBrowserBookmarks": {
+    "message": "คุณต้องการนำเข้าบุ๊คมาร์คของเบราว์เซอร์ทั้งหมดหรือไม่"
+  },
+  "InputTokenHeadline": {
+    "message": "โทเค็นความปลอดภัยของอินพุต"
+  },
+  "InputToken": {
+    "message": "โปรดป้อนโทเค็นความปลอดภัยที่แสดงใน QOwnNotes!"
+  },
+  "Token": {
+    "message": "โทเค็นความปลอดภัย"
+  }
+}
