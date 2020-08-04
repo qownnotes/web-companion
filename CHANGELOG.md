@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.8.1
+- changed Firefox default shortcut to <kbd>Ctrl + Shift + B</kbd>
+
 ## 20.8.0
 - building is now done with GitHub Actions
 - library security updates were made
