@@ -66,3 +66,10 @@ jobs:
         asset_path: packages/qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
         asset_name: qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
         asset_content_type: application/zip
+    - uses: trmcnvn/chrome-addon@v2
+      with:
+        extension: qownnotes-web-companion
+        zip: packages/qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
+        client-id: ${{ secrets.CHROME_CLIENT_ID }}
+        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
