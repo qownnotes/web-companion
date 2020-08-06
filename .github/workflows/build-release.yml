@@ -16,8 +16,8 @@ jobs:
     - name: Set Env
       run: |
         export VERSION=$(cat package.json  | python3 -c "import sys, json; print(json.load(sys.stdin)['version'])")
-        export TAG=v${VERSION}.${GITHUB_RUN_ID}.${GITHUB_RUN_NUMBER}
-        #export TAG=v${VERSION}
+        #export TAG=v${VERSION}.${GITHUB_RUN_ID}.${GITHUB_RUN_NUMBER}
+        export TAG=v${VERSION}
         export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" CHANGELOG.md | sed '$ d')
         RELEASE_TEXT="${RELEASE_TEXT//'%'/'%25'}"
         RELEASE_TEXT="${RELEASE_TEXT//$'\n'/'%0A'}"
