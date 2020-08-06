@@ -19,6 +19,11 @@ The extension is currently tested for Google Chrome and Mozilla Firefox.
 ## Features
 
 - **managing bookmarks** with QOwnNotes notes
+    - you can browse your QOwnNotes bookmarks
+    - you can search for bookmarks and filter them by tag
+    - you can add new bookmarks from the current tab or all tabs
+    - you can add open all bookmarks in tabs
+    - you can import your browser bookmarks to QOwnNotes
     - for more information about the **bookmarks feature** please visit
       [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
 - creating a new note (only text) from the **current selection** by right-clicking it
@@ -55,7 +60,7 @@ To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running
 
 ### Firefox
 
-- in Firefox 66 and newer ([Bugreport, fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=1303384)) you can set a shortcut like <kbd>Alt + Shift + B</kbd> in the settings for extensions
+- use <kbd>Ctrl + Shift + B</kbd> to open the bookmarks popup
 
 ## Permissions
 
