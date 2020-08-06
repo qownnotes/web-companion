@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.8.2
+- fix adding of bookmarks
+
 ## 20.8.1
 - changed Firefox default shortcut to <kbd>Ctrl + Shift + B</kbd>
 - added more translation

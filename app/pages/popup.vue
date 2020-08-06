@@ -212,7 +212,6 @@
                 });
             },
             openBookmarkDialog () {
-                this.bookmarkEditDialog = true;
                 // focus and select all the text to be able to overwrite it easily
                 this.$nextTick(() => this.$refs.editedBookmarkName.focus());
                 this.$nextTick(() => $("#editedBookmarkName").select());

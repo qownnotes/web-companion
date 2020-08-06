@@ -48,7 +48,6 @@
                 return util.getLocale(text);
             },
             openBookmarkDialog () {
-                this.bookmarkEditDialog = true;
                 // focus and select all the text to be able to overwrite it easily
                 this.$nextTick(() => this.$refs.editedBookmarkDescription.focus());
                 this.$nextTick(() => $("#editedBookmarkDescription").select());
