@@ -1,7 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 20.8.2
-- fix adding of bookmarks
+- fixed adding of bookmarks due to Vue/Vuetify update
 
 ## 20.8.1
 - changed Firefox default shortcut to <kbd>Ctrl + Shift + B</kbd>
