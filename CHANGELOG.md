@@ -1,7 +1,11 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.8.3
+- Firefox store releasing is now done via GitHub Actions
+
 ## 20.8.2
 - fixed adding of bookmarks due to Vue/Vuetify update
+- Chrome store releasing is now done via GitHub Actions
 
 ## 20.8.1
 - changed Firefox default shortcut to <kbd>Ctrl + Shift + B</kbd>

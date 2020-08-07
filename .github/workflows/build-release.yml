@@ -66,6 +66,15 @@ jobs:
         asset_path: packages/qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
         asset_name: qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
         asset_content_type: application/zip
+    # https://github.com/trmcnvn/firefox-addon
+    - uses: trmcnvn/firefox-addon@v1
+      with:
+        # search for extension name in about:memory
+        uuid: '{87477736-c9f4-44c4-8eee-7fdfaaf750e9}'
+        xpi: packages/qownnotes-web-companion.v${{ env.VERSION }}.firefox.xpi.zip
+        manifest: dist/firefox/manifest.json
+        api-key: ${{ secrets.FIREFOX_API_KEY }}
+        api-secret: ${{ secrets.FIREFOX_API_SECRET }}
     - uses: trmcnvn/chrome-addon@v2
       with:
         extension: pkgkfnampapjbopomdpnkckbjdnpkbkp
