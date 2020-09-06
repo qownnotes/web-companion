@@ -105,7 +105,7 @@
                 <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>mdi-open-in-new</v-icon></v-btn>
                 <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
-                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>mdi-bookmark-plus</v-icon></v-btn>
+                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>mdi-bookmark-plus-outline</v-icon></v-btn>
                     <v-card>
                         <v-card-title>
                             <span class="headline">{{ getLocale('NewBookmark') }}</span>
