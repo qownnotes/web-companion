@@ -1,7 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
-## 20.8.3
-- Firefox store releasing is now done via GitHub Actions
+## 20.9.0
+- Now the [Material Design Icons](https://materialdesignicons.com/) are used as icons
+  instead of Google's Material Icons (that were using icon fonts) to allow disabling
+  of icon fonts in Firefox (for [#25](https://github.com/qownnotes/web-companion/issues/25))
 
 ## 20.8.2
 - fixed adding of bookmarks due to Vue/Vuetify update

@@ -1,6 +1,6 @@
 <template>
     <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmarks" max-width="500px">
-        <v-btn slot="activator" @click="openBookmarkDialog" accesskey="b" color="primary" flat icon title="Bookmark all tabs"><v-icon>input</v-icon></v-btn>
+        <v-btn slot="activator" @click="openBookmarkDialog" accesskey="b" color="primary" flat icon title="Bookmark all tabs"><v-icon>mdi-bookmark-multiple</v-icon></v-btn>
         <v-card>
             <v-card-title>
                 <span class="headline">{{ getLocale('BookmarkAllTabs') }}</span>

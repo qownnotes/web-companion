@@ -16,7 +16,7 @@
 
                         <v-list-tile-action>
                             <v-btn icon @click.stop="menuDrawer = !menuDrawer">
-                                <v-icon>chevron_left</v-icon>
+                                <v-icon>mdi-chevron-left</v-icon>
                             </v-btn>
                         </v-list-tile-action>
                     </v-list-tile>
@@ -60,7 +60,7 @@
                         ref="searchText"
                         id="searchText"
                         tabindex="1"
-                        append-icon="search"
+                        append-icon="mdi-magnify"
                         accesskey="s"
                         :label="getLocale('popupSearchLabel')"
                         single-line
@@ -102,10 +102,10 @@
                         <!--vertical-->
                 <!--&gt;</v-divider>-->
                 <v-spacer></v-spacer>
-                <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>open_in_new</v-icon></v-btn>
+                <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>mdi-open-in-new</v-icon></v-btn>
                 <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
-                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>add</v-icon></v-btn>
+                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>mdi-bookmark-plus</v-icon></v-btn>
                     <v-card>
                         <v-card-title>
                             <span class="headline">{{ getLocale('NewBookmark') }}</span>
@@ -268,7 +268,7 @@
                 menuDrawer: null,
                 importBrowserBookmarksDialog: false,
                 drawerItems: [
-                    { title: this.getLocale('ImportBrowserBookmarks'), icon: 'import_export', dialog: this.toggleImportBrowserBookmarksDialog }
+                    { title: this.getLocale('ImportBrowserBookmarks'), icon: 'mdi-import', dialog: this.toggleImportBrowserBookmarksDialog }
                 ],
                 inputTokenDialog: false
             }

@@ -2,8 +2,8 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import VueTruncate from 'vue-truncate-filter';
 import Popup from '../pages/popup.vue'
-import "material-design-icons-iconfont/dist/material-design-icons.css"
-import 'vuetify/dist/vuetify.css'
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import 'vuetify/dist/vuetify.min.css'
 import '../styles/popup.css';
 
 console.log("QOwnNotes popup page");
@@ -23,7 +23,9 @@ function initPopup() {
  * Initialize Vue
  */
 function initVue() {
-    Vue.use(Vuetify);
+    Vue.use(Vuetify, {
+        iconfont: 'mdi'
+    });
     Vue.use(VueTruncate);
 
     new Vue({
