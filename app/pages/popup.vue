@@ -115,13 +115,13 @@
                             <v-container grid-list-md>
                                 <v-layout wrap>
                                     <v-flex xs12 sm6>
-                                        <v-text-field ref="editedBookmarkName" id="editedBookmarkName" tabindex="10" v-model="editedBookmark.name" label="Link name"></v-text-field>
+                                        <v-text-field ref="editedBookmarkName" id="editedBookmarkName" tabindex="10" v-model="editedBookmark.name" label="Link name" clearable></v-text-field>
                                     </v-flex>
                                     <v-flex xs12 sm6>
-                                        <v-text-field tabindex="12" v-model="editedBookmark.description" label="Description"></v-text-field>
+                                        <v-text-field tabindex="12" v-model="editedBookmark.description" label="Description" clearable></v-text-field>
                                     </v-flex>
                                     <v-flex xs12 sm12>
-                                        <v-text-field tabindex="11" v-model="editedBookmark.url" label="URL"></v-text-field>
+                                        <v-text-field tabindex="11" v-model="editedBookmark.url" label="URL" clearable></v-text-field>
                                     </v-flex>
                                 </v-layout>
                             </v-container>

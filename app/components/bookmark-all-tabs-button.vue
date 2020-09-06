@@ -10,7 +10,7 @@
                 <v-container grid-list-md>
                     <v-layout wrap>
                         <v-flex xs12 sm12>
-                            <v-text-field ref="editedBookmarkDescription" id="editedBookmarkDescription" tabindex="10" v-model="editedBookmark.description" label="Description"></v-text-field>
+                            <v-text-field ref="editedBookmarkDescription" id="editedBookmarkDescription" tabindex="10" v-model="editedBookmark.description" label="Description" clearable></v-text-field>
                         </v-flex>
                     </v-layout>
                 </v-container>
