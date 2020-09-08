@@ -1,6 +1,6 @@
 {
   "appDescription": {
-    "message": "QOwnNotes এর ডেস্কটপ অ্যাপ্লিকেশনটির সাথে নোট গ্রহণের সাথে ইন্টারঅ্যাক্ট করার জন্য এটি একটি সহযোগী এক্সটেনশন।.",
+    "message": "নোট টেকিং ডেস্কটপ অ্যাপ্লিকেশনের সাথে ইন্টারঅ্যাক্ট করার ক্ষেত্রে QOwnNotes এর জন্য এটি একটি সহযোগী এক্সটেনশন।",
     "description": "The description of the application"
   },
   "settingsHeadline": {
@@ -10,19 +10,19 @@
     "message": "সার্ভার সকেট পোর্ট"
   },
   "sendPageToQOwnNotes": {
-    "message": "কিউঅউননোটস এ খুলুন"
+    "message": "QOwnNotes এ পেজ পাঠান"
   },
   "createScreenshotNote": {
     "message": "দৃশ্যমান পৃষ্ঠার স্ক্রিনশট সহ নোট তৈরি করুন"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "কিউঅউননোটস এ অংশটুকু পাঠান"
+    "message": "QOwnNotes এ সিলেকশন পাঠান"
   },
   "connectionFailed": {
     "message": "QOwnNotes এর সাথে সংযোগ ব্যর্থ হয়েছে!"
   },
   "popupHeadline": {
-    "message": "বুকমার্ক"
+    "message": "বুকমার্কস"
   },
   "popupSearchLabel": {
     "message": "অনুসন্ধান করুন"
@@ -31,7 +31,7 @@
     "message": "নতুন বুকমার্ক"
   },
   "Cancel": {
-    "message": "বাতিল"
+    "message": "বাতিল করুন"
   },
   "Ok": {
     "message": "ঠিক আছে"
@@ -40,24 +40,24 @@
     "message": "সংরক্ষণ করুন"
   },
   "BookmarkAllTabs": {
-    "message": "সমস্ত ট্যাব বুকমার্ক করুন"
+    "message": "সকল ট্যাব বুকমার্ক করুন"
   },
   "ImportBrowserBookmarks": {
-    "message": "ব্রাউজার বুকমার্ক আমদানি করুন"
+    "message": "ব্রাউজার বুকমার্কস আনুন "
   },
   "Import": {
-    "message": "আমদানি করুন"
+    "message": "আনুন "
   },
   "ImportAllBrowserBookmarks": {
-    "message": "আপনি কি সমস্ত ব্রাউজার বুকমার্ক আমদানি করতে চান?"
+    "message": "আপনি কি সকল ব্রাউজার বুকমার্কস আনতে চান?"
   },
   "InputTokenHeadline": {
-    "message": "সুরক্ষা টোকেন ইনপুট"
+    "message": "নিরাপত্তা টোকেন ইনপুট দিন"
   },
   "InputToken": {
-    "message": "দয়া করে এখন সুরক্ষা টোকেনটি ইনপুট করুন যা এখন QOwnNotes এ দেখানো হয়েছে!"
+    "message": "এখন QOwnNotes এ দেখানো নিরাপত্তা টোকেনটি দয়া করে ইনপুট দিন!"
   },
   "Token": {
-    "message": "নিরাপত্তা পাস"
+    "message": "নিরাপত্তা টোকেন "
   }
 }

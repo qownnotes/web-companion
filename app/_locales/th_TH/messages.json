@@ -1,6 +1,6 @@
 {
   "appDescription": {
-    "message": "นี่เป็นส่วนเสริมที่ช่วยให้ QOwnNotes โต้ตอบกับโน้ตที่ใช้แอปพลิเคชันเดสก์ท็อป",
+    "message": "นี่เป็นส่วนเสริมที่ช่วยให้ QOwnNotes โต้ตอบกับแอปพลิเคชันเดสก์ท็อปสำหรับการจดโน๊ต",
     "description": "The description of the application"
   },
   "settingsHeadline": {
@@ -10,13 +10,13 @@
     "message": "พอร์ตซ็อกเก็ตเซิร์ฟเวอร์"
   },
   "sendPageToQOwnNotes": {
-    "message": "ส่งหน้าไปที่ QOwnNotes"
+    "message": "ส่งเพจไปที่ QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "สร้างบันทึกย่อที่มีภาพหน้าจอของหน้าที่มองเห็นได้"
+    "message": "สร้างโน๊ตพร้อมภาพสกรีนช็อตของหน้าเพจที่มองเห็นได้"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "ส่งการเลือกไปยัง QOwnNotes"
+    "message": "ส่งสิ่งที่เลือกไปยัง QOwnNotes"
   },
   "connectionFailed": {
     "message": "การเชื่อมต่อกับ QOwnNotes ล้มเหลว!"
@@ -43,7 +43,7 @@
     "message": "คั่นแท็บทั้งหมด"
   },
   "ImportBrowserBookmarks": {
-    "message": "นำเข้าบุ๊คมาร์คของเบราว์เซอร์"
+    "message": "นำเข้าบุ๊คมาร์คจากเบราว์เซอร์"
   },
   "Import": {
     "message": "นำเข้า"
@@ -52,10 +52,10 @@
     "message": "คุณต้องการนำเข้าบุ๊คมาร์คของเบราว์เซอร์ทั้งหมดหรือไม่"
   },
   "InputTokenHeadline": {
-    "message": "โทเค็นความปลอดภัยของอินพุต"
+    "message": "กรุณาป้อนโทเค็นความปลอดภัย"
   },
   "InputToken": {
-    "message": "โปรดป้อนโทเค็นความปลอดภัยที่แสดงใน QOwnNotes!"
+    "message": "กรุณาป้อนโทเค็นความปลอดภัยที่กำลังถูกแสดงใน QOwnNotes!"
   },
   "Token": {
     "message": "โทเค็นความปลอดภัย"

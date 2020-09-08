@@ -1,6 +1,6 @@
 {
   "appDescription": {
-    "message": "Essa é uma extensão complementar para o QOwnNotes interagir com o aplicativo de anotações.",
+    "message": "Esta é uma extensão complementar para o QOwnNotes interagir com a aplicação de notas para computador.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
@@ -13,7 +13,7 @@
     "message": "Enviar página para QOwnNotes\n"
   },
   "createScreenshotNote": {
-    "message": "Criar nota com captura de tela da página visível"
+    "message": "Criar nota com captura de ecrã da página visível"
   },
   "sendSelectionToQOwnNotes": {
     "message": "Enviar seleção para QOwnNotes"
@@ -40,10 +40,10 @@
     "message": "Guardar"
   },
   "BookmarkAllTabs": {
-    "message": "Adicionar todas as guias aos favoritos"
+    "message": "Marcar todas as abas"
   },
   "ImportBrowserBookmarks": {
-    "message": "Importar favoritos do navegador"
+    "message": "Importar marcadores do navegador"
   },
   "Import": {
     "message": "Importar"
@@ -52,12 +52,12 @@
     "message": "Deseja importar todos os marcadores do navegador?"
   },
   "InputTokenHeadline": {
-    "message": "Token de segurança de entrada"
+    "message": "Introduza o símbolo de segurança"
   },
   "InputToken": {
-    "message": "Por favor, insira o token de segurança que agora é mostrado no QOwnNotes!"
+    "message": "Por favor, insira o símbolo de segurança que agora é mostrado no QOwnNotes!"
   },
   "Token": {
-    "message": "Token de segurança"
+    "message": "Símbolo de segurança"
   }
 }

@@ -22,7 +22,7 @@
     "message": "فشل الاتصال بـ QOwnNotes!"
   },
   "popupHeadline": {
-    "message": "إرسال"
+    "message": "الإشارات المرجعية"
   },
   "popupSearchLabel": {
     "message": "بحث"
@@ -40,19 +40,19 @@
     "message": "حفظ"
   },
   "BookmarkAllTabs": {
-    "message": "إشارة مرجعية جميع علامات التبويب"
+    "message": "حفظ كل علامات التبويب كإشارات مرجعية"
   },
   "ImportBrowserBookmarks": {
-    "message": "استيراد الإشارات المرجعية في المتصفح"
+    "message": "استيراد الإشارات المرجعية من المتصفح"
   },
   "Import": {
-    "message": "استورد"
+    "message": "استيراد"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "هل تريد استيراد جميع الإشارات المرجعية في المتصفح؟"
+    "message": "هل تريد استيراد جميع الإشارات المرجعية من المتصفح؟"
   },
   "InputTokenHeadline": {
-    "message": "رمز أمان الإدخال"
+    "message": "إدخال رمز الأمان"
   },
   "InputToken": {
     "message": "الرجاء إدخال رمز الأمان الذي يظهر الآن في QOwnNotes!"

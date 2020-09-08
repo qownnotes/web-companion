@@ -16,7 +16,7 @@
     "message": "Utwórz notatkę ze zrzutem widocznej strony"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Wyślij wybór do QOwnNotes"
+    "message": "Wyślij zaznaczone do QOwnNotes"
   },
   "connectionFailed": {
     "message": "Połączenie QOwnNotes nie powiodło się!"

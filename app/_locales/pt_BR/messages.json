@@ -1,19 +1,19 @@
 {
   "appDescription": {
-    "message": "Esta é uma extensão para QOwnNotes para interagir com o aplicativo desktop.",
+    "message": "Esta é uma extensão adicional para o QOwnNotes que permite interagir com o cliente para desktop.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
     "message": "Configurações QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "Porta do socket de rede"
   },
   "sendPageToQOwnNotes": {
     "message": "Enviar página para o QOwnNotes\n"
   },
   "createScreenshotNote": {
-    "message": "Criar nota com screenshot da página visível"
+    "message": "Criar nota com a captura de tela da página visível"
   },
   "sendSelectionToQOwnNotes": {
     "message": "Enviar seleção para o QOwnNotes"
@@ -52,10 +52,10 @@
     "message": "Você deseja importar todos os favoritos do navegador?"
   },
   "InputTokenHeadline": {
-    "message": "Importar token de segurança"
+    "message": "Inserir token de segurança"
   },
   "InputToken": {
-    "message": "Por favor, entre com o token de segurança que aparece no QOwnNotes!"
+    "message": "Por favor, insira o token de segurança que aparece no QOwnNotes!"
   },
   "Token": {
     "message": "Token de Segurança"

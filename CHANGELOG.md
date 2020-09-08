@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.9.2
+- added more translation
+
 ## 20.9.1
 - icons now were switched to [Font Awesome Icons 4](https://fontawesome.com/v4.7.0/icons/)
   because all other icon sets take far too much space to be accepted into the Firefox store

@@ -1,25 +1,25 @@
 {
   "appDescription": {
-    "message": "Ovo je popratni nastavak za QOwnNotes za interakciju s aplikacijom za pisanje bilješki.",
+    "message": "Ovo je popratni QOwnNotes nastavak za interakciju s aplikacijom za pisanje bilješki.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "Postavke QOwnNotes"
+    "message": "Postavke QOwnNotes-a"
   },
   "socketPortLabel": {
-    "message": "Port socket poslužitelja"
+    "message": "Adresa poslužitelja"
   },
   "sendPageToQOwnNotes": {
-    "message": "Pošaljite stranicu na QOwnNotes\n"
+    "message": "Pošalji stranicu na QOwnNotes\n"
   },
   "createScreenshotNote": {
-    "message": "Napravite bilješku s snimkom zaslona vidljive stranice"
+    "message": "Napravi bilješku sa snimkom zaslona stranice"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Pošaljite izbor na QOwnNotes"
+    "message": "Pošalji izbor na QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Veza s QOwnNotes nije uspjela!"
+    "message": "Povezivanje s QOwnNotes nije uspjelo!"
   },
   "popupHeadline": {
     "message": "Oznake"
@@ -37,27 +37,27 @@
     "message": "U redu"
   },
   "Save": {
-    "message": "Uštedjeti"
+    "message": "Spremi"
   },
   "BookmarkAllTabs": {
-    "message": "Označite sve kartice"
+    "message": "Označi sve kartice"
   },
   "ImportBrowserBookmarks": {
     "message": "Uvezite oznake preglednika"
   },
   "Import": {
-    "message": "Import"
+    "message": "Uvezi"
   },
   "ImportAllBrowserBookmarks": {
     "message": "Želite li uvesti sve oznake preglednika?"
   },
   "InputTokenHeadline": {
-    "message": "Ulazni sigurnosni žeton"
+    "message": "Unesi sigurnosni token"
   },
   "InputToken": {
-    "message": "Unesite sigurnosni žeton koji je sada prikazan u QOwnNotes!"
+    "message": "Unesi sigurnosni token koji je prikazan u QOwnNotes!"
   },
   "Token": {
-    "message": "Sigurnostni žeton"
+    "message": "Sigurnosni token"
   }
 }

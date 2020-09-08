@@ -1,31 +1,31 @@
 {
   "appDescription": {
-    "message": "این یک برنامه افزودنی همراه برای QOwnNotes برای تعامل با برنامه استفاده از رایانه رومیزی است.",
+    "message": "این یک افزونه همراه برای QOwnNotes جهت تعامل با برنامه دسکتاپ یادداشت برداری است.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
     "message": "تنظیمات QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "درگاه سوکت سرور"
+    "message": "پورت سوکت سرور"
   },
   "sendPageToQOwnNotes": {
-    "message": "ارسال صفحه به QOwnNotes\n"
+    "message": "ارسال صفحه به QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "ایجاد یادداشت با تصویر صفحه قابل مشاهده"
+    "message": "ایجاد یادداشت با نماگرفت از صفحه قابل مشاهده"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "انتخاب را به QOwnNotes ارسال کنید"
+    "message": "ارسال انتخاب به QOwnNotes"
   },
   "connectionFailed": {
-    "message": "اتصال به QOwnNotes انجام نشد!"
+    "message": "ارتباط با QOwnNotes برقرار نشد!"
   },
   "popupHeadline": {
     "message": "نشانک ها"
   },
   "popupSearchLabel": {
-    "message": "جستجو کردن"
+    "message": "جستجو"
   },
   "NewBookmark": {
     "message": "نشانک جدید"
@@ -34,30 +34,30 @@
     "message": "لغو"
   },
   "Ok": {
-    "message": "خوب"
+    "message": "باشه"
   },
   "Save": {
-    "message": "صرفه جویی"
+    "message": "ذخیره"
   },
   "BookmarkAllTabs": {
-    "message": "همه برگه ها را علامت گذاری کنید"
+    "message": "علامت گذاری همه زبانه ها"
   },
   "ImportBrowserBookmarks": {
-    "message": "نشانک های مرورگر را وارد کنید"
+    "message": "ورود نشانک های مرورگر"
   },
   "Import": {
-    "message": "وارد كردن"
+    "message": "ورود"
   },
   "ImportAllBrowserBookmarks": {
     "message": "آیا می خواهید تمام نشانک های مرورگر را وارد کنید؟"
   },
   "InputTokenHeadline": {
-    "message": "نشانه امنیتی ورودی"
+    "message": "ورود توکن امنیتی"
   },
   "InputToken": {
-    "message": "لطفاً نماد امنیتی را که اکنون در QOwnNotes نشان داده شده است وارد کنید!"
+    "message": "لطفاً توکن امنیتی را که اکنون در QOwnNotes نشان داده شده است وارد کنید!"
   },
   "Token": {
-    "message": "رمز امنیتی"
+    "message": "توکن امنیتی"
   }
 }
