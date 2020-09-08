@@ -268,7 +268,7 @@
                 menuDrawer: null,
                 importBrowserBookmarksDialog: false,
                 drawerItems: [
-                    { title: this.getLocale('ImportBrowserBookmarks'), icon: 'fa-import', dialog: this.toggleImportBrowserBookmarksDialog }
+                    { title: this.getLocale('ImportBrowserBookmarks'), icon: 'fa-download', dialog: this.toggleImportBrowserBookmarksDialog }
                 ],
                 inputTokenDialog: false
             }
