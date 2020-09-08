@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.9.1
+- icons now were switched to [Font Awesome Icons 4](https://fontawesome.com/v4.7.0/icons/)
+  because all other icon sets take far too much space to be accepted into the Firefox store
+  (for [#25](https://github.com/qownnotes/web-companion/issues/25))
+
 ## 20.9.0
 - now the [Material Design Icons](https://materialdesignicons.com/) are used as icons
   instead of Google's Material Icons (that were using icon fonts) to allow disabling

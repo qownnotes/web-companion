@@ -10,7 +10,6 @@ module.exports = {
         vendor
     }) => {
         config.plugins.push(new webpack.ProvidePlugin({
-            $: 'jquery',
             jQuery: 'jquery',
             Vue: 'vue',
             VueLoader: 'vue-loader'
@@ -29,6 +28,10 @@ module.exports = {
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: "url-loader",
+            },
+            {
+                test: /\.svg$/,
                 loader: "url-loader",
             },
             {

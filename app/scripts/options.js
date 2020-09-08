@@ -1,8 +1,8 @@
 import Vue from 'vue';
-// import Vue from 'vue/dist/vue.js';
 import Vuetify from 'vuetify';
 import Options from '../pages/options.vue'
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+// import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import 'font-awesome/css/font-awesome.min.css' // Ensure you are using css-loader
 import 'vuetify/dist/vuetify.css'
 import '../styles/options.css';
 
@@ -24,7 +24,10 @@ function initOptions() {
  */
 function initVue() {
     Vue.use(Vuetify, {
-        iconfont: 'mdi'
+        iconfont: 'fa4',
+        icons: {
+            'clear': 'fa-times',
+        }
     });
 
     new Vue({
