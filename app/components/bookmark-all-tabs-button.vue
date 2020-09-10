@@ -49,8 +49,12 @@
             },
             openBookmarkDialog () {
                 // focus and select all the text to be able to overwrite it easily
-                this.$nextTick(() => this.$refs.editedBookmarkDescription.focus());
-                this.$nextTick(() => $("#editedBookmarkDescription").select());
+                this.$nextTick(() => {
+                  const elem = document.querySelector("#editedBookmarkDescription");
+                  // elem.focus();
+                  this.$refs.editedBookmarkDescription.focus();
+                  elem.select();
+                });
             },
             closeBookmarkDialog () {
                 this.bookmarkEditDialog = false;

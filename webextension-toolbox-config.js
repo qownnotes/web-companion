@@ -10,7 +10,6 @@ module.exports = {
         vendor
     }) => {
         config.plugins.push(new webpack.ProvidePlugin({
-            jQuery: 'jquery',
             Vue: 'vue',
             VueLoader: 'vue-loader'
         }));

@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.9.3
+- fixed focusing and selecting in the search input field
+- removed jQuery dependency 
+
 ## 20.9.2
 - added more translation
 

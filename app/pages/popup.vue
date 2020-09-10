@@ -207,14 +207,14 @@
             },
             openAllVisibleBookmarks() {
                 let that = this;
-                $("#bookmark-list tr a").each(function () {
-                    that.openUrl($(this).attr("href"));
+                document.querySelector("#bookmark-list tr a").each(function () {
+                    that.openUrl(this.getAttribute("href"));
                 });
             },
             openBookmarkDialog () {
                 // focus and select all the text to be able to overwrite it easily
                 this.$nextTick(() => this.$refs.editedBookmarkName.focus());
-                this.$nextTick(() => $("#editedBookmarkName").select());
+                this.$nextTick(() => document.querySelector("#editedBookmarkName").select());
             },
             closeBookmarkDialog () {
                 this.bookmarkEditDialog = false;
@@ -281,7 +281,7 @@
                 that.search = data.search;
 
                 // select all the text to be able to overwrite it easily
-                that.$nextTick(() => $("#searchText").select());
+                that.$nextTick(() => document.querySelector("#searchText").select());
             } );
 
             this.webSocket = new ws.QWebSocket(function (event) {
