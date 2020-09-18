@@ -10,13 +10,13 @@
     "message": "Vrata vtičnice strežnika"
   },
   "sendPageToQOwnNotes": {
-    "message": "Pošlji stran na QOwnNotes\n"
+    "message": "Pošljite stran na QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "Ustvarite beležko s posnetkom zaslona vidne strani"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Izbira pošljite na QOwnNotes"
+    "message": "Pošljite izbor na QOwnNotes"
   },
   "connectionFailed": {
     "message": "Povezava z QOwnNotes ni uspela!"
@@ -34,7 +34,7 @@
     "message": "Prekliči"
   },
   "Ok": {
-    "message": "v redu"
+    "message": "V redu"
   },
   "Save": {
     "message": "Shrani"
@@ -52,10 +52,10 @@
     "message": "Ali želite uvoziti vse zaznamke brskalnika?"
   },
   "InputTokenHeadline": {
-    "message": "Vhodni varnostni žeton"
+    "message": "Vnesite varnostni žeton"
   },
   "InputToken": {
-    "message": "Vnesite varnostni žeton, ki je zdaj prikazan v QOwnNotes!"
+    "message": "Prosim, vnesite varnostni žeton, ki je zdaj prikazan v QOwnNotes!"
   },
   "Token": {
     "message": "Varnostni žeton"
