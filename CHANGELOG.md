@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.9.4
+- fixed opening of all bookmarks in new tabs
+
 ## 20.9.3
 - fixed focusing and selecting in the search input field
 - removed jQuery dependency 

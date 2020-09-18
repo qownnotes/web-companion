@@ -206,9 +206,8 @@
                 chrome.tabs.create({ url: url });
             },
             openAllVisibleBookmarks() {
-                let that = this;
-                document.querySelector("#bookmark-list tr a").each(function () {
-                    that.openUrl(this.getAttribute("href"));
+                document.querySelectorAll("#bookmark-list tr a").forEach((item) => {
+                    this.openUrl(item.getAttribute("href"));
                 });
             },
             openBookmarkDialog () {
