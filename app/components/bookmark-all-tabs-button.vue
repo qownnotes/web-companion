@@ -1,6 +1,6 @@
 <template>
     <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmarks" max-width="500px">
-        <v-btn slot="activator" @click="openBookmarkDialog" accesskey="b" color="primary" flat icon title="Bookmark all tabs"><v-icon>fa-arrow-circle-o-down fa-lg</v-icon></v-btn>
+        <v-btn slot="activator" @click="openBookmarkDialog" accesskey="b" color="primary" text icon title="Bookmark all tabs"><v-icon>fa-arrow-circle-o-down fa-lg</v-icon></v-btn>
         <v-card>
             <v-card-title>
                 <span class="headline">{{ getLocale('BookmarkAllTabs') }}</span>
@@ -18,8 +18,8 @@
 
             <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">{{ getLocale('Cancel') }}</v-btn>
-                <v-btn color="blue darken-1" flat @click="saveBookmarks">{{ getLocale('Save') }}</v-btn>
+                <v-btn color="blue darken-1" text @click="closeBookmarkDialog">{{ getLocale('Cancel') }}</v-btn>
+                <v-btn color="blue darken-1" text @click="saveBookmarks">{{ getLocale('Save') }}</v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>

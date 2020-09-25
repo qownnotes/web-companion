@@ -9,22 +9,26 @@
     "build": "webextension-toolbox build"
   },
   "dependencies": {
-    "node-sass": "^4.14.1",
     "vue": "^2.6.12",
     "vue-truncate-filter": "^1.1.7",
-    "vuetify": "^1.5.24"
+    "vuetify": "^2.3.10"
   },
   "devDependencies": {
     "css-loader": "^4.2.2",
+    "deepmerge": "^4.2.2",
+    "fibers": "^5.0.0",
     "file-loader": "^6.1.0",
     "font-awesome": "^4.7.0",
     "mini-css-extract-plugin": "^0.11.0",
     "prettier": "^2.1.1",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
+    "vuetify-loader": "^1.6.0",
     "webextension-toolbox": "latest"
   }
 }

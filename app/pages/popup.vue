@@ -8,40 +8,40 @@
                     temporary
             >
                 <v-list class="pa-1">
-                    <v-list-tile tag="div">
-                        <v-list-tile-content>
-                            <v-list-tile-title>Menu</v-list-tile-title>
-                        </v-list-tile-content>
+                    <v-list-item tag="div">
+                        <v-list-item-content>
+                            <v-list-item-title>Menu</v-list-item-title>
+                        </v-list-item-content>
 
-                        <v-list-tile-action>
+                        <v-list-item-action>
                             <v-btn icon @click.stop="menuDrawer = !menuDrawer">
                                 <v-icon>fa-chevron-left</v-icon>
                                 <!--<font-awesome-icon icon="fa-chevron-left" />-->
                             </v-btn>
-                        </v-list-tile-action>
-                    </v-list-tile>
+                        </v-list-item-action>
+                    </v-list-item>
                 </v-list>
 
                 <v-list class="pt-0" dense>
                     <v-divider light></v-divider>
 
-                    <v-list-tile
+                    <v-list-item
                             v-for="item in drawerItems"
                             :key="item.title"
                             @click.stop="item.dialog"
                     >
-                        <v-list-tile-action>
+                        <v-list-item-action>
                             <v-icon>{{ item.icon }}</v-icon>
-                        </v-list-tile-action>
+                        </v-list-item-action>
 
-                        <v-list-tile-content>
-                            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
+                        <v-list-item-content>
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
                 </v-list>
             </v-navigation-drawer>
-            <v-toolbar flat dark color="grey darken-4" height="56">
-                <v-toolbar-side-icon @click.stop="menuDrawer = !menuDrawer"></v-toolbar-side-icon>
+            <v-toolbar text dark color="grey darken-4" height="56">
+                <v-app-bar-nav-icon @click.stop="menuDrawer = !menuDrawer"></v-app-bar-nav-icon>
                 <v-card-title
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('popupHeadline')"
@@ -70,7 +70,7 @@
                 ></v-text-field>
             </v-toolbar>
 
-            <v-toolbar flat color="white">
+            <v-toolbar text color="white">
                 <v-autocomplete
                         v-model="selectedTags"
                         accesskey="t"
@@ -89,7 +89,7 @@
                 >
                     {{ snackbarText }}
                     <v-btn
-                            flat
+                            text
                             @click="snackbar = false"
                     >
                         Close
@@ -102,10 +102,10 @@
                         <!--vertical-->
                 <!--&gt;</v-divider>-->
                 <v-spacer></v-spacer>
-                <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" flat icon title="Open all bookmarks in new tabs"><v-icon>fa-external-link fa-lg</v-icon></v-btn>
+                <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" text icon title="Open all bookmarks in new tabs"><v-icon>fa-external-link fa-lg</v-icon></v-btn>
                 <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
-                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" flat icon title="Add bookmark"><v-icon>fa-plus fa-lg</v-icon></v-btn>
+                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" text icon title="Add bookmark"><v-icon>fa-plus fa-lg</v-icon></v-btn>
                     <v-card>
                         <v-card-title>
                             <span class="headline">{{ getLocale('NewBookmark') }}</span>
@@ -129,8 +129,8 @@
 
                         <v-card-actions>
                             <v-spacer></v-spacer>
-                            <v-btn color="blue darken-1" flat @click="closeBookmarkDialog">{{ getLocale('Cancel') }}</v-btn>
-                            <v-btn color="blue darken-1" flat @click="saveBookmark">{{ getLocale('Save') }}</v-btn>
+                            <v-btn color="blue darken-1" text @click="closeBookmarkDialog">{{ getLocale('Cancel') }}</v-btn>
+                            <v-btn color="blue darken-1" text @click="saveBookmark">{{ getLocale('Save') }}</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-dialog>
@@ -140,9 +140,8 @@
                     :headers="headers"
                     :items="filteredBookmarks"
                     :loading="loadingBookmarks"
-                    :pagination.sync="pagination"
+                    :options.sync="tableOptions"
                     :rows-per-page-items="[10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
-                    :disable-initial-sort="true"
                     id="bookmark-list"
                     class="elevation-1 bookmark-list"
             >
@@ -257,8 +256,8 @@
                     url: '',
                     description: ''
                 },
-                pagination: {
-                    rowsPerPage: 10
+                tableOptions: {
+                    itemsPerPage: 10
                 },
                 selectedTags: [],
                 webSocket: null,
@@ -306,8 +305,8 @@
 
                         chrome.storage.sync.get( function ( data ) {
                             // console.log("after load");
-                            // console.log(that.pagination.page);
-                            that.pagination.page = data.pagination.page;
+                            // console.log(that.tableOptions.page);
+                            that.tableOptions.page = data.tableOptions.page;
                             that.selectedTags = [];
                             const tags = that.allTags;
 
@@ -354,11 +353,11 @@
                 } );
             },
             // this seems to be also executed when the popup disappears and reset the values that way
-            pagination: function (val, oldVal) {
-                // console.log("pagination watch");
+          tableOptions: function (val, oldVal) {
+                // console.log("tableOptions watch");
                 // console.log(val.page);
                 chrome.storage.sync.set( {
-                    pagination: val
+                  tableOptions: val
                 } );
             },
             bookmarkEditDialog (val) {
@@ -441,59 +440,46 @@
         }
     };
 </script>
-<style lang="scss">
-    #app {
-        min-width: 600px;
-        min-height: 500px;
-    }
-
-    .bookmark-list {
-        a {
-            color: black;
-            text-decoration: none;
-        }
-
-        td {
-            cursor: pointer;
-        }
-
-        span.tag {
-            background: #444;
-            padding: 3px;
-            color: white;
-            border-radius: 5px;
-            margin: 1px;
-            display: inline-block;
-            font-size: 0.8em;
-        }
-
-        table.v-table {
-            tr {
-                height: 30px;
-            }
-
-            tbody td, tbody th, thead th, tbody td:first-child, thead th:first-child {
-                height: 30px;
-                padding: 0 10px;
-
-                span {
-                    line-height: 3em;
-                    display: inline-block;
-                }
-            }
-
-            tbody td.link-tags {
-                white-space: nowrap;
-
-                span {
-                    line-height: inherit;
-                }
-
-                span::first-letter {
-                    /*display: none;*/
-                    /*color: red;*/
-                }
-            }
-        }
-    }
+<style scoped>
+  #app {
+    min-width: 600px;
+    min-height: 500px;
+  }
+  .bookmark-list a {
+    color: black;
+    text-decoration: none;
+  }
+  .bookmark-list td {
+    cursor: pointer;
+  }
+  .bookmark-list span.tag {
+    background: #444;
+    padding: 3px;
+    color: white;
+    border-radius: 5px;
+    margin: 1px;
+    display: inline-block;
+    font-size: 0.8em;
+  }
+  .bookmark-list table.v-table tr {
+    height: 30px;
+  }
+  .bookmark-list table.v-table tbody td, .bookmark-list table.v-table tbody th, .bookmark-list table.v-table thead th, .bookmark-list table.v-table tbody td:first-child, .bookmark-list table.v-table thead th:first-child {
+    height: 30px;
+    padding: 0 10px;
+  }
+  .bookmark-list table.v-table tbody td span, .bookmark-list table.v-table tbody th span, .bookmark-list table.v-table thead th span, .bookmark-list table.v-table tbody td:first-child span, .bookmark-list table.v-table thead th:first-child span {
+    line-height: 3em;
+    display: inline-block;
+  }
+  .bookmark-list table.v-table tbody td.link-tags {
+    white-space: nowrap;
+  }
+  .bookmark-list table.v-table tbody td.link-tags span {
+    line-height: inherit;
+  }
+  .bookmark-list table.v-table tbody td.link-tags span::first-letter {
+    /*display: none;*/
+    /*color: red;*/
+  }
 </style>

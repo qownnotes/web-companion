@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify';
+// import Vuetify from 'vuetify/lib'
+import vuetify from './plugins/vuetify' // path to vuetify export
 import VueTruncate from 'vue-truncate-filter';
 import Popup from '../pages/popup.vue'
 // import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
@@ -31,19 +32,33 @@ function initVue() {
     // Vue.component('font-awesome-icon', FontAwesomeIcon) // Register component globally
     // library.add(fas) // Include needed icons.
 
-    Vue.use(Vuetify, {
-        iconfont: 'fa4',
-        icons: {
-            // 'clear': 'fas fa-times fa-lg',
-            'clear': 'fa-times',
-        }
-    });
+    // Vue.use(Vuetify, {
+    //     iconfont: 'fa4',
+    //     icons: {
+    //         // 'clear': 'fas fa-times fa-lg',
+    //         'clear': 'fa-times',
+    //     }
+    // });
+
+    // const vuetifyOpts = {
+    //     iconfont: 'fa4',
+    //     icons: {
+    //         // 'clear': 'fas fa-times fa-lg',
+    //         'clear': 'fa-times',
+    //     }
+    // }
+
     Vue.use(VueTruncate);
 
+    /* eslint-disable no-new */
     new Vue({
-        el: '#app',
-        render: (h) => h(Popup)
-    });
+        // el: '#app',
+        // vuetify: new Vuetify(vuetifyOpts),
+        vuetify,
+        components: { Popup },
+        // template: "<App/>",
+        render: h => h(Popup),
+    }).$mount('#app');
 }
 
 initPopup();

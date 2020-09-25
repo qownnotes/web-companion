@@ -26,8 +26,8 @@
 
             <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" flat @click.native="$emit('input')">{{ getLocale('Cancel') }}</v-btn>
-                <v-btn color="blue darken-1" flat @click="storeToken">{{ getLocale('Ok') }}</v-btn>
+                <v-btn color="blue darken-1" text @click.native="$emit('input')">{{ getLocale('Cancel') }}</v-btn>
+                <v-btn color="blue darken-1" text @click="storeToken">{{ getLocale('Ok') }}</v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>

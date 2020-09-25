@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <v-app id="options">
-            <v-toolbar flat dark color="grey darken-4">
+            <v-toolbar text dark color="grey darken-4">
                 <v-card-title
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('settingsHeadline')"
