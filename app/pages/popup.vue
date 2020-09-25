@@ -5,9 +5,10 @@
                     v-model="menuDrawer"
                     absolute
                     dark
+                    clipped
                     temporary
             >
-                <v-list class="pa-1">
+                <v-list>
                     <v-list-item tag="div">
                         <v-list-item-content>
                             <v-list-item-title>Menu</v-list-item-title>
@@ -22,7 +23,7 @@
                     </v-list-item>
                 </v-list>
 
-                <v-list class="pt-0" dense>
+                <v-list dense>
                     <v-divider light></v-divider>
 
                     <v-list-item
@@ -40,11 +41,11 @@
                     </v-list-item>
                 </v-list>
             </v-navigation-drawer>
-            <v-toolbar text dark color="grey darken-4" height="56">
+            <v-app-bar class="flex-grow-0" dark height="56">
                 <v-app-bar-nav-icon @click.stop="menuDrawer = !menuDrawer"></v-app-bar-nav-icon>
                 <v-card-title
-                        class="headline spacedLetters upperCase ml-2"
-                        v-html="getLocale('popupHeadline')"
+                    style="white-space: nowrap"
+                    v-html="getLocale('popupHeadline')"
                 />
                 <v-select
                         accesskey="f"
@@ -66,11 +67,11 @@
                         single-line
                         hide-details
                         clearable
-                        style="padding-top: 0"
+                        style="padding-top: 0; wi"
                 ></v-text-field>
-            </v-toolbar>
+            </v-app-bar>
 
-            <v-toolbar text color="white">
+            <v-toolbar class="flex-grow-0" text color="white">
                 <v-autocomplete
                         v-model="selectedTags"
                         accesskey="t"
@@ -145,7 +146,7 @@
                     :options.sync="tableOptions"
                     :footer-props="{'items-per-page-options': [10,25,50,75,100,-1]}"
                     id="bookmark-list"
-                    class="elevation-1 bookmark-list"
+                    class="elevation-1 bookmark-list flex-grow-1"
             >
                 <template slot="items" slot-scope="props">
                     <tr @click="openUrl(props.item.url)">
@@ -449,7 +450,7 @@
 </script>
 <style scoped>
   #app {
-    min-width: 600px;
+    min-width: 650px;
     min-height: 500px;
   }
   .bookmark-list a {

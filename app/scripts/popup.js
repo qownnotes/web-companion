@@ -1,16 +1,16 @@
 import Vue from 'vue';
 // import Vuetify from 'vuetify/lib'
-import vuetify from './plugins/vuetify' // path to vuetify export
+import vuetify from './plugins/vuetify'
 import VueTruncate from 'vue-truncate-filter';
 import Popup from '../pages/popup.vue'
 // import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
-import 'vuetify/dist/vuetify.min.css'
-import '../styles/popup.css';
+// import 'vuetify/dist/vuetify.min.css'
+// import '../styles/popup.css';
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // import { fas } from '@fortawesome/free-solid-svg-icons'
 // import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
-import 'font-awesome/css/font-awesome.min.css' // Ensure you are using css-loader
+// import 'font-awesome/css/font-awesome.min.css' // Ensure you are using css-loader
 
 console.log("QOwnNotes popup page");
 

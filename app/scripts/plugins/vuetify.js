@@ -1,18 +1,23 @@
 
 // src/plugins/vuetify.js
 
+// import '@mdi/font/css/materialdesignicons.css'
+import 'font-awesome/css/font-awesome.min.css'
+// import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-// import 'vuetify/dist/vuetify.min.css'
+import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify)
 
 const opts = {
-    // iconfont: 'fa4',
-    // icons: {
-    //     // 'clear': 'fas fa-times fa-lg',
-    //     'clear': 'fa-times',
-    // }
+    icons: {
+        iconfont: 'fa4',
+        values: {
+            // 'clear': 'fas fa-times fa-lg',
+            'clear': 'fa-times',
+        }
+    },
 }
 
 export default new Vuetify(opts)
