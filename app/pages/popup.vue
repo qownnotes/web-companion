@@ -148,7 +148,7 @@
                     id="bookmark-list"
                     class="elevation-1 bookmark-list flex-grow-1"
             >
-                <template slot="items" slot-scope="props">
+                <template v-slot:item="props">
                     <tr @click="openUrl(props.item.url)">
                         <td v-if="props.item.name" class="text-no-wrap">
                             <v-tooltip bottom>
