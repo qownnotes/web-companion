@@ -105,7 +105,9 @@
                 <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" text icon title="Open all bookmarks in new tabs"><v-icon>fa-external-link fa-lg</v-icon></v-btn>
                 <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
                 <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark" max-width="500px">
-                    <v-btn slot="activator" @click="openBookmarkDialog" accesskey="a" color="primary" text icon title="Add bookmark"><v-icon>fa-plus fa-lg</v-icon></v-btn>
+                    <template v-slot:activator="{ on, attrs }">
+                        <v-btn v-on="on" v-bind="attrs" @click="openBookmarkDialog" accesskey="a" color="primary" text icon title="Add bookmark"><v-icon>fa-plus fa-lg</v-icon></v-btn>
+                    </template>
                     <v-card>
                         <v-card-title>
                             <span class="headline">{{ getLocale('NewBookmark') }}</span>
@@ -141,7 +143,7 @@
                     :items="filteredBookmarks"
                     :loading="loadingBookmarks"
                     :options.sync="tableOptions"
-                    :rows-per-page-items="[10,25,50,75,100,{'text':'$vuetify.dataIterator.rowsPerPageAll','value':-1}]"
+                    :footer-props="{'items-per-page-options': [10,25,50,75,100,-1]}"
                     id="bookmark-list"
                     class="elevation-1 bookmark-list"
             >
@@ -149,7 +151,11 @@
                     <tr @click="openUrl(props.item.url)">
                         <td v-if="props.item.name" class="text-no-wrap">
                             <v-tooltip bottom>
-                                <strong slot="activator"><a tabindex="2" :href="props.item.url" :accesskey="props.index + 1" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a></strong>
+                                <template v-slot:activator="{ on, attrs }">
+                                  <strong v-bind="attrs" v-on="on">
+                                      <a tabindex="2" :href="props.item.url" :accesskey="props.index + 1" target="_blank" @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a>
+                                  </strong>
+                                </template>
                                 <span>
                                     <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br /></template>
                                     {{ props.item.url }}
@@ -211,7 +217,8 @@
             },
             openBookmarkDialog () {
                 // focus and select all the text to be able to overwrite it easily
-                this.$nextTick(() => this.$refs.editedBookmarkName.focus());
+                // Todo: Doesn't seem to do anything
+                // this.$nextTick(() => this.$refs.editedBookmarkName.focus());
                 this.$nextTick(() => document.querySelector("#editedBookmarkName").select());
             },
             closeBookmarkDialog () {

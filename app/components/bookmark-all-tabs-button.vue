@@ -1,6 +1,8 @@
 <template>
     <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmarks" max-width="500px">
-        <v-btn slot="activator" @click="openBookmarkDialog" accesskey="b" color="primary" text icon title="Bookmark all tabs"><v-icon>fa-arrow-circle-o-down fa-lg</v-icon></v-btn>
+        <template v-slot:activator="{ on, attrs }">
+            <v-btn v-on="on" v-bind="attrs" @click="openBookmarkDialog" accesskey="b" color="primary" text icon title="Bookmark all tabs"><v-icon>fa-arrow-circle-o-down fa-lg</v-icon></v-btn>
+        </template>
         <v-card>
             <v-card-title>
                 <span class="headline">{{ getLocale('BookmarkAllTabs') }}</span>
@@ -23,7 +25,6 @@
             </v-card-actions>
         </v-card>
     </v-dialog>
-
 </template>
 
 <script>
