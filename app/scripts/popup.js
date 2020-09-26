@@ -55,7 +55,7 @@ function initVue() {
         // el: '#app',
         // vuetify: new Vuetify(vuetifyOpts),
         vuetify,
-        components: { Popup },
+        components: {Popup},
         // template: "<App/>",
         render: h => h(Popup),
     }).$mount('#app');

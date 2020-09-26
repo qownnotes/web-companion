@@ -32,7 +32,7 @@ function initVue() {
 
     new Vue({
         vuetify,
-        components: { Options },
+        components: {Options},
         render: h => h(Options)
     }).$mount('#app');
 }
