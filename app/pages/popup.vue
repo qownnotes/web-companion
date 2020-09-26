@@ -152,7 +152,7 @@
           :items="filteredBookmarks"
           :loading="loadingBookmarks"
           :options.sync="tableOptions"
-          :footer-props="{'items-per-page-options': [10,25,50,75,100,-1]}"
+          :footer-props="{'items-per-page-options': [10,25,50,75,100,-1], showFirstLastPage: true}"
           id="bookmark-list"
           class="elevation-1 bookmark-list flex-grow-1"
       >
