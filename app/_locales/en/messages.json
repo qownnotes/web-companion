@@ -72,7 +72,22 @@
   "AddBookmark": {
     "message": "Add bookmark"
   },
-  "BookmarkAllTabs": {
-    "message": "Bookmark all tabs"
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

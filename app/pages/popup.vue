@@ -7,6 +7,7 @@
           dark
           clipped
           temporary
+          width="280"
       >
         <v-list>
           <v-list-item tag="div">
@@ -51,7 +52,7 @@
             accesskey="f"
             v-model="selectedNoteFolderId"
             :items="noteFolders"
-            label="Note folder"
+            :label="getLocale('NoteFolder')"
             style="padding-right: 20px; margin-top: 21px;"
             single-line
         ></v-select>
@@ -80,7 +81,7 @@
             single-line
             deletable-chips
             clearable
-            label="Tags"
+            :label="getLocale('Tags')"
         >
         </v-autocomplete>
         <v-snackbar
@@ -92,7 +93,7 @@
               text
               @click="snackbar = false"
           >
-            Close
+            {{ getLocale('Close') }}
           </v-btn>
         </v-snackbar>
         <!--<v-toolbar-title>name</v-toolbar-title>-->
@@ -125,14 +126,14 @@
                 <v-layout wrap>
                   <v-flex xs12 sm6>
                     <v-text-field ref="editedBookmarkName" id="editedBookmarkName" tabindex="10"
-                                  v-model="editedBookmark.name" label="Link name" clearable></v-text-field>
+                                  v-model="editedBookmark.name" :label="getLocale('LinkName')" clearable></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm6>
-                    <v-text-field tabindex="12" v-model="editedBookmark.description" label="Description"
+                    <v-text-field tabindex="12" v-model="editedBookmark.description" :label="getLocale('Description')"
                                   clearable></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm12>
-                    <v-text-field tabindex="11" v-model="editedBookmark.url" label="URL" clearable></v-text-field>
+                    <v-text-field tabindex="11" v-model="editedBookmark.url" :label="getLocale('URL')" clearable></v-text-field>
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -167,14 +168,10 @@
                   </strong>
                 </template>
                 <span>
-                                    <template v-if="props.item.name"><strong>{{
-                                        props.item.name
-                                      }}</strong><br/></template>
-                                    {{ props.item.url }}
-                                    <template v-if="props.item.description"><br/><em>{{
-                                        props.item.description
-                                      }}</em></template>
-                                </span>
+                  <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br/></template>
+                  {{ props.item.url }}
+                  <template v-if="props.item.description"><br/><em>{{ props.item.description }}</em></template>
+                </span>
               </v-tooltip>
             </td>
             <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
