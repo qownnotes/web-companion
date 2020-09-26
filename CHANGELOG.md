@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.9.5
+- the whole application was ported to Vuetify 2 for it to be more future-proof 
+- more text was made translatable
+- the options page was improved and more hints were added
+
 ## 20.9.4
 - fixed opening of all bookmarks in new tabs
 - added more translation
