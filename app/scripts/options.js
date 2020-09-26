@@ -4,7 +4,7 @@ import Options from '../pages/options.vue'
 // import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 // import 'font-awesome/css/font-awesome.min.css' // Ensure you are using css-loader
 // import 'vuetify/dist/vuetify.min.css'
-// import '../styles/options.css';
+import '../styles/options.css';
 
 console.log("QOwnNotes options page");
 

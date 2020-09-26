@@ -1,0 +1,13 @@
+/**
+ * Chrome seems to need these workarounds because the components are interpreted incorrectly
+ */
+
+button.v-icon.v-icon {
+    font-size: inherit;
+    border: none;
+    background: none;
+}
+
+input[type="number"], input[type="password"] {
+    border: none;
+}
