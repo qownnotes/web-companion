@@ -10,6 +10,7 @@ import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify)
 
+// https://fontawesome.com/v4.7.0/icons/
 const opts = {
     icons: {
         iconfont: 'fa4',

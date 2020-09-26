@@ -52,7 +52,7 @@
                         v-model="selectedNoteFolderId"
                         :items="noteFolders"
                         label="Note folder"
-                        style="padding-right: 20px; margin-top: 8px;"
+                        style="padding-right: 20px; margin-top: 21px;"
                         single-line
                 ></v-select>
                 <v-spacer></v-spacer>
@@ -67,7 +67,6 @@
                         single-line
                         hide-details
                         clearable
-                        style="padding-top: 0; wi"
                 ></v-text-field>
             </v-app-bar>
 

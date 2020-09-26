@@ -1,36 +1,37 @@
 <template>
     <div id="app">
         <v-app id="options">
-            <v-toolbar text dark color="grey darken-4">
+            <v-toolbar text dark color="grey darken-4 flex-grow-0">
                 <v-card-title
                         class="headline spacedLetters upperCase ml-2"
                         v-html="getLocale('settingsHeadline')"
                 />
             </v-toolbar>
 
-            <v-form>
+            <v-form class="flex-grow-0">
                 <v-container>
                     <v-layout row wrap>
                         <v-flex xs12 sm6>
                             <v-text-field
                                     type="number"
                                     v-model.number="socketPort"
+                                    :label="getLocale('socketPortLabel')"
                                     clearable
                             >
-                                <template slot="label">
-                                    {{ getLocale('socketPortLabel') }}
-                                </template>
                             </v-text-field>
                         </v-flex>
                         <v-flex xs12 sm6>
                             <v-text-field
-                                    type="text"
+                                    v-model="password"
+                                    :append-icon="showToken ? 'fa-eye' : 'fa-eye-slash'"
+                                    @click:append="showToken = !showToken"
+                                    :type="showToken ? 'text' : 'password'"
                                     v-model.number="token"
+                                    :hint="getLocale('TokenHint')"
+                                    :label="getLocale('Token')"
                                     clearable
+                                    persistent-hint
                             >
-                                <template slot="label">
-                                    {{ getLocale('Token') }}
-                                </template>
                             </v-text-field>
                         </v-flex>
                     </v-layout>
@@ -67,8 +68,8 @@
         data() {
             return {
                 socketPort: defaultSocketPort,
-                socketPortLabel: "Socket server port",
-                token: ""
+                token: "",
+                showToken: false
             };
         },
         mounted() {
