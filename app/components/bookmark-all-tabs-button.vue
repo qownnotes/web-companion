@@ -2,7 +2,7 @@
   <v-dialog v-model="bookmarkEditDialog" max-width="500px" @keydown.esc="closeBookmarkDialog"
             @keydown.enter="saveBookmarks">
     <template v-slot:activator="{ on, attrs }">
-      <v-btn v-bind="attrs" v-on="on" accesskey="b" color="primary" icon text title="Bookmark all tabs"
+      <v-btn v-bind="attrs" v-on="on" accesskey="b" color="primary" icon text :title="getLocale('BookmarkAllTabs')"
              @click="openBookmarkDialog">
         <v-icon>fa-arrow-circle-o-down fa-lg</v-icon>
       </v-btn>

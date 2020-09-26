@@ -62,5 +62,17 @@
   },
   "TokenHint": {
     "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "BookmarkAllTabs": {
+    "message": "Bookmark all tabs"
   }
 }

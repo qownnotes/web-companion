@@ -11,7 +11,7 @@
         <v-list>
           <v-list-item tag="div">
             <v-list-item-content>
-              <v-list-item-title>Menu</v-list-item-title>
+              <v-list-item-title>{{ getLocale('Menu') }}</v-list-item-title>
             </v-list-item-content>
 
             <v-list-item-action>
@@ -103,7 +103,7 @@
         <!--&gt;</v-divider>-->
         <v-spacer></v-spacer>
         <v-btn @click="openAllVisibleBookmarks" accesskey="o" color="primary" text icon
-               title="Open all bookmarks in new tabs">
+               :title="getLocale('OpenAllBookmarks')">
           <v-icon>fa-external-link fa-lg</v-icon>
         </v-btn>
         <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
@@ -111,7 +111,7 @@
                   max-width="500px">
           <template v-slot:activator="{ on, attrs }">
             <v-btn v-on="on" v-bind="attrs" @click="openBookmarkDialog" accesskey="a" color="primary" text icon
-                   title="Add bookmark">
+                   :title="getLocale('AddBookmark')">
               <v-icon>fa-plus fa-lg</v-icon>
             </v-btn>
           </template>
