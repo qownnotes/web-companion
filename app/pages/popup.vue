@@ -166,7 +166,7 @@
                 <template v-slot:activator="{ on, attrs }">
                   <strong v-bind="attrs" v-on="on">
                     <a tabindex="2" :href="props.item.url" :accesskey="props.index + 1" target="_blank"
-                       @click="$event.stopPropagation()">{{ props.item.name | truncate(50, '…') }}</a>
+                       @click="$event.stopPropagation()">{{ props.item.name | truncate(40, '…') }}</a>
                   </strong>
                 </template>
                 <span>
@@ -176,7 +176,7 @@
                 </span>
               </v-tooltip>
             </td>
-            <td v-if="props.item.name">{{ props.item.url | truncate(50, '…') }}</td>
+            <td v-if="props.item.name">{{ props.item.url | truncate(40, '…') }}</td>
             <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
               <a tabindex="2" @click="$event.stopPropagation()" :accesskey="props.index + 1" :href="props.item.url"
                  target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
