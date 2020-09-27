@@ -79,6 +79,7 @@
             multiple
             small-chips
             single-line
+            hide-details
             deletable-chips
             clearable
             :label="getLocale('Tags')"
@@ -156,6 +157,7 @@
           :footer-props="{'items-per-page-options': [10,25,50,75,100,-1], showFirstLastPage: true}"
           id="bookmark-list"
           class="elevation-1 bookmark-list flex-grow-1"
+          dense
       >
         <template v-slot:item="props">
           <tr @click="openUrl(props.item.url)">
@@ -469,6 +471,10 @@ export default {
 #app {
   min-width: 650px;
   min-height: 500px;
+}
+
+.bookmark-list {
+  margin-top: 18px;
 }
 
 .bookmark-list a {
