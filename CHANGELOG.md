@@ -1,7 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 20.9.5
-- the whole application was ported to Vuetify 2 for it to be more future-proof 
+- the whole application was ported to Vuetify 2 for it to be more future-proof
 - more text was made translatable and the default ui components are now localized
 - the options page was improved and more hints were added
 - you can now jump to the first and last bookmarks page
