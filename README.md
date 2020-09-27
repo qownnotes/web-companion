@@ -25,7 +25,7 @@ The extension is currently tested for Google Chrome and Mozilla Firefox.
     - you can add open all bookmarks in tabs
     - you can import your browser bookmarks to QOwnNotes
     - for more information about the **bookmarks feature** please visit
-      [QOwnNotes Web Companion browser extension](https://www.qownnotes.org/Knowledge-base/QOwnNotes-Web-Companion-browser-extension)
+      [QOwnNotes Web Companion browser extension](https://docs.qownnotes.org/en/latest/getting-started/browser-extension/)
 - creating a new note (only text) from the **current selection** by right-clicking it
     - this is scriptable in QOwnNotes
 - creating a new note from the content of the **current webpage** by right-clicking on the page
