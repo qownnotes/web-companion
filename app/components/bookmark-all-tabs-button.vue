@@ -79,6 +79,7 @@ export default {
 
         that.webSocket.send(data, function () {
           console.log("Storing bookmarks:" + data);
+          that.$emit("bookmarksCreated");
         });
 
         that.closeBookmarkDialog()

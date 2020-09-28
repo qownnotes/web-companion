@@ -5,6 +5,7 @@
 - the success message snackbar is now shown on the top of the bookmarks popup
   to prevent it from being outside of the visible area
 - the empty space of the popup in Firefox was fixed
+- when bookmarks are added now the bookmark list will be reloaded
 
 ## 20.9.5
 - the whole application was ported to Vuetify 2 for it to be more future-proof

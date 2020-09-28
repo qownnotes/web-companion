@@ -109,7 +109,7 @@
                :title="getLocale('OpenAllBookmarks')">
           <v-icon>fa-external-link fa-lg</v-icon>
         </v-btn>
-        <BookmarkAllTabsButton v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
+        <BookmarkAllTabsButton @bookmarksCreated="loadBookmarks" v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
         <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark"
                   max-width="500px">
           <template v-slot:activator="{ on, attrs }">
@@ -246,9 +246,10 @@ export default {
     },
     saveBookmark() {
       const data = {type: "newBookmarks", data: [this.editedBookmark]};
+      const that = this;
       this.webSocket.send(data, function () {
         console.log("Storing bookmark:" + data);
-        // this.loadBookmarks();
+        that.loadBookmarks();
       });
       this.closeBookmarkDialog()
     },
