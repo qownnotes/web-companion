@@ -113,7 +113,7 @@
         <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark"
                   max-width="500px">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn v-on="on" v-bind="attrs" @click="openBookmarkDialog" accesskey="a" color="primary" text icon
+            <v-btn v-on="on" v-bind="attrs" accesskey="a" color="primary" text icon
                    :title="getLocale('AddBookmark')">
               <v-icon>fa-plus fa-lg</v-icon>
             </v-btn>
@@ -231,12 +231,6 @@ export default {
       document.querySelectorAll("#bookmark-list tr a").forEach((item) => {
         this.openUrl(item.getAttribute("href"));
       });
-    },
-    openBookmarkDialog() {
-      // focus and select all the text to be able to overwrite it easily
-      // Todo: Doesn't seem to do anything
-      // this.$nextTick(() => this.$refs.editedBookmarkName.focus());
-      this.$nextTick(() => document.querySelector("#editedBookmarkName").select());
     },
     closeBookmarkDialog() {
       this.bookmarkEditDialog = false;
@@ -391,7 +385,13 @@ export default {
       });
     },
     bookmarkEditDialog(val) {
-      this.$refs.editedBookmarkName.focus();
+      if (val) {
+        this.$nextTick(() => {
+          // doesn't seem to work
+          this.$refs.editedBookmarkName.focus();
+          document.querySelector("#editedBookmarkName").select();
+        });
+      }
 
       val || this.closeBookmarkDialog()
     },

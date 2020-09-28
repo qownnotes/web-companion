@@ -56,10 +56,11 @@ export default {
     openBookmarkDialog() {
       // focus and select all the text to be able to overwrite it easily
       this.$nextTick(() => {
-        const elem = document.querySelector("#editedBookmarkDescription");
-        // elem.focus();
-        this.$refs.editedBookmarkDescription.focus();
-        elem.select();
+        // only throws an error
+        // const elem = document.querySelector("#editedBookmarkDescription");
+        // // elem.focus();
+        // this.$refs.editedBookmarkDescription.focus();
+        // elem.select();
       });
     },
     closeBookmarkDialog() {
