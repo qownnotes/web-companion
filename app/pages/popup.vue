@@ -88,6 +88,7 @@
         <v-snackbar
             v-model="snackbar"
             color="success"
+            center
         >
           {{ snackbarText }}
           <v-btn
@@ -247,6 +248,7 @@ export default {
       const data = {type: "newBookmarks", data: [this.editedBookmark]};
       this.webSocket.send(data, function () {
         console.log("Storing bookmark:" + data);
+        // this.loadBookmarks();
       });
       this.closeBookmarkDialog()
     },
