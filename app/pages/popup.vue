@@ -88,7 +88,7 @@
         <v-snackbar
             v-model="snackbar"
             color="success"
-            center
+            top
         >
           {{ snackbarText }}
           <v-btn
