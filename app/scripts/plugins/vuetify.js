@@ -62,4 +62,7 @@ const opts = {
     },
 }
 
+// Omit all the 'Translation key xxx not found, falling back to default' messages
+Vuetify.config.silent = true;
+
 export default new Vuetify(opts)
