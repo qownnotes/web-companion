@@ -150,44 +150,49 @@
         </v-dialog>
       </v-toolbar>
 
-      <v-data-table
-          :headers="headers"
-          :items="filteredBookmarks"
-          :loading="loadingBookmarks"
-          :options.sync="tableOptions"
-          :footer-props="{'items-per-page-options': [10,25,50,75,100,-1], showFirstLastPage: true}"
-          id="bookmark-list"
-          class="elevation-1 bookmark-list flex-grow-1"
-          dense
+      <v-sheet
+          class="overflow-y-auto"
+          max-height="480"
       >
-        <template v-slot:item="props">
-          <tr @click="openUrl(props.item.url)">
-            <td v-if="props.item.name" class="text-no-wrap">
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
-                  <strong v-bind="attrs" v-on="on">
-                    <a tabindex="2" :href="props.item.url" :accesskey="props.index + 1" target="_blank"
-                       @click="$event.stopPropagation()">{{ props.item.name | truncate(40, '…') }}</a>
-                  </strong>
-                </template>
-                <span>
-                  <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br/></template>
-                  {{ props.item.url }}
-                  <template v-if="props.item.description"><br/><em>{{ props.item.description }}</em></template>
-                </span>
-              </v-tooltip>
-            </td>
-            <td v-if="props.item.name">{{ props.item.url | truncate(40, '…') }}</td>
-            <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
-              <a tabindex="2" @click="$event.stopPropagation()" :accesskey="props.index + 1" :href="props.item.url"
-                 target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
-            </td>
-            <td class="link-tags">
-              <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
-            </td>
-          </tr>
-        </template>
-      </v-data-table>
+        <v-data-table
+            :headers="headers"
+            :items="filteredBookmarks"
+            :loading="loadingBookmarks"
+            :options.sync="tableOptions"
+            :footer-props="{'items-per-page-options': [10,25,50,75,100,-1], showFirstLastPage: true}"
+            id="bookmark-list"
+            class="elevation-1 bookmark-list flex-grow-1"
+            dense
+        >
+          <template v-slot:item="props">
+            <tr @click="openUrl(props.item.url)">
+              <td v-if="props.item.name" class="text-no-wrap">
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <strong v-bind="attrs" v-on="on">
+                      <a tabindex="2" :href="props.item.url" :accesskey="props.index + 1" target="_blank"
+                         @click="$event.stopPropagation()">{{ props.item.name | truncate(40, '…') }}</a>
+                    </strong>
+                  </template>
+                  <span>
+                    <template v-if="props.item.name"><strong>{{ props.item.name }}</strong><br/></template>
+                    {{ props.item.url }}
+                    <template v-if="props.item.description"><br/><em>{{ props.item.description }}</em></template>
+                  </span>
+                </v-tooltip>
+              </td>
+              <td v-if="props.item.name">{{ props.item.url | truncate(40, '…') }}</td>
+              <td v-if="props.item.name === ''" colspan="2" class="text-no-wrap">
+                <a tabindex="2" @click="$event.stopPropagation()" :accesskey="props.index + 1" :href="props.item.url"
+                   target="_blank" :title="props.item.url">{{ props.item.url | truncate(80, '…') }}</a>
+              </td>
+              <td class="link-tags">
+                <span class="tag" v-for="tag in props.item.tags">{{ tag }}</span>
+              </td>
+            </tr>
+          </template>
+        </v-data-table>
+      </v-sheet>
 
       <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog"
                                     v-bind:webSocket="this.webSocket"></ImportBrowserBookmarksDialog>

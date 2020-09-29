@@ -2,6 +2,7 @@
 
 ## 20.9.7
 - fixed unnecessary scrollbar in Firefox
+- you can now scroll in your bookmark list while the top toolbar is still visible 
 
 ## 20.9.6
 - the `content_security_policy` with `unsafe-eval` was removed for the Firefox store
