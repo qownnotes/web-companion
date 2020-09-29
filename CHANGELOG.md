@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.9.7
+- fixed unnecessary scrollbar in Firefox
+
 ## 20.9.6
 - the `content_security_policy` with `unsafe-eval` was removed for the Firefox store
 - the success message snackbar is now shown on the top of the bookmarks popup
