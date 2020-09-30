@@ -7,7 +7,7 @@
     "message": "QOwnNotes stillingar"
   },
   "socketPortLabel": {
-    "message": "Tengi netþjóns"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "Sendu síðu til QOwnNotes\n"
@@ -58,6 +58,36 @@
     "message": "Vinsamlegast settu inn öryggismerkið sem nú er sýnt í QOwnNotes!"
   },
   "Token": {
-    "message": "Öryggistákn"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

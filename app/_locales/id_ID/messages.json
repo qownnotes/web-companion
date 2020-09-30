@@ -7,7 +7,7 @@
     "message": "Pengaturan QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Porta soket server"
+    "message": "Porta soket server QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Kirim halaman ke QOwnNotes\n"
@@ -58,6 +58,36 @@
     "message": "Silakan masukkan token keamanan yang saat ini sedang ditampilkan di QOwnNotes!"
   },
   "Token": {
-    "message": "Token keamanan"
+    "message": "Token keamanan dari QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "Jika anda menyinkronkan pengaturan peramban anda, anda mungkin ingin menggunakan token yang sama pada setiap perangkat. "
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Buka semua markah di tab baru"
+  },
+  "AddBookmark": {
+    "message": "Tambah markah"
+  },
+  "Close": {
+    "message": "Tutup"
+  },
+  "Tags": {
+    "message": "Tag"
+  },
+  "NoteFolder": {
+    "message": "Folder catatan"
+  },
+  "LinkName": {
+    "message": "Nama tautan"
+  },
+  "Description": {
+    "message": "Deskripsi"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

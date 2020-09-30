@@ -7,7 +7,7 @@
     "message": "QOwnNotes settings"
   },
   "socketPortLabel": {
-    "message": "Server socket port"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "Send page to QOwnNotes"
@@ -58,6 +58,36 @@
     "message": "Please input the security token that now is shown in QOwnNotes!"
   },
   "Token": {
-    "message": "Security token"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

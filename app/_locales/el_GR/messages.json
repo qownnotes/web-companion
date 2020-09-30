@@ -7,7 +7,7 @@
     "message": "Ρυθμίσεις QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Θύρα υποδοχής διακομιστή"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "Αποστολή σελίδας στο QOwnNotes\n"
@@ -31,7 +31,7 @@
     "message": "Νέος σελιδοδείκτης"
   },
   "Cancel": {
-    "message": "Άκυρο"
+    "message": "Ακύρωση"
   },
   "Ok": {
     "message": "Ok"
@@ -40,7 +40,7 @@
     "message": "Αποθήκευση"
   },
   "BookmarkAllTabs": {
-    "message": "Όλες οι καρτέλες να προστεθούν στους σελιδοδείκτες"
+    "message": "Προσθήκη όλων των καρτέλων στους σελιδοδείκτες"
   },
   "ImportBrowserBookmarks": {
     "message": "Εισαγωγή σελιδοδεικτών προγράμματος περιήγησης"
@@ -49,15 +49,45 @@
     "message": "Εισαγωγή"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Θέλετε να εισαγάγετε όλους τους σελιδοδείκτες του προγράμματος περιήγησης;"
+    "message": "Θέλετε να εισάγετε όλους τους σελιδοδείκτες του προγράμματος περιήγησης;"
   },
   "InputTokenHeadline": {
-    "message": "Εισαγωγή διακριτικού ασφαλείας"
+    "message": "Εισαγωγή αδειοδοτικού ασφαλείας"
   },
   "InputToken": {
-    "message": "Εισαγάγετε το διακριτικό ασφαλείας που εμφανίζεται τώρα στο QOwnNotes!"
+    "message": "Παρακαλούμε εισάγετε το αδειοδοτικό ασφαλείας που εμφανίζεται τώρα στο QOwnNotes!"
   },
   "Token": {
-    "message": "Διακριτικό ασφαλείας"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

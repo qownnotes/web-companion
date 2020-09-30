@@ -7,7 +7,7 @@
     "message": "Nastavitve QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Vrata vtičnice strežnika"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "Pošljite stran na QOwnNotes\n"
@@ -58,6 +58,36 @@
     "message": "Prosim, vnesite varnostni žeton, ki je zdaj prikazan v QOwnNotes!"
   },
   "Token": {
-    "message": "Varnostni žeton"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

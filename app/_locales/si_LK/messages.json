@@ -7,7 +7,7 @@
     "message": "QOwnNotes සැකසුම්"
   },
   "socketPortLabel": {
-    "message": "සේවාදායක සොකට් වරාය"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "QOwnNotes වෙත පිටුව යවන්න\n"
@@ -58,6 +58,36 @@
     "message": "QOwnNotes හි දැන් පෙන්වා ඇති ආරක්ෂක ටෝකනය කරුණාකර ඇතුළත් කරන්න!"
   },
   "Token": {
-    "message": "ආරක්ෂක ටෝකනය"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

@@ -7,7 +7,7 @@
     "message": "Настройки QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Порт веб-сокета сервера"
+    "message": "Порт сервера сокета QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Отправить страницу в QOwnNotes"
@@ -58,6 +58,36 @@
     "message": "Пожалуйста, введите токен безопасности, который теперь отображается в QOwnNotes!"
   },
   "Token": {
-    "message": "Токен безопасности"
+    "message": "Токен безопасности QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "Если вы синхронизируете настройки своего браузера, вы можете использовать один и тот же токен на всех устройствах."
+  },
+  "Menu": {
+    "message": "Меню"
+  },
+  "OpenAllBookmarks": {
+    "message": "Открыть все закладки в новых вкладках"
+  },
+  "AddBookmark": {
+    "message": "Новая закладка"
+  },
+  "Close": {
+    "message": "Закрыть"
+  },
+  "Tags": {
+    "message": "Теги"
+  },
+  "NoteFolder": {
+    "message": "Папка заметок"
+  },
+  "LinkName": {
+    "message": "Имя ссылки"
+  },
+  "Description": {
+    "message": "Описание"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

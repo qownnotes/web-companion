@@ -7,7 +7,7 @@
     "message": "Paramètres QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "Port du serveur"
+    "message": "Port du serveur QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Envoyer la page vers QOwnNotes"
@@ -58,6 +58,36 @@
     "message": "Veuillez saisir le jeton de sécurité qui est maintenant affiché dans QOwnNotes !"
   },
   "Token": {
-    "message": "Jeton de sécurité"
+    "message": "Jeton de sécurité de QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "Si vous synchronisez les réglages de votre navigateur, vous pourriez vouloir utiliser le même jeton sur tous les appareils."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Ouvrir tous les signets dans de nouveaux onglets"
+  },
+  "AddBookmark": {
+    "message": "Ajouter un signet"
+  },
+  "Close": {
+    "message": "Fermer"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Dossiers de notes"
+  },
+  "LinkName": {
+    "message": "Nom du lien"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

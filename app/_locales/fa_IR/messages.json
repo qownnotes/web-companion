@@ -7,7 +7,7 @@
     "message": "تنظیمات QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "پورت سوکت سرور"
+    "message": "پورت سرور سوکت برای QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "ارسال صفحه به QOwnNotes"
@@ -58,6 +58,36 @@
     "message": "لطفاً توکن امنیتی را که اکنون در QOwnNotes نشان داده شده است وارد کنید!"
   },
   "Token": {
-    "message": "توکن امنیتی"
+    "message": "توکن امنیتی از QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "اگر قصد دارید تنظیمات مرورگر خود را همگام سازی کنید، شاید تمایل داشته باشید از توکن یکسان برای هر ابزار استفاده کنید."
+  },
+  "Menu": {
+    "message": "منو"
+  },
+  "OpenAllBookmarks": {
+    "message": "باز کردن همه نشانک ها در زبانه های جدید"
+  },
+  "AddBookmark": {
+    "message": "افزودن نشانک"
+  },
+  "Close": {
+    "message": "بستن"
+  },
+  "Tags": {
+    "message": "برچسب ها"
+  },
+  "NoteFolder": {
+    "message": "پوشه یادداشت"
+  },
+  "LinkName": {
+    "message": "نام پیوند"
+  },
+  "Description": {
+    "message": "شرح"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

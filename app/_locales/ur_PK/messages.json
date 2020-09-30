@@ -7,7 +7,7 @@
     "message": "QOwnNotes کی ترتیبات"
   },
   "socketPortLabel": {
-    "message": "سرور ساکٹ پورٹ"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "صفحہ QOwnNotes پر بھیجیں\n"
@@ -58,6 +58,36 @@
     "message": "براہ کرم سیکیورٹی ٹوکن ان پٹ کریں جو اب کیو نوٹس میں دکھایا گیا ہے!"
   },
   "Token": {
-    "message": "سیکیورٹی ٹوکن"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

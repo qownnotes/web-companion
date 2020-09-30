@@ -7,7 +7,7 @@
     "message": "إعدادات QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "خادم منفذ المقبس"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "إرسال الصفحة إلى QOwnNotes\n"
@@ -58,6 +58,36 @@
     "message": "الرجاء إدخال رمز الأمان الذي يظهر الآن في QOwnNotes!"
   },
   "Token": {
-    "message": "رمز الأمان"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }

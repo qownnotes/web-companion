@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 20.10.0
+- added more translation
+
 ## 20.9.7
 - fixed unnecessary scrollbar in Firefox
 - you can now scroll in your bookmark list while the top toolbar is still visible 

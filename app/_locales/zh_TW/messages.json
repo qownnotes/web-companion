@@ -7,7 +7,7 @@
     "message": "QOwnNotes 設定"
   },
   "socketPortLabel": {
-    "message": "伺服器 Socket 通訊埠"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
     "message": "發送頁面到QOwnNotes\n"
@@ -58,6 +58,36 @@
     "message": "請輸入現在在QOwnNotes中顯示的安全令牌！"
   },
   "Token": {
-    "message": "安全令牌"
+    "message": "Security token from QOwnNotes"
+  },
+  "TokenHint": {
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+  },
+  "Menu": {
+    "message": "Menu"
+  },
+  "OpenAllBookmarks": {
+    "message": "Open all bookmarks in new tabs"
+  },
+  "AddBookmark": {
+    "message": "Add bookmark"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "Tags": {
+    "message": "Tags"
+  },
+  "NoteFolder": {
+    "message": "Note folder"
+  },
+  "LinkName": {
+    "message": "Link name"
+  },
+  "Description": {
+    "message": "Description"
+  },
+  "URL": {
+    "message": "URL"
   }
 }
