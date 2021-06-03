@@ -4,7 +4,8 @@
 TRANSLATION_PATH="app/_locales"
 
 echo "Downloading translation from Crowdin..."
-java -jar /opt/crowdin-cli/crowdin-cli.jar download translations
+# see: https://support.crowdin.com/cli-tool/
+crowdin download || exit 1
 echo
 
 # no renaming needed
