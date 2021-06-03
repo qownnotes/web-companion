@@ -1,6 +1,6 @@
 {
   "name": "qownnotes-web-companion",
-  "version": "20.10.0",
+  "version": "21.6.0",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "author": "Patrizio Bekerle <patrizio@bekerle.com>",
   "license": "GPL",
@@ -11,24 +11,24 @@
   "dependencies": {
     "vue": "^2.6.12",
     "vue-truncate-filter": "^1.1.7",
-    "vuetify": "^2.3.10"
+    "vuetify": "^2.5.1"
   },
   "devDependencies": {
-    "css-loader": "^4.2.2",
+    "css-loader": "^4.3.0",
     "deepmerge": "^4.2.2",
     "fibers": "^5.0.0",
-    "file-loader": "^6.1.0",
+    "file-loader": "^6.2.0",
     "font-awesome": "^4.7.0",
-    "mini-css-extract-plugin": "^0.11.0",
+    "mini-css-extract-plugin": "^0.11.3",
     "node-sass": "^4.14.1",
-    "prettier": "^2.1.1",
-    "sass": "^1.26.11",
-    "sass-loader": "^10.0.2",
-    "style-loader": "^1.2.1",
-    "url-loader": "^4.1.0",
-    "vue-loader": "^15.9.3",
+    "prettier": "^2.3.0",
+    "sass": "^1.34.0",
+    "sass-loader": "^10.2.0",
+    "style-loader": "^1.3.0",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.12",
-    "vuetify-loader": "^1.6.0",
+    "vuetify-loader": "^1.7.2",
     "webextension-toolbox": "^3.0.0"
   }
 }
