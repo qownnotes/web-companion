@@ -7,7 +7,7 @@
     "message": "Ustawienia QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Port serwera gniazdowego QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Wyślij stronę do QOwnNotes\n"
@@ -58,36 +58,36 @@
     "message": "Wprowadź token bezpieczeństwa, który jest teraz wyświetlany w QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Token zabezpieczający od QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Jeśli synchronizujesz ustawienia swojej przeglądarki, rozważ użycie tego samego tokena na każdym z urządzeń."
   },
   "Menu": {
     "message": "Menu"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Otwórz wszystkie zakładki na nowych kartach"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Dodaj zakładkę"
   },
   "Close": {
-    "message": "Close"
+    "message": "Zamknij"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Tagi"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Folder notatki"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Nazwa linku"
   },
   "Description": {
-    "message": "Description"
+    "message": "Opis"
   },
   "URL": {
-    "message": "URL"
+    "message": "Adres URL"
   }
 }

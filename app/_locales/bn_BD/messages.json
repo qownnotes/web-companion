@@ -7,7 +7,7 @@
     "message": "QOwnNotes সেটিংস"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes সকেটস সার্ভার পোর্ট "
   },
   "sendPageToQOwnNotes": {
     "message": "QOwnNotes এ পেজ পাঠান"
@@ -58,36 +58,36 @@
     "message": "এখন QOwnNotes এ দেখানো নিরাপত্তা টোকেনটি দয়া করে ইনপুট দিন!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotes থেকে পাপ্ত নিরাপত্তা টোকেন "
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "আপনার ব্রাউজার সেটিংস সিঙ্ক করতে চাইলে আপনি প্রতিটি ডিভাইসে একই টোকেন ব্যবহার করতে পারেন।"
   },
   "Menu": {
-    "message": "Menu"
+    "message": "মেনু"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "নতুন ট্যাবে বুকমার্ক খুলুন"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "বুকমার্ক যোগ করুন "
   },
   "Close": {
-    "message": "Close"
+    "message": "বন্ধ করুন"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "ট্যাগ"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "নোট ফোল্ডার"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "লিঙ্কের নাম"
   },
   "Description": {
-    "message": "Description"
+    "message": "বর্ণনা"
   },
   "URL": {
-    "message": "URL"
+    "message": "ইউআরএল"
   }
 }

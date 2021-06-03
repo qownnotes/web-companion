@@ -7,7 +7,7 @@
     "message": "QOwnNotes innstillinger"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes-serverport"
   },
   "sendPageToQOwnNotes": {
     "message": "Send side til QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Vennligst skriv inn sikkerhetstokenet som nå vises i QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Sikkerhetstoken fra QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Hvis du synkroniserer nettleserinnstillingene dine, kan det være lurt å bruke samme token på hver enhet."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Meny"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Åpne alle bokmerker i nye faner"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Legg til bokmerke"
   },
   "Close": {
-    "message": "Close"
+    "message": "Lukk"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Merker"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Notatmappe"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Linknavn"
   },
   "Description": {
-    "message": "Description"
+    "message": "Beskrivelse"
   },
   "URL": {
     "message": "URL"

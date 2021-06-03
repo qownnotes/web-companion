@@ -7,7 +7,7 @@
     "message": "Socruithe QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Port freastalaí soicéad QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Seol leathanach chuig QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Cuir isteach an chomhartha slándála a thaispeántar anois i QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Comhartha slándála ó QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Má tá tú ag sioncrónú socruithe do bhrabhsálaí b’fhéidir gur mhaith leat an chomhartha céanna a úsáid ar gach feiste."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Roghchlár"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Oscail gach leabharmharc i gcluaisíní nua"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Cuir leabharmharc leis"
   },
   "Close": {
-    "message": "Close"
+    "message": "Dún"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Clibeanna"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Fillteán nóta"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Ainm nasc"
   },
   "Description": {
-    "message": "Description"
+    "message": "Cur síos"
   },
   "URL": {
     "message": "URL"

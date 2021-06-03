@@ -7,7 +7,7 @@
     "message": "Definições do QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Porta do servidor 'socket' QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Enviar página para QOwnNotes\n"
@@ -52,22 +52,22 @@
     "message": "Deseja importar todos os marcadores do navegador?"
   },
   "InputTokenHeadline": {
-    "message": "Introduza o símbolo de segurança"
+    "message": "Introduza o token de segurança"
   },
   "InputToken": {
-    "message": "Por favor, insira o símbolo de segurança que agora é mostrado no QOwnNotes!"
+    "message": "Por favor, insira o token de segurança que agora é mostrado no QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Token de segurança QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Se estiver a sincronizar as definições do navegador, deve utilizar o mesmo token em todos os dispositivos."
   },
   "Menu": {
     "message": "Menu"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Abrir todos os marcadores em separadores"
   },
   "AddBookmark": {
     "message": "Novo marcador"

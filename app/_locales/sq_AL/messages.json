@@ -7,7 +7,7 @@
     "message": "Cilësimet QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Porti i serverit të prizës QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Dërgoni faqe tek QOwnNote\n"
@@ -58,36 +58,36 @@
     "message": "Ju lutemi shënoni shenjën e sigurisë që tani është treguar në QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Shenjë sigurie nga QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Nëse jeni duke sinkronizuar cilësimet e shfletuesit tuaj, mund të dëshironi të përdorni të njëjtën shenjë në çdo pajisje."
   },
   "Menu": {
     "message": "Menu"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Hapni të gjithë faqeshënuesit në skedat e reja"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Shto faqeshënues"
   },
   "Close": {
-    "message": "Close"
+    "message": "Mbylle"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Etiketat"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Dosja e shënimeve"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Emri i lidhjes"
   },
   "Description": {
-    "message": "Description"
+    "message": "Përshkrim"
   },
   "URL": {
-    "message": "URL"
+    "message": "URL-ja"
   }
 }

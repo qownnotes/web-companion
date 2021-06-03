@@ -7,7 +7,7 @@
     "message": "QOwnNotes کی ترتیبات"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes ساکٹ سرور پورٹ"
   },
   "sendPageToQOwnNotes": {
     "message": "صفحہ QOwnNotes پر بھیجیں\n"
@@ -58,34 +58,34 @@
     "message": "براہ کرم سیکیورٹی ٹوکن ان پٹ کریں جو اب کیو نوٹس میں دکھایا گیا ہے!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotes سے متعلق حفاظتی ٹوکن"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "اگر آپ اپنے براؤزر کی ترتیبات کو وقت کے عین مطابق کررہے ہیں تو اس کا مطلب یہ ہے کہ آپ ہر ڈیوائس پر ایک ہی ٹوکن استعمال کرنا چاہتے ہیں۔"
   },
   "Menu": {
-    "message": "Menu"
+    "message": "مینو"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "تمام بک مارکس کو نئی ٹیبز میں کھولیں"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "بُک مارک شامل کریں"
   },
   "Close": {
-    "message": "Close"
+    "message": "بند کریں"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "ٹیگز"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "نوٹ فولڈر"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "اسم رابط"
   },
   "Description": {
-    "message": "Description"
+    "message": "وضاحت"
   },
   "URL": {
     "message": "URL"

@@ -7,7 +7,7 @@
     "message": "QOwnNotes סעטטינגס"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes כאָלעל סערווער פּאָרט"
   },
   "sendPageToQOwnNotes": {
     "message": "שיקן בלאַט צו QOwnNotes"
@@ -58,34 +58,34 @@
     "message": "ביטע אַרייַן די זיכערהייט סימען וואָס איז געוויזן אין QNwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "זיכערהייט סימען פֿון QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "אויב איר סינסינג דיין בלעטערער סעטטינגס, איר קען וועלן צו נוצן די זעלבע סימען אויף יעדער מיטל."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "מעניו"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "עפֿן אַלע בוקמאַרקס אין נייַע טאַבס"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "לייג לייענ - צייכן"
   },
   "Close": {
-    "message": "Close"
+    "message": "נאָענט"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "טאַגס"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "באַמערקונג טעקע"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "לינק נאָמען"
   },
   "Description": {
-    "message": "Description"
+    "message": "באַשרייַבונג"
   },
   "URL": {
     "message": "URL"

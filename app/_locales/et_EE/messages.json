@@ -7,7 +7,7 @@
     "message": "QOwnNotes'i seaded"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes pesaserveri port"
   },
   "sendPageToQOwnNotes": {
     "message": "Saada leht aadressile QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Sisestage turvatunnus, mida nüüd kuvatakse rakenduses QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotes'i turvakood"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Kui sünkroonite oma brauseri seadeid, võiksite kasutada igas seadmes sama märki."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Menüü"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Avage kõik järjehoidjad uutel vahelehtedel"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Lisa järjehoidja"
   },
   "Close": {
-    "message": "Close"
+    "message": "Sulge"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Sildid"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Märkmete kaust"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Lingi nimi"
   },
   "Description": {
-    "message": "Description"
+    "message": "Kirjeldus"
   },
   "URL": {
     "message": "URL"

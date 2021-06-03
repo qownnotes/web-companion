@@ -7,7 +7,7 @@
     "message": "Configurații QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Portul serverului socket QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Trimite pagina către QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Introduceți simbolul de securitate care este afișat acum în QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Jeton de securitate din QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Dacă sincronizați setările browserului, vă recomandăm să utilizați același simbol pe fiecare dispozitiv."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Meniul"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Deschideți toate marcajele în filele noi"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Adaugă semn de carte"
   },
   "Close": {
-    "message": "Close"
+    "message": "Închide"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Etichete"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Notă folder"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Numele linkului"
   },
   "Description": {
-    "message": "Description"
+    "message": "Descriere"
   },
   "URL": {
     "message": "URL"

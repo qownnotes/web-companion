@@ -7,7 +7,7 @@
     "message": "Cài đặt QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Cổng máy chủ socket QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Gửi trang tới QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Vui lòng nhập mã thông báo bảo mật hiện được hiển thị trong QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Mã thông báo bảo mật từ QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Nếu bạn đang đồng bộ hóa cài đặt trình duyệt của mình, bạn có thể muốn sử dụng cùng một mã thông báo trên mọi thiết bị."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Thực đơn"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Mở tất cả các dấu trang trong các tab mới"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Thêm dấu trang"
   },
   "Close": {
-    "message": "Close"
+    "message": "Đóng"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Thẻ"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Thư mục ghi chú"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Tên liên kết"
   },
   "Description": {
-    "message": "Description"
+    "message": "Sự miêu tả"
   },
   "URL": {
     "message": "URL"

@@ -7,7 +7,7 @@
     "message": "QOwnNotes ezarpenak"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes socket zerbitzariaren ataka"
   },
   "sendPageToQOwnNotes": {
     "message": "Bidali orria QOwnNotes-era\n"
@@ -58,34 +58,34 @@
     "message": "Mesedez idatzi orain QOwnNotes-en agertzen den segurtasun tokenari!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotes-eko segurtasun token-a"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Arakatzailearen ezarpenak sinkronizatzen ari bazara, baliteke token bera erabili nahi izatea gailu guztietan."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Menua"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Ireki laster-marka guztiak fitxa berrietan"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Gehitu laster-marka"
   },
   "Close": {
-    "message": "Close"
+    "message": "Itxi"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Etiketak"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Oharra karpeta"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Estekaren izena"
   },
   "Description": {
-    "message": "Description"
+    "message": "Deskribapena"
   },
   "URL": {
     "message": "URL"

@@ -7,7 +7,7 @@
     "message": "QOwnNotes beállítások"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes socket szerver port"
   },
   "sendPageToQOwnNotes": {
     "message": "Küldje el az oldalt a QOwnNotes-nak"
@@ -58,34 +58,34 @@
     "message": "Kérjük, adja meg a biztonsági jelképet, amelyet most a QOwnNotes mutat!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Biztonsági token a QOwnNotes-tól"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Ha szinkronizálja a böngésző beállításait, akkor érdemes minden eszközön ugyanazt a tokent használni."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Menü"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Nyissa meg az összes könyvjelzőt új lapokon"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Könyvjelző hozzáadása"
   },
   "Close": {
-    "message": "Close"
+    "message": "Bezárás"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Címkék"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Jegyzetmappa"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Link neve"
   },
   "Description": {
-    "message": "Description"
+    "message": "Leírás:"
   },
   "URL": {
     "message": "URL"

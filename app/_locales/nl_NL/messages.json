@@ -7,7 +7,7 @@
     "message": "QOwnNotes instellingen"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes socketserverpoort"
   },
   "sendPageToQOwnNotes": {
     "message": "Stuur pagina naar QOwnNotes"
@@ -58,34 +58,34 @@
     "message": "Voer het beveiligingstoken in dat nu wordt weergegeven in QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Beveiligingstoken van QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Als u uw browserinstellingen synchroniseert, wilt u misschien hetzelfde token op elk apparaat gebruiken."
   },
   "Menu": {
     "message": "Menu"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Open alle bladwijzers in nieuwe tabbladen"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Voeg bladwijzer toe"
   },
   "Close": {
-    "message": "Close"
+    "message": "Dichtbij"
   },
   "Tags": {
     "message": "Tags"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Notitiemap"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Link naam"
   },
   "Description": {
-    "message": "Description"
+    "message": "Beschrijving"
   },
   "URL": {
     "message": "URL"

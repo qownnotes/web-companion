@@ -7,16 +7,16 @@
     "message": "QOwnNotes 設定"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes socket 伺服器埠"
   },
   "sendPageToQOwnNotes": {
-    "message": "發送頁面到QOwnNotes\n"
+    "message": "傳送頁面到 QOwnNotes\n"
   },
   "createScreenshotNote": {
     "message": "擷取網頁可視範圍的畫面建立筆記"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "將選擇發送到QOwnNotes"
+    "message": "傳送選取到 QOwnNotes"
   },
   "connectionFailed": {
     "message": "連線到 QOwnNotes 失敗！"
@@ -28,28 +28,28 @@
     "message": "搜尋"
   },
   "NewBookmark": {
-    "message": "新書籤"
+    "message": "新增書籤"
   },
   "Cancel": {
     "message": "取消"
   },
   "Ok": {
-    "message": "行"
+    "message": "Ok"
   },
   "Save": {
     "message": "儲存"
   },
   "BookmarkAllTabs": {
-    "message": "為所有標籤添加書籤"
+    "message": "將所有頁簽新增到書籤"
   },
   "ImportBrowserBookmarks": {
-    "message": "Import browser bookmarks"
+    "message": "匯入瀏覽器書簽"
   },
   "Import": {
     "message": "匯入"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "是否要導入所有瀏覽器書籤？"
+    "message": "是否要匯入所有瀏覽器書籤？"
   },
   "InputTokenHeadline": {
     "message": "輸入安全令牌"
@@ -58,34 +58,34 @@
     "message": "請輸入現在在QOwnNotes中顯示的安全令牌！"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotes 安全令牌"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "如果你同步你的瀏覽器設定，你也許想要使用相同的令牌到所有裝置上。"
   },
   "Menu": {
-    "message": "Menu"
+    "message": "選單"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "於新頁簽內開啟所有書簽"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "新增書簽"
   },
   "Close": {
-    "message": "Close"
+    "message": "關閉"
   },
   "Tags": {
     "message": "Tags"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "筆記資料夾"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "鏈結名稱"
   },
   "Description": {
-    "message": "Description"
+    "message": "備註"
   },
   "URL": {
     "message": "URL"

@@ -7,7 +7,7 @@
     "message": "Параметри QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Порт сервера сокетів QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Надіслати сторінку на QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Будь ласка, введіть маркер безпеки, який зараз відображається в QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Токен безпеки від QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Якщо ви синхронізуєте налаштування браузера, можливо, ви захочете використовувати один і той же маркер на кожному пристрої."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Меню"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Відкрийте всі закладки в нових вкладках"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Додати закладку"
   },
   "Close": {
-    "message": "Close"
+    "message": "Закрити"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Теги"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Папка приміток"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Назва посилання"
   },
   "Description": {
-    "message": "Description"
+    "message": "Опис"
   },
   "URL": {
     "message": "URL"

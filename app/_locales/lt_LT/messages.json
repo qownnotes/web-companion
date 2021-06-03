@@ -7,7 +7,7 @@
     "message": "QOwnNotes nustatymai"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "„QOwnNotes“ lizdo serverio prievadas"
   },
   "sendPageToQOwnNotes": {
     "message": "Siųsti puslapį „QOwnNotes“\n"
@@ -58,34 +58,34 @@
     "message": "Įveskite saugos ženklą, kuris dabar rodomas QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Saugos žetonas iš „QOwnNotes“"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Jei sinchronizuojate savo naršyklės nustatymus, galite naudoti tą patį prieigos raktą kiekviename įrenginyje."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Meniu"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Atidarykite visas žymes naujuose skirtukuose"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Pridėti žymą"
   },
   "Close": {
-    "message": "Close"
+    "message": "Uždaryti"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Žymos"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Užrašų aplankas"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Nuorodos pavadinimas"
   },
   "Description": {
-    "message": "Description"
+    "message": "Apibūdinimas"
   },
   "URL": {
     "message": "URL"

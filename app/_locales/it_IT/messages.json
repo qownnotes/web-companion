@@ -1,6 +1,6 @@
 {
   "appDescription": {
-    "message": "Questa è un'estensione complementare per QOwnNotes per interagire con l'applicazione desktop per le note.",
+    "message": "Questa è un'estensione aggiuntiva per QOwnNotes per interagire con l'applicazione desktop per le note.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
@@ -55,7 +55,7 @@
     "message": "Inserire il token di sicurezza"
   },
   "InputToken": {
-    "message": "Inserisre il token di sicurezza che ora è mostrato in QOwnNotes!"
+    "message": "Inserire il token di sicurezza mostrato in QOwnNotes!"
   },
   "Token": {
     "message": "Token di sicurezza di QOwnNotes"

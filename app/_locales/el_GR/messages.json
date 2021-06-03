@@ -7,13 +7,13 @@
     "message": "Ρυθμίσεις QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Θύρα υποδοχής διακομιστή QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Αποστολή σελίδας στο QOwnNotes\n"
   },
   "createScreenshotNote": {
-    "message": "Δημιουργήστε τη σημείωση με το στιγμιότυπο της ορατής σελίδας"
+    "message": "Δημιουργία σημείωσης με στιγμιότυπο ορατής σελίδας"
   },
   "sendSelectionToQOwnNotes": {
     "message": "Αποστολή επιλογής στο QOwnNotes"
@@ -58,36 +58,36 @@
     "message": "Παρακαλούμε εισάγετε το αδειοδοτικό ασφαλείας που εμφανίζεται τώρα στο QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Διακριτικό ασφαλείας από το QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Εάν συγχρονίζετε τις ρυθμίσεις του προγράμματος περιήγησής σας, ίσως θελήσετε να χρησιμοποιήσετε το ίδιο διακριτικό σε κάθε συσκευή."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Μενού"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Άνοιγμα όλων των σελιδοδεικτών σε νέες καρτέλες"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Προσθήκη σελιδοδείκτη"
   },
   "Close": {
-    "message": "Close"
+    "message": "Κλείσιμο"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Ετικέτες"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Φάκελος σημειώσεων"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Ονομασία συνδέσμου"
   },
   "Description": {
-    "message": "Description"
+    "message": "Περιγραφή"
   },
   "URL": {
-    "message": "URL"
+    "message": "Διεύθυνση URL"
   }
 }

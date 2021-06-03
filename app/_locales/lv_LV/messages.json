@@ -7,7 +7,7 @@
     "message": "QOwnNotes iestatījumi"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes ligzdas servera ports"
   },
   "sendPageToQOwnNotes": {
     "message": "Nosūtīt lapu vietnei QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Lūdzu, ievadiet drošības marķieri, kas tagad tiek parādīts pakalpojumā QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Drošības marķieris no QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Ja sinhronizējat pārlūkprogrammas iestatījumus, ieteicams izmantot to pašu marķieri visās ierīcēs."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Izvēlne"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Atveriet visas grāmatzīmes jaunās cilnēs"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Pievienot grāmatzīmi"
   },
   "Close": {
-    "message": "Close"
+    "message": "Aizvērt"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Tagi"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Piezīmju mape"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Saites nosaukums"
   },
   "Description": {
-    "message": "Description"
+    "message": "Apraksts"
   },
   "URL": {
     "message": "URL"

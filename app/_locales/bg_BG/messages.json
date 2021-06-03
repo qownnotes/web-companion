@@ -7,7 +7,7 @@
     "message": "Настройки на QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes порт на сокет сървър"
   },
   "sendPageToQOwnNotes": {
     "message": "Изпращане на страница до QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Моля, въведете маркера за сигурност, който сега е показан в QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Токен за сигурност от QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Ако синхронизирате настройките на браузъра си, може да искате да използвате един и същ маркер на всяко устройство."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Меню"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Отворете всички отметки в нови раздели"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Добави отметка"
   },
   "Close": {
-    "message": "Close"
+    "message": "Близо"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Етикети"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Папка с бележки"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Име на връзката"
   },
   "Description": {
-    "message": "Description"
+    "message": "Описание"
   },
   "URL": {
     "message": "URL"

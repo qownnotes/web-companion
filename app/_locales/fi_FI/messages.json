@@ -7,7 +7,7 @@
     "message": "QOwnNotes-asetukset"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes-palvelinportti"
   },
   "sendPageToQOwnNotes": {
     "message": "Lähetä sivu osoitteeseen QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Anna tietoturvatunnus, joka näkyy nyt QOwnNotesissa!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotesin suojaustunnus"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Jos synkronoit selaimesi asetuksia, haluat ehkä käyttää samaa tunnusta kaikilla laitteilla."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Valikko"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Avaa kaikki kirjanmerkit uusilla välilehdillä"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Lisää kirjanmerkki"
   },
   "Close": {
-    "message": "Close"
+    "message": "kiinni"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Tunnisteet"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Muistiinpanokansio"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Linkin nimi"
   },
   "Description": {
-    "message": "Description"
+    "message": "Kuvaus"
   },
   "URL": {
     "message": "URL"

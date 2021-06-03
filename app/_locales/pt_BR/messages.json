@@ -61,7 +61,7 @@
     "message": "Token de segurança do QOwnNotes"
   },
   "TokenHint": {
-    "message": "Se você está sincronizando as configurações do seu navegador, talvez você queira usar o mesmo token em cada dispositivo."
+    "message": "Se você está sincronizando as configurações do seu navegador, você deve usar o mesmo token em todos dispositivos."
   },
   "Menu": {
     "message": "Menu"

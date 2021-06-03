@@ -7,7 +7,7 @@
     "message": "QOwnNotes nastavenia"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "Port soketového servera QOwnNotes"
   },
   "sendPageToQOwnNotes": {
     "message": "Poslať stránku na QOwnNotes\n"
@@ -58,34 +58,34 @@
     "message": "Zadajte token zabezpečenia, ktorý je teraz zobrazený v QOwnNotes!"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "Bezpečnostný token od QOwnNotes"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "Ak synchronizujete nastavenia prehliadača, možno budete chcieť na všetkých zariadeniach použiť rovnaký token."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "Ponuka"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "Otvoriť všetky záložky na nových kartách"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "Pridať záložku"
   },
   "Close": {
-    "message": "Close"
+    "message": "Zavrieť"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "Značky"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "Priečinok s poznámkami"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Názov odkazu"
   },
   "Description": {
-    "message": "Description"
+    "message": "Popis"
   },
   "URL": {
     "message": "URL"
