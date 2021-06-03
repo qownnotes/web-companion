@@ -75,10 +75,12 @@ jobs:
 #        manifest: dist/firefox/manifest.json
 #        api-key: ${{ secrets.FIREFOX_API_KEY }}
 #        api-secret: ${{ secrets.FIREFOX_API_SECRET }}
-    - uses: trmcnvn/chrome-addon@v2
-      with:
-        extension: pkgkfnampapjbopomdpnkckbjdnpkbkp
-        zip: packages/qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
-        client-id: ${{ secrets.CHROME_CLIENT_ID }}
-        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
-        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+#    # https://github.com/trmcnvn/chrome-addon
+#    - uses: trmcnvn/chrome-addon@v2
+#      with:
+#        extension: pkgkfnampapjbopomdpnkckbjdnpkbkp
+#        zip: packages/qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
+#        # Credentials see: https://github.com/DrewML/chrome-webstore-upload/blob/master/How%20to%20generate%20Google%20API%20keys.md
+#        client-id: ${{ secrets.CHROME_CLIENT_ID }}
+#        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+#        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
