@@ -22,11 +22,10 @@
             </v-flex>
             <v-flex xs12 sm6>
               <v-text-field
-                  v-model="password"
                   :append-icon="showToken ? 'fa-eye' : 'fa-eye-slash'"
                   @click:append="showToken = !showToken"
                   :type="showToken ? 'text' : 'password'"
-                  v-model.number="token"
+                  v-model="token"
                   :hint="getLocale('TokenHint')"
                   :label="getLocale('Token')"
                   clearable

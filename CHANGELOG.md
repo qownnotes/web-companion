@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 21.6.0
+- fixed a problem with cut-off security tokens when they start with a number
+  (for [#33](https://github.com/qownnotes/web-companion/issues/33))
+
 ## 20.10.0
 - added more translation
 
