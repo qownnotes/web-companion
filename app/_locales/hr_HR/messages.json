@@ -64,16 +64,16 @@
     "message": "Ako sinkronizirate postavke preglednika, možda ćete htjeti koristiti isti token na svakom uređaju."
   },
   "Menu": {
-    "message": "Sadrzaj"
+    "message": "Izbornik"
   },
   "OpenAllBookmarks": {
-    "message": "Otvorite sve oznake na novim karticama"
+    "message": "Otvori sve oznake u novim karticama"
   },
   "AddBookmark": {
     "message": "Dodaj oznaku"
   },
   "Close": {
-    "message": "Zatvoriti"
+    "message": "Zatvori"
   },
   "Tags": {
     "message": "Oznake"

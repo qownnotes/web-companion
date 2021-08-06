@@ -1,7 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
 ## 21.8.0
-- migrated to webextension-toolbox 4 and webpack 5
+- migrated to webextension-toolbox 4 and webpack 5 to fix a lot of vulnerabilities
+- added more Croatian translation
 
 ## 21.6.0
 - fixed a problem with cut-off security tokens when they start with a number
