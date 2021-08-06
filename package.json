@@ -29,6 +29,6 @@
     "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.12",
     "vuetify-loader": "^1.7.2",
-    "webextension-toolbox": "^3.0.0"
+    "webextension-toolbox": "^4.0.3"
   }
 }

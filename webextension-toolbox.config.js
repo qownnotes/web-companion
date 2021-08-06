@@ -1,18 +1,15 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+// console.log("webpack", webpack);
+
 module.exports = {
-    webpack: (config, {
-        src,
-        target,
-        dev,
-        vendor
-    }) => {
-        config.plugins.push(new webpack.ProvidePlugin({
-            Vue: 'vue',
-            VueLoader: 'vue-loader'
-        }));
+    webpack: (config, {}) => {
+        // config.plugins.push(new webpack.ProvidePlugin({
+        //     Vue: 'vue',
+        //     VueLoader: 'vue-loader'
+        // }));
 
         // config.plugins.push(new webpack.ProvidePlugin({
         //     Vue: 'vue'
