@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 21.8.1
+- update dependencies
+
 ## 21.8.0
 - migrated to webextension-toolbox 4 and webpack 5 to fix a lot of vulnerabilities
 - added more Croatian translation
