@@ -1,7 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
 ## 21.9.0
-- update dependencies
+- added a link to the [Web clipper documentation](https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper)
+  to the hamburger menu on the top left to give more exposure to that feature
+- updated dependencies
 
 ## 21.8.1
 - update dependencies

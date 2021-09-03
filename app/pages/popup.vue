@@ -218,6 +218,9 @@ export default {
     toggleImportBrowserBookmarksDialog() {
       this.importBrowserBookmarksDialog = !this.importBrowserBookmarksDialog;
     },
+    openWebClipperDocumentation() {
+      this.openUrl('https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper');
+    },
     getLocale(text) {
       return util.getLocale(text);
     },
@@ -295,6 +298,11 @@ export default {
           title: this.getLocale('ImportBrowserBookmarks'),
           icon: 'fa-download',
           dialog: this.toggleImportBrowserBookmarksDialog
+        },
+        {
+          title: this.getLocale('WebClipper'),
+          icon: 'fa-info-circle',
+          dialog: this.openWebClipperDocumentation
         }
       ],
       inputTokenDialog: false
