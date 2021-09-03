@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 21.9.0
+- update dependencies
+
 ## 21.8.1
 - update dependencies
 
