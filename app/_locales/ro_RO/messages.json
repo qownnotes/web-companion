@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Importă marcajele browserului"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Import"
   },

@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Importējiet pārlūka grāmatzīmes"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Importēt"
   },

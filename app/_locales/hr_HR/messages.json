@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Uvezite oznake preglednika"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Uvezi"
   },

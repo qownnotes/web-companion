@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "ब्राउज़र बुकमार्क आयात करें"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "आयात"
   },

@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Importer les signets du navigateur"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Importer"
   },

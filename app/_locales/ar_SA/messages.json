@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "استيراد الإشارات المرجعية من المتصفح"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "استيراد"
   },

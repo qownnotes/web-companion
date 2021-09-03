@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Import ang mga bookmark sa browser"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Angkat"
   },

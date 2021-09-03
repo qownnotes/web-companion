@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Importuoti naršyklės žymes"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Importuoti"
   },

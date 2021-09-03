@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "ブラウザのブックマークをインポートする"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "インポート"
   },

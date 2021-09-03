@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "匯入瀏覽器書簽"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "匯入"
   },

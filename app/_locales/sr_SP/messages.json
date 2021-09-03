@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Увези ознаке прегледача"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Увоз"
   },

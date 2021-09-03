@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Lesezeichen des Browsers importieren"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Importieren"
   },

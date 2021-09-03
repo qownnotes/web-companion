@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "브라우저 북마크 가져오기"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "가져오기"
   },

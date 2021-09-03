@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Import penanda buku pelayar"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Import"
   },

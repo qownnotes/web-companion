@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "นำเข้าบุ๊คมาร์คจากเบราว์เซอร์"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "นำเข้า"
   },

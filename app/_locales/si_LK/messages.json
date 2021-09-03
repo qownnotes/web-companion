@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "බ්‍රව්සර් පිටු සලකුණු ආයාත කරන්න"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "ආනයන"
   },
@@ -79,7 +82,7 @@
     "message": "Tags"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "සටහන් බහාලුම"
   },
   "LinkName": {
     "message": "Link name"
@@ -88,6 +91,6 @@
     "message": "Description"
   },
   "URL": {
-    "message": "URL"
+    "message": "ඒ.ස.නි."
   }
 }

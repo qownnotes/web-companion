@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Tuo selaimen kirjanmerkit"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Tuonti"
   },

@@ -4,6 +4,7 @@
 - added a link to the [Web clipper documentation](https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper)
   to the hamburger menu on the top left to give more exposure to that feature
 - updated dependencies
+- added more Sinhala translation
 
 ## 21.8.1
 - update dependencies

@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Εισαγωγή σελιδοδεικτών προγράμματος περιήγησης"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Εισαγωγή"
   },

@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Імпортуйте закладки браузера"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Імпорт"
   },

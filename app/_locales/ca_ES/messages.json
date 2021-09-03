@@ -45,6 +45,9 @@
   "ImportBrowserBookmarks": {
     "message": "Importa les adreces d'interès del navegador"
   },
+  "WebClipper": {
+    "message": "Web clipper"
+  },
   "Import": {
     "message": "Importa"
   },
