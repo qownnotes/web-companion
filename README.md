@@ -6,7 +6,7 @@
 [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) |
 [QOwnNotes Webpage](https://www.qownnotes.org)
 
-![build-test](https://github.com/qownnotes/web-companion/workflows/build-test/badge.svg?branch=develop)
+[![build-test](https://github.com/qownnotes/web-companion/workflows/build-test/badge.svg?branch=develop)](https://github.com/qownnotes/web-companion/actions/workflows/build-test.yml)
 
 Chrome / Firefox browser extension to interact with the note taking desktop application [QOwnNotes](https://www.qownnotes.org) for managing bookmarks and act as a web-clipper.
 
