@@ -1,6 +1,6 @@
 {
   "name": "qownnotes-web-companion",
-  "version": "21.9.0",
+  "version": "21.10.0",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "author": "Patrizio Bekerle <patrizio@bekerle.com>",
   "license": "GPL",
@@ -20,7 +20,7 @@
     "file-loader": "^6.2.0",
     "font-awesome": "^4.7.0",
     "mini-css-extract-plugin": "^0.11.3",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "prettier": "^2.3.2",
     "sass": "^1.39.0",
     "sass-loader": "^10.2.0",
