@@ -2,7 +2,7 @@
 
 ## 21.10.0
 - when adding a bookmark and pressing enter to store it, now the 2nd `Add bookmark` dialog, that was triggered, is suppressed
-- update dependencies
+- updated dependencies
 - added a lot more translation
 
 ## 21.9.0
@@ -12,7 +12,7 @@
 - added more Sinhala translation
 
 ## 21.8.1
-- update dependencies
+- updated dependencies
 
 ## 21.8.0
 - migrated to webextension-toolbox 4 and webpack 5 to fix a lot of vulnerabilities
