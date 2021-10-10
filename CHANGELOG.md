@@ -1,6 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 21.10.0
+- when adding a bookmark and pressing enter to store it, now the 2nd `Add bookmark` dialog, that was triggered, is suppressed
 - update dependencies
 
 ## 21.9.0

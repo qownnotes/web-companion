@@ -110,7 +110,7 @@
           <v-icon>fa-external-link fa-lg</v-icon>
         </v-btn>
         <BookmarkAllTabsButton @bookmarksCreated="loadBookmarks" v-bind:webSocket="this.webSocket"></BookmarkAllTabsButton>
-        <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark"
+        <v-dialog v-model="bookmarkEditDialog" @keydown.esc="closeBookmarkDialog" @keydown.enter="saveBookmark($event)"
                   max-width="500px">
           <template v-slot:activator="{ on, attrs }">
             <v-btn v-on="on" v-bind="attrs" accesskey="a" color="primary" text icon
@@ -246,14 +246,22 @@ export default {
       // reset the dialog form
       this.$nextTick(() => this.editedBookmark = Object.assign({}, this.defaultBookmark));
     },
-    saveBookmark() {
+    saveBookmark(event) {
+      // Prevent that pressing Enter to save bookmark triggers a 2nd dialog
+      if (event) {
+        event.preventDefault();
+      }
+
+      // This would only be a workaround if the event.preventDefault() doesn't work
+      // setTimeout(() => { this.closeBookmarkDialog() }, 500);
+
       const data = {type: "newBookmarks", data: [this.editedBookmark]};
       const that = this;
       this.webSocket.send(data, function () {
         console.log("Storing bookmark:" + data);
         that.loadBookmarks();
       });
-      this.closeBookmarkDialog()
+      this.closeBookmarkDialog();
     },
     onInputTokenDialogClose() {
       window.close();
