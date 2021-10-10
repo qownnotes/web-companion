@@ -3,6 +3,7 @@
 ## 21.10.0
 - when adding a bookmark and pressing enter to store it, now the 2nd `Add bookmark` dialog, that was triggered, is suppressed
 - update dependencies
+- added a lot more translation
 
 ## 21.9.0
 - added a link to the [Web clipper documentation](https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper)

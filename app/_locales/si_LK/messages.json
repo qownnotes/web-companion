@@ -22,16 +22,16 @@
     "message": "QOwnNotes වෙත සම්බන්ධතාවය අසාර්ථක විය!"
   },
   "popupHeadline": {
-    "message": "පිටු සලකුණු"
+    "message": "පොත්යොමු"
   },
   "popupSearchLabel": {
-    "message": "සෙවීම"
+    "message": "සොයන්න"
   },
   "NewBookmark": {
-    "message": "නව පිටු සලකුණ"
+    "message": "නව පොත්යොමු"
   },
   "Cancel": {
-    "message": "අවලංගු කරන්න"
+    "message": "අවලංගු"
   },
   "Ok": {
     "message": "හරි"
@@ -49,7 +49,7 @@
     "message": "Web clipper"
   },
   "Import": {
-    "message": "ආනයන"
+    "message": "ආයාත කරන්න"
   },
   "ImportAllBrowserBookmarks": {
     "message": "සියලුම බ්‍රව්සර් පිටු සලකුණු ආනයනය කිරීමට ඔබට අවශ්‍යද?"
