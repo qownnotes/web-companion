@@ -31,7 +31,7 @@
 ## 20.9.6
 - the `content_security_policy` with `unsafe-eval` was removed for the Firefox store
 - the success message snackbar is now shown on the top of the bookmarks popup
-  to prevent it from being outside of the visible area
+  to prevent it from being outside the visible area
 - the empty space of the popup in Firefox was fixed
 - when bookmarks are added now the bookmark list will be reloaded
 
