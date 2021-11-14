@@ -4,13 +4,13 @@
 [Releases](https://github.com/qownnotes/web-companion/releases) |
 [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) |
-[QOwnNotes Webpage](https://www.qownnotes.org)
+[QOwnNotes web page](https://www.qownnotes.org)
 
 [![build-test](https://github.com/qownnotes/web-companion/workflows/build-test/badge.svg?branch=develop)](https://github.com/qownnotes/web-companion/actions/workflows/build-test.yml)
 
 Chrome / Firefox browser extension to interact with the note taking desktop application [QOwnNotes](https://www.qownnotes.org) for managing bookmarks and act as a web-clipper.
 
-[QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **markdown note taking**
+[QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **Markdown note taking**
 application for GNU/Linux, macOS and Windows, that (optionally) works together with the notes application of
 [**ownCloud**](https://github.com/owncloud/notes) or [**Nextcloud**](https://github.com/Nextcloud/notes).
 
@@ -28,8 +28,8 @@ The extension is currently tested for Google Chrome and Mozilla Firefox.
       [QOwnNotes Web Companion browser extension](https://docs.qownnotes.org/en/latest/getting-started/browser-extension/)
 - creating a new note (only text) from the **current selection** by right-clicking it
     - this is scriptable in QOwnNotes
-- creating a new note from the content of the **current webpage** by right-clicking on the page
-    - the html will be converted to markdown and images of the page will be downloaded (might take a while)
+- creating a new note from the content of the **current web page** by right-clicking on the page
+    - the HTML will be converted to Markdown and images of the page will be downloaded (might take a while)
     - this is scriptable in QOwnNotes
 - creating a new note with a **screenshot** of the visible part of the current webpage by right-clicking on the page
 - you can change the server socket port in the extension *Option page*

@@ -78,7 +78,7 @@
 - library security updates were made
 
 ## 20.5.0
-- screenshots are now captured as png instead of the browser's default format to capture screenshots
+- screenshots are now captured as PNG instead of the browser's default format to capture screenshots
   (for [#17](https://github.com/qownnotes/web-companion/issues/17))
 - the context menu entries `Create note from page (HTML import)` and `Create note from selection`
   where renamed to `Send page to QOwnNotes` and `Send selection to QOwnNotes`, because now a screenshot
@@ -103,7 +103,7 @@
 
 ## 19.5.3
 - you are now able to enter a **security token** to communicate with QOwnNotes 
-    - QOwnNotes 19.5.4 or higher needs this feature to ensure no other website or application can access your bookmarks
+    - QOwnNotes 19.5.4 or higher needs this feature to ensure no other web page or application can access your bookmarks
 - added a lot of translation
 
 ## 19.5.2
@@ -182,7 +182,7 @@
 ## 19.1.2
 - you can now browse a **list of all links in the current note** if you click on the QOwnNotes icon in the browser toolbar
     - you can **search for links** on the popup
-    - clicking a line opens the url in a new browser tab
+    - clicking a line opens the URL in a new browser tab
     - clicking on the headline items of the table sorts the items in the table
     - you need QOwnNotes 19.1.2 or higher for this feature
 - added more German translation (thank you rakekniven)
@@ -201,15 +201,15 @@
 
 ## 18.12.2
 - added support to import pages as new note in QOwnNotes 18.12.9 and higher
-    - the html will be converted to markdown and images of the page will be downloaded (might take a while)
+    - the HTML will be converted to Markdown and images of the page will be downloaded (might take a while)
 - added support to add a screenshot of the visible area as new note in QOwnNotes 18.12.9 and higher
 - selected text will now be created as new note with newlines if possible
 
 ## 18.12.1
 - fixed the default port
-- the url of the page will now also be written to the note
+- the URL of the page will now also be written to the note
 - restructured the context menu
-- added an context menu entry to reset the settings
+- added a context menu entry to reset the settings
 
 ## 18.12.0
 - added support to add selected text as new note in QOwnNotes 18.12.7 and higher
