@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 22.2.0
+- an un-minified version of the extension is now provided for the Firefox Store
+
 ## 21.10.0
 - when adding a bookmark and pressing enter to store it, now the 2nd `Add bookmark` dialog, that was triggered, is suppressed
 - updated dependencies
