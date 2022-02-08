@@ -16,4 +16,4 @@ npm run build firefox || exit 1
 #npm run build-no-minimize firefox || exit 1
 
 # download sourcecode for Mozilla store
-curl https://github.com/qownnotes/web-companion/archive/refs/heads/develop.zip -Lo ./dist/develop.zip
+curl https://github.com/qownnotes/web-companion/archive/refs/heads/develop.zip -Lo ./packages/sourcecode.zip
