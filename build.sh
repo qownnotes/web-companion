@@ -12,4 +12,8 @@ npm run build chrome || exit 1
 
 # switch back to the correct version number format again
 sed -i -e 's/"version": "20/"version": "/g' package.json || exit 1
-npm run build-no-minimize firefox || exit 1
+npm run build firefox || exit 1
+#npm run build-no-minimize firefox || exit 1
+
+# download sourcecode for Mozilla store
+curl https://github.com/qownnotes/web-companion/archive/refs/heads/develop.zip -Lo ./dist/develop.zip
