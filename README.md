@@ -1,5 +1,6 @@
 # [QOwnNotes](https://www.qownnotes.org "QOwnNotes Official Site") Web Companion browser extension
 
+[GitHub](https://github.com/qownnotes/web-companion) |
 [Changelog](https://github.com/qownnotes/web-companion/blob/develop/CHANGELOG.md) |
 [Releases](https://github.com/qownnotes/web-companion/releases) |
 [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
