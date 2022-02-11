@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 22.2.3
+- a user data consent page was added for the Firefox Store (for [#37](https://github.com/qownnotes/web-companion/issues/37))
+
 ## 22.2.0
 - an un-minified version of the extension is now provided for the Firefox Store
 

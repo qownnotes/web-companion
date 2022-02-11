@@ -3,6 +3,8 @@ import Vue from 'vue';
 import vuetify from './plugins/vuetify'
 import VueTruncate from 'vue-truncate-filter';
 import Popup from '../pages/popup.vue'
+import Consent from '../pages/consent.vue'
+
 // import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 // import 'vuetify/dist/vuetify.min.css'
 // import '../styles/popup.css';
@@ -50,15 +52,23 @@ function initVue() {
 
     Vue.use(VueTruncate);
 
-    /* eslint-disable no-new */
-    new Vue({
-        // el: '#app',
-        // vuetify: new Vuetify(vuetifyOpts),
-        vuetify,
-        components: {Popup},
-        // template: "<App/>",
-        render: h => h(Popup),
-    }).$mount('#app');
+    chrome.storage.sync.get(function (data) {
+        if (data.userDataConsent === true) {
+            /* eslint-disable no-new */
+            new Vue({
+                vuetify,
+                components: {Popup},
+                render: h => h(Popup),
+            }).$mount('#app');
+        } else {
+            /* eslint-disable no-new */
+            new Vue({
+                vuetify,
+                components: {Consent},
+                render: h => h(Consent),
+            }).$mount('#app');
+        }
+    });
 }
 
 initPopup();
