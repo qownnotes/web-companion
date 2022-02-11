@@ -61,36 +61,63 @@
     "message": "请输入现在在QOwnNotes中显示的安全令牌！"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "来自 QOwnNotes 的安全令牌"
   },
   "TokenHint": {
     "message": "If you are syncing your browser settings you may want to use the same token on every device."
   },
   "Menu": {
-    "message": "Menu"
+    "message": "菜单"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "在新标页中打开所有书签"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "添加书签"
   },
   "Close": {
-    "message": "Close"
+    "message": "关闭"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "标签"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "笔记文件夹"
   },
   "LinkName": {
     "message": "Link name"
   },
   "Description": {
-    "message": "Description"
+    "message": "描述"
   },
   "URL": {
     "message": "URL"
+  },
+  "ConsentHeadline": {
+    "message": "User data consent"
+  },
+  "ConsentIntro": {
+    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+  },
+  "ConsentData1": {
+    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+  },
+  "ConsentData2": {
+    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+  },
+  "ConsentData3": {
+    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+  },
+  "ConsentData4": {
+    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+  },
+  "ConsentFooter": {
+    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+  },
+  "ConsentButton": {
+    "message": "Consent with user data collection"
+  },
+  "UninstallButton": {
+    "message": "Uninstall extension"
   }
 }

@@ -2,9 +2,7 @@
 
 ## 22.2.3
 - a user data consent page was added for the Firefox Store (for [#37](https://github.com/qownnotes/web-companion/issues/37))
-
-## 22.2.0
-- an un-minified version of the extension is now provided for the Firefox Store
+- added more translation
 
 ## 21.10.0
 - when adding a bookmark and pressing enter to store it, now the 2nd `Add bookmark` dialog, that was triggered, is suppressed

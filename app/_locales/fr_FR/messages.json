@@ -92,5 +92,32 @@
   },
   "URL": {
     "message": "URL"
+  },
+  "ConsentHeadline": {
+    "message": "Consentement à l'utilisation des données utlisateur"
+  },
+  "ConsentIntro": {
+    "message": "Ce greffon de navigateur collecte des données utilisateur qu'il envoie à votre instance locale de QOwnNotes via un Websocket. Les données collectées peuvent comporter les informations suivantes :"
+  },
+  "ConsentData1": {
+    "message": "Informations concernant les onglets ouverts dans votre navigateur, telle que les URLs, afin de stocker des signets dans QOwnNotes"
+  },
+  "ConsentData2": {
+    "message": "Le contenu de l'onglet ouvert si vous souhaitez l'envoyer en tant que note à QOwnNotes"
+  },
+  "ConsentData3": {
+    "message": "Une copie d'écran de l'onglet ouvert si vous souhaitez l'envoyer en tant que note à QOwnNotes"
+  },
+  "ConsentData4": {
+    "message": "Les signets de votre navigateur si vous souhaitez les importer dans QOwnNotes"
+  },
+  "ConsentFooter": {
+    "message": "Ce greffon ne fonctionne pas sans communiquer avec votre instance locale de QOwnNotes ni sans envoyer ou recevoir des données. Aucunes données utilisateur ne sont transmises via l'Internet ni à des tiers !"
+  },
+  "ConsentButton": {
+    "message": "Accepter la collecte des données utlisateur"
+  },
+  "UninstallButton": {
+    "message": "Désinstaller le greffon"
   }
 }

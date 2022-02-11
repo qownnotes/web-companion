@@ -92,5 +92,32 @@
   },
   "URL": {
     "message": "URL"
+  },
+  "ConsentHeadline": {
+    "message": "Zustimmung zu den Benutzerdaten"
+  },
+  "ConsentIntro": {
+    "message": "Diese Browsererweiterung sammelt persönliche Benutzerdaten und sendet sie über einen WebSocket an Ihre lokale Instanz von QOwnNotes. Die gesammelten Daten können die folgenden Informationen enthalten:"
+  },
+  "ConsentData1": {
+    "message": "Informationen über Ihre Browser-Tabs, wie die URL, um Lesezeichen in QOwnNotes zu speichern"
+  },
+  "ConsentData2": {
+    "message": "Der Inhalt Ihres geöffneten Tabs, wenn Sie ihn als Notiz an QOwnNotes senden möchten"
+  },
+  "ConsentData3": {
+    "message": "Ein Screenshot des geöffneten Tabs, wenn Sie diesen als Notiz an QOwnNotes senden möchten"
+  },
+  "ConsentData4": {
+    "message": "Ihre Browser-Lesezeichen, wenn Sie diese in QOwnNotes importieren möchten"
+  },
+  "ConsentFooter": {
+    "message": "Diese Erweiterung funktioniert nicht, ohne mit Ihrer lokalen Instanz von QOwnNotes zu kommunizieren und Benutzerdaten hin und her zu senden. Es werden keine Benutzerdaten über das Internet oder an eine andere Partei gesendet!"
+  },
+  "ConsentButton": {
+    "message": "Einverständnis mit der Erfassung von Benutzerdaten"
+  },
+  "UninstallButton": {
+    "message": "Erweiterung deinstallieren"
   }
 }

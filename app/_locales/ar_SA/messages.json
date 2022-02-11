@@ -1,16 +1,16 @@
 {
   "appDescription": {
-    "message": "هذا امتداد ملحق لـ QOwnNotes للتفاعل مع تطبيق تدوين الملاحظات لسطح المكتب.",
+    "message": "هذه إضافة مرافقة لـ QOwnNotes حتى يتعامل مع التطبيق الحاسوبي لتدوين الملاحظات.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
     "message": "إعدادات QOwnNotes"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes منفذ خادم مأخذ التوصيل"
+    "message": "منفذ خادم مقبس QOwnNotes"
   },
   "sendPageToQOwnNotes": {
-    "message": "إرسال الصفحة إلى QOwnNotes\n"
+    "message": "إرسال الصفحة إلى QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "إنشاء ملاحظة مع لقطة شاشة للصفحة المرئية"
@@ -46,7 +46,7 @@
     "message": "استيراد الإشارات المرجعية من المتصفح"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "مقص الويب"
   },
   "Import": {
     "message": "استيراد"
@@ -64,33 +64,60 @@
     "message": "رمز الأمان من QOwnNotes"
   },
   "TokenHint": {
-    "message": "إذا كنت تقوم بمزامنة إعدادات المستعرض الخاص بك ، فقد ترغب في استخدام نفس الرمز المميز على كل جهاز."
+    "message": "إذا كنت تزامن إعدادات متصفحك، فقد ترغب في استخدام نفس رمز الأمان على كل جهاز."
   },
   "Menu": {
-    "message": "قائمة طعام"
+    "message": "القائمة"
   },
   "OpenAllBookmarks": {
     "message": "افتح جميع الإشارات المرجعية في علامات تبويب جديدة"
   },
   "AddBookmark": {
-    "message": "اضافة للمفضلة"
+    "message": "إضافة إشارة مرجعية"
   },
   "Close": {
-    "message": "قريب"
+    "message": "إغلاق"
   },
   "Tags": {
-    "message": "العلامات"
+    "message": "الوسوم"
   },
   "NoteFolder": {
-    "message": "مجلد الملاحظات"
+    "message": "مجلد الملاحظة"
   },
   "LinkName": {
-    "message": "اسم الارتباط"
+    "message": "اسم الرابط"
   },
   "Description": {
-    "message": "وصف"
+    "message": "الوصف"
   },
   "URL": {
-    "message": "عنوان URL"
+    "message": "العنوان"
+  },
+  "ConsentHeadline": {
+    "message": "User data consent"
+  },
+  "ConsentIntro": {
+    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+  },
+  "ConsentData1": {
+    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+  },
+  "ConsentData2": {
+    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+  },
+  "ConsentData3": {
+    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+  },
+  "ConsentData4": {
+    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+  },
+  "ConsentFooter": {
+    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+  },
+  "ConsentButton": {
+    "message": "Consent with user data collection"
+  },
+  "UninstallButton": {
+    "message": "Uninstall extension"
   }
 }

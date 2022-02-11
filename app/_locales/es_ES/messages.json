@@ -46,7 +46,7 @@
     "message": "Importar marcadores de navegador"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "Cortadora web"
   },
   "Import": {
     "message": "Importar"
@@ -92,5 +92,32 @@
   },
   "URL": {
     "message": "URL"
+  },
+  "ConsentHeadline": {
+    "message": "User data consent"
+  },
+  "ConsentIntro": {
+    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+  },
+  "ConsentData1": {
+    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+  },
+  "ConsentData2": {
+    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+  },
+  "ConsentData3": {
+    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+  },
+  "ConsentData4": {
+    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+  },
+  "ConsentFooter": {
+    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+  },
+  "ConsentButton": {
+    "message": "Consent with user data collection"
+  },
+  "UninstallButton": {
+    "message": "Uninstall extension"
   }
 }
