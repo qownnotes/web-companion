@@ -66,7 +66,7 @@ export default {
       window.close();
     },
     doUninstall() {
-      browser.management.uninstallSelf({
+      chrome.management.uninstallSelf({
         showConfirmDialog: true
       });
     }
