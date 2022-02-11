@@ -52,6 +52,9 @@ function initVue() {
 
     Vue.use(VueTruncate);
 
+    // DEBUG: remove userDataConsent
+    // chrome.storage.sync.remove(["userDataConsent"]);
+
     chrome.storage.sync.get(function (data) {
         if (data.userDataConsent === true) {
             /* eslint-disable no-new */

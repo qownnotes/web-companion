@@ -21,109 +21,111 @@ function genericOnClick(info, tab) {
  * @param tab
  */
 function scrapeSelection(info, tab) {
-    // console.log("info: " + JSON.stringify(info));
-    // console.log("tab: " + JSON.stringify(tab));
-    //
-    // console.log(info.pageUrl);
-    // console.log(info.selectionText);
+    checkConsent(info, tab, (info, tab) => {
+        // console.log("info: " + JSON.stringify(info));
+        // console.log("tab: " + JSON.stringify(tab));
+        //
+        // console.log(info.pageUrl);
+        // console.log(info.selectionText);
 
-    // let selection = window.getSelection();
-    // console.log(selection);
-    //
-    // console.log(getSelected());
-    //
-    // testSelection();
-    //
-    // var html = "";
-    // if (typeof window.getSelection != "undefined") {
-    //     var sel = window.getSelection();
-    //     if (sel.rangeCount) {
-    //         var container = document.createElement("div");
-    //         for (var i = 0, len = sel.rangeCount; i < len; ++i) {
-    //             container.appendChild(sel.getRangeAt(i).cloneContents());
-    //         }
-    //         html = container.innerHTML;
-    //     }
-    // } else if (typeof document.selection != "undefined") {
-    //     if (document.selection.type == "Text") {
-    //         html = document.selection.createRange().htmlText;
-    //     }
-    // }
-    //
-    // console.log(html);
+        // let selection = window.getSelection();
+        // console.log(selection);
+        //
+        // console.log(getSelected());
+        //
+        // testSelection();
+        //
+        // var html = "";
+        // if (typeof window.getSelection != "undefined") {
+        //     var sel = window.getSelection();
+        //     if (sel.rangeCount) {
+        //         var container = document.createElement("div");
+        //         for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+        //             container.appendChild(sel.getRangeAt(i).cloneContents());
+        //         }
+        //         html = container.innerHTML;
+        //     }
+        // } else if (typeof document.selection != "undefined") {
+        //     if (document.selection.type == "Text") {
+        //         html = document.selection.createRange().htmlText;
+        //     }
+        // }
+        //
+        // console.log(html);
 
-    // chrome.tabs.executeScript( tab.tabId, {
-    //     code: "window.getSelection();"
-    // }, function(selection) {
-    //     console.log("window.getSelection();");
-    //     console.log(selection);
-    // });
+        // chrome.tabs.executeScript( tab.tabId, {
+        //     code: "window.getSelection();"
+        // }, function(selection) {
+        //     console.log("window.getSelection();");
+        //     console.log(selection);
+        // });
 
-    // chrome.extension.sendRequest(window.getSelection().toString(), function(response) {
-    //     console.log(response);
-    // });
+        // chrome.extension.sendRequest(window.getSelection().toString(), function(response) {
+        //     console.log(response);
+        // });
 
-    // chrome.tabs.getSelected( null , function(tab) {
-    //     console.log(tab);
-    // });
+        // chrome.tabs.getSelected( null , function(tab) {
+        //     console.log(tab);
+        // });
 
-    // chrome.tabs.executeScript( tab.tabId, {
-    //     code: "window.getSelection();"
-    // }, function(selection) {
-    //     console.log("window.getSelection() 2;");
-    //     console.log(selection.toString());
-    //     console.log(selection[0].rangeCount);
-    //     var html;
-    //
-    //     if (selection.rangeCount) {
-    //         var container = document.createElement("div");
-    //         for (var i = 0, len = selection.rangeCount; i < len; ++i) {
-    //             container.appendChild(selection.getRangeAt(i).cloneContents());
-    //         }
-    //         html = container.innerHTML;
-    //     }
-    //
-    //     console.log(html);
-    // });
-    //
-    //
-    //
-    // chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
-    //     console.log(response);
-    //     return;
-    //     var url=response.url;
-    //     var subject=response.subject;
-    //     var body= response.body;
-    //
-    //     if(body===''){
-    //         body="No text selected";
-    //         //You may choose to pop up a text box allowing the user to enter in a message instead.
-    //     }
-    //     //From here, you can POST the variables to any web service you choose.
-    //
-    //     console.log(body);
-    // });
+        // chrome.tabs.executeScript( tab.tabId, {
+        //     code: "window.getSelection();"
+        // }, function(selection) {
+        //     console.log("window.getSelection() 2;");
+        //     console.log(selection.toString());
+        //     console.log(selection[0].rangeCount);
+        //     var html;
+        //
+        //     if (selection.rangeCount) {
+        //         var container = document.createElement("div");
+        //         for (var i = 0, len = selection.rangeCount; i < len; ++i) {
+        //             container.appendChild(selection.getRangeAt(i).cloneContents());
+        //         }
+        //         html = container.innerHTML;
+        //     }
+        //
+        //     console.log(html);
+        // });
+        //
+        //
+        //
+        // chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
+        //     console.log(response);
+        //     return;
+        //     var url=response.url;
+        //     var subject=response.subject;
+        //     var body= response.body;
+        //
+        //     if(body===''){
+        //         body="No text selected";
+        //         //You may choose to pop up a text box allowing the user to enter in a message instead.
+        //     }
+        //     //From here, you can POST the variables to any web service you choose.
+        //
+        //     console.log(body);
+        // });
 
-    // this will get us the selected text with newlines
-    chrome.tabs.executeScript( {
-        code: "window.getSelection().toString();"
-    }, function(selection) {
-        // if you try and inject into an extensions page or the webstore/NTP you'll get an error
-        // we then have to fallback to info.selectionText, which will get us the selected text without newlines (Chrome bug)
-        const selectionText = chrome.runtime.lastError ? info.selectionText : selection[0];
-        const headline = tab.title;
-        const text = "<" + tab.url + ">\n\n" + selectionText;
+        // this will get us the selected text with newlines
+        chrome.tabs.executeScript( {
+            code: "window.getSelection().toString();"
+        }, function(selection) {
+            // if you try and inject into an extensions page or the webstore/NTP you'll get an error
+            // we then have to fallback to info.selectionText, which will get us the selected text without newlines (Chrome bug)
+            const selectionText = chrome.runtime.lastError ? info.selectionText : selection[0];
+            const headline = tab.title;
+            const text = "<" + tab.url + ">\n\n" + selectionText;
 
-        // also take a screenshot to be able to use it in the QOwnNotes scripting hook
-        chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
-            const data = {
-                type: "handleRawData", requestType: "selection", contentType: "markdown", rawData: selectionText,
-                headline: headline, text: text, pageUrl: info.pageUrl, pageTitle: headline, screenshotDataUrl: dataUrl
-            };
+            // also take a screenshot to be able to use it in the QOwnNotes scripting hook
+            chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+                const data = {
+                    type: "handleRawData", requestType: "selection", contentType: "markdown", rawData: selectionText,
+                    headline: headline, text: text, pageUrl: info.pageUrl, pageTitle: headline, screenshotDataUrl: dataUrl
+                };
 
-            WebSocketClient.sendData(data);
+                WebSocketClient.sendData(data);
+            });
         });
-    });
+    })
 }
 
 /**
@@ -133,17 +135,19 @@ function scrapeSelection(info, tab) {
  * @param tab
  */
 function scrapePageScreenshot(info, tab) {
-	chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
-        const headline = tab.title;
+    checkConsent(info, tab, (info, tab) => {
+        chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+            const headline = tab.title;
 
-        // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
-        // const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
+            // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
+            // const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
 
-        const url = tab.url;
-        const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
-        const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
-        WebSocketClient.sendData(data);
-    });
+            const url = tab.url;
+            const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
+            const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
+            WebSocketClient.sendData(data);
+        });
+    })
 }
 
 /**
@@ -153,18 +157,39 @@ function scrapePageScreenshot(info, tab) {
  * @param tab
  */
 function scrapeHTMLPage(info, tab) {
-    chrome.tabs.executeScript(null, {
-        file: "scripts/functions.js"
-    }, function() {
-        // If you try and inject into an extensions page or the webstore/NTP you'll get an error
-        if (chrome.runtime.lastError) {
-            alert('Error: \n' + chrome.runtime.lastError.message);
-        }
-    });
+    checkConsent(info, tab, (info, tab) => {
+        chrome.tabs.executeScript(null, {
+            file: "scripts/functions.js"
+        }, function() {
+            // If you try and inject into an extensions page or the webstore/NTP you'll get an error
+            if (chrome.runtime.lastError) {
+                // This only works in Chrome
+                alert('Error: \n' + chrome.runtime.lastError.message);
+            }
+        });
+    })
 }
 
 function getServerUrl() {
     return serverUrl + ":" + socketPort;
+}
+
+/**
+ * Check if the consent was given and then run the real function
+ *
+ * @param info
+ * @param tab
+ * @param fun
+ */
+function checkConsent(info, tab, fun) {
+    chrome.storage.sync.get(function (data) {
+        if (data.userDataConsent === true) {
+            fun(info, tab);
+        } else {
+            // This only works in Chrome
+            alert('You need to open the QOwnNotes Web Companion extension popup to allow data being sent to QOwnNotes!');
+        }
+    });
 }
 
 // function getSelected() {
