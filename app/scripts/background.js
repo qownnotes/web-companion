@@ -267,20 +267,24 @@ chrome.storage.onChanged.addListener(function () {
 });
 
 const mainMenu = chrome.contextMenus.create({
+    "id": "mainMenu-root",
     "title": "QOwnNotes", "contexts": ["page"]
 });
 
 chrome.contextMenus.create({
+    "id": "mainMenu-sendPageToQOwnNotes",
     "title": util.getLocale('sendPageToQOwnNotes'), "contexts": ["page"],
     "onclick": scrapeHTMLPage, "parentId": mainMenu
 });
 
 chrome.contextMenus.create({
+    "id": "mainMenu-createScreenshotNote",
     "title": util.getLocale('createScreenshotNote'), "contexts": ["page"],
     "onclick": scrapePageScreenshot, "parentId": mainMenu
 });
 
 chrome.contextMenus.create({
+    "id": "mainMenu-sendSelectionToQOwnNotes",
     "title": util.getLocale('sendSelectionToQOwnNotes'), "contexts": ["selection"],
     "onclick": scrapeSelection, "parentId": null
 });
