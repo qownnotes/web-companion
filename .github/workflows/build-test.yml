@@ -2,9 +2,11 @@ name: Build test
 
 on:
   push:
-    branches: [ develop ]
+    branches-ignore:
+      - master
+    tags-ignore:
+      - '*'
   pull_request:
-    branches: [ develop ]
   workflow_dispatch:
 
 jobs:
