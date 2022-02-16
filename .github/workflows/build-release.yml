@@ -55,7 +55,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
 #        asset_path: packages/qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
-        asset_path: dist/chrome
+        asset_path: packages/chrome.zip
         asset_name: qownnotes-web-companion.v20${{ env.VERSION }}.chrome.zip
         asset_content_type: application/zip
     - name: Upload Firefox package
