@@ -166,13 +166,48 @@ function scrapePageScreenshot(info, tab) {
  */
 function scrapeHTMLPage(info, tab) {
     checkConsent(info, tab, (info, tab) => {
-        chrome.scripting.executeScript(null, {
-            file: "scripts/functions.js"
-        }, function() {
+        chrome.scripting.executeScript({
+            target: {tabId: tab.id},
+            function: () => {
+                // Inlining this was the only thing that worked
+                function DOMtoString(document_root) {
+                    var html = '',
+                        node = document_root.firstChild;
+                    while (node) {
+                        switch (node.nodeType) {
+                            case Node.ELEMENT_NODE:
+                                html += node.outerHTML;
+                                break;
+                            case Node.TEXT_NODE:
+                                html += node.nodeValue;
+                                break;
+                            case Node.CDATA_SECTION_NODE:
+                                html += '<![CDATA[' + node.nodeValue + ']]>';
+                                break;
+                            case Node.COMMENT_NODE:
+                                html += '<!--' + node.nodeValue + '-->';
+                                break;
+                            case Node.DOCUMENT_TYPE_NODE:
+                                // (X)HTML documents are identified by public identifiers
+                                html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
+                                break;
+                        }
+                        node = node.nextSibling;
+                    }
+
+                    return html;
+                }
+
+                chrome.runtime.sendMessage({
+                    action: "getSource",
+                    source: DOMtoString(document)
+                });
+            },
+        }, () => {
             // If you try and inject into an extensions page or the webstore/NTP you'll get an error
             if (chrome.runtime.lastError) {
-                // This only works in Chrome
-                alert('Error: \n' + chrome.runtime.lastError.message);
+                // there are no alerts in service-workers
+                console.error('Error: \n' + chrome.runtime.lastError.message);
             }
         });
     })
