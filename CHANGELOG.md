@@ -5,6 +5,8 @@
 
 ## 22.2.3
 - a user data consent page was added for the Firefox Store (for [#37](https://github.com/qownnotes/web-companion/issues/37))
+  - you need to open the extension popup and give your consent that personal data
+    can be sent to QOwnNotes once
 - added more translation
 
 ## 21.10.0
