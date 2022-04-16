@@ -1,7 +1,7 @@
 // const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
 // console.log("webpack", webpack);
 
 module.exports = {
@@ -57,6 +57,19 @@ module.exports = {
 
         config.plugins.push(new VueLoaderPlugin());
         // config.plugins.push(new MiniCssExtractPlugin());
+
+        config.plugins.push(
+            new ReplaceInFileWebpackPlugin([{
+                dir: 'dist/chrome',
+                files: ['manifest.json'],
+                rules: [
+                    {
+                        search: /"scripts(.*)"service_worker"/sig,
+                        replace: '"service_worker"'
+                    }
+                ]
+            }])
+        )
 
         return config
     }
