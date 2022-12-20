@@ -7,7 +7,7 @@
     "message": "QOwnNotes 设置"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotes 套接字服务器端口"
   },
   "sendPageToQOwnNotes": {
     "message": "发送页面到QOwnNotes\n"
@@ -46,7 +46,7 @@
     "message": "导入浏览器书签"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "Web裁剪器"
   },
   "Import": {
     "message": "导入"
@@ -64,7 +64,7 @@
     "message": "来自 QOwnNotes 的安全令牌"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "如果您要同步浏览器设置，您可能希望在每台设备上使用相同的令牌。"
   },
   "Menu": {
     "message": "菜单"
@@ -85,7 +85,7 @@
     "message": "笔记文件夹"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "链接名称"
   },
   "Description": {
     "message": "描述"
@@ -94,30 +94,30 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "用户数据同意"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "此浏览器扩展程序收集个人用户数据以通过 WebSocket 将其发送到您的本地 QOwnNotes 实例。 收集的数据可能包括以下信息："
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "有关您的浏览器选项卡的信息，例如 URL，用于在 QOwnNotes 中存储书签"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "如果您想将其作为注释发送到 QOwnNotes，请显示打开选项卡的内容"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "如果您想将其作为注释发送到 QOwnNotes，请查看打开的选项卡的屏幕截图"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "如果您想将浏览器书签导入QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "如果不与您的本地 QOwnNotes 实例通信并来回发送用户数据，此扩展将无法工作。 用户数据不会通过互联网或任何其他方发送！"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "同意收集用户数据"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "卸载扩展"
   }
 }

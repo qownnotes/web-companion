@@ -7,7 +7,7 @@
     "message": "QOwnNotes設定"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes socket server port"
+    "message": "QOwnNotesソケットサーバーポート"
   },
   "sendPageToQOwnNotes": {
     "message": "QOwnNotesにページを送信する\n"
@@ -46,7 +46,7 @@
     "message": "ブラウザのブックマークをインポートする"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "Webクリッパー"
   },
   "Import": {
     "message": "インポート"
@@ -61,28 +61,28 @@
     "message": "QOwnNotesに表示されているセキュリティトークンを入力してください！"
   },
   "Token": {
-    "message": "Security token from QOwnNotes"
+    "message": "QOwnNotesからのセキュリティトークン"
   },
   "TokenHint": {
-    "message": "If you are syncing your browser settings you may want to use the same token on every device."
+    "message": "ブラウザの設定を同期している場合は、すべてのデバイスで同じトークンを使用することをお勧めします。"
   },
   "Menu": {
-    "message": "Menu"
+    "message": "メニュー"
   },
   "OpenAllBookmarks": {
-    "message": "Open all bookmarks in new tabs"
+    "message": "新しいタブですべてのブックマークを開きます"
   },
   "AddBookmark": {
-    "message": "Add bookmark"
+    "message": "ブックマークを追加"
   },
   "Close": {
-    "message": "Close"
+    "message": "近い"
   },
   "Tags": {
-    "message": "Tags"
+    "message": "近い"
   },
   "NoteFolder": {
-    "message": "Note folder"
+    "message": "ノートフォルダー"
   },
   "LinkName": {
     "message": "Link name"
@@ -97,27 +97,27 @@
     "message": "User data consent"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "このブラウザ拡張機能は、個人ユーザーデータを収集して、WebSocketを介してQOwnNotesのローカルインスタンスに送信します。 収集されるデータには、次の情報が含まれる場合があります。"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "QOwnNotesにブックマークを保存するためのURLなどのブラウザタブに関する情報"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "メモとしてQOwnNotesに送信する場合は、開いているタブのコンテンツ"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "メモとしてQOwnNotesに送信する場合は、開いているタブのスクリーンショット"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "QOwnNotesにインポートする場合は、ブラウザのブックマーク"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "この拡張機能は、QOwnNotesのローカルインスタンスと通信し、ユーザーデータをやり取りしないと機能しません。 ユーザーデータはインターネットや他の当事者に送信されません！"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "ユーザーデータ収集への同意"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "拡張機能をアンインストールします"
   }
 }

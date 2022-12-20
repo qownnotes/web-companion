@@ -97,10 +97,10 @@
     "message": "User data consent"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Esta extensão de navegador recolhe os dados pessoais do utilizador para enviá-los à sua instância local do QOwnNotes via WebSocket. Os dados recolhidos podem incluir a seguinte informação:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Informação sobre os separadores do seu navegador, tal como URL, para guardar os marcadores no QOwnNotes"
   },
   "ConsentData2": {
     "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"

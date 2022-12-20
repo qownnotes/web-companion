@@ -94,30 +94,30 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Consentimiento de datos de usuario"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Esta extensión del navegador recopila datos personales del usuario para enviarlos a su instancia local de QOwnNotes a través de un WebSocket. Los datos recopilados pueden incluir la siguiente información:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Información sobre las pestañas de su navegador, como la URL, para almacenar marcadores en QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "El contenido de su pestaña abierta, si desea enviarlo a QOwnNotes como una nota"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Una captura de pantalla de su pestaña abierta, si desea enviarla a QOwnNotes como una nota"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "Los marcadores de su navegador, si desea importarlos a QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "Esta extensión no funciona sin comunicarse con su instancia local de QOwnNotes y enviar datos de usuario de un lado a otro. ¡No se envían datos de usuario a través de Internet ni a ninguna otra parte!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Consentimiento con la recopilación de datos del usuario"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Desinstalar extensión"
   }
 }

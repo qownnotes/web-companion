@@ -94,30 +94,30 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Souhlas s údaji uživatele"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Toto rozšíření prohlížeče shromažďuje osobní uživatelská data, aby je mohla odeslat do vaší místní instance QOwnNotes prostřednictvím WebSocket. Shromážděné údaje mohou obsahovat následující informace:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Informace o kartách vašeho prohlížeče, jako je adresa URL, pro ukládání záložek do QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Obsah vaší otevřené karty, pokud jej chcete odeslat do QOwnNotes jako poznámku"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Snímek obrazovky vaší otevřené karty, pokud jej chcete odeslat do QOwnNotes jako poznámku"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "Záložky vašeho prohlížeče, pokud je chcete importovat do QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "Toto rozšíření nefunguje bez komunikace s vaší místní instancí QOwnNotes a odesílání uživatelských dat tam a zpět. Žádná uživatelská data nejsou odesílána přes internet ani žádné jiné straně!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Souhlas se shromažďováním uživatelských dat"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Odinstalovat rozšíření"
   }
 }

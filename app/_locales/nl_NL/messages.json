@@ -94,30 +94,30 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Toestemming gebruikersgegevens"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Deze browserextensie verzamelt persoonlijke gebruikersgegevens om deze via een WebSocket naar uw lokale exemplaar van QOwnNotes te sturen. De verzamelde gegevens kunnen de volgende informatie bevatten:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Informatie over uw browsertabbladen, zoals de URL, om bladwijzers op te slaan in QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "De inhoud van uw geopende tabblad, als u het als notitie naar QOwnNotes wilt sturen"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "De inhoud van uw geopende tabblad, als u het als notitie naar QOwnNotes wilt sturen"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "De inhoud van uw geopende tabblad, als u het als notitie naar QOwnNotes wilt sturen"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "Deze extensie werkt niet zonder te communiceren met uw lokale exemplaar van QOwnNotes en gebruikersgegevens heen en weer te sturen. Er worden geen gebruikersgegevens via internet of naar een andere partij verzonden!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Toestemming met het verzamelen van gebruikersgegevens"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Extensie verwijderen"
   }
 }

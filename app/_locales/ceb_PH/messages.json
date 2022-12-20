@@ -76,7 +76,7 @@
     "message": "Add bookmark"
   },
   "Close": {
-    "message": "Close"
+    "message": "Sirado"
   },
   "Tags": {
     "message": "Tags"
@@ -85,7 +85,7 @@
     "message": "Note folder"
   },
   "LinkName": {
-    "message": "Link name"
+    "message": "Ngalan sa link"
   },
   "Description": {
     "message": "Description"

@@ -94,7 +94,7 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "Zustimmung zu den Benutzerdaten"
+    "message": "Benutzerdaten zustimmen"
   },
   "ConsentIntro": {
     "message": "Diese Browsererweiterung sammelt persönliche Benutzerdaten und sendet sie über einen WebSocket an Ihre lokale Instanz von QOwnNotes. Die gesammelten Daten können die folgenden Informationen enthalten:"
@@ -115,7 +115,7 @@
     "message": "Diese Erweiterung funktioniert nicht, ohne mit Ihrer lokalen Instanz von QOwnNotes zu kommunizieren und Benutzerdaten hin und her zu senden. Es werden keine Benutzerdaten über das Internet oder an eine andere Partei gesendet!"
   },
   "ConsentButton": {
-    "message": "Einverständnis mit der Erfassung von Benutzerdaten"
+    "message": "Erfassung von Benutzerdaten zustimmen"
   },
   "UninstallButton": {
     "message": "Erweiterung deinstallieren"

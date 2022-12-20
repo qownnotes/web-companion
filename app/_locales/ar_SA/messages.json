@@ -94,30 +94,30 @@
     "message": "العنوان"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "بيانات المستخدم"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "تجمع إضافة المتصفح هذه بيانات مستخدم شخصية لإرسالها إلى نسختك المحلية من QOwnNotes عبر مقبس ويب. قد تحتوي البيانات المجموعة على المعلومات التالية:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "معلومات عن تبويبات متصفحك، مثل روابط URL، لتخزين الإشارات المرجعية في QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "محتوى التبويب المفتوح في متصفحك، إذا أردت إرساله إلى QOwnNotes كملاحظة"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "لقطة شاشة من التبويب المفتوح في متصفحك، إذا أردت إرسالها إلى QOwnNotes كملاحظة"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "إشارات متصفحك المرجعية، إذا أردت استيرادها إلى QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "لا تعمل هذه الإضافة بغير التواصل مع نسختك المحلية من QOwnNotes وإرسال بياناتك في الاتجاهين. لا يُرسل أي شيء من بياناتك إلى الإنترنت أو إلى أي طرف آخر!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "قَبول تجميع بيانات المستخدم"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "إزالة تثبيت الإضافة"
   }
 }

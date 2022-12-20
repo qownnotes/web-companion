@@ -94,30 +94,30 @@
     "message": "Adres URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Zgoda na dane użytkownika"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "To rozszerzenie przeglądarki zbiera dane osobowe użytkownika, aby wysłać je do lokalnej instancji QOwnNotes za pośrednictwem WebSocket. Gromadzone dane mogą obejmować następujące informacje:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Informacje o kartach przeglądarki, takie jak adres URL, do przechowywania zakładek w QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Zawartość otwartej karty, jeśli chcesz wysłać ją do QOwnNotes jako notatkę"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Zawartość otwartej karty, jeśli chcesz wysłać ją do QOwnNotes jako notatkę"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "Zakładki przeglądarki, jeśli chcesz je zaimportować do QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "To rozszerzenie nie działa bez komunikacji z lokalną instancją QOwnNotes oraz wysyłanie danych użytkownika tam i z powrotem. Żadne dane użytkownika nie są przesyłane przez Internet ani do innych podmiotów!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Zgoda na gromadzenie danych użytkownika"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Odinstaluj rozszerzenie"
   }
 }

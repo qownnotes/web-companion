@@ -46,7 +46,7 @@
     "message": "브라우저 북마크 가져오기"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "웹 클리퍼"
   },
   "Import": {
     "message": "가져오기"
@@ -94,30 +94,30 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "사용자 데이터 동의"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "이 브라우저 확장은 개인 사용자 데이터를 수집하여 웹 소켓을 통해 로컬 QOwnNotes 인스턴스로 전송합니다. 수집된 데이터에는 다음과 같은 정보가 포함될 수 있습니다:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "URL과 같은 브라우저 탭에 대한 정보를 사용하여 QOwnNotes에 북마크를 저장합니다"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "열려 있는 탭의 내용입니다. 이 내용을 메모로 QOwnNotes에 보내려면"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "열려 있는 탭의 스크린샷 , 노트로 QOwnNotes에 보내려는 경우"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "브라우저 북마크를 QOwnNotes로 가져오려는 경우"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "이 확장은 로컬 QOwnNotes 인스턴스와 통신하고 사용자 데이터를 주고 받지 않으면 작동하지 않습니다. 인터넷이나 다른 파티에는 사용자 데이터가 전송되지 않습니다!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "사용자 데이터 수집에 대한 동의"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "확장 제거"
   }
 }

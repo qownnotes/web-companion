@@ -46,7 +46,7 @@
     "message": "Uvezite oznake preglednika"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "Web rezač"
   },
   "Import": {
     "message": "Uvezi"
@@ -94,30 +94,30 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Pristanak na korisničke podatke"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Ovo proširenje preglednika prikuplja osobne korisničke podatke kako bi ih poslalo tvojoj lokalnoj QOwnNotes instanci putem WebSocketa. Prikupljeni podaci mogu uključivati sljedeće informacije:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Informacije o karticama tvog preglednika, poput URL-a, za spremanje oznaka u QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Sadržaj tvoje otvorene kartice, ako je želiš poslati QOwnNotesu kao bilješku"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Snimka tvoje otvorene kartice, ako je želiš poslati QOwnNotesu kao bilješku"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "Tvoje oznake preglednika, ako ih želiš uvesti u QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "Ovo proširenje ne radi bez komunikacije s tvojom lokalnom QOwnNotes instancom i slanja korisničkih podataka naprijed i natrag. Nikoji korisnički podaci se ne šalju putem interneta ili bilo kome!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Pristanak na prikupljanje korisničkih podataka"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Deinstaliraj proširenje"
   }
 }
