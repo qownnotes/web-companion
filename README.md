@@ -54,14 +54,22 @@ To use this extension [QOwnNotes](https://www.qownnotes.org) needs to be running
 ### Chrome
 
 - use <kbd>Ctrl + B</kbd> to open the bookmarks popup
-    - access key <kbd>A</kbd> to add a new bookmarks (for example press <kbd>Alt + A</kbd> in Chrome)
-    - access key <kbd>S</kbd> to search for bookmarks
-    - access key <kbd>O</kbd> to open all visible bookmarks
-    - access key <kbd>T</kbd> to jump to the tag selector
 
 ### Firefox
 
-- use <kbd>Ctrl + Shift + B</kbd> to open the bookmarks popup
+- use <kbd>Ctrl + Alt + B</kbd> to open the bookmarks popup
+
+### Access keys
+
+Access keys in the bookmarks popup:
+
+- access key <kbd>A</kbd> to add a new bookmarks
+- access key <kbd>S</kbd> to search for bookmarks
+- access key <kbd>O</kbd> to open all visible bookmarks
+- access key <kbd>T</kbd> to jump to the tag selector
+
+See [Access keys](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey)
+for more information on how to use access keys in your browser.
 
 ## Permissions
 
