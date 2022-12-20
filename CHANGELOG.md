@@ -2,6 +2,7 @@
 
 ## 22.12.0
 - added a lot more translation
+- updated dependencies
 
 ## 22.2.4
 - for Chrome the extension was ported to the soon mandatory manifest v3 (for [#38](https://github.com/qownnotes/web-companion/issues/38))
