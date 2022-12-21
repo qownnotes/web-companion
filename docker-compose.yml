@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/app
+    user: 1000:1000
+    ports:
+      - "8080:8080"
+    command: ['/bin/bash', '-c', 'cd /app && npm install && ./build.sh']
