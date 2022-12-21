@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 22.12.1
+- the package for Chrome was fixed (for [#41](https://github.com/qownnotes/web-companion/issues/41))
+
 ## 22.12.0
 - changed Firefox default shortcut to <kbd>Ctrl + Alt + B</kbd> since the browser blocked <kbd>Ctrl + Shift + B</kbd>
   (for [#48](https://github.com/qownnotes/web-companion/issues/48))
