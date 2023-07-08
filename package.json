@@ -21,7 +21,7 @@
     "file-loader": "^6.2.0",
     "font-awesome": "^4.7.0",
     "mini-css-extract-plugin": "^0.11.3",
-    "node-sass": "^7.0.0",
+    "node-sass": "^9.0.0",
     "prettier": "^2.3.2",
     "replace-in-file-webpack-plugin": "^1.0.6",
     "sass": "^1.39.0",
