@@ -1,5 +1,5 @@
 // const webpack = require('webpack');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
 // console.log("webpack", webpack);
@@ -38,17 +38,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s(c|a)ss$/,
+                test: /\.s([ca])ss$/,
                 use: [
                     'vue-style-loader',
                     'css-loader',
+                    // 'sass-loader',
                     {
                         loader: 'sass-loader',
-                        // Requires sass-loader@^8.0.0
                         options: {
                             implementation: require('sass'),
                             sassOptions: {
-                                fiber: require('fibers'),
+                                indentedSyntax: true // optional
                             },
                         },
                     },

@@ -1,8 +1,12 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
     # nativeBuildInputs is usually what you want -- tools you need to run
-    nativeBuildInputs = [
-      pkgs.nodejs_14
+    nativeBuildInputs = with pkgs; [
+      nodejs_18
+      gnumake
+      gcc
+      python3
+      zip
     ];
 }
 
