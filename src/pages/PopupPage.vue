@@ -60,11 +60,11 @@ const columns = [
 
 export default defineComponent({
   setup () {
-    let bookmarks = reactive([]);
+    let bookmarks = ref([]);
     let loadingBookmarks = ref(false);
     let search = ref('');
     let noteFolderName = ref('');
-    let noteFolders = reactive([]);
+    let noteFolders = ref([]);
     let selectedNoteFolderId = ref(null);
     let selectedNoteFolderIdWatchEnabled = ref(true);
     const bookmarkEditDialog = ref(false);
@@ -81,7 +81,7 @@ export default defineComponent({
     const tableOptions = reactive({
       itemsPerPage: 10
     });
-    let selectedTags = reactive([]);
+    let selectedTags = ref([]);
     let webSocket = null;
     const snackbar = ref(false);
     const snackbarText = ref('');
@@ -106,7 +106,7 @@ export default defineComponent({
     const allTags = computed(() => {
       let tags = [];
 
-      bookmarks.forEach((bookmark) => {
+      bookmarks.value.forEach((bookmark) => {
         bookmark.tags.forEach((tag) => {
           if (!tags.includes(tag)) {
             tags.push(tag);
@@ -119,15 +119,15 @@ export default defineComponent({
 
     // Creates a list of all bookmarks filtered by the selected tags
     const filteredBookmarks = computed(() => {
-      let filteredBookmarks1 = bookmarks.slice(); // Copy bookmarks array
+      let filteredBookmarks1 = bookmarks.value.slice(); // Copy bookmarks array
 
-      console.log("bookmarks", bookmarks);
-      console.log("selectedTags", selectedTags);
+      console.log("bookmarks", filteredBookmarks1);
+      console.log("selectedTags", selectedTags.value);
 
       // filter by tags
-      if (selectedTags.length > 0) {
+      if (selectedTags.value.length > 0) {
         filteredBookmarks1 = filteredBookmarks1.filter((bookmark) => {
-          return selectedTags.every((elem) => bookmark.tags.includes(elem));
+          return selectedTags.value.every((elem) => bookmark.tags.includes(elem));
         });
       }
 
@@ -186,10 +186,10 @@ export default defineComponent({
           console.log("jsonObject.type", jsonObject.type);
 
           if (type === 'bookmarks') {
-            bookmarks = jsonObject.data;
+            bookmarks.value = jsonObject.data;
             console.log("bookmarks", bookmarks);
             noteFolderName.value = jsonObject.noteFolderName;
-            noteFolders = jsonObject.noteFolders;
+            noteFolders.value = jsonObject.noteFolders;
             selectedNoteFolderIdWatchEnabled.value = false;
             selectedNoteFolderId.value = jsonObject.noteFolderId;
             selectedNoteFolderIdWatchEnabled.value = true;
@@ -199,17 +199,19 @@ export default defineComponent({
               // console.log("after load");
               // console.log(that.tableOptions.page);
               // tableOptions.page = data.tableOptions.page;
-              selectedTags = [];
+              let localSelectedTags = [];
               const tags = allTags.value;
 
               // check if we can add stored selected tags
               if (data.selectedTags !== undefined && data.selectedTags.length > 0 && tags.length > 0) {
                 data.selectedTags.forEach((tag) => {
                   if (tags.indexOf(tag) > -1) {
-                    selectedTags.push(tag);
+                    localSelectedTags.push(tag);
                   }
                 });
               }
+
+              selectedTags.value = localSelectedTags;
             });
           } else if (type === 'switchedNoteFolder') {
             if (jsonObject.data === false) {
