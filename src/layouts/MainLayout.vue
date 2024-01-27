@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          {{ getLocale('popupHeadline') }}
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -48,6 +48,7 @@
 <script>
 import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
+import {getLocale} from "../helpers/utils";
 
 const linksList = [
   {
@@ -96,6 +97,7 @@ const linksList = [
 
 export default defineComponent({
   name: 'MainLayout',
+  methods: {getLocale},
 
   components: {
     EssentialLink

@@ -1,14 +1,46 @@
 <template>
-  <q-page v-if="!inputTokenDialog" class="flex flex-center">
+  <q-page v-if="!inputTokenDialog" class="flex flex-center bookmarks-page">
     <div class="q-pa-md">
+      <div class="row">
+        <div class="col">
+          <q-select
+            v-model="selectedNoteFolderId"
+            emit-value
+            map-options
+            :loading="loadingBookmarks"
+            accesskey="f"
+            option-value="value"
+            option-label="text"
+            :options="noteFolders"
+            :label="getLocale('NoteFolder')"
+          >
+            <template v-slot:prepend>
+              <q-icon name="folder" />
+            </template>
+          </q-select>
+        </div>
+        <div class="col">
+          <q-input
+            bottom-slots
+            dense clearable
+            v-model="search"
+            accesskey="s"
+            autofocus
+            :label="getLocale('popupSearchLabel')"
+          >
+            <template v-slot:append>
+              <q-icon name="search" />
+            </template>
+          </q-input>
+        </div>
+      </div>
+
       <q-table
         flat bordered
-        title="Bookmarks"
         :rows="filteredBookmarks"
         :columns="columns"
         :loading="loadingBookmarks"
         row-key="name"
-        color="amber"
         class="bookmark-list"
       >
         <template v-slot:body="props">
@@ -47,7 +79,7 @@
 </template>
 
 <script>
-import {computed, defineComponent, onMounted, reactive, ref} from 'vue'
+import {computed, defineComponent, onMounted, reactive, ref, watch} from 'vue'
 import { getLocale, openUrl, truncateText } from '../helpers/utils'
 import * as ws from '../services/qwebsocket';
 import InputTokenDialog from '../components/InputTokenDialog.vue'
@@ -234,6 +266,19 @@ export default defineComponent({
         defaultBookmark.url = tabs[0].url;
         editedBookmark.url = tabs[0].url;
       });
+
+      // Watch for changes in selectedNoteFolderId
+      watch(selectedNoteFolderId, (newFolderId, oldFolderId) => {
+        if (!selectedNoteFolderIdWatchEnabled.value) {
+          return;
+        }
+
+        loadingBookmarks.value = true;
+        const data = {type: "switchNoteFolder", data: newFolderId};
+        webSocket.send(data, function () {
+          console.log("Switching to note folder:" + data);
+        });
+      });
     })
 
     const loadBookmarks = () => {
@@ -303,6 +348,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.bookmarks-page {
+  min-width: 500px;
+  min-height: 400px;
+}
+
 .bookmark-list tr {
   cursor: pointer;
 }
