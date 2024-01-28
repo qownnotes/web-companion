@@ -34,6 +34,30 @@
           </q-input>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <q-select
+            v-model="selectedTags"
+            multiple
+            use-chips
+            use-input
+            input-debounce="100"
+            @filter="tagFilterFn"
+            @input-value="allTags"
+            accesskey="t"
+            :loading="loadingBookmarks"
+            :options="filteredTags"
+            :label="getLocale('Tags')"
+          >
+            <template v-slot:prepend>
+              <q-icon name="tag" />
+            </template>
+          </q-select>
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
 
       <q-table
         flat bordered
@@ -81,7 +105,7 @@
 <script>
 import {computed, defineComponent, onMounted, reactive, ref, watch} from 'vue'
 import { getLocale, openUrl, truncateText } from '../helpers/utils'
-import * as ws from '../services/qwebsocket';
+import * as ws from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 
 const columns = [
@@ -98,7 +122,7 @@ export default defineComponent({
     let noteFolderName = ref('');
     let noteFolders = ref([]);
     let selectedNoteFolderId = ref(null);
-    let selectedNoteFolderIdWatchEnabled = ref(true);
+    let selectedNoteFolderIdWatchEnabled = true;
     const bookmarkEditDialog = ref(false);
     const editedBookmark = reactive({
       name: '',
@@ -149,12 +173,11 @@ export default defineComponent({
       return tags.sort();
     });
 
+    let filteredTags = ref(allTags.value);
+
     // Creates a list of all bookmarks filtered by the selected tags
     const filteredBookmarks = computed(() => {
       let filteredBookmarks1 = bookmarks.value.slice(); // Copy bookmarks array
-
-      console.log("bookmarks", filteredBookmarks1);
-      console.log("selectedTags", selectedTags.value);
 
       // filter by tags
       if (selectedTags.value.length > 0) {
@@ -193,9 +216,16 @@ export default defineComponent({
       return filteredBookmarks2;
     });
 
-    onMounted(() => {
-      let that = this;
+    const tagFilterFn = (val, update, abort) => {
+      update(() => {
+        const needle = val.toLocaleLowerCase()
 
+        filteredTags.value = allTags.value.filter(v => v.toLocaleLowerCase().indexOf(needle) > -1)
+      })
+    };
+
+    onMounted(() => {
+      // let that = this;
       // this.$refs.searchText.focus();
 
       chrome.storage.sync.get((data) => {
@@ -213,18 +243,17 @@ export default defineComponent({
           const jsonObject = JSON.parse(data);
           const type = jsonObject.type;
 
-          console.log("Got a new message: " + data);
           console.log("Got a new message: " + jsonObject);
-          console.log("jsonObject.type", jsonObject.type);
+          console.log("type", type);
 
           if (type === 'bookmarks') {
             bookmarks.value = jsonObject.data;
             console.log("bookmarks", bookmarks);
             noteFolderName.value = jsonObject.noteFolderName;
             noteFolders.value = jsonObject.noteFolders;
-            selectedNoteFolderIdWatchEnabled.value = false;
+            selectedNoteFolderIdWatchEnabled = false;
             selectedNoteFolderId.value = jsonObject.noteFolderId;
-            selectedNoteFolderIdWatchEnabled.value = true;
+            selectedNoteFolderIdWatchEnabled = true;
             loadingBookmarks.value = false;
 
             chrome.storage.sync.get((data) => {
@@ -233,10 +262,11 @@ export default defineComponent({
               // tableOptions.page = data.tableOptions.page;
               let localSelectedTags = [];
               const tags = allTags.value;
+              const dataSelectedTags = Object.values(data.selectedTags);
 
               // check if we can add stored selected tags
-              if (data.selectedTags !== undefined && data.selectedTags.length > 0 && tags.length > 0) {
-                data.selectedTags.forEach((tag) => {
+              if (data.selectedTags !== undefined && dataSelectedTags.length > 0 && tags.length > 0) {
+                dataSelectedTags.forEach((tag) => {
                   if (tags.indexOf(tag) > -1) {
                     localSelectedTags.push(tag);
                   }
@@ -269,7 +299,7 @@ export default defineComponent({
 
       // Watch for changes in selectedNoteFolderId
       watch(selectedNoteFolderId, (newFolderId, oldFolderId) => {
-        if (!selectedNoteFolderIdWatchEnabled.value) {
+        if (!selectedNoteFolderIdWatchEnabled) {
           return;
         }
 
@@ -279,7 +309,16 @@ export default defineComponent({
           console.log("Switching to note folder:" + data);
         });
       });
-    })
+    });
+
+    watch(search, (newSearch, oldSearch) => {
+      chrome.storage.sync.set({ search: newSearch });
+    });
+
+    watch(selectedTags, (newSelectedTags, oldSelectedTags) => {
+      chrome.storage.sync.set({ selectedTags: newSelectedTags });
+      console.log("selectedTags stored", newSelectedTags);
+    });
 
     const loadBookmarks = () => {
       loadingBookmarks.value = true;
@@ -304,7 +343,6 @@ export default defineComponent({
       noteFolderName,
       noteFolders,
       selectedNoteFolderId,
-      selectedNoteFolderIdWatchEnabled,
       bookmarkEditDialog,
       editedBookmark,
       defaultBookmark,
@@ -322,7 +360,9 @@ export default defineComponent({
       truncateText,
       openUrl,
       loadBookmarks,
-      closeWindow
+      closeWindow,
+      tagFilterFn,
+      filteredTags
     };
   },
   components: {
