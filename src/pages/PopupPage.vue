@@ -1,5 +1,5 @@
 <template>
-  <q-page v-if="!inputTokenDialog" class="flex flex-center bookmarks-page">
+  <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
     <div class="q-pa-md">
       <div class="row">
         <div class="col">
@@ -350,7 +350,10 @@ export default defineComponent({
 <style scoped>
 .bookmarks-page {
   min-width: 500px;
-  min-height: 400px;
+
+  > div {
+    width: 100%;
+  }
 }
 
 .bookmark-list tr {
