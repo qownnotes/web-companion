@@ -1,1 +1,6 @@
 // app global css in SCSS form
+
+// This fixes the issue that the popup is getting tiny when a dialog is opened
+body.bex.q-body--prevent-scroll {
+  position: inherit !important;
+}

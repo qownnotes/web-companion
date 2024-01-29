@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col q-pa-md q-gutter-sm">
           <q-select
             v-model="selectedTags"
             multiple
@@ -54,8 +54,16 @@
             </template>
           </q-select>
         </div>
-        <div class="col">
-
+        <div class="col q-pa-md q-gutter-sm">
+          <q-btn round color="secondary" icon="open_in_new">
+            <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
+          </q-btn>
+          <q-btn round color="secondary" icon="bookmarks">
+            <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
+          </q-btn>
+          <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true" >
+            <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
+          </q-btn>
         </div>
       </div>
 
@@ -100,13 +108,15 @@
     </div>
   </q-page>
   <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
+  <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
 </template>
 
 <script>
 import {computed, defineComponent, onMounted, reactive, ref, watch} from 'vue'
 import { getLocale, openUrl, truncateText } from '../helpers/utils'
-import * as ws from '../services/qwebsocket'
+import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
+import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
 
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
@@ -123,6 +133,7 @@ export default defineComponent({
     let noteFolders = ref([]);
     let selectedNoteFolderId = ref(null);
     let selectedNoteFolderIdWatchEnabled = true;
+    let addBookmarkDialog = ref(false);
     const bookmarkEditDialog = ref(false);
     const editedBookmark = reactive({
       name: '',
@@ -138,7 +149,7 @@ export default defineComponent({
       itemsPerPage: 10
     });
     let selectedTags = ref([]);
-    let webSocket = null;
+    let webSocket = ref(new QWebSocket());
     const snackbar = ref(false);
     const snackbarText = ref('');
     const menuDrawer = ref(null);
@@ -224,6 +235,11 @@ export default defineComponent({
       })
     };
 
+    const onBookmarkStored = () => {
+      addBookmarkDialog.value = false;
+      loadBookmarks();
+    };
+
     onMounted(() => {
       // let that = this;
       // this.$refs.searchText.focus();
@@ -235,7 +251,7 @@ export default defineComponent({
         // that.$nextTick(() => document.querySelector("#searchText").select());
       });
 
-      webSocket = new ws.QWebSocket((event) => {
+      webSocket.value = new QWebSocket((event) => {
         const data = event.data;
 
         if (typeof data === 'string' || data instanceof String) {
@@ -262,7 +278,7 @@ export default defineComponent({
               // tableOptions.page = data.tableOptions.page;
               let localSelectedTags = [];
               const tags = allTags.value;
-              const dataSelectedTags = Object.values(data.selectedTags);
+              const dataSelectedTags = Object.values(data.selectedTags || []);
 
               // check if we can add stored selected tags
               if (data.selectedTags !== undefined && dataSelectedTags.length > 0 && tags.length > 0) {
@@ -305,7 +321,7 @@ export default defineComponent({
 
         loadingBookmarks.value = true;
         const data = {type: "switchNoteFolder", data: newFolderId};
-        webSocket.send(data, function () {
+        webSocket.value.send(data, function () {
           console.log("Switching to note folder:" + data);
         });
       });
@@ -324,7 +340,7 @@ export default defineComponent({
       loadingBookmarks.value = true;
 
       const data = {type: "getBookmarks"};
-      webSocket.send(data, function () {
+      webSocket.value.send(data, function () {
         console.log("Loading bookmarks:" + data);
       });
     }
@@ -344,6 +360,8 @@ export default defineComponent({
       noteFolders,
       selectedNoteFolderId,
       bookmarkEditDialog,
+      addBookmarkDialog,
+      onBookmarkStored,
       editedBookmark,
       defaultBookmark,
       tableOptions,
@@ -366,6 +384,7 @@ export default defineComponent({
     };
   },
   components: {
+    AddBookmarkDialog,
     // BookmarkAllTabsButton: BookmarkAllTabsButton,
     // ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
     InputTokenDialog
