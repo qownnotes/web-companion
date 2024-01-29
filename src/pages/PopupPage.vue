@@ -1,5 +1,5 @@
 <template>
-  <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
+  <q-page v-if="!inputTokenDialog && !userDataConsentPage" class="flex bookmarks-page">
     <div class="q-pa-md">
       <div class="row">
         <div class="col">
@@ -108,6 +108,7 @@
       </q-table>
     </div>
   </q-page>
+  <ConsentPage v-if="userDataConsentPage" />
   <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
   <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
 </template>
@@ -118,6 +119,7 @@ import { getLocale, openUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
+import ConsentPage from "components/ConsentPage.vue";
 
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
@@ -136,6 +138,7 @@ export default defineComponent({
     let selectedNoteFolderIdWatchEnabled = true;
     let addBookmarkDialog = ref(false);
     const bookmarkEditDialog = ref(false);
+    let userDataConsentPage = ref(false);
     const pagination = ref({
       sortBy: 'name',
       descending: false,
@@ -172,6 +175,13 @@ export default defineComponent({
     //   }
     // ]);
     const inputTokenDialog = ref(false);
+
+    // DEBUG: remove userDataConsent
+    // chrome.storage.sync.remove(["userDataConsent"]);
+
+    chrome.storage.sync.get(function (data) {
+      userDataConsentPage.value = !data.userDataConsent || data.userDataConsent !== true;
+    });
 
     // Creates a list of all tags of bookmarks
     // Returns a sorted list of all tags
@@ -372,7 +382,7 @@ export default defineComponent({
     // Return the variables that you want to use in the template
     return {
       columns,
-      getLocale,
+      userDataConsentPage,
       bookmarks,
       loadingBookmarks,
       search,
@@ -404,11 +414,13 @@ export default defineComponent({
     };
   },
   components: {
+    ConsentPage,
     AddBookmarkDialog,
     // BookmarkAllTabsButton: BookmarkAllTabsButton,
     // ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
     InputTokenDialog
-  }
+  },
+  methods: {getLocale}
 })
 
 // export default defineComponent({
