@@ -73,6 +73,7 @@
         :columns="columns"
         :loading="loadingBookmarks"
         row-key="name"
+        v-model:pagination="pagination"
         class="bookmark-list"
       >
         <template v-slot:body="props">
@@ -135,6 +136,13 @@ export default defineComponent({
     let selectedNoteFolderIdWatchEnabled = true;
     let addBookmarkDialog = ref(false);
     const bookmarkEditDialog = ref(false);
+    const pagination = ref({
+      sortBy: 'name',
+      descending: false,
+      page: 1,
+      rowsPerPage: 10,
+      initialSetup: true
+    });
     const editedBookmark = reactive({
       name: '',
       url: '',
@@ -144,9 +152,6 @@ export default defineComponent({
       name: '',
       url: '',
       description: ''
-    });
-    const tableOptions = reactive({
-      itemsPerPage: 10
     });
     let selectedTags = ref([]);
     let webSocket = ref(new QWebSocket());
@@ -274,8 +279,10 @@ export default defineComponent({
 
             chrome.storage.sync.get((data) => {
               // console.log("after load");
-              // console.log(that.tableOptions.page);
-              // tableOptions.page = data.tableOptions.page;
+              console.log("data.pagination", data.pagination);
+              pagination.value = data.pagination;
+              pagination.value.page = 1;
+
               let localSelectedTags = [];
               const tags = allTags.value;
               const dataSelectedTags = Object.values(data.selectedTags || []);
@@ -327,6 +334,19 @@ export default defineComponent({
       });
     });
 
+    watch(pagination, (newPagination, oldPagination) => {
+      // Ignore the first change of pagination, because it was done by the reference initialization
+      if (newPagination.initialSetup) {
+        newPagination.initialSetup = false;
+        return;
+      }
+
+      chrome.storage.sync.set({
+        pagination: newPagination
+      });
+      // console.log("newPagination", newPagination);
+    });
+
     watch(search, (newSearch, oldSearch) => {
       chrome.storage.sync.set({ search: newSearch });
     });
@@ -364,7 +384,7 @@ export default defineComponent({
       onBookmarkStored,
       editedBookmark,
       defaultBookmark,
-      tableOptions,
+      pagination,
       selectedTags,
       webSocket,
       snackbar,
