@@ -20,13 +20,11 @@ const routes = [
   },
   {
     path: '/options',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/OptionsLayout.vue'),
     children: [
       { path: '', component: () => import('pages/OptionsPage.vue') }
     ]
   },
-
-  // { path: '/options', component: () => import('pages/OptionsPage.vue') },
 
   // Always leave this as last one,
   // but you can also remove it
