@@ -1,10 +1,21 @@
+// DEBUG: remove userDataConsent
+// chrome.storage.sync.remove(["userDataConsent"]);
 
 const routes = [
   {
     path: '/popup',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/PopupPage.vue') }
+      { path: '',
+        component: async () => {
+          const data = await chrome.storage.sync.get();
+          if (!data.userDataConsent || data.userDataConsent !== true) {
+            return (await import('pages/ConsentPage.vue')).default;
+          } else {
+            return (await import('pages/PopupPage.vue')).default;
+          }
+        },
+      }
     ]
   },
   {

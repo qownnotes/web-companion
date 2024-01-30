@@ -1,5 +1,5 @@
 <template>
-  <q-page v-if="!inputTokenDialog && !userDataConsentPage" class="flex bookmarks-page">
+  <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
     <div class="q-pa-md">
       <div class="row">
         <div class="col">
@@ -68,7 +68,7 @@
       </div>
 
       <q-table
-        flat bordered
+        flat dense
         :rows="filteredBookmarks"
         :columns="columns"
         :loading="loadingBookmarks"
@@ -108,7 +108,6 @@
       </q-table>
     </div>
   </q-page>
-  <ConsentPage v-if="userDataConsentPage" />
   <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
   <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
 </template>
@@ -119,7 +118,6 @@ import { getLocale, openUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
-import ConsentPage from "components/ConsentPage.vue";
 
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
@@ -138,7 +136,6 @@ export default defineComponent({
     let selectedNoteFolderIdWatchEnabled = true;
     let addBookmarkDialog = ref(false);
     const bookmarkEditDialog = ref(false);
-    let userDataConsentPage = ref(false);
     const pagination = ref({
       sortBy: 'name',
       descending: false,
@@ -175,13 +172,6 @@ export default defineComponent({
     //   }
     // ]);
     const inputTokenDialog = ref(false);
-
-    // DEBUG: remove userDataConsent
-    // chrome.storage.sync.remove(["userDataConsent"]);
-
-    chrome.storage.sync.get(function (data) {
-      userDataConsentPage.value = !data.userDataConsent || data.userDataConsent !== true;
-    });
 
     // Creates a list of all tags of bookmarks
     // Returns a sorted list of all tags
@@ -290,8 +280,10 @@ export default defineComponent({
             chrome.storage.sync.get((data) => {
               // console.log("after load");
               console.log("data.pagination", data.pagination);
-              pagination.value = data.pagination;
-              pagination.value.page = 1;
+              if (data.pagination) {
+                pagination.value = data.pagination;
+                pagination.value.page = 1;
+              }
 
               let localSelectedTags = [];
               const tags = allTags.value;
@@ -346,7 +338,7 @@ export default defineComponent({
 
     watch(pagination, (newPagination, oldPagination) => {
       // Ignore the first change of pagination, because it was done by the reference initialization
-      if (newPagination.initialSetup) {
+      if (newPagination && newPagination.initialSetup) {
         newPagination.initialSetup = false;
         return;
       }
@@ -382,7 +374,6 @@ export default defineComponent({
     // Return the variables that you want to use in the template
     return {
       columns,
-      userDataConsentPage,
       bookmarks,
       loadingBookmarks,
       search,
@@ -414,7 +405,6 @@ export default defineComponent({
     };
   },
   components: {
-    ConsentPage,
     AddBookmarkDialog,
     // BookmarkAllTabsButton: BookmarkAllTabsButton,
     // ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
@@ -449,6 +439,10 @@ export default defineComponent({
 
 .bookmark-list tr {
   cursor: pointer;
+}
+
+.q-table tbody td {
+  //font-size: 14px;
 }
 
 .column-name {
