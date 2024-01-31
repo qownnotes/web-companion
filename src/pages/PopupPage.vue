@@ -24,6 +24,7 @@
             bottom-slots
             dense clearable
             v-model="search"
+            ref="searchInput"
             accesskey="s"
             autofocus
             :label="getLocale('popupSearchLabel')"
@@ -55,7 +56,7 @@
           </q-select>
         </div>
         <div class="col q-pa-md q-gutter-sm">
-          <q-btn round color="secondary" icon="open_in_new">
+          <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks">
             <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
           </q-btn>
           <q-btn round color="secondary" icon="bookmarks">
@@ -113,11 +114,12 @@
 </template>
 
 <script>
-import {computed, defineComponent, onMounted, reactive, ref, watch} from 'vue'
+import {computed, defineComponent, nextTick, onMounted, reactive, ref, watch} from 'vue'
 import { getLocale, openUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
+import {useQuasar} from "quasar";
 
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
@@ -155,9 +157,6 @@ export default defineComponent({
     });
     let selectedTags = ref([]);
     let webSocket = ref(new QWebSocket());
-    const snackbar = ref(false);
-    const snackbarText = ref('');
-    const menuDrawer = ref(null);
     const importBrowserBookmarksDialog = ref(false);
     // const drawerItems = reactive([
     //   {
@@ -240,20 +239,27 @@ export default defineComponent({
       })
     };
 
+    const openFilteredBookmarks = () => {
+      filteredBookmarks.value.forEach((item) => {
+        if (item.url) {
+          openUrl(item.url);
+        }
+      });
+    };
+
     const onBookmarkStored = () => {
       addBookmarkDialog.value = false;
       loadBookmarks();
     };
 
-    onMounted(() => {
-      // let that = this;
-      // this.$refs.searchText.focus();
+    const searchInput = ref(null);
 
+    onMounted(() => {
       chrome.storage.sync.get((data) => {
         search.value = data.search;
 
-        // select all the text to be able to overwrite it easily
-        // that.$nextTick(() => document.querySelector("#searchText").select());
+        // Select the text in the search input field after it was updated by the data from the storage
+        nextTick(() => searchInput.value.select());
       });
 
       webSocket.value = new QWebSocket((event) => {
@@ -305,8 +311,8 @@ export default defineComponent({
               loadingBookmarks.value = false;
             }
           } else if (type === 'flashMessage') {
-            snackbar.value = true;
-            snackbarText.value = jsonObject.message;
+            const $q = useQuasar();
+            $q.notify(jsonObject.message);
           } else if (type === 'tokenQuery') {
             inputTokenDialog.value = true;
           }
@@ -377,6 +383,7 @@ export default defineComponent({
       bookmarks,
       loadingBookmarks,
       search,
+      searchInput,
       noteFolderName,
       noteFolders,
       selectedNoteFolderId,
@@ -388,20 +395,16 @@ export default defineComponent({
       pagination,
       selectedTags,
       webSocket,
-      snackbar,
-      snackbarText,
-      menuDrawer,
       importBrowserBookmarksDialog,
-      // drawerItems,
       inputTokenDialog,
       allTags,
       filteredBookmarks,
-      truncateText,
       openUrl,
       loadBookmarks,
       closeWindow,
       tagFilterFn,
-      filteredTags
+      filteredTags,
+      openFilteredBookmarks
     };
   },
   components: {
@@ -410,7 +413,7 @@ export default defineComponent({
     // ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
     InputTokenDialog
   },
-  methods: {getLocale}
+  methods: {getLocale, truncateText}
 })
 
 // export default defineComponent({

@@ -35,12 +35,13 @@
 </template>
 <script>
 import {getLocale} from "src/helpers/utils";
-import {defineComponent, onMounted, ref} from "vue";
+import {defineComponent, onMounted, ref, watch} from "vue";
 
 export default defineComponent({
   methods: {getLocale},
   setup () {
-    let socketPort = ref(22222);
+    const defaultSocketPort = 22222;
+    let socketPort = ref(defaultSocketPort);
     let token = ref('');
     const isPwd = ref(true);
 
@@ -59,6 +60,27 @@ export default defineComponent({
 
     onMounted(() => {
       loadSettings();
+    });
+
+    watch(socketPort, (newValue) => {
+      if (newValue === null) {
+        socketPort.value = defaultSocketPort;
+        return;
+      }
+
+      if (newValue === 0 || isNaN(newValue)) {
+        newValue = defaultSocketPort;
+      }
+
+      chrome.storage.sync.set({ socketPort: newValue });
+    });
+
+    watch(token, (newValue) => {
+      if (newValue === null) {
+        return;
+      }
+
+      chrome.storage.sync.set({ token: newValue });
     });
 
     return {
