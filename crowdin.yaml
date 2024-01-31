@@ -15,6 +15,6 @@ base_path: "."
 files:
   -
     # source files filter
-    source: '/app/_locales/en/messages.json'
+    source: '/src-bex/_locales/en/messages.json'
     # where translations live
-    translation: '/app/_locales/%locale_with_underscore%/messages.json'
+    translation: '/src-bex/_locales/%locale_with_underscore%/messages.json'

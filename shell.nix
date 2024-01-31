@@ -3,6 +3,7 @@
     nativeBuildInputs = with pkgs; [
       nodejs_20
       gnumake
+      crowdin-cli
     ];
 }
 

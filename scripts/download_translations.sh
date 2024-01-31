@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/env bash
 # Use this script in $ProjectFileDir$ to download the translations from Crowdin
 
-TRANSLATION_PATH="app/_locales"
+#TRANSLATION_PATH="src-bex/_locales"
 
 echo "Downloading translation from Crowdin..."
 # see: https://support.crowdin.com/cli-tool/
