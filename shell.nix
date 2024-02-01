@@ -4,6 +4,7 @@
       nodejs_20
       gnumake
       crowdin-cli
+      zellij # smart terminal workspace
     ];
 }
 

@@ -1,0 +1,14 @@
+layout {
+  pane split_direction="vertical" {
+    pane command="npm" {
+      args "run" "dev-chrome"
+    }
+    pane command="npm" {
+      args "install"
+    }
+  }
+  pane focus=true
+  pane size=1 borderless=true {
+    plugin location="zellij:compact-bar"
+  }
+}
