@@ -59,10 +59,10 @@
           <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks">
             <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
           </q-btn>
-          <q-btn round color="secondary" icon="bookmarks">
+          <q-btn round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true">
             <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
           </q-btn>
-          <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true" >
+          <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true">
             <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
           </q-btn>
         </div>
@@ -111,6 +111,7 @@
   </q-page>
   <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
   <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
+  <BookmarkAllTabsDialog v-model="bookmarkAllTabsDialog" :webSocket="webSocket" @bookmarksStored="onBookmarksStored" />
 </template>
 
 <script>
@@ -119,7 +120,8 @@ import { getLocale, openUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
-import {useQuasar} from "quasar";
+import {Notify} from "quasar";
+import BookmarkAllTabsDialog from "components/BookmarkAllTabsDialog.vue";
 
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
@@ -137,6 +139,7 @@ export default defineComponent({
     let selectedNoteFolderId = ref(null);
     let selectedNoteFolderIdWatchEnabled = true;
     let addBookmarkDialog = ref(false);
+    let bookmarkAllTabsDialog = ref(false);
     const bookmarkEditDialog = ref(false);
     const pagination = ref({
       sortBy: 'name',
@@ -252,6 +255,11 @@ export default defineComponent({
       loadBookmarks();
     };
 
+    const onBookmarksStored = () => {
+      bookmarkAllTabsDialog.value = false;
+      loadBookmarks();
+    };
+
     const searchInput = ref(null);
 
     onMounted(() => {
@@ -311,8 +319,7 @@ export default defineComponent({
               loadingBookmarks.value = false;
             }
           } else if (type === 'flashMessage') {
-            const $q = useQuasar();
-            $q.notify(jsonObject.message);
+            Notify.create(jsonObject.message);
           } else if (type === 'tokenQuery') {
             inputTokenDialog.value = true;
           }
@@ -389,7 +396,9 @@ export default defineComponent({
       selectedNoteFolderId,
       bookmarkEditDialog,
       addBookmarkDialog,
+      bookmarkAllTabsDialog,
       onBookmarkStored,
+      onBookmarksStored,
       editedBookmark,
       defaultBookmark,
       pagination,
@@ -409,7 +418,7 @@ export default defineComponent({
   },
   components: {
     AddBookmarkDialog,
-    // BookmarkAllTabsButton: BookmarkAllTabsButton,
+    BookmarkAllTabsDialog,
     // ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
     InputTokenDialog
   },
