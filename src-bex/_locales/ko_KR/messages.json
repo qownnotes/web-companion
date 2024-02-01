@@ -1,25 +1,25 @@
 {
   "appDescription": {
-    "message": "메모 작성 데스크탑 애플리케이션과 정보를 교환할 수 있는 QOwnNotes용 동반 익스텐션입니다.",
+    "message": "이것은 QOwnNotes가 노트 필기 데스크톱 응용프로그램과 상호 작용할 수 있도록 지원하는 확장입니다.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
     "message": "QOwnNotes 설정"
   },
   "socketPortLabel": {
-    "message": "QOwnNotes 소켓 서버 포트"
+    "message": "QOWNNotes 소켓 서버 포트"
   },
   "sendPageToQOwnNotes": {
-    "message": "QOwnNotes로 페이지 보내기"
+    "message": "페이지를 QOWNNotes로 보내기"
   },
   "createScreenshotNote": {
-    "message": "보이는 페이지의 스크린샷으로 노트 만들기"
+    "message": "보이는 페이지의 스크린샷이 있는 노트 만들기"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "QOwnNotes로 선택사항 보내기"
+    "message": "선택 항목을 QOWNNotes로 전송"
   },
   "connectionFailed": {
-    "message": "QOwnNotes 연결 실패!"
+    "message": "QOWNNotes에 연결하지 못했습니다!"
   },
   "popupHeadline": {
     "message": "북마크"
@@ -28,7 +28,7 @@
     "message": "검색"
   },
   "NewBookmark": {
-    "message": "새로운 북마크"
+    "message": "새 북마크"
   },
   "Cancel": {
     "message": "취소"
@@ -37,7 +37,7 @@
     "message": "확인"
   },
   "Save": {
-    "message": "저장"
+    "message": "Save"
   },
   "BookmarkAllTabs": {
     "message": "모든 탭 북마크"
@@ -55,13 +55,13 @@
     "message": "모든 브라우저 북마크를 가져오시겠습니까?"
   },
   "InputTokenHeadline": {
-    "message": "입력 보안 토큰"
+    "message": "보안 토큰 입력"
   },
   "InputToken": {
-    "message": "QOwnNotes에 표시되는 보안 토큰을 입력하십시오!"
+    "message": "QOWNNotes에 표시된 보안 토큰을 입력하십시오!"
   },
   "Token": {
-    "message": "QOwnNotes의 보안 토큰"
+    "message": "QOownNotes의 보안 토큰"
   },
   "TokenHint": {
     "message": "브라우저 설정을 동기화하는 경우 모든 장치에서 동일한 토큰을 사용할 수 있습니다."
@@ -82,7 +82,7 @@
     "message": "태그"
   },
   "NoteFolder": {
-    "message": "메모 폴더"
+    "message": "노트 폴더"
   },
   "LinkName": {
     "message": "링크 이름"
@@ -106,7 +106,7 @@
     "message": "열려 있는 탭의 내용입니다. 이 내용을 메모로 QOwnNotes에 보내려면"
   },
   "ConsentData3": {
-    "message": "열려 있는 탭의 스크린샷 , 노트로 QOwnNotes에 보내려는 경우"
+    "message": "열려 있는 탭을 QOwnNotes로 노트로 보내려면 해당 탭의 스크린샷"
   },
   "ConsentData4": {
     "message": "브라우저 북마크를 QOwnNotes로 가져오려는 경우"

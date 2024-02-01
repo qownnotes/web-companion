@@ -1,6 +1,6 @@
 {
   "appDescription": {
-    "message": "Dies ist eine begleitende Erweiterung für QOwnNotes für die Interaktion mit den Notizen der Desktop-Anwendung.",
+    "message": "Dies ist eine begleitende Erweiterung für QOwnNotes, um mit den Notizen der Desktop-Anwendung zu interagieren.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
@@ -61,7 +61,7 @@
     "message": "Bitte das Sicherheits-Token eingeben, das gerade in QOwnNotes angezeigt wird!"
   },
   "Token": {
-    "message": "Sicherheitstoken von QOwnNotes"
+    "message": "Sicherheits-Token von QOwnNotes"
   },
   "TokenHint": {
     "message": "Wenn Sie Ihre Browsereinstellungen synchronisieren, möchten Sie vielleicht auf jedem Gerät dasselbe Token verwenden."
@@ -88,7 +88,7 @@
     "message": "Linkname"
   },
   "Description": {
-    "message": "Beschreibung:"
+    "message": "Beschreibung"
   },
   "URL": {
     "message": "URL"

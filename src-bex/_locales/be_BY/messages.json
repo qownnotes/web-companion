@@ -1,49 +1,49 @@
 {
   "appDescription": {
-    "message": "Aceasta este o extensie însoțitoare pentru QOwnNotes pentru a interacționa cu nota care folosește aplicația desktop.",
+    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "Configurații QOwnNotes"
+    "message": "QOwnNotes settings"
   },
   "socketPortLabel": {
-    "message": "Portul serverului socket QOwnNotes"
+    "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
-    "message": "Trimite pagina către QOwnNotes\n"
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "Creați notă cu captura de ecran a paginii vizibile"
+    "message": "Create note with screenshot of visible page"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "Trimiteți selecția la QOwnNotes"
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "Conectarea la QOwnNotes nu a reușit!"
+    "message": "Connection to QOwnNotes failed!"
   },
   "popupHeadline": {
-    "message": "Marcaje"
+    "message": "Bookmarks"
   },
   "popupSearchLabel": {
-    "message": "Căutare"
+    "message": "Search"
   },
   "NewBookmark": {
-    "message": "Marcaj nou"
+    "message": "New bookmark"
   },
   "Cancel": {
-    "message": "Revocare"
+    "message": "Cancel"
   },
   "Ok": {
-    "message": "O.K."
+    "message": "Ok"
   },
   "Save": {
-    "message": "Salva"
+    "message": "Save"
   },
   "BookmarkAllTabs": {
-    "message": "Marcați toate filele"
+    "message": "Bookmark all tabs"
   },
   "ImportBrowserBookmarks": {
-    "message": "Importă marcajele browserului"
+    "message": "Import browser bookmarks"
   },
   "WebClipper": {
     "message": "Web clipper"
@@ -52,43 +52,43 @@
     "message": "Import"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "Doriți să importați toate marcajele browserului?"
+    "message": "Do you want to import all browser bookmarks?"
   },
   "InputTokenHeadline": {
-    "message": "Introduceți jetonul de securitate"
+    "message": "Input security token"
   },
   "InputToken": {
-    "message": "Introduceți simbolul de securitate care este afișat acum în QOwnNotes!"
+    "message": "Please input the security token that now is shown in QOwnNotes!"
   },
   "Token": {
-    "message": "Token de securitate din QOwnNotes"
+    "message": "Security token from QOwnNotes"
   },
   "TokenHint": {
-    "message": "Dacă sincronizați setările browserului, vă recomandăm să utilizați același token pe fiecare dispozitiv."
+    "message": "If you are syncing your browser settings you may want to use the same token on every device."
   },
   "Menu": {
-    "message": "Meniul"
+    "message": "Menu"
   },
   "OpenAllBookmarks": {
-    "message": "Deschideți toate marcajele în filele noi"
+    "message": "Open all bookmarks in new tabs"
   },
   "AddBookmark": {
-    "message": "Adaugă marcaj"
+    "message": "Add bookmark"
   },
   "Close": {
-    "message": "Închide"
+    "message": "Close"
   },
   "Tags": {
-    "message": "Etichete"
+    "message": "Tags"
   },
   "NoteFolder": {
-    "message": "Notă folder"
+    "message": "Note folder"
   },
   "LinkName": {
-    "message": "Numele linkului"
+    "message": "Link name"
   },
   "Description": {
-    "message": "Descriere"
+    "message": "Description"
   },
   "URL": {
     "message": "URL"
