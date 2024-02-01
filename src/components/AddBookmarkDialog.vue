@@ -54,8 +54,8 @@
       </q-card-section>
 
       <q-card-actions align="right">
-        <q-btn flat label="Cancel" tabindex="5" v-close-popup @click="$emit('cancel')" />
-        <q-btn flat label="OK" color="primary" tabindex="4" @click="storeBookmark" />
+        <q-btn flat :label="getLocale('Cancel')" tabindex="5" v-close-popup @click="$emit('cancel')" />
+        <q-btn flat :label="getLocale('Ok')" color="primary" tabindex="4" @click="storeBookmark" />
       </q-card-actions>
     </q-card>
   </q-dialog>
