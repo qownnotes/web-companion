@@ -3,11 +3,16 @@ layout {
     pane command="npm" {
       args "run" "dev-chrome"
     }
-    pane command="npm" {
+    pane command="npm" start_suspended=true {
+      args "run" "dev-firefox"
+    }
+  }
+  pane split_direction="vertical" {
+    pane focus=true
+    pane command="npm" size="30%" {
       args "install"
     }
   }
-  pane focus=true
   pane size=1 borderless=true {
     plugin location="zellij:status-bar"
   }

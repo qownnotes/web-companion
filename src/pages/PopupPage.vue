@@ -130,12 +130,12 @@
           </q-table>
         </div>
       </q-page>
+      <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
+      <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
+      <BookmarkAllTabsDialog v-model="bookmarkAllTabsDialog" :webSocket="webSocket" @bookmarksStored="onBookmarksStored" />
+      <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" :webSocket="webSocket" @bookmarksImported="onBookmarksImported" />
     </q-page-container>
   </q-layout>
-  <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
-  <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
-  <BookmarkAllTabsDialog v-model="bookmarkAllTabsDialog" :webSocket="webSocket" @bookmarksStored="onBookmarksStored" />
-  <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" :webSocket="webSocket" @bookmarksImported="onBookmarksImported" />
 </template>
 
 <script>

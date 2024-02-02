@@ -26,7 +26,8 @@
     "contextMenus",
     "storage",
     "bookmarks",
-    "scripting"
+    "scripting",
+    "all_urls"
   ],
   "host_permissions": [
     "*://*/*"
