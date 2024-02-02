@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "Importer les signets du navigateur"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "Clipper Web"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "Importer"

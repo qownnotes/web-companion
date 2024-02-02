@@ -1,117 +1,141 @@
 <template>
-  <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
-    <div class="q-pa-md">
-      <div class="row">
-        <div class="col">
-          <q-select
-            v-model="selectedNoteFolderId"
-            emit-value
-            map-options
-            :loading="loadingBookmarks"
-            accesskey="f"
-            option-value="value"
-            option-label="text"
-            :options="noteFolders"
-            :label="getLocale('NoteFolder')"
-          >
-            <template v-slot:prepend>
-              <q-icon name="folder" />
-            </template>
-          </q-select>
-        </div>
-        <div class="col">
-          <q-input
-            bottom-slots
-            dense clearable
-            v-model="search"
-            ref="searchInput"
-            accesskey="s"
-            autofocus
-            :label="getLocale('popupSearchLabel')"
-          >
-            <template v-slot:append>
-              <q-icon name="search" />
-            </template>
-          </q-input>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col q-pa-md q-gutter-sm">
-          <q-select
-            v-model="selectedTags"
-            multiple
-            use-chips
-            use-input
-            input-debounce="100"
-            @filter="tagFilterFn"
-            @input-value="allTags"
-            accesskey="t"
-            :loading="loadingBookmarks"
-            :options="filteredTags"
-            :label="getLocale('Tags')"
-          >
-            <template v-slot:prepend>
-              <q-icon name="tag" />
-            </template>
-          </q-select>
-        </div>
-        <div class="col q-pa-md q-gutter-sm">
-          <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks">
-            <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
-          </q-btn>
-          <q-btn round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true">
-            <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
-          </q-btn>
-          <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true">
-            <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
-          </q-btn>
-        </div>
-      </div>
+  <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <q-toolbar>
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
-      <q-table
-        flat dense
-        :rows="filteredBookmarks"
-        :columns="columns"
-        :loading="loadingBookmarks"
-        row-key="name"
-        v-model:pagination="pagination"
-        class="bookmark-list"
-      >
-        <template v-slot:body="props">
-          <q-tr :props="props" @click="openUrl(props.row.url)">
-            <q-td v-if="props.row.name" key="name" :props="props">
-              <div>
-                <div class="column-name">{{ truncateText( props.row.name, 40 ) }}</div>
-                <q-tooltip>
-                  <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
-                  <div>{{ props.row.url }}</div>
-                  <div class="column-description" v-if="props.row.description">{{ props.row.description }}</div>
-                </q-tooltip>
-              </div>
-            </q-td>
-            <q-td v-if="props.row.name" key="url" :props="props">
-              <div>
-                {{ truncateText( props.row.url, 40 ) }}
-              </div>
-            </q-td>
-            <q-td v-if="props.row.name === ''" colspan="2" key="url" :props="props">
-              <div>
-                <a tabindex="2" :href="props.row.url" @click="$event.stopPropagation()" :accesskey="props.rowIndex + 1" target="_blank" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
-              </div>
-            </q-td>
-            <q-td key="tags" :props="props">
-              <div class="column-tags">
-                <q-badge color="purple" v-for="tag in props.row.tags" :key="tag" :label="tag" />
-              </div>
-            </q-td>
-          </q-tr>
-        </template>
-      </q-table>
-    </div>
-  </q-page>
+        <q-toolbar-title>
+          {{ getLocale('popupHeadline') }}
+        </q-toolbar-title>
+
+        <div>Quasar v{{ $q.version }}</div>
+      </q-toolbar>
+    </q-header>
+    <PopupDrawer v-model="leftDrawerOpen" @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;" />
+    <q-page-container>
+      <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
+        <div class="q-pa-md">
+          <div class="row">
+            <div class="col">
+              <q-select
+                v-model="selectedNoteFolderId"
+                emit-value
+                map-options
+                :loading="loadingBookmarks"
+                accesskey="f"
+                option-value="value"
+                option-label="text"
+                :options="noteFolders"
+                :label="getLocale('NoteFolder')"
+              >
+                <template v-slot:prepend>
+                  <q-icon name="folder" />
+                </template>
+              </q-select>
+            </div>
+            <div class="col">
+              <q-input
+                bottom-slots
+                dense clearable
+                v-model="search"
+                ref="searchInput"
+                accesskey="s"
+                autofocus
+                :label="getLocale('popupSearchLabel')"
+              >
+                <template v-slot:append>
+                  <q-icon name="search" />
+                </template>
+              </q-input>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col q-pa-md q-gutter-sm">
+              <q-select
+                v-model="selectedTags"
+                multiple
+                use-chips
+                use-input
+                input-debounce="100"
+                @filter="tagFilterFn"
+                @input-value="allTags"
+                accesskey="t"
+                :loading="loadingBookmarks"
+                :options="filteredTags"
+                :label="getLocale('Tags')"
+              >
+                <template v-slot:prepend>
+                  <q-icon name="tag" />
+                </template>
+              </q-select>
+            </div>
+            <div class="col q-pa-md q-gutter-sm">
+              <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks">
+                <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
+              </q-btn>
+              <q-btn round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true">
+                <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
+              </q-btn>
+              <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true">
+                <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
+              </q-btn>
+            </div>
+          </div>
+
+          <q-table
+            flat dense
+            :rows="filteredBookmarks"
+            :columns="columns"
+            :loading="loadingBookmarks"
+            row-key="name"
+            v-model:pagination="pagination"
+            class="bookmark-list"
+          >
+            <template v-slot:body="props">
+              <q-tr :props="props" @click="openUrl(props.row.url)">
+                <q-td v-if="props.row.name" key="name" :props="props">
+                  <div>
+                    <div class="column-name">{{ truncateText( props.row.name, 40 ) }}</div>
+                    <q-tooltip>
+                      <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
+                      <div>{{ props.row.url }}</div>
+                      <div class="column-description" v-if="props.row.description">{{ props.row.description }}</div>
+                    </q-tooltip>
+                  </div>
+                </q-td>
+                <q-td v-if="props.row.name" key="url" :props="props">
+                  <div>
+                    {{ truncateText( props.row.url, 40 ) }}
+                  </div>
+                </q-td>
+                <q-td v-if="props.row.name === ''" colspan="2" key="url" :props="props">
+                  <div>
+                    <a tabindex="2" :href="props.row.url" @click="$event.stopPropagation()" :accesskey="props.rowIndex + 1" target="_blank" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
+                  </div>
+                </q-td>
+                <q-td key="tags" :props="props">
+                  <div class="column-tags">
+                    <q-badge color="purple" v-for="tag in props.row.tags" :key="tag" :label="tag" />
+                  </div>
+                </q-td>
+              </q-tr>
+            </template>
+          </q-table>
+        </div>
+      </q-page>
+    </q-page-container>
+  </q-layout>
   <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
   <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
   <BookmarkAllTabsDialog v-model="bookmarkAllTabsDialog" :webSocket="webSocket" @bookmarksStored="onBookmarksStored" />
+  <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" :webSocket="webSocket" @bookmarksImported="onBookmarksImported" />
 </template>
 
 <script>
@@ -122,6 +146,8 @@ import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
 import {Notify} from "quasar";
 import BookmarkAllTabsDialog from "components/BookmarkAllTabsDialog.vue";
+import ImportBrowserBookmarksDialog from "components/ImportBrowserBookmarksDialog.vue";
+import PopupDrawer from "components/PopupDrawer.vue";
 
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
@@ -131,6 +157,7 @@ const columns = [
 
 export default defineComponent({
   setup () {
+    const leftDrawerOpen = ref(false)
     let bookmarks = ref([]);
     let loadingBookmarks = ref(false);
     let search = ref('');
@@ -161,6 +188,8 @@ export default defineComponent({
     let selectedTags = ref([]);
     let webSocket = ref(new QWebSocket());
     const importBrowserBookmarksDialog = ref(false);
+    // import { defineProps } from 'vue';
+    // const { foo } = defineProps(['foo']);
     // const drawerItems = reactive([
     //   {
     //     title: this.getLocale('ImportBrowserBookmarks'),
@@ -257,6 +286,11 @@ export default defineComponent({
 
     const onBookmarksStored = () => {
       bookmarkAllTabsDialog.value = false;
+      loadBookmarks();
+    };
+
+    const onBookmarksImported = () => {
+      importBrowserBookmarksDialog.value = false;
       loadBookmarks();
     };
 
@@ -384,8 +418,14 @@ export default defineComponent({
       window.close();
     }
 
+    const toggleLeftDrawer = () => {
+      leftDrawerOpen.value = !leftDrawerOpen.value
+    }
+
     // Return the variables that you want to use in the template
     return {
+      leftDrawerOpen,
+      toggleLeftDrawer,
       columns,
       bookmarks,
       loadingBookmarks,
@@ -399,6 +439,7 @@ export default defineComponent({
       bookmarkAllTabsDialog,
       onBookmarkStored,
       onBookmarksStored,
+      onBookmarksImported,
       editedBookmark,
       defaultBookmark,
       pagination,
@@ -417,9 +458,10 @@ export default defineComponent({
     };
   },
   components: {
+    PopupDrawer,
     AddBookmarkDialog,
     BookmarkAllTabsDialog,
-    // ImportBrowserBookmarksDialog: ImportBrowserBookmarksDialog,
+    ImportBrowserBookmarksDialog,
     InputTokenDialog
   },
   methods: {getLocale, truncateText}

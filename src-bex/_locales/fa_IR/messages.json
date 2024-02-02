@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "ورود نشانک های مرورگر"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "وب کلیپر"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "ورود"

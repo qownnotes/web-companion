@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "Importovat záložky prohlížeče"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "Web Clipper"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "Importovat"

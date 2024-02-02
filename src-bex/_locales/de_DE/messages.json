@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "Lesezeichen des Browsers importieren"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Importieren Sie Ihre Browser-Lesezeichen in QOwnNotes"
+  },
   "WebClipper": {
     "message": "Web-Clipper"
+  },
+  "WebClipperCaption": {
+    "message": "Erfahren Sie mehr über den Web Clipper"
   },
   "Import": {
     "message": "Importieren"

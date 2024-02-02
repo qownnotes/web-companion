@@ -84,6 +84,10 @@ npm run dev chrome
 npm run dev firefox
 ```
 
+### Icons
+
+[Material Icons](https://fonts.google.com/icons) are used for the extension icons.
+
 ## Building packages
 
 ```bash

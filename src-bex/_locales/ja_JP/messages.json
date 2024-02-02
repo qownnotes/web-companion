@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "ブラウザのブックマークをインポートする"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "Webクリッパー"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "インポート"

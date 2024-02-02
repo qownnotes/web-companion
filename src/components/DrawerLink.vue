@@ -23,7 +23,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'EssentialLink',
+  name: 'DrawerLink',
   props: {
     title: {
       type: String,

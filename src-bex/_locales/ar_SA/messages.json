@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "استيراد الإشارات المرجعية من المتصفح"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "مقص الويب"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "استيراد"

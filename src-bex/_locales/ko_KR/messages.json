@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "브라우저 북마크 가져오기"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "웹 클리퍼"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "가져오기"

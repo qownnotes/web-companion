@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "Inportatu arakatzailearen laster-markak"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "Web clipper"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "Inportazio"

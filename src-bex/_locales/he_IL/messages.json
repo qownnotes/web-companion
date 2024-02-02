@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "ייבא סימניות דפדפן"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "Web clipper"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "יבוא"

@@ -45,8 +45,14 @@
   "ImportBrowserBookmarks": {
     "message": "බ්‍රව්සර් පිටු සලකුණු ආයාත කරන්න"
   },
+  "ImportBrowserBookmarksCaption": {
+    "message": "Import your browser bookmarks into QOwnNotes"
+  },
   "WebClipper": {
     "message": "Web clipper"
+  },
+  "WebClipperCaption": {
+    "message": "Get more information about the Web clipper"
   },
   "Import": {
     "message": "ආයාත කරන්න"
