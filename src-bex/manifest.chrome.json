@@ -33,6 +33,12 @@
     "default_popup": "www/index.html#/popup"
   },
 
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Ctrl+B", "mac": "Command+B" }
+    }
+  },
+
   "background": {
     "service_worker": "service-worker.js"
   },
