@@ -64,6 +64,7 @@
                 multiple
                 use-chips
                 use-input
+                clearable
                 input-debounce="100"
                 @filter="tagFilterFn"
                 @input-value="allTags"
