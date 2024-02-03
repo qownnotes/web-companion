@@ -15,7 +15,45 @@
           {{ getLocale('popupHeadline') }}
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div class="row header-search-bar">
+          <div class="col">
+            <q-select
+              v-model="selectedNoteFolderId"
+              emit-value
+              map-options
+              :loading="loadingBookmarks"
+              accesskey="f"
+              dark
+              dense
+              option-value="value"
+              option-label="text"
+              :options="noteFolders"
+              :label="getLocale('NoteFolder')"
+            >
+              <template v-slot:prepend>
+                <q-icon name="folder" />
+              </template>
+            </q-select>
+          </div>
+          <div class="col">
+            <q-input
+              bottom-slots
+              dense
+              clearable
+              dark
+              v-model="search"
+              ref="searchInput"
+              accesskey="s"
+              tabindex="1"
+              autofocus
+              :label="getLocale('popupSearchLabel')"
+            >
+              <template v-slot:append>
+                <q-icon name="search" />
+              </template>
+            </q-input>
+          </div>
+        </div>
       </q-toolbar>
     </q-header>
     <PopupDrawer v-model="leftDrawerOpen" @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;" />
@@ -24,37 +62,8 @@
         <div class="q-pa-md">
           <div class="row">
             <div class="col">
-              <q-select
-                v-model="selectedNoteFolderId"
-                emit-value
-                map-options
-                :loading="loadingBookmarks"
-                accesskey="f"
-                option-value="value"
-                option-label="text"
-                :options="noteFolders"
-                :label="getLocale('NoteFolder')"
-              >
-                <template v-slot:prepend>
-                  <q-icon name="folder" />
-                </template>
-              </q-select>
             </div>
             <div class="col">
-              <q-input
-                bottom-slots
-                dense clearable
-                v-model="search"
-                ref="searchInput"
-                accesskey="s"
-                tabindex="1"
-                autofocus
-                :label="getLocale('popupSearchLabel')"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                </template>
-              </q-input>
             </div>
           </div>
           <div class="row">
@@ -485,6 +494,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.header-search-bar {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
 .bookmarks-page {
   min-width: 500px;
 
