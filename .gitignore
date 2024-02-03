@@ -32,5 +32,8 @@ yarn-error.log*
 # local .env files
 .env.local*
 
-/src-bex/manifest.json
 /packages
+
+# Those are symlinked for Firefox and Chrome separately
+/src-bex/manifest.json
+/src-bex/background.js

@@ -40,7 +40,7 @@
   },
 
   "background": {
-    "service_worker": "service-worker.js"
+    "service_worker": "background.js"
   },
 
   "content_scripts": [
