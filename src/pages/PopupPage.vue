@@ -47,6 +47,7 @@
                 v-model="search"
                 ref="searchInput"
                 accesskey="s"
+                tabindex="1"
                 autofocus
                 :label="getLocale('popupSearchLabel')"
               >
@@ -77,13 +78,13 @@
               </q-select>
             </div>
             <div class="col q-pa-md q-gutter-sm">
-              <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks">
+              <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks" accesskey="o">
                 <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
               </q-btn>
-              <q-btn round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true">
+              <q-btn round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true" accesskey="b">
                 <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
               </q-btn>
-              <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true">
+              <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true" accesskey="a">
                 <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
               </q-btn>
             </div>
@@ -102,7 +103,7 @@
               <q-tr :props="props" @click="openUrl(props.row.url)">
                 <q-td v-if="props.row.name" key="name" :props="props">
                   <div>
-                    <div class="column-name">{{ truncateText( props.row.name, 40 ) }}</div>
+                    <div class="column-name" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</div>
                     <q-tooltip>
                       <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
                       <div>{{ props.row.url }}</div>
