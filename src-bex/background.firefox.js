@@ -189,7 +189,7 @@ function scrapeSelection(info, tab) {
     try {
       chrome.scripting.executeScript({
           target: {tabId: tab.id},
-          function: () => getSelection().toString(),
+          func: () => getSelection().toString(),
         },
         (selection) => {
           const selectionText = chrome.runtime.lastError ? info.selectionText : selection[0].result;
@@ -233,7 +233,7 @@ function scrapeHTMLPage(info, tab) {
   checkConsent(info, tab, (info, tab) => {
     chrome.scripting.executeScript({
       target: {tabId: tab.id},
-      function: () => {
+      func: () => {
         // Inlining this was the only thing that worked
         function DOMtoString(document_root) {
           var html = '',

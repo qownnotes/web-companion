@@ -26,11 +26,11 @@
     "contextMenus",
     "storage",
     "bookmarks",
-    "scripting",
-    "all_urls"
+    "scripting"
   ],
   "host_permissions": [
-    "*://*/*"
+    "*://*/*",
+    "<all_urls>"
   ],
 
   "options_ui": {
