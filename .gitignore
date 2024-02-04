@@ -36,4 +36,3 @@ yarn-error.log*
 
 # Those are symlinked for Firefox and Chrome separately
 /src-bex/manifest.json
-/src-bex/background.js

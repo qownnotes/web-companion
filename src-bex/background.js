@@ -175,7 +175,7 @@ function scrapeSelection(info, tab) {
       const text = "<" + tab.url + ">\n\n" + selectionText;
 
       // also take a screenshot to be able to use it in the QOwnNotes scripting hook
-      browser.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+      chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
         const data = {
           type: "handleRawData", requestType: "selection", contentType: "markdown", rawData: selectionText,
           headline: headline, text: text, pageUrl: info.pageUrl, pageTitle: headline, screenshotDataUrl: dataUrl
@@ -209,7 +209,7 @@ function scrapeSelection(info, tab) {
  */
 function scrapePageScreenshot(info, tab) {
   checkConsent(info, tab, (info, tab) => {
-    browser.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+    chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
       const headline = tab.title;
 
       // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
@@ -424,7 +424,7 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
       const text = "<a href=\"" + url + "\">" + url + "</a><br /><br />" + request.source;
 
       // also take a screenshot to be able to use it in the QOwnNotes scripting hook
-      browser.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+      chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
         const data = {
           type: "handleRawData", requestType: "page", contentType: "html", rawData: request.source,
           headline: headline, text: text, pageTitle: headline, pageUrl: url, screenshotDataUrl: dataUrl
