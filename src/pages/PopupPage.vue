@@ -238,7 +238,7 @@ export default defineComponent({
       let filteredBookmarks1 = bookmarks.value.slice(); // Copy bookmarks array
 
       // filter by tags
-      if (selectedTags.value.length > 0) {
+      if (selectedTags.value && selectedTags.value.length > 0) {
         filteredBookmarks1 = filteredBookmarks1.filter((bookmark) => {
           return selectedTags.value.every((elem) => bookmark.tags.includes(elem));
         });
