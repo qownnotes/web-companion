@@ -24,6 +24,7 @@
               :loading="loadingBookmarks"
               accesskey="f"
               dark
+              color="white"
               dense
               option-value="value"
               option-label="text"
@@ -41,6 +42,7 @@
               dense
               clearable
               dark
+              color="white"
               v-model="search"
               ref="searchInput"
               accesskey="s"
@@ -101,7 +103,8 @@
           </div>
 
           <q-table
-            flat dense
+            flat
+            dense
             :rows="filteredBookmarks"
             :columns="columns"
             :loading="loadingBookmarks"
@@ -133,7 +136,7 @@
                 </q-td>
                 <q-td key="tags" :props="props">
                   <div class="column-tags">
-                    <q-badge color="purple" v-for="tag in props.row.tags" :key="tag" :label="tag" />
+                    <q-badge v-for="tag in props.row.tags" :key="tag" :label="tag" />
                   </div>
                 </q-td>
               </q-tr>
@@ -508,8 +511,10 @@ export default defineComponent({
   }
 }
 
-.bookmark-list tr {
-  cursor: pointer;
+.bookmark-list {
+  font-size: 1.5em;
+  tr { cursor: pointer; }
+  a { color: black; }
 }
 
 .q-table tbody td {
