@@ -9,9 +9,9 @@
 
 [![build-test](https://github.com/qownnotes/web-companion/workflows/build-test/badge.svg?branch=develop)](https://github.com/qownnotes/web-companion/actions/workflows/build-test.yml)
 
-Chrome / Firefox browser extension to interact with the note taking desktop application [QOwnNotes](https://www.qownnotes.org) for managing bookmarks and act as a web-clipper.
+Chrome / Firefox browser extension to interact with the note-taking desktop application [QOwnNotes](https://www.qownnotes.org) for managing bookmarks and act as a web-clipper.
 
-[QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **Markdown note taking**
+[QOwnNotes](https://www.qownnotes.org) is the **open source** (GPL) plain-text file **Markdown note-taking**
 application for GNU/Linux, macOS and Windows, that (optionally) works together with the notes application of
 [**ownCloud**](https://github.com/owncloud/notes) or [**Nextcloud**](https://github.com/Nextcloud/notes).
 
@@ -80,13 +80,13 @@ for more information on how to use access keys in your browser.
 ```bash
 npm install
 
-npm run dev chrome
-npm run dev firefox
+npm run dev-chrome
+npm run dev-firefox
 ```
 
 ### Icons
 
-[Material Icons](https://fonts.google.com/icons) are used for the extension icons.
+[Material Design Icons](https://fonts.google.com/icons) are used for the extension icons.
 
 ## Building packages
 
