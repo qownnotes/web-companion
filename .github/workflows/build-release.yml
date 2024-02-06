@@ -27,7 +27,7 @@ jobs:
         run: |
           export VERSION=$(jq -r '.version' package.json)
           export TAG=v${VERSION}
-          export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" ../CHANGELOG.md | sed '$ d')
+          export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" CHANGELOG.md | sed '$ d')
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
           echo "TAG=${TAG}" >> $GITHUB_ENV
           # add multiline release text
@@ -52,17 +52,13 @@ jobs:
           draft: true
           prerelease: false
 
-#--------------------------------------------------------------------------------
-# Workflow jobs (GNU/Linux, macOS & Windows)
-#--------------------------------------------------------------------------------
-
   #
   # Package build
   #
   build-package:
     needs: create_release
     runs-on: ubuntu-latest
-    name: '📦 Build package'
+    name: '📦 Build packages'
     steps:
 
       - name: '🧰 Checkout'
