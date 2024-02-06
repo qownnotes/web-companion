@@ -1,0 +1,107 @@
+name: 📣 Build release of QOwnNotes Web Companion
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - release
+    tags-ignore:
+      - '*'
+
+#--------------------------------------------------------------------------------
+# Define application name & version
+#--------------------------------------------------------------------------------
+
+jobs:
+  create_release:
+    name: '🗃️️ Prepare release'
+    permissions:
+      contents: write  # for actions/create-release to create a release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      release_id: ${{ steps.create_release.outputs.id }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set Env
+        run: |
+          export VERSION=$(jq -r '.version' package.json)
+          export TAG=v${VERSION}
+          export RELEASE_TEXT=$(grep -Pzo "## ${VERSION}\n(\n|.)+?\n##" ../CHANGELOG.md | sed '$ d')
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+          echo "TAG=${TAG}" >> $GITHUB_ENV
+          # add multiline release text
+          echo "RELEASE_TEXT<<EOF" >> $GITHUB_ENV
+          echo "${RELEASE_TEXT}" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Printenv
+        run: |
+          echo "VERSION=${VERSION}"
+          echo "TAG=${TAG}"
+          echo "RELEASE_TEXT=${RELEASE_TEXT}"
+          printenv
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.TAG }}
+          release_name: Release v${{ env.VERSION }}
+          body: ${{ env.RELEASE_TEXT }}
+          draft: true
+          prerelease: false
+
+#--------------------------------------------------------------------------------
+# Workflow jobs (GNU/Linux, macOS & Windows)
+#--------------------------------------------------------------------------------
+
+  #
+  # Package build
+  #
+  build-package:
+    needs: create_release
+    runs-on: ubuntu-latest
+    name: '📦 Build package'
+    steps:
+
+      - name: '🧰 Checkout'
+        uses: actions/checkout@v4
+
+      - name: '⚙️ Install dependencies'
+        run: |
+          npm install
+
+      - name: '🚧 Build extension'
+        run: ./build.sh
+
+      - name: '📤 Release Chrome package'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: ./dist/package-chrome.zip
+          asset_name: package-chrome.zip
+          asset_content_type: application/zip
+      - name: '📤 Release Firefox package'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: ./dist/package-firefox.zip
+          asset_name: package-firefox.zip
+          asset_content_type: application/zip
+
+  publish_release:
+    name: 📣 Publish release
+    runs-on: ubuntu-latest
+    needs: [create_release, build-package]
+    steps:
+      - name: 📣 Publish draft release
+        uses: eregon/publish-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_id: ${{ needs.create_release.outputs.release_id }}
