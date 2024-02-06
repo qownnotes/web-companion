@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.2.0
+- the extension was completely **rewritten in Vue.js 3 with Vite using QUASAR with BEX**
+ (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+  - also both the Chrome and Firefox extensions are now using manifest version 3
+
 ## 22.12.1
 - the package for Chrome was fixed (for [#41](https://github.com/qownnotes/web-companion/issues/41))
 
@@ -46,7 +51,7 @@
 
 ## 20.9.7
 - fixed unnecessary scrollbar in Firefox
-- you can now scroll in your bookmark list while the top toolbar is still visible 
+- you can now scroll in your bookmark list while the top toolbar is still visible
 
 ## 20.9.6
 - the `content_security_policy` with `unsafe-eval` was removed for the Firefox store
@@ -67,7 +72,7 @@
 
 ## 20.9.3
 - fixed focusing and selecting in the search input field
-- removed jQuery dependency 
+- removed jQuery dependency
 
 ## 20.9.2
 - added more translation
@@ -120,7 +125,7 @@
 - added more translation
 
 ## 19.5.3
-- you are now able to enter a **security token** to communicate with QOwnNotes 
+- you are now able to enter a **security token** to communicate with QOwnNotes
     - QOwnNotes 19.5.4 or higher needs this feature to ensure no other web page or application can access your bookmarks
 - added a lot of translation
 
@@ -132,7 +137,7 @@
 
 ## 19.5.0
 - you can now also **search** for the **description of bookmarks**
-- a **loading progressbar** will now be shown while bookmarks are loaded when the **note folder is switched** by the user 
+- a **loading progressbar** will now be shown while bookmarks are loaded when the **note folder is switched** by the user
     - you need QOwnNotes 19.5.1 or higher for this feature
 - added a lot of translation
 
@@ -161,7 +166,7 @@
     - you need QOwnNotes 19.1.8 or higher for this feature
 - changed the **default shortcut** for the **bookmarks popup** in **Firefox** to <kbd>Alt + Shift + B</kbd>,
   because <kbd>Ctrl + B</kbd> is blocked
-    - these shortcuts will only work in Firefox 66 and newer 
+    - these shortcuts will only work in Firefox 66 and newer
 
 ## 19.1.7
 - added **access keys** to some **bookmark popup** actions
@@ -207,7 +212,7 @@
 
 ## 19.1.1
 - reimplementation of extension with webextension-toolbox, webpack and VueJS for Google Chrome and Mozilla Firefox
-    - creating notes from the current selection, the whole page and as screenshot now works with Firefox and Chrome again 
+    - creating notes from the current selection, the whole page and as screenshot now works with Firefox and Chrome again
 - there now is a browser option page to set and reset the server socket port
 - the text of the extension can now be translated
     - visit [QOwnNotes translations](https://crowdin.com/project/qownnotes) if you want to help to translate the
