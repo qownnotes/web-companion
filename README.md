@@ -1,13 +1,13 @@
 # [QOwnNotes](https://www.qownnotes.org "QOwnNotes Official Site") Web Companion browser extension
 
 [GitHub](https://github.com/qownnotes/web-companion) |
-[Changelog](https://github.com/qownnotes/web-companion/blob/develop/CHANGELOG.md) |
+[Changelog](https://github.com/qownnotes/web-companion/blob/main/CHANGELOG.md) |
 [Releases](https://github.com/qownnotes/web-companion/releases) |
 [Chrome Web Store](https://chrome.google.com/webstore/detail/qownnotes-web-companion/pkgkfnampapjbopomdpnkckbjdnpkbkp) |
 [Firefox Add-ons page](https://addons.mozilla.org/firefox/addon/qownnotes-web-companion) |
 [QOwnNotes web page](https://www.qownnotes.org)
 
-[![build-test](https://github.com/qownnotes/web-companion/workflows/build-test/badge.svg?branch=develop)](https://github.com/qownnotes/web-companion/actions/workflows/build-test.yml)
+[![build-test](https://github.com/qownnotes/web-companion/workflows/build-test/badge.svg?branch=main)](https://github.com/qownnotes/web-companion/actions/workflows/build-test.yml)
 
 Chrome / Firefox browser extension to interact with the note-taking desktop application [QOwnNotes](https://www.qownnotes.org) for managing bookmarks and act as a web-clipper.
 

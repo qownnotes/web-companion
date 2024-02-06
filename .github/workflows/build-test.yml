@@ -3,7 +3,7 @@ name: Build test
 on:
   push:
     branches-ignore:
-      - master
+      - release
     tags-ignore:
       - '*'
   pull_request:
