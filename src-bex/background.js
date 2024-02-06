@@ -374,27 +374,31 @@ chrome.storage.onChanged.addListener(function () {
   loadSettings();
 });
 
-const mainMenu = chrome.contextMenus.create({
-  "id": "mainMenu-root",
-  "title": "QOwnNotes", "contexts": ["page"]
-});
+// Make sure old context menus are removed before creating new ones in case
+// of the background script being reloaded
+chrome.contextMenus.removeAll(() => {
+  const mainMenu = chrome.contextMenus.create({
+    "id": "mainMenu-root",
+    "title": "QOwnNotes", "contexts": ["page"]
+  });
 
-chrome.contextMenus.create({
-  "id": "mainMenu-sendPageToQOwnNotes",
-  "title": getLocale('sendPageToQOwnNotes'), "contexts": ["page"],
-  "parentId": mainMenu
-});
+  chrome.contextMenus.create({
+    "id": "mainMenu-sendPageToQOwnNotes",
+    "title": getLocale('sendPageToQOwnNotes'), "contexts": ["page"],
+    "parentId": mainMenu
+  });
 
-chrome.contextMenus.create({
-  "id": "mainMenu-createScreenshotNote",
-  "title": getLocale('createScreenshotNote'), "contexts": ["page"],
-  "parentId": mainMenu
-});
+  chrome.contextMenus.create({
+    "id": "mainMenu-createScreenshotNote",
+    "title": getLocale('createScreenshotNote'), "contexts": ["page"],
+    "parentId": mainMenu
+  });
 
-chrome.contextMenus.create({
-  "id": "mainMenu-sendSelectionToQOwnNotes",
-  "title": getLocale('sendSelectionToQOwnNotes'), "contexts": ["selection"],
-  "parentId": null
+  chrome.contextMenus.create({
+    "id": "mainMenu-sendSelectionToQOwnNotes",
+    "title": getLocale('sendSelectionToQOwnNotes'), "contexts": ["selection"],
+    "parentId": null
+  });
 });
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
