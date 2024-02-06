@@ -61,7 +61,7 @@
     <PopupDrawer v-model="leftDrawerOpen" @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;" />
     <q-page-container>
       <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
-        <div class="q-pa-md">
+        <div class="q-pa-sm">
           <div class="row">
             <div class="col">
             </div>
@@ -69,10 +69,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="col q-pa-md q-gutter-sm">
+            <div class="col q-pa-sm q-gutter-sm">
               <q-select
                 v-model="selectedTags"
                 multiple
+                dense
                 use-chips
                 use-input
                 clearable
@@ -89,18 +90,19 @@
                 </template>
               </q-select>
             </div>
-            <div class="col q-pa-md q-gutter-sm">
-              <q-btn round color="secondary" icon="open_in_new" @click="openFilteredBookmarks" accesskey="o">
+            <div class="col q-pa-sm q-gutter-sm text-right">
+              <q-btn size="sm" round color="secondary" icon="open_in_new" @click="openFilteredBookmarks" accesskey="o">
                 <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
               </q-btn>
-              <q-btn round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true" accesskey="b">
+              <q-btn size="sm" round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true" accesskey="b">
                 <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
               </q-btn>
-              <q-btn round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true" accesskey="a">
+              <q-btn size="sm" round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true" accesskey="a">
                 <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
               </q-btn>
             </div>
           </div>
+          <q-separator />
 
           <q-table
             flat
@@ -504,7 +506,7 @@ export default defineComponent({
 }
 
 .bookmarks-page {
-  min-width: 500px;
+  min-width: 550px;
 
   > div {
     width: 100%;

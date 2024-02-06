@@ -4,12 +4,3 @@
 body.bex.q-body--prevent-scroll {
   position: inherit !important;
 }
-
-// https://quasar.dev/style/color-palette#color-list
-:root {
-  //--q-primary: #3f51b5;
-  --q-primary: rgb(40, 53, 147);
-  --q-secondary: rgb(92, 107, 192);
-  //--q-accent: #8c9eff;
-  --q-accent: rgb(40, 53, 147);
-}
