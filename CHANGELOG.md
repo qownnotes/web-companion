@@ -1,8 +1,17 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.2.1
+- an issue with the columns in the bookmarks list was fixed
+  (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+- the minimum version for Firefox was raised to 109, because of manifest version 3
+  (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+- `host_permissions` were removed from the manifest file for Chrome, because they are not needed
+  (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+- added a more translation
+
 ## 2024.2.0
 - the extension was completely **rewritten in Vue.js 3 with Vite using QUASAR with BEX**
- (for [#56](https://github.com/qownnotes/web-companion/issues/56))
+  (for [#56](https://github.com/qownnotes/web-companion/issues/56))
   - also both the Chrome and Firefox extensions are now using manifest version 3
 
 ## 22.12.1
