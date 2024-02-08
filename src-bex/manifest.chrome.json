@@ -23,9 +23,6 @@
     "bookmarks",
     "scripting"
   ],
-  "host_permissions": [
-    "*://*/*"
-  ],
 
   "options_page": "www/index.html#/options",
 

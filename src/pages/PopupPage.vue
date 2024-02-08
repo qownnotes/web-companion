@@ -116,26 +116,30 @@
           >
             <template v-slot:body="props">
               <q-tr :props="props" @click="openUrl(props.row.url)">
-                <q-td v-if="props.row.name" key="name" :props="props">
-                  <div>
-                    <div class="column-name" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</div>
-                    <q-tooltip>
-                      <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
-                      <div>{{ props.row.url }}</div>
-                      <div class="column-description" v-if="props.row.description">{{ props.row.description }}</div>
-                    </q-tooltip>
-                  </div>
-                </q-td>
-                <q-td v-if="props.row.name" key="url" :props="props">
-                  <div>
-                    {{ truncateText( props.row.url, 40 ) }}
-                  </div>
-                </q-td>
-                <q-td v-if="props.row.name === ''" colspan="2" key="url" :props="props">
-                  <div>
-                    <a tabindex="2" :href="props.row.url" @click="$event.stopPropagation()" :accesskey="props.rowIndex + 1" target="_blank" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
-                  </div>
-                </q-td>
+                <template v-if="props.row.name">
+                  <q-td key="name" :props="props">
+                    <div>
+                      <div class="column-name" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</div>
+                      <q-tooltip>
+                        <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
+                        <div>{{ props.row.url }}</div>
+                        <div class="column-description" v-if="props.row.description">{{ props.row.description }}</div>
+                      </q-tooltip>
+                    </div>
+                  </q-td>
+                  <q-td key="url" :props="props">
+                    <div>
+                      {{ truncateText( props.row.url, 40 ) }}
+                    </div>
+                  </q-td>
+                </template>
+                <template v-else>
+                  <q-td colspan="2" key="url" :props="props">
+                    <div>
+                      <a tabindex="2" :href="props.row.url" @click="$event.stopPropagation()" :accesskey="props.rowIndex + 1" target="_blank" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
+                    </div>
+                  </q-td>
+                </template>
                 <q-td key="tags" :props="props">
                   <div class="column-tags">
                     <q-badge v-for="tag in props.row.tags" :key="tag" :label="tag" />
