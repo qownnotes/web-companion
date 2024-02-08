@@ -7,7 +7,7 @@
   (for [#56](https://github.com/qownnotes/web-companion/issues/56))
 - `host_permissions` were removed from the manifest file for Chrome, because they are not needed
   (for [#56](https://github.com/qownnotes/web-companion/issues/56))
-- added a more translation
+- added more translation
 
 ## 2024.2.0
 - the extension was completely **rewritten in Vue.js 3 with Vite using QUASAR with BEX**
