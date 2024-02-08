@@ -5,6 +5,7 @@
       gnumake
       crowdin-cli
       zellij # smart terminal workspace
+      imagemagick # screenshot resizing
     ];
 }
 
