@@ -39,6 +39,15 @@
   "Save": {
     "message": "Vista"
   },
+  "DeleteBookmark": {
+    "message": "Delete bookmark"
+  },
+  "DeleteBookmarkConfirmTitle": {
+    "message": "Delete bookmark"
+  },
+  "DeleteBookmarkConfirmMessage": {
+    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+  },
   "BookmarkAllTabs": {
     "message": "Settu bókamerki við alla flipa"
   },

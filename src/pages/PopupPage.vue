@@ -115,26 +115,27 @@
             class="bookmark-list"
           >
             <template v-slot:body="props">
-              <q-tr :props="props" @click="openUrl(props.row.url)">
+              <q-tr :props="props">
                 <template v-if="props.row.name">
-                  <q-td key="name" :props="props">
+                  <q-td key="name" :props="props" @click="openUrl(props.row.url)" class="click">
                     <div>
                       <div class="column-name" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</div>
                       <q-tooltip>
                         <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
                         <div>{{ props.row.url }}</div>
+                        <code>{{ props.row.markdown }}</code>
                         <div class="column-description" v-if="props.row.description">{{ props.row.description }}</div>
                       </q-tooltip>
                     </div>
                   </q-td>
-                  <q-td key="url" :props="props">
+                  <q-td key="url" :props="props" @click="openUrl(props.row.url)" class="click">
                     <div>
                       {{ truncateText( props.row.url, 40 ) }}
                     </div>
                   </q-td>
                 </template>
                 <template v-else>
-                  <q-td colspan="2" key="url" :props="props">
+                  <q-td colspan="2" key="url" :props="props" @click="openUrl(props.row.url)" class="click">
                     <div>
                       <a tabindex="2" :href="props.row.url" @click="$event.stopPropagation()" :accesskey="props.rowIndex + 1" target="_blank" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
                     </div>
@@ -144,6 +145,11 @@
                   <div class="column-tags">
                     <q-badge v-for="tag in props.row.tags" :key="tag" :label="tag" />
                   </div>
+                </q-td>
+                <q-td key="toolbar" :props="props">
+                  <q-btn size="xs" round color="secondary" icon="delete" @click="deleteBookmark(props.row.markdown)">
+                    <q-tooltip class="bg-accent">{{ getLocale('DeleteBookmark') }}</q-tooltip>
+                  </q-btn>
                 </q-td>
               </q-tr>
             </template>
@@ -164,7 +170,7 @@ import { getLocale, openUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
-import {Notify} from "quasar";
+import {Notify, useQuasar} from "quasar";
 import BookmarkAllTabsDialog from "components/BookmarkAllTabsDialog.vue";
 import ImportBrowserBookmarksDialog from "components/ImportBrowserBookmarksDialog.vue";
 import PopupDrawer from "components/PopupDrawer.vue";
@@ -172,11 +178,13 @@ import PopupDrawer from "components/PopupDrawer.vue";
 const columns = [
   { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
   { name: 'url', align: 'left', label: 'Url', field: 'url', sortable: true },
-  { name: 'tags', align: 'left', label: 'Tags', field: 'tags', sortable: true }
+  { name: 'tags', align: 'left', label: 'Tags', field: 'tags', sortable: true },
+  { name: 'toolbar', align: 'left' }
 ]
 
 export default defineComponent({
   setup () {
+    const $q = useQuasar();
     const leftDrawerOpen = ref(false)
     let bookmarks = ref([]);
     let loadingBookmarks = ref(false);
@@ -313,6 +321,16 @@ export default defineComponent({
       importBrowserBookmarksDialog.value = false;
       loadBookmarks();
     };
+
+    const deleteBookmark = (markdown) => {
+      $q.dialog({
+        title: getLocale('DeleteBookmarkConfirmTitle'),
+        message: `${getLocale('DeleteBookmarkConfirmMessage')}<br><br><code style="display: block; overflow-x: auto">${markdown}</code>`,
+        html: true,
+        cancel: true,
+        persistent: true
+      })
+    }
 
     const searchInput = ref(null);
 
@@ -470,6 +488,7 @@ export default defineComponent({
       allTags,
       filteredBookmarks,
       openUrl,
+      deleteBookmark,
       loadBookmarks,
       closeWindow,
       tagFilterFn,
@@ -519,7 +538,7 @@ export default defineComponent({
 
 .bookmark-list {
   font-size: 1.5em;
-  tr { cursor: pointer; }
+  td.click { cursor: pointer; }
   a { color: black; }
 }
 
@@ -538,5 +557,12 @@ export default defineComponent({
 .column-tags {
   display: flex;
   gap: 5px;
+}
+
+code.scroll {
+  overflow: auto;
+  display: block;
+  white-space: pre;
+  word-wrap: break-word;
 }
 </style>

@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.2.2
+- bookmarks can now be deleted in the bookmarks list (for [#57](https://github.com/qownnotes/web-companion/issues/57))
+- added more Arabic translation (thank you noureddin)
+
 ## 2024.2.1
 - an issue with the columns in the bookmarks list was fixed
   (for [#56](https://github.com/qownnotes/web-companion/issues/56))

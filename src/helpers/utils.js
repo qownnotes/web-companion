@@ -1,8 +1,8 @@
 /*
  * Get localization
  */
-export const getLocale = (msg) => {
-  const string = chrome.i18n.getMessage(msg);
+export const getLocale = (msg, substitutions = []) => {
+  const string = chrome.i18n.getMessage(msg, substitutions);
 
   if (string === '') {
     throw new Error(`No Message found for "${msg}" in locales`);

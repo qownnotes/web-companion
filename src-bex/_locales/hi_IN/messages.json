@@ -39,6 +39,15 @@
   "Save": {
     "message": "सहेजें"
   },
+  "DeleteBookmark": {
+    "message": "Delete bookmark"
+  },
+  "DeleteBookmarkConfirmTitle": {
+    "message": "Delete bookmark"
+  },
+  "DeleteBookmarkConfirmMessage": {
+    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+  },
   "BookmarkAllTabs": {
     "message": "सभी टैब को बुकमार्क करें"
   },
