@@ -329,7 +329,13 @@ export default defineComponent({
         html: true,
         cancel: true,
         persistent: true
-      })
+      }).onOk(() => {
+        const data = {type: "deleteBookmark", data: {markdown: markdown}};
+        webSocket.value.send(data, function () {
+          console.log("Deleting bookmark:" + data);
+          loadBookmarks();
+        });
+      });
     }
 
     const searchInput = ref(null);
@@ -530,6 +536,7 @@ export default defineComponent({
 
 .bookmarks-page {
   min-width: 550px;
+  min-height: 300px;
 
   > div {
     width: 100%;

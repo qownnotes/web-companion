@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.2.3
+- the missing delete code was added (for [#57](https://github.com/qownnotes/web-companion/issues/57))
+- the minimum height of the popup was raised to 300px to allow
+  dialogs to be shown fully if there is little content
+
 ## 2024.2.2
 - bookmarks can now be deleted in the bookmarks list (for [#57](https://github.com/qownnotes/web-companion/issues/57))
 - added more Arabic translation (thank you noureddin)
