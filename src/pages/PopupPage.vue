@@ -90,6 +90,14 @@
                 </template>
               </q-select>
             </div>
+            <div class="col q-pa-sm q-gutter-sm">
+              <q-toggle
+                v-model="privateMode"
+                :label="getLocale('PrivateMode')"
+              >
+                <q-tooltip class="bg-accent">{{ getLocale('PrivateModeTooltip') }}</q-tooltip>
+              </q-toggle>
+            </div>
             <div class="col q-pa-sm q-gutter-sm text-right">
               <q-btn size="sm" round color="secondary" icon="open_in_new" @click="openFilteredBookmarks" accesskey="o">
                 <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
@@ -119,7 +127,7 @@
                 <template v-if="props.row.name">
                   <q-td key="name" :props="props" @click="openUrl(props.row.url)" class="click">
                     <div>
-                      <div class="column-name" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</div>
+                      <a class="column-name" :href="props.row.url" @click="openUrl(props.row.url, $event)" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</a>
                       <q-tooltip>
                         <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
                         <div>{{ props.row.url }}</div>
@@ -137,7 +145,7 @@
                 <template v-else>
                   <q-td colspan="2" key="url" :props="props" @click="openUrl(props.row.url)" class="click">
                     <div>
-                      <a class="column-name" tabindex="2" :href="props.row.url" @click="$event.stopPropagation(); openUrl(props.row.url)" :accesskey="props.rowIndex + 1" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
+                      <a class="column-name" tabindex="2" :href="props.row.url" @click="openUrl(props.row.url, $event)" :accesskey="props.rowIndex + 1" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
                     </div>
                   </q-td>
                 </template>
@@ -166,7 +174,7 @@
 
 <script>
 import {computed, defineComponent, nextTick, onMounted, reactive, ref, watch} from 'vue'
-import { getLocale, openUrl, truncateText } from '../helpers/utils'
+import { getLocale, openPrivateUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
@@ -186,6 +194,7 @@ export default defineComponent({
   setup () {
     const $q = useQuasar();
     const leftDrawerOpen = ref(false)
+    const privateMode = ref(false)
     let bookmarks = ref([]);
     let loadingBookmarks = ref(false);
     let search = ref('');
@@ -338,11 +347,25 @@ export default defineComponent({
       });
     }
 
+    const openUrl = (url, event) => {
+      if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+
+      if (privateMode.value) {
+        openPrivateUrl(url);
+      } else {
+        chrome.tabs.create({url});
+      }
+    }
+
     const searchInput = ref(null);
 
     onMounted(() => {
       chrome.storage.sync.get((data) => {
-        search.value = data.search;
+        search.value = data.search || '';
+        privateMode.value = data.privateMode || false;
 
         // Select the text in the search input field after it was updated by the data from the storage
         nextTick(() => searchInput.value.select());
@@ -449,6 +472,10 @@ export default defineComponent({
       console.log("selectedTags stored", newSelectedTags);
     });
 
+    watch(privateMode, (newPrivateMode, oldPrivateMode) => {
+      chrome.storage.sync.set({ privateMode: newPrivateMode });
+    });
+
     const loadBookmarks = () => {
       loadingBookmarks.value = true;
 
@@ -469,6 +496,7 @@ export default defineComponent({
     // Return the variables that you want to use in the template
     return {
       leftDrawerOpen,
+      privateMode,
       toggleLeftDrawer,
       columns,
       bookmarks,
@@ -555,6 +583,7 @@ export default defineComponent({
 
 .column-name {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .column-description {

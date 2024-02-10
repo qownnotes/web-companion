@@ -20,6 +20,21 @@ export const truncateText = (text, limit) => {
   }
 };
 
-export const openUrl = (url) => {
-  chrome.tabs.create({ url });
+export const openPrivateUrl = (url) => {
+  // Check if there's an incognito window already open
+  chrome.windows.getAll({ 'populate': true }, function(windows) {
+    console.log("windows", windows);
+    const incognitoWindow = windows.find(window => window.incognito);
+    console.log("incognitoWindow", incognitoWindow);
+    if (incognitoWindow) {
+      // If there's already an incognito window, open a new tab in it
+      chrome.tabs.create({ url: url, windowId: incognitoWindow.id });
+    } else {
+      // If there isn't an incognito window, create one and open a tab in it
+      chrome.windows.create({ incognito: true, url: url, focused: true }, function(window) {
+        console.log("window", window);
+        // chrome.tabs.create({ url: url, windowId: window.id });
+      });
+    }
+  });
 }
