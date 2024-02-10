@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.2.4
+- now only a delete button is shown in the bookmarks list if the bookmark
+  can be deleted (for [#57](https://github.com/qownnotes/web-companion/issues/57))
+
 ## 2024.2.3
 - the missing delete code was added (for [#57](https://github.com/qownnotes/web-companion/issues/57))
 - the minimum height of the popup was raised to 300px to allow

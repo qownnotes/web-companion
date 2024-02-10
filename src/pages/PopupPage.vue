@@ -147,7 +147,7 @@
                   </div>
                 </q-td>
                 <q-td key="toolbar" :props="props">
-                  <q-btn size="xs" round color="secondary" icon="delete" @click="deleteBookmark(props.row.markdown)">
+                  <q-btn v-if="props.row.markdown" size="xs" round color="secondary" icon="delete" @click="deleteBookmark(props.row.markdown)">
                     <q-tooltip class="bg-accent">{{ getLocale('DeleteBookmark') }}</q-tooltip>
                   </q-btn>
                 </q-td>
