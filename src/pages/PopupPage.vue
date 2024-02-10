@@ -137,7 +137,7 @@
                 <template v-else>
                   <q-td colspan="2" key="url" :props="props" @click="openUrl(props.row.url)" class="click">
                     <div>
-                      <a tabindex="2" :href="props.row.url" @click="$event.stopPropagation()" :accesskey="props.rowIndex + 1" target="_blank" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
+                      <a class="column-name" tabindex="2" :href="props.row.url" @click="$event.stopPropagation(); openUrl(props.row.url)" :accesskey="props.rowIndex + 1" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
                     </div>
                   </q-td>
                 </template>

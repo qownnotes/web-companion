@@ -3,6 +3,7 @@
 ## 2024.2.4
 - now only a delete button is shown in the bookmarks list if the bookmark
   can be deleted (for [#57](https://github.com/qownnotes/web-companion/issues/57))
+- fixed a problem where links without name couldn't be opened when the link directly was clicked
 
 ## 2024.2.3
 - the missing delete code was added (for [#57](https://github.com/qownnotes/web-companion/issues/57))
