@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page>
     <q-card>
       <q-card-section>
         <div class="text-h6">{{ getLocale('settingsHeadline') }}</div>
