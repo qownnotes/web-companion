@@ -10,7 +10,7 @@
     "message": "Порт сервера сокетів QOwnNotes"
   },
   "sendPageToQOwnNotes": {
-    "message": "Надіслати сторінку на QOwnNotes\n"
+    "message": "Надіслати сторінку до QOwnNotes"
   },
   "createScreenshotNote": {
     "message": "Створити нотатку зі скріншоту видимої сторінки"
@@ -40,13 +40,13 @@
     "message": "Зберегти"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Видалити закладку"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Видалити закладку"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Ви точно хочете видалити цей текст зі всіх нотаток які помічені як закладки?"
   },
   "BookmarkAllTabs": {
     "message": "Закласти всі вкладки"
@@ -55,7 +55,7 @@
     "message": "Імпортуйте закладки браузера"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Імпортувати закладки браузера у QOwnNotes"
   },
   "WebClipper": {
     "message": "Web clipper"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Uninstall extension"
+  },
+  "PrivateMode": {
+    "message": "Private mode"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bookmarks in private browser window"
   }
 }

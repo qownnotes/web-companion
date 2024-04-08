@@ -40,13 +40,13 @@
     "message": "Save"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "북마크 삭제"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "북마크 삭제"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "북마크로 태그가 지정된 모든 노트에서 이 텍스트를 삭제하시겠습니까?"
   },
   "BookmarkAllTabs": {
     "message": "모든 탭 북마크"
@@ -55,13 +55,13 @@
     "message": "브라우저 북마크 가져오기"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "브라우저 북마크를 QOwnNotes로 가져오기"
   },
   "WebClipper": {
     "message": "웹 클리퍼"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "웹 클리퍼에 대한 자세한 정보 보기"
   },
   "Import": {
     "message": "가져오기"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "확장 제거"
+  },
+  "PrivateMode": {
+    "message": "개인 모드"
+  },
+  "PrivateModeTooltip": {
+    "message": "개인 브라우저 창에서 북마크 열기"
   }
 }

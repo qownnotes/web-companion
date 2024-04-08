@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "拡張機能をアンインストールします"
+  },
+  "PrivateMode": {
+    "message": "Private mode"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bookmarks in private browser window"
   }
 }

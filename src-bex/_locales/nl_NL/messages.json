@@ -40,13 +40,13 @@
     "message": "Opslaan"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Bladwijzer verwijderen"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Bladwijzer verwijderen"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Wilt u deze tekst verwijderen uit alle notities die als bladwijzer zijn gelabeld?"
   },
   "BookmarkAllTabs": {
     "message": "Bladwijzer voor alle tabbladen"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Extensie verwijderen"
+  },
+  "PrivateMode": {
+    "message": "Privémodus"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bladwijzers in het privévenster van een browser"
   }
 }

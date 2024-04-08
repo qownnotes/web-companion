@@ -40,10 +40,10 @@
     "message": "Enregistrer"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Supprimer le signet"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Supprimer le signet"
   },
   "DeleteBookmarkConfirmMessage": {
     "message": "Would you like to delete this text from all notes tagged as bookmark?"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Désinstaller le greffon"
+  },
+  "PrivateMode": {
+    "message": "Private mode"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bookmarks in private browser window"
   }
 }

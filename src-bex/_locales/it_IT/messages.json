@@ -40,13 +40,13 @@
     "message": "Salva"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Cancella segnalibro"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Cancella segnalibro"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Vuoi cancellare questo testo da tutte le note marcate come segnalibro?"
   },
   "BookmarkAllTabs": {
     "message": "Metti un segnalibro a tutte le schede"
@@ -55,7 +55,7 @@
     "message": "Importa i preferiti del browser"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Importa i preferiti del tuo browser in QOwnNotes"
   },
   "WebClipper": {
     "message": "Strumento di ritaglio web"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Disinstalla l'estensione"
+  },
+  "PrivateMode": {
+    "message": "Modalità privata"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bookmarks in private browser window"
   }
 }

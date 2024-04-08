@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Odinstaluj rozszerzenie"
+  },
+  "PrivateMode": {
+    "message": "Private mode"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bookmarks in private browser window"
   }
 }

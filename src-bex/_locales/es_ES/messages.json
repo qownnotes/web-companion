@@ -40,10 +40,10 @@
     "message": "Guardar"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Eliminar marcador"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Eliminar marcador"
   },
   "DeleteBookmarkConfirmMessage": {
     "message": "Would you like to delete this text from all notes tagged as bookmark?"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Desinstalar extensión"
+  },
+  "PrivateMode": {
+    "message": "Private mode"
+  },
+  "PrivateModeTooltip": {
+    "message": "Open bookmarks in private browser window"
   }
 }

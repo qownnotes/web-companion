@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "إزالة تثبيت الإضافة"
+  },
+  "PrivateMode": {
+    "message": "الوضع الخصوصي"
+  },
+  "PrivateModeTooltip": {
+    "message": "افتح الإشارات المرجعية في نافذة تصفح خصوصي"
   }
 }

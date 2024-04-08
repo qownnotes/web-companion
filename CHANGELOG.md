@@ -4,6 +4,7 @@
 - the "running away" of the Preferences dialog was fixed under Firefox when
   using a zoom-level over 100% (for [#63](https://github.com/qownnotes/web-companion/issues/63))
 - update dependencies
+- add more translations
 
 ## 2024.2.4
 - now only a delete button is shown in the bookmarks list if the bookmark

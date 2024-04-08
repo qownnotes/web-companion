@@ -40,10 +40,10 @@
     "message": "Speichern"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Lesezeichen löschen"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Lesezeichen löschen"
   },
   "DeleteBookmarkConfirmMessage": {
     "message": "Would you like to delete this text from all notes tagged as bookmark?"
@@ -134,5 +134,11 @@
   },
   "UninstallButton": {
     "message": "Erweiterung deinstallieren"
+  },
+  "PrivateMode": {
+    "message": "Privater Modus"
+  },
+  "PrivateModeTooltip": {
+    "message": "Lesezeichen in privatem Fenster öffnen"
   }
 }
