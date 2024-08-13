@@ -1,5 +1,8 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.8.0
+- update dependencies
+
 ## 2024.4.0
 - the "running away" of the Preferences dialog was fixed under Firefox when
   using a zoom-level over 100% (for [#63](https://github.com/qownnotes/web-companion/issues/63))
