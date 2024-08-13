@@ -2,6 +2,7 @@
 
 ## 2024.8.0
 - bookmarks can now be edited in the bookmarks list (for [#65](https://github.com/qownnotes/web-companion/issues/65))
+  - this feature needs QOwnNotes 24.8.5 or higher
 - update dependencies
 - add more translations
 
