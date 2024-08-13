@@ -1,6 +1,7 @@
 # QOwnNotes Web Companion Changelog
 
 ## 2024.8.0
+- bookmarks can now be edited in the bookmarks list (for [#65](https://github.com/qownnotes/web-companion/issues/65))
 - update dependencies
 
 ## 2024.4.0

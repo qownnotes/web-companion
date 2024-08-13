@@ -154,9 +154,12 @@
                     <q-badge v-for="tag in props.row.tags" :key="tag" :label="tag" />
                   </div>
                 </q-td>
-                <q-td key="toolbar" :props="props">
+                <q-td key="toolbar" :props="props" class="row-buttons">
                   <q-btn v-if="props.row.markdown" size="xs" round color="secondary" icon="delete" @click="deleteBookmark(props.row.markdown)">
                     <q-tooltip class="bg-accent">{{ getLocale('DeleteBookmark') }}</q-tooltip>
+                  </q-btn>
+                  <q-btn v-if="props.row.markdown" size="xs" round color="secondary" icon="edit" @click="editBookmark(props.row.markdown)">
+                    <q-tooltip class="bg-accent">{{ getLocale('EditBookmark') }}</q-tooltip>
                   </q-btn>
                 </q-td>
               </q-tr>
@@ -166,6 +169,7 @@
       </q-page>
       <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
       <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
+      <EditBookmarkDialog v-model="editBookmarkDialog" :markdown="editBookmarkMarkdown" :webSocket="webSocket" @bookmark-edited="onBookmarkEdited" />
       <BookmarkAllTabsDialog v-model="bookmarkAllTabsDialog" :webSocket="webSocket" @bookmarksStored="onBookmarksStored" />
       <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" :webSocket="webSocket" @bookmarksImported="onBookmarksImported" />
     </q-page-container>
@@ -178,6 +182,7 @@ import { getLocale, openPrivateUrl, truncateText } from '../helpers/utils'
 import { QWebSocket } from '../services/qwebsocket'
 import InputTokenDialog from '../components/InputTokenDialog.vue'
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
+import EditBookmarkDialog from "components/EditBookmarkDialog.vue";
 import {Notify, useQuasar} from "quasar";
 import BookmarkAllTabsDialog from "components/BookmarkAllTabsDialog.vue";
 import ImportBrowserBookmarksDialog from "components/ImportBrowserBookmarksDialog.vue";
@@ -203,8 +208,9 @@ export default defineComponent({
     let selectedNoteFolderId = ref(null);
     let selectedNoteFolderIdWatchEnabled = true;
     let addBookmarkDialog = ref(false);
+    let editBookmarkDialog = ref(false);
     let bookmarkAllTabsDialog = ref(false);
-    const bookmarkEditDialog = ref(false);
+    let editBookmarkMarkdown = ref('');
     const pagination = ref({
       sortBy: 'name',
       descending: false,
@@ -321,6 +327,11 @@ export default defineComponent({
       loadBookmarks();
     };
 
+    const onBookmarkEdited = () => {
+      editBookmarkDialog.value = false;
+      loadBookmarks();
+    };
+
     const onBookmarksStored = () => {
       bookmarkAllTabsDialog.value = false;
       loadBookmarks();
@@ -345,6 +356,12 @@ export default defineComponent({
           loadBookmarks();
         });
       });
+    }
+
+    const editBookmark = (markdown) => {
+      console.log('markdown', markdown)
+      editBookmarkMarkdown.value = markdown;
+      editBookmarkDialog.value = true;
     }
 
     const openUrl = (url, event) => {
@@ -506,13 +523,15 @@ export default defineComponent({
       noteFolderName,
       noteFolders,
       selectedNoteFolderId,
-      bookmarkEditDialog,
       addBookmarkDialog,
+      editBookmarkDialog,
       bookmarkAllTabsDialog,
       onBookmarkStored,
+      onBookmarkEdited,
       onBookmarksStored,
       onBookmarksImported,
       editedBookmark,
+      editBookmarkMarkdown,
       defaultBookmark,
       pagination,
       selectedTags,
@@ -523,6 +542,7 @@ export default defineComponent({
       filteredBookmarks,
       openUrl,
       deleteBookmark,
+      editBookmark,
       loadBookmarks,
       closeWindow,
       tagFilterFn,
@@ -533,6 +553,7 @@ export default defineComponent({
   components: {
     PopupDrawer,
     AddBookmarkDialog,
+    EditBookmarkDialog,
     BookmarkAllTabsDialog,
     ImportBrowserBookmarksDialog,
     InputTokenDialog
@@ -600,5 +621,10 @@ code.scroll {
   display: block;
   white-space: pre;
   word-wrap: break-word;
+}
+
+.row-buttons {
+  display: flex;
+  gap: 5px;
 }
 </style>
