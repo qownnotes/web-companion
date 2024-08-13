@@ -48,6 +48,21 @@
   "DeleteBookmarkConfirmMessage": {
     "message": "북마크로 태그가 지정된 모든 노트에서 이 텍스트를 삭제하시겠습니까?"
   },
+  "EditBookmark": {
+    "message": "Edit bookmark"
+  },
+  "BookmarkText": {
+    "message": "Bookmark text"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Edit bookmark"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "With this text:"
+  },
   "BookmarkAllTabs": {
     "message": "모든 탭 북마크"
   },

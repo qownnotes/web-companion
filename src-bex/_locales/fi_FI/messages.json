@@ -48,6 +48,21 @@
   "DeleteBookmarkConfirmMessage": {
     "message": "Would you like to delete this text from all notes tagged as bookmark?"
   },
+  "EditBookmark": {
+    "message": "Edit bookmark"
+  },
+  "BookmarkText": {
+    "message": "Bookmark text"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Edit bookmark"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "With this text:"
+  },
   "BookmarkAllTabs": {
     "message": "Merkitse kaikki välilehdet"
   },

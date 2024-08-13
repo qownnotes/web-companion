@@ -46,7 +46,22 @@
     "message": "Supprimer le signet"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Voulez-vous supprimer ce texte de toutes les notes taguées comme signets ?"
+  },
+  "EditBookmark": {
+    "message": "Edit bookmark"
+  },
+  "BookmarkText": {
+    "message": "Bookmark text"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Edit bookmark"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "With this text:"
   },
   "BookmarkAllTabs": {
     "message": "Ajouter tous les onglets aux signets"
@@ -55,13 +70,13 @@
     "message": "Importer les signets du navigateur"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Importer les signets de votre navigateur dans QOwnNotes"
   },
   "WebClipper": {
     "message": "Clipper Web"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "Obtenir plus d’informations à propos du Clipper Web"
   },
   "Import": {
     "message": "Importer"
@@ -136,9 +151,9 @@
     "message": "Désinstaller le greffon"
   },
   "PrivateMode": {
-    "message": "Private mode"
+    "message": "Mode privé"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "Ouvrir les signets dans une fenêtre privée"
   }
 }

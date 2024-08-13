@@ -48,6 +48,21 @@
   "DeleteBookmarkConfirmMessage": {
     "message": "Ви точно хочете видалити цей текст зі всіх нотаток які помічені як закладки?"
   },
+  "EditBookmark": {
+    "message": "Edit bookmark"
+  },
+  "BookmarkText": {
+    "message": "Bookmark text"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Edit bookmark"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "With this text:"
+  },
   "BookmarkAllTabs": {
     "message": "Закласти всі вкладки"
   },

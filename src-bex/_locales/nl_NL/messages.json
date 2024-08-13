@@ -48,6 +48,21 @@
   "DeleteBookmarkConfirmMessage": {
     "message": "Wilt u deze tekst verwijderen uit alle notities die als bladwijzer zijn gelabeld?"
   },
+  "EditBookmark": {
+    "message": "Bladwijzer bewerken"
+  },
+  "BookmarkText": {
+    "message": "Bladwijzer-tekst"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Bladwijzer bewerken"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Wil je deze tekst vervangen door alle notities die als bladwijzer zijn getagd:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "Met deze tekst:"
+  },
   "BookmarkAllTabs": {
     "message": "Bladwijzer voor alle tabbladen"
   },

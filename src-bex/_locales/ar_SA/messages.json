@@ -48,6 +48,21 @@
   "DeleteBookmarkConfirmMessage": {
     "message": "هل تريد حذف هذا النص من كل الملاحظات الموسومة بأنها إشارة مرجعية؟"
   },
+  "EditBookmark": {
+    "message": "Edit bookmark"
+  },
+  "BookmarkText": {
+    "message": "Bookmark text"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Edit bookmark"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "With this text:"
+  },
   "BookmarkAllTabs": {
     "message": "حفظ كل علامات التبويب كإشارات مرجعية"
   },

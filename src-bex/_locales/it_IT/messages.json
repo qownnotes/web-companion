@@ -48,6 +48,21 @@
   "DeleteBookmarkConfirmMessage": {
     "message": "Vuoi cancellare questo testo da tutte le note marcate come segnalibro?"
   },
+  "EditBookmark": {
+    "message": "Edit bookmark"
+  },
+  "BookmarkText": {
+    "message": "Bookmark text"
+  },
+  "EditBookmarkConfirmTitle": {
+    "message": "Edit bookmark"
+  },
+  "EditBookmarkConfirmMessage": {
+    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+  },
+  "EditBookmarkConfirmMessage2": {
+    "message": "With this text:"
+  },
   "BookmarkAllTabs": {
     "message": "Metti un segnalibro a tutte le schede"
   },
@@ -61,7 +76,7 @@
     "message": "Strumento di ritaglio web"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "Ottieni maggiori informazioni sul Web clipper"
   },
   "Import": {
     "message": "Importa"
@@ -139,6 +154,6 @@
     "message": "Modalità privata"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "Apri i segnalibri in una finestra in incognito del browser"
   }
 }
