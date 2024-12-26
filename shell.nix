@@ -2,7 +2,7 @@
   pkgs.mkShell {
     nativeBuildInputs = with pkgs; [
       nodejs_20
-      gnumake
+      just # task runner
       crowdin-cli
       zellij # smart terminal workspace
       imagemagick # screenshot resizing
