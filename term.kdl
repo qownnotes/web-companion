@@ -1,19 +1,34 @@
+// https://zellij.dev/documentation/creating-a-layout
 layout {
-  pane split_direction="vertical" {
-    pane command="npm" {
-      args "run" "dev-chrome"
+  tab name="main" focus=true {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
     }
-    pane command="npm" start_suspended=true {
-      args "run" "dev-firefox"
+    pane size="60%" {
+      command "lazygit"
+      focus true
+    }
+    pane split_direction="vertical" size="40%" {
+      pane {
+        command "just"
+        args "run"
+      }
+      pane {
+        command "npm"
+        args "install"
+      }
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:status-bar"
     }
   }
-  pane split_direction="vertical" {
-    pane focus=true
-    pane command="npm" size="30%" {
-      args "install"
+  tab name="term" {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
     }
-  }
-  pane size=1 borderless=true {
-    plugin location="zellij:status-bar"
+    pane
+    pane size=1 borderless=true {
+      plugin location="zellij:status-bar"
+    }
   }
 }
