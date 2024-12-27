@@ -49,13 +49,13 @@
     "message": "Voulez-vous supprimer ce texte de toutes les notes taguées comme signets ?"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "Modifier le signet"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "Texte du signet"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "Modifier le signet"
   },
   "EditBookmarkConfirmMessage": {
     "message": "Would you like to replace this text from all notes tagged as bookmark:"
@@ -155,5 +155,11 @@
   },
   "PrivateModeTooltip": {
     "message": "Ouvrir les signets dans une fenêtre privée"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

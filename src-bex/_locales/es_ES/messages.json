@@ -46,22 +46,22 @@
     "message": "Eliminar marcador"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "¿Le gustaría eliminar este texto de todas las notas etiquetadas como marcadores?"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "Editar marcador"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "Texto del marcador"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "Editar marcador"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "Le gustaría reemplazar este texto de todas las notas etiquetadas como marcadores:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "Con este texto:"
   },
   "BookmarkAllTabs": {
     "message": "Guardar todas las pestañas como marcadores"
@@ -70,19 +70,19 @@
     "message": "Importar marcadores de navegador"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Importe los marcadores de su navegador a QOwnNotes"
   },
   "WebClipper": {
-    "message": "Cortadora web"
+    "message": "Web Clipper"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "Obtener más información sobre Web Clipper"
   },
   "Import": {
     "message": "Importar"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "¿Quieres importar todos los marcadores del navegador?"
+    "message": "¿Desea importar todos los marcadores del navegador?"
   },
   "InputTokenHeadline": {
     "message": "Ingresa el token de seguridad"
@@ -94,7 +94,7 @@
     "message": "Token de seguridad de QOwnNotes"
   },
   "TokenHint": {
-    "message": "Si estás sincronizando la configuración de tu navegador, es posible que quieras utilizar el mismo token en todos tus dispositivos."
+    "message": "Si se encuentra sincronizando la configuración de su navegador, es posible que desee utilizar la misma ficha en todos sus dispositivos."
   },
   "Menu": {
     "message": "Menú"
@@ -154,6 +154,12 @@
     "message": "Modo privado"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "Abrir marcadores en una ventana privada del navegador"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

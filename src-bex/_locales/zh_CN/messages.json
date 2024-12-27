@@ -40,28 +40,28 @@
     "message": "保存"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "删除书签"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "删除书签"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "要从标记为书签的所有笔记中删除此文本吗？"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "编辑书签"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "书签标签："
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "添加书签"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "是否要替换标记为书签的所有备注中的此文本:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "以下文字:"
   },
   "BookmarkAllTabs": {
     "message": "收藏所有标签页"
@@ -70,7 +70,7 @@
     "message": "导入浏览器书签"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "将你的浏览器书签导入QOwnNotes"
   },
   "WebClipper": {
     "message": "Web裁剪器"
@@ -151,9 +151,15 @@
     "message": "卸载扩展"
   },
   "PrivateMode": {
-    "message": "Private mode"
+    "message": "私人模式"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "在个人浏览器窗口中打开书签"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

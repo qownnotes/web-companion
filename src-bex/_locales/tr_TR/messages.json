@@ -40,28 +40,28 @@
     "message": "Kaydet"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Yer işaretini sil"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Yer işaretini sil"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Bu metni yer imi olarak etiketlenen tüm notlardan silmek ister misiniz?"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "Yer işaretini düzenle"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "Yer imi metni"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "Yer işaretini düzenle"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "Bu metni, yer işareti olarak etiketlenen tüm notlardan değiştirmek ister misiniz:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "Bu metinle:"
   },
   "BookmarkAllTabs": {
     "message": "Tüm sekmelere yer işareti koy"
@@ -70,13 +70,13 @@
     "message": "Tarayıcı yer işaretlerini içe aktarın"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Tarayıcı yer işaretlerinizi QOwnNotes'a aktarın"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "Web kesme makinesi"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "Web kesme makinesi hakkında daha fazla bilgi edinin"
   },
   "Import": {
     "message": "İçe aktar"
@@ -124,36 +124,42 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Kullanıcı verileri onayı"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Bu tarayıcı uzantısı kişisel kullanıcı verilerini bir WebSocket aracılığıyla yerel QOwnNotes örneğinize göndermek için toplar. Toplanan veriler aşağıdaki bilgileri içerebilir:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Yer işaretlerini QOwnNotes'ta depolamak için URL gibi tarayıcı sekmeleriniz hakkındaki bilgiler"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "QOwnNotes'a not olarak göndermek istiyorsanız açık sekmenizin içeriği"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "QOwnNotes'a not olarak göndermek istiyorsanız açık sekmenizin ekran görüntüsü"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "QOwnNotes'a aktarmak istiyorsanız tarayıcınızın yer işaretleri"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "Bu uzantı, QOwnNotes'un yerel sürümüyle iletişim kurmadan çalışmaz ve kullanıcı verilerini karşılıklı olarak gönderir. Ancak, hiçbir kullanıcı verisi internet üzerinden ya da başka bir tarafa gönderilmez!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Kullanıcı verilerinin toplanmasına onay"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Uzantıyı kaldır"
   },
   "PrivateMode": {
-    "message": "Private mode"
+    "message": "Gizli mod"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "Yer işaretlerini gizli tarayıcı penceresinde aç"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

@@ -49,19 +49,19 @@
     "message": "هل تريد حذف هذا النص من كل الملاحظات الموسومة بأنها إشارة مرجعية؟"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "عدّل إشارة مرجعية"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "نص الإشارة المرجعية"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "تعديل إشارة مرجعية"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "هل تريد تغيير هذا النص من كل الملاحظات الموسومة بأنها إشارة مرجعية:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "إلى هذا النص:"
   },
   "BookmarkAllTabs": {
     "message": "حفظ كل علامات التبويب كإشارات مرجعية"
@@ -155,5 +155,11 @@
   },
   "PrivateModeTooltip": {
     "message": "افتح الإشارات المرجعية في نافذة تصفح خصوصي"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

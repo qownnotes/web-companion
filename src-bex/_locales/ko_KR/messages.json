@@ -49,19 +49,19 @@
     "message": "북마크로 태그가 지정된 모든 노트에서 이 텍스트를 삭제하시겠습니까?"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "북마크 편집"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "북마크 텍스트"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "북마크 편집"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "북마크로 태그가 지정된 모든 노트에서 이 텍스트를 바꾸시겠습니까:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "바꿀 텍스트:"
   },
   "BookmarkAllTabs": {
     "message": "모든 탭 북마크"
@@ -155,5 +155,11 @@
   },
   "PrivateModeTooltip": {
     "message": "개인 브라우저 창에서 북마크 열기"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

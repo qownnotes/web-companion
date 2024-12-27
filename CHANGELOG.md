@@ -8,6 +8,7 @@
   - Bookmarks can still contain the `Current` tag, for example if the current note is a bookmark note
   - This feature needs QOwnNotes 24.12.7 or higher
 - The dependencies were updated
+- More translations were added
 
 ## 2024.8.0
 - bookmarks can now be edited in the bookmarks list (for [#65](https://github.com/qownnotes/web-companion/issues/65))

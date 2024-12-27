@@ -40,28 +40,28 @@
     "message": "Сохранить"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Удалить закладку"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Удалить закладку"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Хотите ли вы удалить этот текст из всех заметок, помеченных как закладка?"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "Изменить закладку"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "Текст закладки"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "Изменить закладку"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "Хотите ли вы изменить этот текст из всех заметок, помеченных как закладка:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "С этим текстом:"
   },
   "BookmarkAllTabs": {
     "message": "Добавить все вкладки в закладки"
@@ -70,13 +70,13 @@
     "message": "Импорт закладок браузера"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Импортировать ваши закладки в браузере в QOwnNotes"
   },
   "WebClipper": {
-    "message": "Web clipper"
+    "message": "Веб-клиппер"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "Получить больше информации о Веб-клиппер"
   },
   "Import": {
     "message": "Импорт"
@@ -124,36 +124,42 @@
     "message": "URL"
   },
   "ConsentHeadline": {
-    "message": "User data consent"
+    "message": "Согласие на обработку пользовательских данных"
   },
   "ConsentIntro": {
-    "message": "This browser extension collects personal user data to send it to your local instance of QOwnNotes via a WebSocket. The data collected may include the following information:"
+    "message": "Это расширение для браузера собирает персональные данные пользователя для отправки их в ваш локальный экземпляр QOwnNotes через WebSocket. Собранные данные могут включать следующую информацию:"
   },
   "ConsentData1": {
-    "message": "Information about your browser tabs, like the URL, to store bookmarks in QOwnNotes"
+    "message": "Информация о ваших вкладках в браузере, такая как Url, для хранения закладок в QOwnNotes"
   },
   "ConsentData2": {
-    "message": "The content of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Содержимое вашего открытого окна, если вы хотите отправить в QOwnNotes как заметку"
   },
   "ConsentData3": {
-    "message": "A screenshot of your open tab, if you want to send it to QOwnNotes as a note"
+    "message": "Снимок экрана вашего открытого окна, если вы хотите отправить в QOwnNotes как заметку"
   },
   "ConsentData4": {
-    "message": "Your browser bookmarks, if you want to import them into QOwnNotes"
+    "message": "Ваши закладки в браузере, если вы хотите импортировать их в QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "This extension doesn't work without communicating to your local instance of QOwnNotes and sending user data back and forth. No user data is sent over the internet or to any other party!"
+    "message": "Это расширение не работает без подключения к вашему локальному экземпляру QOwnNotes и отправки пользовательских данных туда и обратно. Никакие пользовательские данные не передаются через интернет или какой-либо другой стороне!"
   },
   "ConsentButton": {
-    "message": "Consent with user data collection"
+    "message": "Согласие на сбор пользовательских данных"
   },
   "UninstallButton": {
-    "message": "Uninstall extension"
+    "message": "Удалить расширение"
   },
   "PrivateMode": {
-    "message": "Private mode"
+    "message": "Приватный режим"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "Открыть закладки в приватном окне браузера"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

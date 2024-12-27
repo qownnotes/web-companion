@@ -155,5 +155,11 @@
   },
   "PrivateModeTooltip": {
     "message": "Apri i segnalibri in una finestra in incognito del browser"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }

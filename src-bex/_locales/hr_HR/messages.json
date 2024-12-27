@@ -40,28 +40,28 @@
     "message": "Spremi"
   },
   "DeleteBookmark": {
-    "message": "Delete bookmark"
+    "message": "Izbriši oznaku"
   },
   "DeleteBookmarkConfirmTitle": {
-    "message": "Delete bookmark"
+    "message": "Izbriši oznaku"
   },
   "DeleteBookmarkConfirmMessage": {
-    "message": "Would you like to delete this text from all notes tagged as bookmark?"
+    "message": "Želiš li izbrisati ovaj tekst iz svih bilješki označenih kao oznaka?"
   },
   "EditBookmark": {
-    "message": "Edit bookmark"
+    "message": "Uredi oznaku"
   },
   "BookmarkText": {
-    "message": "Bookmark text"
+    "message": "Tekst oznake"
   },
   "EditBookmarkConfirmTitle": {
-    "message": "Edit bookmark"
+    "message": "Uredi oznaku"
   },
   "EditBookmarkConfirmMessage": {
-    "message": "Would you like to replace this text from all notes tagged as bookmark:"
+    "message": "Želiš li zamijeniti ovaj tekst iz svih bilješki označenih kao oznaka:"
   },
   "EditBookmarkConfirmMessage2": {
-    "message": "With this text:"
+    "message": "S ovim tekstom:"
   },
   "BookmarkAllTabs": {
     "message": "Označi sve kartice"
@@ -70,13 +70,13 @@
     "message": "Uvezite oznake preglednika"
   },
   "ImportBrowserBookmarksCaption": {
-    "message": "Import your browser bookmarks into QOwnNotes"
+    "message": "Uvezi oznake preglednika u QOwnNotes"
   },
   "WebClipper": {
-    "message": "Web rezač"
+    "message": "Web clipper"
   },
   "WebClipperCaption": {
-    "message": "Get more information about the Web clipper"
+    "message": "Saznaj više o proširenju Web Clipper"
   },
   "Import": {
     "message": "Uvezi"
@@ -151,9 +151,15 @@
     "message": "Deinstaliraj proširenje"
   },
   "PrivateMode": {
-    "message": "Private mode"
+    "message": "Privatni modus"
   },
   "PrivateModeTooltip": {
-    "message": "Open bookmarks in private browser window"
+    "message": "Otvori oznake u prozoru privatnog preglednika"
+  },
+  "HideCurrent": {
+    "message": "Hide bookmarks from current note"
+  },
+  "HideCurrentTooltip": {
+    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
   }
 }
