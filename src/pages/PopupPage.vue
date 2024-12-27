@@ -61,6 +61,7 @@
     <PopupDrawer
       v-model="leftDrawerOpen"
       @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;"
+      @hideCurrentChanged="onHideCurrentChanged"
       @privateModeChanged="onPrivateModeChanged"
     />
     <q-page-container>
@@ -196,6 +197,7 @@ export default defineComponent({
     const $q = useQuasar();
     const leftDrawerOpen = ref(false)
     const privateMode = ref(false)
+    const hideCurrent = ref(false)
     let bookmarks = ref([]);
     let loadingBookmarks = ref(false);
     let search = ref('');
@@ -338,6 +340,10 @@ export default defineComponent({
       loadBookmarks();
     };
 
+    const onHideCurrentChanged = (value) => {
+      hideCurrent.value = value;
+      loadBookmarks();
+    }
 
     const onPrivateModeChanged = (value) => {
       privateMode.value = value;
@@ -384,6 +390,8 @@ export default defineComponent({
       chrome.storage.sync.get((data) => {
         search.value = data.search || '';
         privateMode.value = data.privateMode || false;
+        hideCurrent.value = data.hideCurrent || false;
+        loadBookmarks();
 
         // Select the text in the search input field after it was updated by the data from the storage
         nextTick(() => searchInput.value.select());
@@ -445,8 +453,6 @@ export default defineComponent({
         }
       });
 
-      loadBookmarks();
-
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         defaultBookmark.name = tabs[0].title;
         editedBookmark.name = tabs[0].title;
@@ -461,7 +467,7 @@ export default defineComponent({
         }
 
         loadingBookmarks.value = true;
-        const data = {type: "switchNoteFolder", data: newFolderId};
+        const data = {type: "switchNoteFolder", data: newFolderId, hideCurrent: hideCurrent.value};
         webSocket.value.send(data, function () {
           console.log("Switching to note folder:" + data);
         });
@@ -493,7 +499,7 @@ export default defineComponent({
     const loadBookmarks = () => {
       loadingBookmarks.value = true;
 
-      const data = {type: "getBookmarks"};
+      const data = {type: "getBookmarks", hideCurrent: hideCurrent.value};
       webSocket.value.send(data, function () {
         console.log("Loading bookmarks:" + data);
       });
@@ -511,6 +517,7 @@ export default defineComponent({
     return {
       leftDrawerOpen,
       privateMode,
+      hideCurrent,
       toggleLeftDrawer,
       columns,
       bookmarks,
@@ -527,6 +534,7 @@ export default defineComponent({
       onBookmarkEdited,
       onBookmarksStored,
       onBookmarksImported,
+      onHideCurrentChanged,
       onPrivateModeChanged,
       editedBookmark,
       editBookmarkMarkdown,

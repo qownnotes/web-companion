@@ -37,6 +37,17 @@
           </q-toggle></q-item-label>
         </q-item-section>
       </q-item>
+      <q-separator />
+      <q-item>
+        <q-item-section>
+          <q-item-label><q-toggle
+            v-model="hideCurrent"
+            :label="getLocale('HideCurrent')"
+          >
+            <q-tooltip class="bg-accent">{{ getLocale('HideCurrentTooltip') }}</q-tooltip>
+          </q-toggle></q-item-label>
+        </q-item-section>
+      </q-item>
     </q-list>
   </q-drawer>
 </template>
@@ -68,15 +79,23 @@ export default defineComponent({
   setup(prop, { emit }) {
     const leftDrawerOpen = ref(prop.model);
     const privateMode = ref(false)
+    const hideCurrent = ref(false)
+
     onMounted(() => {
       chrome.storage.sync.get((data) => {
         privateMode.value = data.privateMode || false;
+        hideCurrent.value = data.hideCurrent || false;
       });
     });
 
     watch(privateMode, (value) => {
       chrome.storage.sync.set({ privateMode: value });
       emit('privateModeChanged', value);
+    });
+
+    watch(hideCurrent, (value) => {
+      chrome.storage.sync.set({ hideCurrent: value });
+      emit('hideCurrentChanged', value);
     });
 
     const importBrowserBookmarksClicked = () => {
@@ -86,6 +105,7 @@ export default defineComponent({
     // Return variables and methods that you want to expose to the template
     return {
       privateMode,
+      hideCurrent,
       leftDrawerOpen,
       linksList,
       importBrowserBookmarksClicked
@@ -93,6 +113,7 @@ export default defineComponent({
   },
   emits: [
     'importBrowserBookmarksClicked',
+    'hideCurrentChanged',
     'privateModeChanged'
   ]
 })

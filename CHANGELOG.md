@@ -3,6 +3,10 @@
 ## 2024.12.0
 - The private mode switch got moved to the drawer menu, so it doesn't take up space in the popup anymore
   (for [#76](https://github.com/qownnotes/web-companion/issues/76))
+- There now is a new switch in the drawer menu to **hide bookmarks from the current note**
+  (for [#70](https://github.com/qownnotes/web-companion/issues/70))
+  - Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note
+  - This feature needs QOwnNotes 24.12.7 or higher
 
 ## 2024.8.0
 - bookmarks can now be edited in the bookmarks list (for [#65](https://github.com/qownnotes/web-companion/issues/65))
