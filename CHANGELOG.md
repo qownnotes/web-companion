@@ -5,7 +5,7 @@
   (for [#76](https://github.com/qownnotes/web-companion/issues/76))
 - There now is a new switch in the drawer menu to **hide bookmarks from the current note**
   (for [#70](https://github.com/qownnotes/web-companion/issues/70))
-  - Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note
+  - Bookmarks can still contain the `Current` tag, for example if the current note is a bookmark note
   - This feature needs QOwnNotes 24.12.7 or higher
 
 ## 2024.8.0
