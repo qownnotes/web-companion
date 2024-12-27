@@ -58,7 +58,11 @@
         </div>
       </q-toolbar>
     </q-header>
-    <PopupDrawer v-model="leftDrawerOpen" @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;" />
+    <PopupDrawer
+      v-model="leftDrawerOpen"
+      @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;"
+      @privateModeChanged="onPrivateModeChanged"
+    />
     <q-page-container>
       <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
         <div class="q-pa-sm">
@@ -89,14 +93,6 @@
                   <q-icon name="tag" />
                 </template>
               </q-select>
-            </div>
-            <div class="col q-pa-sm q-gutter-sm">
-              <q-toggle
-                v-model="privateMode"
-                :label="getLocale('PrivateMode')"
-              >
-                <q-tooltip class="bg-accent">{{ getLocale('PrivateModeTooltip') }}</q-tooltip>
-              </q-toggle>
             </div>
             <div class="col q-pa-sm q-gutter-sm text-right">
               <q-btn size="sm" round color="secondary" icon="open_in_new" @click="openFilteredBookmarks" accesskey="o">
@@ -342,6 +338,11 @@ export default defineComponent({
       loadBookmarks();
     };
 
+
+    const onPrivateModeChanged = (value) => {
+      privateMode.value = value;
+    }
+
     const deleteBookmark = (markdown) => {
       $q.dialog({
         title: getLocale('DeleteBookmarkConfirmTitle'),
@@ -489,10 +490,6 @@ export default defineComponent({
       console.log("selectedTags stored", newSelectedTags);
     });
 
-    watch(privateMode, (newPrivateMode, oldPrivateMode) => {
-      chrome.storage.sync.set({ privateMode: newPrivateMode });
-    });
-
     const loadBookmarks = () => {
       loadingBookmarks.value = true;
 
@@ -530,6 +527,7 @@ export default defineComponent({
       onBookmarkEdited,
       onBookmarksStored,
       onBookmarksImported,
+      onPrivateModeChanged,
       editedBookmark,
       editBookmarkMarkdown,
       defaultBookmark,

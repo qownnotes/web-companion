@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 2024.12.0
+- The private mode switch got moved to the drawer menu, so it doesn't take up space in the popup anymore
+  (for [#76](https://github.com/qownnotes/web-companion/issues/76))
+
 ## 2024.8.0
 - bookmarks can now be edited in the bookmarks list (for [#65](https://github.com/qownnotes/web-companion/issues/65))
   - this feature needs QOwnNotes 24.8.5 or higher

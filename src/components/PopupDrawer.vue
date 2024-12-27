@@ -26,13 +26,24 @@
         :key="link.title"
         v-bind="link"
       />
+      <q-separator />
+      <q-item>
+        <q-item-section>
+          <q-item-label><q-toggle
+            v-model="privateMode"
+            :label="getLocale('PrivateMode')"
+          >
+            <q-tooltip class="bg-accent">{{ getLocale('PrivateModeTooltip') }}</q-tooltip>
+          </q-toggle></q-item-label>
+        </q-item-section>
+      </q-item>
     </q-list>
   </q-drawer>
 </template>
 
 <script>
 import {getLocale} from "src/helpers/utils";
-import {defineComponent, ref} from "vue";
+import {defineComponent, onMounted, ref, watch} from "vue";
 import DrawerLink from "components/DrawerLink.vue";
 
 const linksList = [
@@ -56,6 +67,17 @@ export default defineComponent({
   },
   setup(prop, { emit }) {
     const leftDrawerOpen = ref(prop.model);
+    const privateMode = ref(false)
+    onMounted(() => {
+      chrome.storage.sync.get((data) => {
+        privateMode.value = data.privateMode || false;
+      });
+    });
+
+    watch(privateMode, (value) => {
+      chrome.storage.sync.set({ privateMode: value });
+      emit('privateModeChanged', value);
+    });
 
     const importBrowserBookmarksClicked = () => {
       emit('importBrowserBookmarksClicked');
@@ -63,12 +85,16 @@ export default defineComponent({
 
     // Return variables and methods that you want to expose to the template
     return {
+      privateMode,
       leftDrawerOpen,
       linksList,
       importBrowserBookmarksClicked
     };
   },
-  emits: ['importBrowserBookmarksClicked']
+  emits: [
+    'importBrowserBookmarksClicked',
+    'privateModeChanged'
+  ]
 })
 </script>
 
