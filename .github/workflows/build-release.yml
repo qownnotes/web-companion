@@ -6,7 +6,7 @@ on:
     branches:
       - release
     tags-ignore:
-      - '*'
+      - "*"
 
 #--------------------------------------------------------------------------------
 # Define application name & version
@@ -14,9 +14,9 @@ on:
 
 jobs:
   create_release:
-    name: '🗃️️ Prepare release'
+    name: "🗃️️ Prepare release"
     permissions:
-      contents: write  # for actions/create-release to create a release
+      contents: write # for actions/create-release to create a release
     runs-on: ubuntu-latest
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
@@ -58,20 +58,19 @@ jobs:
   build-package:
     needs: create_release
     runs-on: ubuntu-latest
-    name: '📦 Build packages'
+    name: "📦 Build packages"
     steps:
-
-      - name: '🧰 Checkout'
+      - name: "🧰 Checkout"
         uses: actions/checkout@v4
 
-      - name: '⚙️ Install dependencies'
+      - name: "⚙️ Install dependencies"
         run: |
           npm install
 
-      - name: '🚧 Build extension'
+      - name: "🚧 Build extension"
         run: ./build.sh
 
-      - name: '📤 Release Chrome package'
+      - name: "📤 Release Chrome package"
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -80,7 +79,7 @@ jobs:
           asset_path: ./dist/package-chrome.zip
           asset_name: package-chrome.zip
           asset_content_type: application/zip
-      - name: '📤 Release Firefox package'
+      - name: "📤 Release Firefox package"
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

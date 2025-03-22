@@ -1,51 +1,42 @@
 <template>
-  <q-drawer
-    v-model="leftDrawerOpen"
-    show-if-above
-    bordered
-  >
+  <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
     <q-list>
-      <q-item
-        clickable
-        @click="importBrowserBookmarksClicked"
-      >
-        <q-item-section
-          avatar
-        >
+      <q-item clickable @click="importBrowserBookmarksClicked">
+        <q-item-section avatar>
           <q-icon name="save_alt" />
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>{{ getLocale('ImportBrowserBookmarks') }}</q-item-label>
-          <q-item-label caption>{{ getLocale('ImportBrowserBookmarksCaption') }}</q-item-label>
+          <q-item-label>{{ getLocale("ImportBrowserBookmarks") }}</q-item-label>
+          <q-item-label caption>{{
+            getLocale("ImportBrowserBookmarksCaption")
+          }}</q-item-label>
         </q-item-section>
       </q-item>
       <q-separator />
-      <DrawerLink
-        v-for="link in linksList"
-        :key="link.title"
-        v-bind="link"
-      />
+      <DrawerLink v-for="link in linksList" :key="link.title" v-bind="link" />
       <q-separator />
       <q-item>
         <q-item-section>
-          <q-item-label><q-toggle
-            v-model="privateMode"
-            :label="getLocale('PrivateMode')"
+          <q-item-label
+            ><q-toggle v-model="privateMode" :label="getLocale('PrivateMode')">
+              <q-tooltip class="bg-accent">{{
+                getLocale("PrivateModeTooltip")
+              }}</q-tooltip>
+            </q-toggle></q-item-label
           >
-            <q-tooltip class="bg-accent">{{ getLocale('PrivateModeTooltip') }}</q-tooltip>
-          </q-toggle></q-item-label>
         </q-item-section>
       </q-item>
       <q-separator />
       <q-item>
         <q-item-section>
-          <q-item-label><q-toggle
-            v-model="hideCurrent"
-            :label="getLocale('HideCurrent')"
+          <q-item-label
+            ><q-toggle v-model="hideCurrent" :label="getLocale('HideCurrent')">
+              <q-tooltip class="bg-accent">{{
+                getLocale("HideCurrentTooltip")
+              }}</q-tooltip>
+            </q-toggle></q-item-label
           >
-            <q-tooltip class="bg-accent">{{ getLocale('HideCurrentTooltip') }}</q-tooltip>
-          </q-toggle></q-item-label>
         </q-item-section>
       </q-item>
     </q-list>
@@ -53,33 +44,33 @@
 </template>
 
 <script>
-import {getLocale} from "src/helpers/utils";
-import {defineComponent, onMounted, ref, watch} from "vue";
+import { getLocale } from "src/helpers/utils";
+import { defineComponent, onMounted, ref, watch } from "vue";
 import DrawerLink from "components/DrawerLink.vue";
 
 const linksList = [
   {
-    title: getLocale('WebClipper'),
-    caption: getLocale('WebClipperCaption'),
-    icon: 'info',
-    link: 'https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper'
-  }
-]
+    title: getLocale("WebClipper"),
+    caption: getLocale("WebClipperCaption"),
+    icon: "info",
+    link: "https://www.qownnotes.org/getting-started/browser-extension.html#web-clipper",
+  },
+];
 
 export default defineComponent({
   name: "PopupDrawer",
-  components: {DrawerLink},
-  methods: {getLocale},
+  components: { DrawerLink },
+  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   setup(prop, { emit }) {
     const leftDrawerOpen = ref(prop.model);
-    const privateMode = ref(false)
-    const hideCurrent = ref(false)
+    const privateMode = ref(false);
+    const hideCurrent = ref(false);
 
     onMounted(() => {
       chrome.storage.sync.get((data) => {
@@ -90,16 +81,16 @@ export default defineComponent({
 
     watch(privateMode, (value) => {
       chrome.storage.sync.set({ privateMode: value });
-      emit('privateModeChanged', value);
+      emit("privateModeChanged", value);
     });
 
     watch(hideCurrent, (value) => {
       chrome.storage.sync.set({ hideCurrent: value });
-      emit('hideCurrentChanged', value);
+      emit("hideCurrentChanged", value);
     });
 
     const importBrowserBookmarksClicked = () => {
-      emit('importBrowserBookmarksClicked');
+      emit("importBrowserBookmarksClicked");
     };
 
     // Return variables and methods that you want to expose to the template
@@ -108,17 +99,15 @@ export default defineComponent({
       hideCurrent,
       leftDrawerOpen,
       linksList,
-      importBrowserBookmarksClicked
+      importBrowserBookmarksClicked,
     };
   },
   emits: [
-    'importBrowserBookmarksClicked',
-    'hideCurrentChanged',
-    'privateModeChanged'
-  ]
-})
+    "importBrowserBookmarksClicked",
+    "hideCurrentChanged",
+    "privateModeChanged",
+  ],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

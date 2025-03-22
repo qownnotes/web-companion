@@ -2,7 +2,7 @@
   <q-dialog v-model="dialog">
     <q-card>
       <q-card-section>
-        <div class="text-h6">{{ getLocale('EditBookmark') }}</div>
+        <div class="text-h6">{{ getLocale("EditBookmark") }}</div>
       </q-card-section>
 
       <q-card-section class="q-pt-none">
@@ -22,64 +22,81 @@
       </q-card-section>
 
       <q-card-actions align="right">
-        <q-btn flat :label="getLocale('Cancel')" tabindex="3" v-close-popup @click="$emit('cancel')" />
-        <q-btn flat :label="getLocale('Ok')" color="primary" tabindex="2" @click="storeBookmark" />
+        <q-btn
+          flat
+          :label="getLocale('Cancel')"
+          tabindex="3"
+          v-close-popup
+          @click="$emit('cancel')"
+        />
+        <q-btn
+          flat
+          :label="getLocale('Ok')"
+          color="primary"
+          tabindex="2"
+          @click="storeBookmark"
+        />
       </q-card-actions>
     </q-card>
   </q-dialog>
 </template>
 
 <script>
-import {getLocale} from "src/helpers/utils";
-import {computed, defineComponent, ref} from "vue";
-import {QWebSocket} from "src/services/qwebsocket";
-import {useQuasar} from "quasar";
+import { getLocale } from "src/helpers/utils";
+import { computed, defineComponent, ref } from "vue";
+import { QWebSocket } from "src/services/qwebsocket";
+import { useQuasar } from "quasar";
 
 export default defineComponent({
   name: "EditBookmarkDialog",
-  methods: {getLocale},
+  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
-      default: false
+      default: false,
     },
     markdown: {
       type: String,
-      default: '',
-      required: true
+      default: "",
+      required: true,
     },
     webSocket: {
       type: QWebSocket,
-      required: true
-    }
+      required: true,
+    },
   },
   setup(props, { emit }) {
     const $q = useQuasar();
     const dialog = ref(props.model);
-    let markdownToStore = '';
+    let markdownToStore = "";
 
     const newMarkdown = computed({
       get: () => props.markdown,
-      set: (value) => {markdownToStore = value}
+      set: (value) => {
+        markdownToStore = value;
+      },
     });
 
     const storeBookmark = () => {
-      const data = {type: "editBookmark", data: {markdown: props.markdown, newMarkdown: markdownToStore}};
+      const data = {
+        type: "editBookmark",
+        data: { markdown: props.markdown, newMarkdown: markdownToStore },
+      };
 
       $q.dialog({
-        title: getLocale('EditBookmarkConfirmTitle'),
+        title: getLocale("EditBookmarkConfirmTitle"),
         message: `
-            ${getLocale('EditBookmarkConfirmMessage')}<br><br>
+            ${getLocale("EditBookmarkConfirmMessage")}<br><br>
             <code style="display: block; overflow-x: auto">${data.data.markdown}</code><br>
-            ${getLocale('EditBookmarkConfirmMessage2')}<br><br>
+            ${getLocale("EditBookmarkConfirmMessage2")}<br><br>
             <code style="display: block; overflow-x: auto">${data.data.newMarkdown}</code>`,
         html: true,
         cancel: true,
-        persistent: true
+        persistent: true,
       }).onOk(() => {
         props.webSocket.send(data, () => {
           console.log("Edited bookmark:" + data);
-          emit('bookmarkEdited');
+          emit("bookmarkEdited");
         });
       });
     };
@@ -87,13 +104,11 @@ export default defineComponent({
     return {
       dialog,
       newMarkdown,
-      storeBookmark
+      storeBookmark,
     };
   },
-  emits: ['cancel', 'bookmarkEdited']
-})
+  emits: ["cancel", "bookmarkEdited"],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

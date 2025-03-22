@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          {{ getLocale('popupHeadline') }}
+          {{ getLocale("popupHeadline") }}
         </q-toolbar-title>
 
         <div class="row header-search-bar">
@@ -60,7 +60,7 @@
     </q-header>
     <PopupDrawer
       v-model="leftDrawerOpen"
-      @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true;"
+      @importBrowserBookmarksClicked="importBrowserBookmarksDialog = true"
       @hideCurrentChanged="onHideCurrentChanged"
       @privateModeChanged="onPrivateModeChanged"
     />
@@ -68,10 +68,8 @@
       <q-page v-if="!inputTokenDialog" class="flex bookmarks-page">
         <div class="q-pa-sm">
           <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
+            <div class="col"></div>
+            <div class="col"></div>
           </div>
           <div class="row">
             <div class="col q-pa-sm q-gutter-sm">
@@ -96,14 +94,41 @@
               </q-select>
             </div>
             <div class="col q-pa-sm q-gutter-sm text-right">
-              <q-btn size="sm" round color="secondary" icon="open_in_new" @click="openFilteredBookmarks" accesskey="o">
-                <q-tooltip class="bg-accent">{{ getLocale('OpenAllBookmarks') }}</q-tooltip>
+              <q-btn
+                size="sm"
+                round
+                color="secondary"
+                icon="open_in_new"
+                @click="openFilteredBookmarks"
+                accesskey="o"
+              >
+                <q-tooltip class="bg-accent">{{
+                  getLocale("OpenAllBookmarks")
+                }}</q-tooltip>
               </q-btn>
-              <q-btn size="sm" round color="secondary" icon="bookmarks" @click="bookmarkAllTabsDialog = true" accesskey="b">
-                <q-tooltip class="bg-accent">{{ getLocale('BookmarkAllTabs') }}</q-tooltip>
+              <q-btn
+                size="sm"
+                round
+                color="secondary"
+                icon="bookmarks"
+                @click="bookmarkAllTabsDialog = true"
+                accesskey="b"
+              >
+                <q-tooltip class="bg-accent">{{
+                  getLocale("BookmarkAllTabs")
+                }}</q-tooltip>
               </q-btn>
-              <q-btn size="sm" round color="primary" icon="bookmark_add" @click="addBookmarkDialog = true" accesskey="a">
-                <q-tooltip class="bg-accent">{{ getLocale('AddBookmark') }}</q-tooltip>
+              <q-btn
+                size="sm"
+                round
+                color="primary"
+                icon="bookmark_add"
+                @click="addBookmarkDialog = true"
+                accesskey="a"
+              >
+                <q-tooltip class="bg-accent">{{
+                  getLocale("AddBookmark")
+                }}</q-tooltip>
               </q-btn>
             </div>
           </div>
@@ -122,41 +147,102 @@
             <template v-slot:body="props">
               <q-tr :props="props">
                 <template v-if="props.row.name">
-                  <q-td key="name" :props="props" @click="openUrl(props.row.url)" class="click">
+                  <q-td
+                    key="name"
+                    :props="props"
+                    @click="openUrl(props.row.url)"
+                    class="click"
+                  >
                     <div>
-                      <a class="column-name" :href="props.row.url" @click="openUrl(props.row.url, $event)" tabindex="2" :accesskey="props.rowIndex + 1" @keyup.enter="openUrl(props.row.url)">{{ truncateText( props.row.name, 40 ) }}</a>
+                      <a
+                        class="column-name"
+                        :href="props.row.url"
+                        @click="openUrl(props.row.url, $event)"
+                        tabindex="2"
+                        :accesskey="props.rowIndex + 1"
+                        @keyup.enter="openUrl(props.row.url)"
+                        >{{ truncateText(props.row.name, 40) }}</a
+                      >
                       <q-tooltip>
-                        <div class="column-name" v-if="props.row.name">{{ props.row.name }}</div>
+                        <div class="column-name" v-if="props.row.name">
+                          {{ props.row.name }}
+                        </div>
                         <div>{{ props.row.url }}</div>
                         <code>{{ props.row.markdown }}</code>
-                        <div class="column-description" v-if="props.row.description">{{ props.row.description }}</div>
+                        <div
+                          class="column-description"
+                          v-if="props.row.description"
+                        >
+                          {{ props.row.description }}
+                        </div>
                       </q-tooltip>
                     </div>
                   </q-td>
-                  <q-td key="url" :props="props" @click="openUrl(props.row.url)" class="click">
+                  <q-td
+                    key="url"
+                    :props="props"
+                    @click="openUrl(props.row.url)"
+                    class="click"
+                  >
                     <div>
-                      {{ truncateText( props.row.url, 40 ) }}
+                      {{ truncateText(props.row.url, 40) }}
                     </div>
                   </q-td>
                 </template>
                 <template v-else>
-                  <q-td colspan="2" key="url" :props="props" @click="openUrl(props.row.url)" class="click">
+                  <q-td
+                    colspan="2"
+                    key="url"
+                    :props="props"
+                    @click="openUrl(props.row.url)"
+                    class="click"
+                  >
                     <div>
-                      <a class="column-name" tabindex="2" :href="props.row.url" @click="openUrl(props.row.url, $event)" :accesskey="props.rowIndex + 1" :title="props.row.url">{{ truncateText( props.row.url, 80 ) }}</a>
+                      <a
+                        class="column-name"
+                        tabindex="2"
+                        :href="props.row.url"
+                        @click="openUrl(props.row.url, $event)"
+                        :accesskey="props.rowIndex + 1"
+                        :title="props.row.url"
+                        >{{ truncateText(props.row.url, 80) }}</a
+                      >
                     </div>
                   </q-td>
                 </template>
                 <q-td key="tags" :props="props">
                   <div class="column-tags">
-                    <q-badge v-for="tag in props.row.tags" :key="tag" :label="tag" />
+                    <q-badge
+                      v-for="tag in props.row.tags"
+                      :key="tag"
+                      :label="tag"
+                    />
                   </div>
                 </q-td>
                 <q-td key="toolbar" :props="props" class="row-buttons">
-                  <q-btn v-if="props.row.markdown" size="xs" round color="secondary" icon="delete" @click="deleteBookmark(props.row.markdown)">
-                    <q-tooltip class="bg-accent">{{ getLocale('DeleteBookmark') }}</q-tooltip>
+                  <q-btn
+                    v-if="props.row.markdown"
+                    size="xs"
+                    round
+                    color="secondary"
+                    icon="delete"
+                    @click="deleteBookmark(props.row.markdown)"
+                  >
+                    <q-tooltip class="bg-accent">{{
+                      getLocale("DeleteBookmark")
+                    }}</q-tooltip>
                   </q-btn>
-                  <q-btn v-if="props.row.markdown" size="xs" round color="secondary" icon="edit" @click="editBookmark(props.row.markdown)">
-                    <q-tooltip class="bg-accent">{{ getLocale('EditBookmark') }}</q-tooltip>
+                  <q-btn
+                    v-if="props.row.markdown"
+                    size="xs"
+                    round
+                    color="secondary"
+                    icon="edit"
+                    @click="editBookmark(props.row.markdown)"
+                  >
+                    <q-tooltip class="bg-accent">{{
+                      getLocale("EditBookmark")
+                    }}</q-tooltip>
                   </q-btn>
                 </q-td>
               </q-tr>
@@ -164,67 +250,97 @@
           </q-table>
         </div>
       </q-page>
-      <InputTokenDialog v-if="inputTokenDialog" @token-stored="closeWindow" @cancel="closeWindow" />
-      <AddBookmarkDialog v-model="addBookmarkDialog" :bookmark="editedBookmark" :webSocket="webSocket" @bookmark-stored="onBookmarkStored" />
-      <EditBookmarkDialog v-model="editBookmarkDialog" :markdown="editBookmarkMarkdown" :webSocket="webSocket" @bookmark-edited="onBookmarkEdited" />
-      <BookmarkAllTabsDialog v-model="bookmarkAllTabsDialog" :webSocket="webSocket" @bookmarksStored="onBookmarksStored" />
-      <ImportBrowserBookmarksDialog v-model="importBrowserBookmarksDialog" :webSocket="webSocket" @bookmarksImported="onBookmarksImported" />
+      <InputTokenDialog
+        v-if="inputTokenDialog"
+        @token-stored="closeWindow"
+        @cancel="closeWindow"
+      />
+      <AddBookmarkDialog
+        v-model="addBookmarkDialog"
+        :bookmark="editedBookmark"
+        :webSocket="webSocket"
+        @bookmark-stored="onBookmarkStored"
+      />
+      <EditBookmarkDialog
+        v-model="editBookmarkDialog"
+        :markdown="editBookmarkMarkdown"
+        :webSocket="webSocket"
+        @bookmark-edited="onBookmarkEdited"
+      />
+      <BookmarkAllTabsDialog
+        v-model="bookmarkAllTabsDialog"
+        :webSocket="webSocket"
+        @bookmarksStored="onBookmarksStored"
+      />
+      <ImportBrowserBookmarksDialog
+        v-model="importBrowserBookmarksDialog"
+        :webSocket="webSocket"
+        @bookmarksImported="onBookmarksImported"
+      />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import {computed, defineComponent, nextTick, onMounted, reactive, ref, watch} from 'vue'
-import { getLocale, openPrivateUrl, truncateText } from '../helpers/utils'
-import { QWebSocket } from '../services/qwebsocket'
-import InputTokenDialog from '../components/InputTokenDialog.vue'
+import {
+  computed,
+  defineComponent,
+  nextTick,
+  onMounted,
+  reactive,
+  ref,
+  watch,
+} from "vue";
+import { getLocale, openPrivateUrl, truncateText } from "../helpers/utils";
+import { QWebSocket } from "../services/qwebsocket";
+import InputTokenDialog from "../components/InputTokenDialog.vue";
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
 import EditBookmarkDialog from "components/EditBookmarkDialog.vue";
-import {Notify, useQuasar} from "quasar";
+import { Notify, useQuasar } from "quasar";
 import BookmarkAllTabsDialog from "components/BookmarkAllTabsDialog.vue";
 import ImportBrowserBookmarksDialog from "components/ImportBrowserBookmarksDialog.vue";
 import PopupDrawer from "components/PopupDrawer.vue";
 
 const columns = [
-  { name: 'name', align: 'left', label: 'Name', field: 'name', sortable: true },
-  { name: 'url', align: 'left', label: 'Url', field: 'url', sortable: true },
-  { name: 'tags', align: 'left', label: 'Tags', field: 'tags', sortable: true },
-  { name: 'toolbar', align: 'left' }
-]
+  { name: "name", align: "left", label: "Name", field: "name", sortable: true },
+  { name: "url", align: "left", label: "Url", field: "url", sortable: true },
+  { name: "tags", align: "left", label: "Tags", field: "tags", sortable: true },
+  { name: "toolbar", align: "left" },
+];
 
 export default defineComponent({
-  setup () {
+  setup() {
     const $q = useQuasar();
-    const leftDrawerOpen = ref(false)
-    const privateMode = ref(false)
-    const hideCurrent = ref(false)
+    const leftDrawerOpen = ref(false);
+    const privateMode = ref(false);
+    const hideCurrent = ref(false);
     let bookmarks = ref([]);
     let loadingBookmarks = ref(false);
-    let search = ref('');
-    let noteFolderName = ref('');
+    let search = ref("");
+    let noteFolderName = ref("");
     let noteFolders = ref([]);
     let selectedNoteFolderId = ref(null);
     let selectedNoteFolderIdWatchEnabled = true;
     let addBookmarkDialog = ref(false);
     let editBookmarkDialog = ref(false);
     let bookmarkAllTabsDialog = ref(false);
-    let editBookmarkMarkdown = ref('');
+    let editBookmarkMarkdown = ref("");
     const pagination = ref({
-      sortBy: 'name',
+      sortBy: "name",
       descending: false,
       page: 1,
       rowsPerPage: 10,
-      initialSetup: true
+      initialSetup: true,
     });
     const editedBookmark = reactive({
-      name: '',
-      url: '',
-      description: ''
+      name: "",
+      url: "",
+      description: "",
     });
     const defaultBookmark = reactive({
-      name: '',
-      url: '',
-      description: ''
+      name: "",
+      url: "",
+      description: "",
     });
     let selectedTags = ref([]);
     let webSocket = ref(new QWebSocket());
@@ -270,7 +386,9 @@ export default defineComponent({
       // filter by tags
       if (selectedTags.value && selectedTags.value.length > 0) {
         filteredBookmarks1 = filteredBookmarks1.filter((bookmark) => {
-          return selectedTags.value.every((elem) => bookmark.tags.includes(elem));
+          return selectedTags.value.every((elem) =>
+            bookmark.tags.includes(elem),
+          );
         });
       }
 
@@ -279,7 +397,7 @@ export default defineComponent({
       // filter by all parts of the search text
       if (search.value !== undefined && search.value !== null) {
         filteredBookmarks2 = [];
-        const searchParts = search.value.toLowerCase().trim().split(' ');
+        const searchParts = search.value.toLowerCase().trim().split(" ");
         const searchPartsLength = searchParts.length;
 
         filteredBookmarks1.forEach((bookmark) => {
@@ -306,10 +424,12 @@ export default defineComponent({
 
     const tagFilterFn = (val, update, abort) => {
       update(() => {
-        const needle = val.toLocaleLowerCase()
+        const needle = val.toLocaleLowerCase();
 
-        filteredTags.value = allTags.value.filter(v => v.toLocaleLowerCase().indexOf(needle) > -1)
-      })
+        filteredTags.value = allTags.value.filter(
+          (v) => v.toLocaleLowerCase().indexOf(needle) > -1,
+        );
+      });
     };
 
     const openFilteredBookmarks = () => {
@@ -343,33 +463,33 @@ export default defineComponent({
     const onHideCurrentChanged = (value) => {
       hideCurrent.value = value;
       loadBookmarks();
-    }
+    };
 
     const onPrivateModeChanged = (value) => {
       privateMode.value = value;
-    }
+    };
 
     const deleteBookmark = (markdown) => {
       $q.dialog({
-        title: getLocale('DeleteBookmarkConfirmTitle'),
-        message: `${getLocale('DeleteBookmarkConfirmMessage')}<br><br><code style="display: block; overflow-x: auto">${markdown}</code>`,
+        title: getLocale("DeleteBookmarkConfirmTitle"),
+        message: `${getLocale("DeleteBookmarkConfirmMessage")}<br><br><code style="display: block; overflow-x: auto">${markdown}</code>`,
         html: true,
         cancel: true,
-        persistent: true
+        persistent: true,
       }).onOk(() => {
-        const data = {type: "deleteBookmark", data: {markdown: markdown}};
+        const data = { type: "deleteBookmark", data: { markdown: markdown } };
         webSocket.value.send(data, function () {
           console.log("Deleting bookmark:" + data);
           loadBookmarks();
         });
       });
-    }
+    };
 
     const editBookmark = (markdown) => {
-      console.log('markdown', markdown)
+      console.log("markdown", markdown);
       editBookmarkMarkdown.value = markdown;
       editBookmarkDialog.value = true;
-    }
+    };
 
     const openUrl = (url, event) => {
       if (event) {
@@ -380,15 +500,15 @@ export default defineComponent({
       if (privateMode.value) {
         openPrivateUrl(url);
       } else {
-        chrome.tabs.create({url});
+        chrome.tabs.create({ url });
       }
-    }
+    };
 
     const searchInput = ref(null);
 
     onMounted(() => {
       chrome.storage.sync.get((data) => {
-        search.value = data.search || '';
+        search.value = data.search || "";
         privateMode.value = data.privateMode || false;
         hideCurrent.value = data.hideCurrent || false;
         loadBookmarks();
@@ -400,7 +520,7 @@ export default defineComponent({
       webSocket.value = new QWebSocket((event) => {
         const data = event.data;
 
-        if (typeof data === 'string' || data instanceof String) {
+        if (typeof data === "string" || data instanceof String) {
           // create a JSON object
           const jsonObject = JSON.parse(data);
           const type = jsonObject.type;
@@ -408,7 +528,7 @@ export default defineComponent({
           console.log("Got a new message: " + jsonObject);
           console.log("type", type);
 
-          if (type === 'bookmarks') {
+          if (type === "bookmarks") {
             bookmarks.value = jsonObject.data;
             console.log("bookmarks", bookmarks);
             noteFolderName.value = jsonObject.noteFolderName;
@@ -431,7 +551,11 @@ export default defineComponent({
               const dataSelectedTags = Object.values(data.selectedTags || []);
 
               // check if we can add stored selected tags
-              if (data.selectedTags !== undefined && dataSelectedTags.length > 0 && tags.length > 0) {
+              if (
+                data.selectedTags !== undefined &&
+                dataSelectedTags.length > 0 &&
+                tags.length > 0
+              ) {
                 dataSelectedTags.forEach((tag) => {
                   if (tags.indexOf(tag) > -1) {
                     localSelectedTags.push(tag);
@@ -441,13 +565,13 @@ export default defineComponent({
 
               selectedTags.value = localSelectedTags;
             });
-          } else if (type === 'switchedNoteFolder') {
+          } else if (type === "switchedNoteFolder") {
             if (jsonObject.data === false) {
               loadingBookmarks.value = false;
             }
-          } else if (type === 'flashMessage') {
+          } else if (type === "flashMessage") {
             Notify.create(jsonObject.message);
-          } else if (type === 'tokenQuery') {
+          } else if (type === "tokenQuery") {
             inputTokenDialog.value = true;
           }
         }
@@ -467,7 +591,11 @@ export default defineComponent({
         }
 
         loadingBookmarks.value = true;
-        const data = {type: "switchNoteFolder", data: newFolderId, hideCurrent: hideCurrent.value};
+        const data = {
+          type: "switchNoteFolder",
+          data: newFolderId,
+          hideCurrent: hideCurrent.value,
+        };
         webSocket.value.send(data, function () {
           console.log("Switching to note folder:" + data);
         });
@@ -482,7 +610,7 @@ export default defineComponent({
       }
 
       chrome.storage.sync.set({
-        pagination: newPagination
+        pagination: newPagination,
       });
       // console.log("newPagination", newPagination);
     });
@@ -499,19 +627,19 @@ export default defineComponent({
     const loadBookmarks = () => {
       loadingBookmarks.value = true;
 
-      const data = {type: "getBookmarks", hideCurrent: hideCurrent.value};
+      const data = { type: "getBookmarks", hideCurrent: hideCurrent.value };
       webSocket.value.send(data, function () {
         console.log("Loading bookmarks:" + data);
       });
-    }
+    };
 
     const closeWindow = () => {
       window.close();
-    }
+    };
 
     const toggleLeftDrawer = () => {
-      leftDrawerOpen.value = !leftDrawerOpen.value
-    }
+      leftDrawerOpen.value = !leftDrawerOpen.value;
+    };
 
     // Return the variables that you want to use in the template
     return {
@@ -553,7 +681,7 @@ export default defineComponent({
       closeWindow,
       tagFilterFn,
       filteredTags,
-      openFilteredBookmarks
+      openFilteredBookmarks,
     };
   },
   components: {
@@ -562,10 +690,10 @@ export default defineComponent({
     EditBookmarkDialog,
     BookmarkAllTabsDialog,
     ImportBrowserBookmarksDialog,
-    InputTokenDialog
+    InputTokenDialog,
   },
-  methods: {getLocale, truncateText}
-})
+  methods: { getLocale, truncateText },
+});
 
 // export default defineComponent({
 //   name: 'IndexPage',
@@ -600,8 +728,12 @@ export default defineComponent({
 
 .bookmark-list {
   font-size: 1.5em;
-  td.click { cursor: pointer; }
-  a { color: black; }
+  td.click {
+    cursor: pointer;
+  }
+  a {
+    color: black;
+  }
 }
 
 .q-table tbody td {

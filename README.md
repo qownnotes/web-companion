@@ -20,20 +20,20 @@ The extension is currently tested for Google Chrome and Mozilla Firefox.
 ## Features
 
 - **managing bookmarks** with QOwnNotes notes
-    - you can browse your QOwnNotes bookmarks
-    - you can search for bookmarks and filter them by tag
-    - you can add new bookmarks from the current tab or all tabs
-    - you can add open all bookmarks in tabs
-    - you can import your browser bookmarks to QOwnNotes
-    - for more information about the **bookmarks feature** please visit
-      [QOwnNotes Web Companion browser extension](https://docs.qownnotes.org/en/latest/getting-started/browser-extension/)
+  - you can browse your QOwnNotes bookmarks
+  - you can search for bookmarks and filter them by tag
+  - you can add new bookmarks from the current tab or all tabs
+  - you can add open all bookmarks in tabs
+  - you can import your browser bookmarks to QOwnNotes
+  - for more information about the **bookmarks feature** please visit
+    [QOwnNotes Web Companion browser extension](https://docs.qownnotes.org/en/latest/getting-started/browser-extension/)
 - creating a new note (only text) from the **current selection** by right-clicking it
-    - this is scriptable in QOwnNotes
+  - this is scriptable in QOwnNotes
 - creating a new note from the content of the **current web page** by right-clicking on the page
-    - the HTML will be converted to Markdown and images of the page will be downloaded (might take a while)
-    - this is scriptable in QOwnNotes
+  - the HTML will be converted to Markdown and images of the page will be downloaded (might take a while)
+  - this is scriptable in QOwnNotes
 - creating a new note with a **screenshot** of the visible part of the current webpage by right-clicking on the page
-- you can change the server socket port in the extension *Option page*
+- you can change the server socket port in the extension _Option page_
 
 ## Screenshot
 

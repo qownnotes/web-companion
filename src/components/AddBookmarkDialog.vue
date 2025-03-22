@@ -2,7 +2,7 @@
   <q-dialog v-model="dialog">
     <q-card>
       <q-card-section>
-        <div class="text-h6">{{ getLocale('NewBookmark') }}</div>
+        <div class="text-h6">{{ getLocale("NewBookmark") }}</div>
       </q-card-section>
 
       <q-card-section class="q-pt-none">
@@ -54,35 +54,47 @@
       </q-card-section>
 
       <q-card-actions align="right">
-        <q-btn flat :label="getLocale('Cancel')" tabindex="5" v-close-popup @click="$emit('cancel')" />
-        <q-btn flat :label="getLocale('Ok')" color="primary" tabindex="4" @click="storeBookmark" />
+        <q-btn
+          flat
+          :label="getLocale('Cancel')"
+          tabindex="5"
+          v-close-popup
+          @click="$emit('cancel')"
+        />
+        <q-btn
+          flat
+          :label="getLocale('Ok')"
+          color="primary"
+          tabindex="4"
+          @click="storeBookmark"
+        />
       </q-card-actions>
     </q-card>
   </q-dialog>
 </template>
 
 <script>
-import {getLocale} from "src/helpers/utils";
-import {defineComponent, reactive, ref} from "vue";
-import {QWebSocket} from "src/services/qwebsocket";
+import { getLocale } from "src/helpers/utils";
+import { defineComponent, reactive, ref } from "vue";
+import { QWebSocket } from "src/services/qwebsocket";
 
 export default defineComponent({
   name: "AddBookmarkDialog",
-  methods: {getLocale},
+  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
-      default: false
+      default: false,
     },
     bookmark: {
       type: Object,
-      default: () => ({ name: '', description: '', url: '' }),
-      required: true
+      default: () => ({ name: "", description: "", url: "" }),
+      required: true,
     },
     webSocket: {
       type: QWebSocket,
-      required: true
-    }
+      required: true,
+    },
   },
   setup(props, { emit }) {
     const dialog = ref(props.model);
@@ -94,24 +106,22 @@ export default defineComponent({
       //   event.preventDefault();
       // }
 
-      const data = {type: "newBookmarks", data: [editedBookmark]};
+      const data = { type: "newBookmarks", data: [editedBookmark] };
 
       props.webSocket.send(data, function () {
         console.log("Stored bookmark:" + data);
-        emit('bookmarkStored');
+        emit("bookmarkStored");
       });
     };
 
     return {
       dialog,
       editedBookmark,
-      storeBookmark
+      storeBookmark,
     };
   },
-  emits: ['cancel', 'bookmarkStored']
-})
+  emits: ["cancel", "bookmarkStored"],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

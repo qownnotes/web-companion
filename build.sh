@@ -3,7 +3,7 @@
 # Builds the extensions for Chrome and Firefox
 ###
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR" || exit 1
 
 # Build the Chrome extension

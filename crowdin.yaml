@@ -13,8 +13,7 @@ base_path: "."
 #api_token: XXXX
 
 files:
-  -
-    # source files filter
-    source: '/src-bex/_locales/en/messages.json'
+  - # source files filter
+    source: "/src-bex/_locales/en/messages.json"
     # where translations live
-    translation: '/src-bex/_locales/%locale_with_underscore%/messages.json'
+    translation: "/src-bex/_locales/%locale_with_underscore%/messages.json"

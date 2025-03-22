@@ -2,7 +2,7 @@
   <q-page class="flex flex-center" style="min-width: 400px; min-height: 300px">
     <q-card flat class="">
       <q-card-section>
-        <div class="text-h6">{{ getLocale('InputToken') }}</div>
+        <div class="text-h6">{{ getLocale("InputToken") }}</div>
       </q-card-section>
 
       <q-card-section class="q-pt-none">
@@ -11,23 +11,28 @@
 
       <q-card-actions align="right" class="text-primary">
         <q-btn flat :label="getLocale('Cancel')" @click="cancelClicked" />
-        <q-btn flat :label="getLocale('Ok')" type="submit" @click="storeToken" />
+        <q-btn
+          flat
+          :label="getLocale('Ok')"
+          type="submit"
+          @click="storeToken"
+        />
       </q-card-actions>
     </q-card>
   </q-page>
 </template>
 
 <script>
-import {getLocale} from "src/helpers/utils";
-import {defineComponent, onMounted, ref, watch} from "vue";
-import {QWebSocket} from "src/services/qwebsocket";
+import { getLocale } from "src/helpers/utils";
+import { defineComponent, onMounted, ref, watch } from "vue";
+import { QWebSocket } from "src/services/qwebsocket";
 
 export default defineComponent({
   name: "InputTokenDialog",
   setup(_, { emit }) {
-    const token = ref('');
+    const token = ref("");
 
-    chrome.storage.sync.get(['token'], (result) => {
+    chrome.storage.sync.get(["token"], (result) => {
       token.value = result.token;
     });
 
@@ -41,12 +46,12 @@ export default defineComponent({
         // and then use ref.value.$emit('input') to emit the event
 
         console.log("token.value", token.value);
-        emit('tokenStored');
+        emit("tokenStored");
       });
     };
 
     const cancelClicked = () => {
-      emit('cancel');
+      emit("cancel");
     };
 
     // Return variables and methods that you want to expose to the template
@@ -54,13 +59,11 @@ export default defineComponent({
       token,
       getLocale,
       storeToken,
-      cancelClicked
+      cancelClicked,
     };
   },
-  emits: ['tokenStored', 'cancel']
-})
+  emits: ["tokenStored", "cancel"],
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

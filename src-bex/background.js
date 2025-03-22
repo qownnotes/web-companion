@@ -1,44 +1,44 @@
-import { bexBackground } from 'quasar/wrappers'
+import { bexBackground } from "quasar/wrappers";
 
 export default bexBackground((bridge /* , allActiveConnections */) => {
-  bridge.on('log', ({ data, respond }) => {
-    console.log(`[BEX] ${data.message}`, ...(data.data || []))
-    respond()
-  })
+  bridge.on("log", ({ data, respond }) => {
+    console.log(`[BEX] ${data.message}`, ...(data.data || []));
+    respond();
+  });
 
-  bridge.on('getTime', ({ respond }) => {
-    respond(Date.now())
-  })
+  bridge.on("getTime", ({ respond }) => {
+    respond(Date.now());
+  });
 
-  bridge.on('storage.get', ({ data, respond }) => {
-    const { key } = data
+  bridge.on("storage.get", ({ data, respond }) => {
+    const { key } = data;
     if (key === null) {
-      chrome.storage.local.get(null, items => {
+      chrome.storage.local.get(null, (items) => {
         // Group the values up into an array to take advantage of the bridge's chunk splitting.
-        respond(Object.values(items))
-      })
+        respond(Object.values(items));
+      });
     } else {
-      chrome.storage.local.get([key], items => {
-        respond(items[key])
-      })
+      chrome.storage.local.get([key], (items) => {
+        respond(items[key]);
+      });
     }
-  })
+  });
   // Usage:
   // const { data } = await bridge.send('storage.get', { key: 'someKey' })
 
-  bridge.on('storage.set', ({ data, respond }) => {
+  bridge.on("storage.set", ({ data, respond }) => {
     chrome.storage.local.set({ [data.key]: data.value }, () => {
-      respond()
-    })
-  })
+      respond();
+    });
+  });
   // Usage:
   // await bridge.send('storage.set', { key: 'someKey', value: 'someValue' })
 
-  bridge.on('storage.remove', ({ data, respond }) => {
+  bridge.on("storage.remove", ({ data, respond }) => {
     chrome.storage.local.remove(data.key, () => {
-      respond()
-    })
-  })
+      respond();
+    });
+  });
   // Usage:
   // await bridge.send('storage.remove', { key: 'someKey' })
 
@@ -61,7 +61,7 @@ export default bexBackground((bridge /* , allActiveConnections */) => {
     }
   })
    */
-})
+});
 
 let ws = null;
 let connected = false;
@@ -69,8 +69,8 @@ const serverUrl = "ws://127.0.0.1";
 let sendText = "";
 let socketPort = 22222;
 let token = "";
-import {getLocale} from "../src/helpers/utils";
-var isFirefox = typeof InstallTrigger !== 'undefined';
+import { getLocale } from "../src/helpers/utils";
+var isFirefox = typeof InstallTrigger !== "undefined";
 
 // A generic onclick callback function.
 function genericOnClick(info, tab) {
@@ -175,30 +175,45 @@ function scrapeSelection(info, tab) {
       const text = "<" + tab.url + ">\n\n" + selectionText;
 
       // also take a screenshot to be able to use it in the QOwnNotes scripting hook
-      chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
-        const data = {
-          type: "handleRawData", requestType: "selection", contentType: "markdown", rawData: selectionText,
-          headline: headline, text: text, pageUrl: info.pageUrl, pageTitle: headline, screenshotDataUrl: dataUrl
-        };
+      chrome.tabs.captureVisibleTab(
+        null,
+        { format: "png" },
+        function (dataUrl) {
+          const data = {
+            type: "handleRawData",
+            requestType: "selection",
+            contentType: "markdown",
+            rawData: selectionText,
+            headline: headline,
+            text: text,
+            pageUrl: info.pageUrl,
+            pageTitle: headline,
+            screenshotDataUrl: dataUrl,
+          };
 
-        WebSocketClient.sendData(data);
-      });
+          WebSocketClient.sendData(data);
+        },
+      );
     }
 
     // this will get us the selected text with newlines
     try {
-      chrome.scripting.executeScript({
-          target: {tabId: tab.id},
+      chrome.scripting.executeScript(
+        {
+          target: { tabId: tab.id },
           func: () => getSelection().toString(),
         },
         (selection) => {
-          const selectionText = chrome.runtime.lastError ? info.selectionText : selection[0].result;
+          const selectionText = chrome.runtime.lastError
+            ? info.selectionText
+            : selection[0].result;
           getText(selectionText);
-        });
+        },
+      );
     } catch (e) {
       getText(info.selectionText);
     }
-  })
+  });
 }
 
 /**
@@ -209,18 +224,31 @@ function scrapeSelection(info, tab) {
  */
 function scrapePageScreenshot(info, tab) {
   checkConsent(info, tab, (info, tab) => {
-    chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
+    chrome.tabs.captureVisibleTab(null, { format: "png" }, function (dataUrl) {
       const headline = tab.title;
 
       // const text = "<" + tab.url + ">\n\n![](" + dataUrl + ")";
       // const data = {type: "newNote", contentType: "markdown", headline: headline, text: text, pageUrl: info.pageUrl};
 
       const url = tab.url;
-      const text = "<a href=\"" + url + "\">" + url + "</a><br /><br /><img src=\"" + dataUrl + "\" />";
-      const data = {type: "newNote", contentType: "html", headline: headline, text: text, pageUrl: url};
+      const text =
+        '<a href="' +
+        url +
+        '">' +
+        url +
+        '</a><br /><br /><img src="' +
+        dataUrl +
+        '" />';
+      const data = {
+        type: "newNote",
+        contentType: "html",
+        headline: headline,
+        text: text,
+        pageUrl: url,
+      };
       WebSocketClient.sendData(data);
     });
-  })
+  });
 }
 
 /**
@@ -231,51 +259,60 @@ function scrapePageScreenshot(info, tab) {
  */
 function scrapeHTMLPage(info, tab) {
   checkConsent(info, tab, (info, tab) => {
-    chrome.scripting.executeScript({
-      target: {tabId: tab.id},
-      func: () => {
-        // Inlining this was the only thing that worked
-        function DOMtoString(document_root) {
-          var html = '',
-            node = document_root.firstChild;
-          while (node) {
-            switch (node.nodeType) {
-              case Node.ELEMENT_NODE:
-                html += node.outerHTML;
-                break;
-              case Node.TEXT_NODE:
-                html += node.nodeValue;
-                break;
-              case Node.CDATA_SECTION_NODE:
-                html += '<![CDATA[' + node.nodeValue + ']]>';
-                break;
-              case Node.COMMENT_NODE:
-                html += '<!--' + node.nodeValue + '-->';
-                break;
-              case Node.DOCUMENT_TYPE_NODE:
-                // (X)HTML documents are identified by public identifiers
-                html += "<!DOCTYPE " + node.name + (node.publicId ? ' PUBLIC "' + node.publicId + '"' : '') + (!node.publicId && node.systemId ? ' SYSTEM' : '') + (node.systemId ? ' "' + node.systemId + '"' : '') + '>\n';
-                break;
+    chrome.scripting.executeScript(
+      {
+        target: { tabId: tab.id },
+        func: () => {
+          // Inlining this was the only thing that worked
+          function DOMtoString(document_root) {
+            var html = "",
+              node = document_root.firstChild;
+            while (node) {
+              switch (node.nodeType) {
+                case Node.ELEMENT_NODE:
+                  html += node.outerHTML;
+                  break;
+                case Node.TEXT_NODE:
+                  html += node.nodeValue;
+                  break;
+                case Node.CDATA_SECTION_NODE:
+                  html += "<![CDATA[" + node.nodeValue + "]]>";
+                  break;
+                case Node.COMMENT_NODE:
+                  html += "<!--" + node.nodeValue + "-->";
+                  break;
+                case Node.DOCUMENT_TYPE_NODE:
+                  // (X)HTML documents are identified by public identifiers
+                  html +=
+                    "<!DOCTYPE " +
+                    node.name +
+                    (node.publicId ? ' PUBLIC "' + node.publicId + '"' : "") +
+                    (!node.publicId && node.systemId ? " SYSTEM" : "") +
+                    (node.systemId ? ' "' + node.systemId + '"' : "") +
+                    ">\n";
+                  break;
+              }
+              node = node.nextSibling;
             }
-            node = node.nextSibling;
+
+            return html;
           }
 
-          return html;
-        }
-
-        chrome.runtime.sendMessage({
-          action: "getSource",
-          source: DOMtoString(document)
-        });
+          chrome.runtime.sendMessage({
+            action: "getSource",
+            source: DOMtoString(document),
+          });
+        },
       },
-    }, () => {
-      // If you try and inject into an extensions page or the webstore/NTP you'll get an error
-      if (chrome.runtime.lastError) {
-        // there are no alerts in service-workers
-        console.error('Error: \n' + chrome.runtime.lastError.message);
-      }
-    });
-  })
+      () => {
+        // If you try and inject into an extensions page or the webstore/NTP you'll get an error
+        if (chrome.runtime.lastError) {
+          // there are no alerts in service-workers
+          console.error("Error: \n" + chrome.runtime.lastError.message);
+        }
+      },
+    );
+  });
 }
 
 function getServerUrl() {
@@ -295,7 +332,9 @@ function checkConsent(info, tab, fun) {
       fun(info, tab);
     } else {
       // This only works in Chrome
-      alert('You need to open the QOwnNotes Web Companion extension popup to allow data being sent to QOwnNotes!');
+      alert(
+        "You need to open the QOwnNotes Web Companion extension popup to allow data being sent to QOwnNotes!",
+      );
     }
   });
 }
@@ -355,7 +394,7 @@ function checkConsent(info, tab, fun) {
  * Load the settings
  */
 function loadSettings() {
-  chrome.storage.sync.get( function ( data ) {
+  chrome.storage.sync.get(function (data) {
     token = data.token;
     const port = data.socketPort;
 
@@ -364,7 +403,7 @@ function loadSettings() {
       console.log("socketPort from settings");
       console.log(socketPort);
     }
-  } );
+  });
 }
 
 loadSettings();
@@ -378,31 +417,35 @@ chrome.storage.onChanged.addListener(function () {
 // of the background script being reloaded
 chrome.contextMenus.removeAll(() => {
   const mainMenu = chrome.contextMenus.create({
-    "id": "mainMenu-root",
-    "title": "QOwnNotes", "contexts": ["page"]
+    id: "mainMenu-root",
+    title: "QOwnNotes",
+    contexts: ["page"],
   });
 
   chrome.contextMenus.create({
-    "id": "mainMenu-sendPageToQOwnNotes",
-    "title": getLocale('sendPageToQOwnNotes'), "contexts": ["page"],
-    "parentId": mainMenu
+    id: "mainMenu-sendPageToQOwnNotes",
+    title: getLocale("sendPageToQOwnNotes"),
+    contexts: ["page"],
+    parentId: mainMenu,
   });
 
   chrome.contextMenus.create({
-    "id": "mainMenu-createScreenshotNote",
-    "title": getLocale('createScreenshotNote'), "contexts": ["page"],
-    "parentId": mainMenu
+    id: "mainMenu-createScreenshotNote",
+    title: getLocale("createScreenshotNote"),
+    contexts: ["page"],
+    parentId: mainMenu,
   });
 
   chrome.contextMenus.create({
-    "id": "mainMenu-sendSelectionToQOwnNotes",
-    "title": getLocale('sendSelectionToQOwnNotes'), "contexts": ["selection"],
-    "parentId": null
+    id: "mainMenu-sendSelectionToQOwnNotes",
+    title: getLocale("sendSelectionToQOwnNotes"),
+    contexts: ["selection"],
+    parentId: null,
   });
 });
 
-chrome.contextMenus.onClicked.addListener(function(info, tab) {
-  switch(info.menuItemId) {
+chrome.contextMenus.onClicked.addListener(function (info, tab) {
+  switch (info.menuItemId) {
     case "mainMenu-sendPageToQOwnNotes":
       scrapeHTMLPage(info, tab);
       break;
@@ -415,26 +458,38 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   }
 });
 
-chrome.runtime.onMessage.addListener(function(request, sender) {
+chrome.runtime.onMessage.addListener(function (request, sender) {
   console.log("request:");
   console.log(request);
   // used by scrapeHTMLPage
   if (request.action === "getSource") {
-    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       const tab = tabs[0];
       const headline = tab.title;
       const url = tab.url;
       // default text for creating a note
-      const text = "<a href=\"" + url + "\">" + url + "</a><br /><br />" + request.source;
+      const text =
+        '<a href="' + url + '">' + url + "</a><br /><br />" + request.source;
 
       // also take a screenshot to be able to use it in the QOwnNotes scripting hook
-      chrome.tabs.captureVisibleTab(null, {format: "png"}, function(dataUrl) {
-        const data = {
-          type: "handleRawData", requestType: "page", contentType: "html", rawData: request.source,
-          headline: headline, text: text, pageTitle: headline, pageUrl: url, screenshotDataUrl: dataUrl
-        };
-        WebSocketClient.sendData(data);
-      });
+      chrome.tabs.captureVisibleTab(
+        null,
+        { format: "png" },
+        function (dataUrl) {
+          const data = {
+            type: "handleRawData",
+            requestType: "page",
+            contentType: "html",
+            rawData: request.source,
+            headline: headline,
+            text: text,
+            pageTitle: headline,
+            pageUrl: url,
+            screenshotDataUrl: dataUrl,
+          };
+          WebSocketClient.sendData(data);
+        },
+      );
     });
   }
 
@@ -455,14 +510,14 @@ let open = function () {
 
 let close = function () {
   if (ws) {
-    console.log('CLOSING ...');
+    console.log("CLOSING ...");
     ws.close();
   }
   connected = false;
 };
 
 let onOpen = function () {
-  console.log('OPENED: ' + getServerUrl());
+  console.log("OPENED: " + getServerUrl());
   connected = true;
   sendMessageToSocket();
 };
@@ -480,7 +535,7 @@ let sendMessageToSocket = function () {
 };
 
 let onClose = function () {
-  console.log('CLOSED: ' + getServerUrl());
+  console.log("CLOSED: " + getServerUrl());
   ws = null;
   connected = false;
 };
@@ -509,7 +564,7 @@ let WebSocketClient = {
     } else {
       sendMessageToSocket();
     }
-  }
+  },
 };
 
 /*

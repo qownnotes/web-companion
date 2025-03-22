@@ -2,7 +2,7 @@
   <q-page>
     <q-card>
       <q-card-section>
-        <div class="text-h6">{{ getLocale('settingsHeadline') }}</div>
+        <div class="text-h6">{{ getLocale("settingsHeadline") }}</div>
       </q-card-section>
       <q-card-section>
         <q-form class="q-gutter-md">
@@ -34,15 +34,15 @@
   </q-page>
 </template>
 <script>
-import {getLocale} from "src/helpers/utils";
-import {defineComponent, onMounted, ref, watch} from "vue";
+import { getLocale } from "src/helpers/utils";
+import { defineComponent, onMounted, ref, watch } from "vue";
 
 export default defineComponent({
-  methods: {getLocale},
-  setup () {
+  methods: { getLocale },
+  setup() {
     const defaultSocketPort = 22222;
     let socketPort = ref(defaultSocketPort);
-    let token = ref('');
+    let token = ref("");
     const isPwd = ref(true);
 
     const loadSettings = () => {
@@ -56,7 +56,7 @@ export default defineComponent({
 
         token.value = data.token;
       });
-    }
+    };
 
     onMounted(() => {
       loadSettings();
@@ -87,7 +87,7 @@ export default defineComponent({
       token,
       isPwd,
       socketPort,
-    }
-  }
+    };
+  },
 });
 </script>
