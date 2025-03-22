@@ -10,4 +10,9 @@ pkgs.mkShell {
     zellij # smart terminal workspace
     imagemagick # screenshot resizing
   ];
+
+  shellHook = ''
+    # Symlink the pre-commit hook into the .git/hooks directory
+    ln -sf ../../scripts/pre-commit.sh .git/hooks/pre-commit
+  '';
 }
