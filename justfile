@@ -14,6 +14,7 @@ transferDir := `if [ -d "$HOME/NextcloudPrivate/Transfer" ]; then echo "$HOME/Ne
 # Aliases
 
 alias dev := run
+alias fmt := format
 
 # Open a terminal with the project session
 [group('dev')]
@@ -90,12 +91,7 @@ run:
         exit 1
     fi
 
-# Format all justfiles
+# Format all files
 [group('linter')]
-just-format:
-    #!/usr/bin/env bash
-    # Find all files named "justfile" recursively and run just --fmt --unstable on them
-    find . -type f -name "justfile" -print0 | while IFS= read -r -d '' file; do
-        echo "Formatting $file"
-        just --fmt --unstable -f "$file"
-    done
+format args='':
+    nix-shell -p treefmt nodePackages.prettier shfmt nixfmt-rfc-style statix taplo --run "treefmt {{ args }}"
