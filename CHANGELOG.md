@@ -1,5 +1,11 @@
 # QOwnNotes Web Companion Changelog
 
+## 2025.9.0
+
+- The extension was migrated to the latest version of Quasar to mitigate security issues
+  in those and other packages (for [#86](https://github.com/qownnotes/web-companion/issues/86))
+- The dependencies were updated
+
 ## 2024.12.0
 
 - The private mode switch got moved to the drawer menu, so it doesn't take up space in the popup anymore

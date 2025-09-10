@@ -1,61 +1,63 @@
 {
-  "name": "QOwnNotes Web Companion",
-  "short_name": "qownnotes",
-  "description": "__MSG_appDescription__",
-  "default_locale": "en",
-  "homepage_url": "https://github.com/qownnotes/web-companion",
-  "manifest_version": 3,
+  "all": {
+    "name": "QOwnNotes Web Companion",
+    "short_name": "qownnotes",
+    "description": "__MSG_appDescription__",
+    "default_locale": "en",
+    "homepage_url": "https://github.com/qownnotes/web-companion",
+    "manifest_version": 3,
 
-  "icons": {
-    "16": "icons/16x16/apps/QOwnNotes.png",
-    "32": "icons/32x32/apps/QOwnNotes.png",
-    "48": "icons/48x48/apps/QOwnNotes.png",
-    "128": "icons/128x128/apps/QOwnNotes.png"
-  },
+    "icons": {
+      "16": "icons/16x16/apps/QOwnNotes.png",
+      "32": "icons/32x32/apps/QOwnNotes.png",
+      "48": "icons/48x48/apps/QOwnNotes.png",
+      "128": "icons/128x128/apps/QOwnNotes.png"
+    },
 
-  "minimum_chrome_version": "88.0",
+    "minimum_chrome_version": "88.0",
 
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "contextMenus",
-    "storage",
-    "bookmarks",
-    "scripting"
-  ],
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "contextMenus",
+      "storage",
+      "bookmarks",
+      "scripting"
+    ],
 
-  "options_page": "www/index.html#/options",
+    "options_page": "www/index.html#/options",
 
-  "action": {
-    "default_popup": "www/index.html#/popup"
-  },
+    "action": {
+      "default_popup": "www/index.html#/popup"
+    },
 
-  "commands": {
-    "_execute_action": {
-      "suggested_key": { "default": "Ctrl+B", "mac": "Command+B" }
-    }
-  },
+    "commands": {
+      "_execute_action": {
+        "suggested_key": { "default": "Ctrl+B", "mac": "Command+B" }
+      }
+    },
 
-  "background": {
-    "service_worker": "background.js"
-  },
+    "background": {
+      "service_worker": "background.js"
+    },
 
-  "content_scripts": [
-    {
-      "matches": [ "*://*/*" ],
-      "css": [ "assets/content.css" ],
-      "js": [ "my-content-script.js" ]
-    }
-  ],
+    "content_scripts": [
+      {
+        "matches": [ "*://*/*" ],
+        "css": [ "assets/content.css" ],
+        "js": [ "my-content-script.js" ]
+      }
+    ],
 
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
-  },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    },
 
-  "web_accessible_resources": [
-    {
-      "resources": [ "*" ],
-      "matches": [ "*://*/*" ]
-    }
-  ]
+    "web_accessible_resources": [
+      {
+        "resources": [ "*" ],
+        "matches": [ "*://*/*" ]
+      }
+    ]
+  }
 }

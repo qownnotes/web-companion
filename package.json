@@ -1,10 +1,13 @@
 {
   "name": "qownnotes-web-companion",
-  "version": "2024.12.0",
+  "version": "2025.9.0",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "author": "Patrizio Bekerle <patrizio@bekerle.com>",
   "license": "GPL",
   "productName": "QOwnNotes Web Companion",
+  "overrides": {
+    "sass-embedded": "npm:sass@1.92.1"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
@@ -12,28 +15,29 @@
     "link-firefox": "ln -sf ./manifest.firefox.json ./src-bex/manifest.json",
     "link-chrome": "ln -sf ./manifest.chrome.json ./src-bex/manifest.json",
     "dev": "quasar dev -m bex",
-    "dev-firefox": "npm run link-firefox && npm run dev",
-    "dev-chrome": "npm run link-chrome && npm run dev",
+    "dev-firefox": "npm run link-firefox && npm run dev -- --target firefox",
+    "dev-chrome": "npm run link-chrome && npm run dev -- --target chrome",
     "build": "quasar build -m bex",
-    "build-firefox": "npm run link-firefox && npm run build",
-    "build-chrome": "npm run link-chrome && npm run build"
+    "build-firefox": "npm run link-firefox && npm run build -- --target firefox",
+    "build-chrome": "npm run link-chrome && npm run build -- --target chrome"
   },
   "dependencies": {
-    "@quasar/cli": "^2.3.0",
-    "@quasar/extras": "^1.16.4",
+    "@quasar/cli": "^2.5.0",
+    "@quasar/extras": "^1.17.0",
     "events": "^3.3.0",
-    "quasar": "^2.8.0",
+    "quasar": "^2.18.2",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^1.4.3",
+    "@quasar/app-vite": "^2.4.0",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^9.0.0",
     "postcss": "^8.4.14",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "sass": "^1.92.1"
   },
   "engines": {
     "node": "^20 || ^18 || ^16",
