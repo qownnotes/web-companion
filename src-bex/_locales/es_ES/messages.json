@@ -103,7 +103,7 @@
     "message": "Abrir todos los marcadores en pestañas nuevas"
   },
   "AddBookmark": {
-    "message": "Agregar marcador"
+    "message": "Añadir marcador"
   },
   "Close": {
     "message": "Cerrar"
@@ -157,9 +157,9 @@
     "message": "Abrir marcadores en una ventana privada del navegador"
   },
   "HideCurrent": {
-    "message": "Hide bookmarks from current note"
+    "message": "Ocultar marcadores de la nota actual"
   },
   "HideCurrentTooltip": {
-    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
+    "message": "Los marcadores aún pueden contener la etiqueta 'Actual', por ejemplo si la nota actual es una nota de marcadores"
   }
 }

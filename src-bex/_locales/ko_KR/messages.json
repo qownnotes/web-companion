@@ -157,9 +157,9 @@
     "message": "개인 브라우저 창에서 북마크 열기"
   },
   "HideCurrent": {
-    "message": "Hide bookmarks from current note"
+    "message": "현재 노트에서 북마크 숨기기"
   },
   "HideCurrentTooltip": {
-    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
+    "message": "북마크는 여전히 '현재' 태그를 포함할 수 있습니다 (예: 현재 노트가 북마크 노트인 경우)"
   }
 }

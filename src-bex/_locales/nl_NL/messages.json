@@ -157,9 +157,9 @@
     "message": "Open bladwijzers in het privévenster van een browser"
   },
   "HideCurrent": {
-    "message": "Hide bookmarks from current note"
+    "message": "Bladwijzers verbergen in huidige notitie"
   },
   "HideCurrentTooltip": {
-    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
+    "message": "Bladwijzers kunnen nog steeds het label 'Huidige' bevatten, bijvoorbeeld als de huidige notitie een bladwijzernotitie is"
   }
 }

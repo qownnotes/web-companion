@@ -5,6 +5,7 @@
 - The extension was migrated to the latest version of Quasar to mitigate security issues
   in those and other packages (for [#86](https://github.com/qownnotes/web-companion/issues/86))
 - The dependencies were updated
+- More translations were added
 
 ## 2024.12.0
 

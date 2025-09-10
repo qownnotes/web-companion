@@ -1,43 +1,43 @@
 {
   "appDescription": {
-    "message": "นี่เป็นส่วนเสริมที่ช่วยให้ QOwnNotes โต้ตอบกับแอปพลิเคชันเดสก์ท็อปสำหรับการจดโน๊ต",
+    "message": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
     "description": "The description of the application"
   },
   "settingsHeadline": {
-    "message": "การตั้งค่า QOwnNotes"
+    "message": "QOwnNotes settings"
   },
   "socketPortLabel": {
     "message": "QOwnNotes socket server port"
   },
   "sendPageToQOwnNotes": {
-    "message": "ส่งเพจไปที่ QOwnNotes"
+    "message": "Send page to QOwnNotes"
   },
   "createScreenshotNote": {
-    "message": "สร้างโน๊ตพร้อมภาพสกรีนช็อตของหน้าเพจที่มองเห็นได้"
+    "message": "Create note with screenshot of visible page"
   },
   "sendSelectionToQOwnNotes": {
-    "message": "ส่งสิ่งที่เลือกไปยัง QOwnNotes"
+    "message": "Send selection to QOwnNotes"
   },
   "connectionFailed": {
-    "message": "การเชื่อมต่อกับ QOwnNotes ล้มเหลว!"
+    "message": "Connection to QOwnNotes failed!"
   },
   "popupHeadline": {
-    "message": "ที่คั่น"
+    "message": "Bookmarks"
   },
   "popupSearchLabel": {
-    "message": "ค้นหา"
+    "message": "Search"
   },
   "NewBookmark": {
-    "message": "บุ๊คมาร์คใหม่"
+    "message": "New bookmark"
   },
   "Cancel": {
-    "message": "ยกเลิก"
+    "message": "Cancel"
   },
   "Ok": {
-    "message": "ตกลง"
+    "message": "Ok"
   },
   "Save": {
-    "message": "บันทึก"
+    "message": "Save"
   },
   "DeleteBookmark": {
     "message": "Delete bookmark"
@@ -64,10 +64,10 @@
     "message": "With this text:"
   },
   "BookmarkAllTabs": {
-    "message": "คั่นแท็บทั้งหมด"
+    "message": "Bookmark all tabs"
   },
   "ImportBrowserBookmarks": {
-    "message": "นำเข้าบุ๊คมาร์คจากเบราว์เซอร์"
+    "message": "Import browser bookmarks"
   },
   "ImportBrowserBookmarksCaption": {
     "message": "Import your browser bookmarks into QOwnNotes"
@@ -79,16 +79,16 @@
     "message": "Get more information about the Web clipper"
   },
   "Import": {
-    "message": "นำเข้า"
+    "message": "Import"
   },
   "ImportAllBrowserBookmarks": {
-    "message": "คุณต้องการนำเข้าบุ๊คมาร์คของเบราว์เซอร์ทั้งหมดหรือไม่"
+    "message": "Do you want to import all browser bookmarks?"
   },
   "InputTokenHeadline": {
-    "message": "กรุณาป้อนโทเค็นความปลอดภัย"
+    "message": "Input security token"
   },
   "InputToken": {
-    "message": "กรุณาป้อนโทเค็นความปลอดภัยที่กำลังถูกแสดงใน QOwnNotes!"
+    "message": "Please input the security token that now is shown in QOwnNotes!"
   },
   "Token": {
     "message": "Security token from QOwnNotes"
@@ -97,7 +97,7 @@
     "message": "If you are syncing your browser settings you may want to use the same token on every device."
   },
   "Menu": {
-    "message": "เมนู"
+    "message": "Menu"
   },
   "OpenAllBookmarks": {
     "message": "Open all bookmarks in new tabs"
@@ -109,7 +109,7 @@
     "message": "Close"
   },
   "Tags": {
-    "message": "แท็ก"
+    "message": "Tags"
   },
   "NoteFolder": {
     "message": "Note folder"
@@ -148,7 +148,7 @@
     "message": "Consent with user data collection"
   },
   "UninstallButton": {
-    "message": "ลบส่วนต่อขยาย"
+    "message": "Uninstall extension"
   },
   "PrivateMode": {
     "message": "Private mode"

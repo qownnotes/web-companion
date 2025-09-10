@@ -157,9 +157,9 @@
     "message": "Otvori oznake u prozoru privatnog preglednika"
   },
   "HideCurrent": {
-    "message": "Hide bookmarks from current note"
+    "message": "Sakrij oznaku iz trenutačne bilješke"
   },
   "HideCurrentTooltip": {
-    "message": "Bookmarks can still contain the 'Current' tag, for example if the current note is a bookmark note"
+    "message": "Oznake i dalje mogu sadržavati oznaku „Trenutne”, na primjer ako je trenutna bilješka oznake"
   }
 }

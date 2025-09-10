@@ -142,7 +142,7 @@
     "message": "Les signets de votre navigateur si vous souhaitez les importer dans QOwnNotes"
   },
   "ConsentFooter": {
-    "message": "Ce greffon ne fonctionne pas sans communiquer avec votre instance locale de QOwnNotes ni sans envoyer ou recevoir des données. Aucunes données utilisateur ne sont transmises via l'Internet ni à des tiers !"
+    "message": "Ce greffon ne fonctionne pas sans communiquer avec votre instance locale de QOwnNotes ni sans envoyer ou recevoir des données. Aucune donnée utilisateur n’est transmise via Internet ni à des tiers !"
   },
   "ConsentButton": {
     "message": "Accepter la collecte des données utlisateur"
