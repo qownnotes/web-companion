@@ -94,4 +94,10 @@ run:
 # Format all files
 [group('linter')]
 format args='':
-    nix-shell -p treefmt nodePackages.prettier shfmt nixfmt-rfc-style statix taplo --run "treefmt {{ args }}"
+    treefmt {{ args }}
+
+# Format all files using pre-commit
+[group('linter')]
+format-all args='':
+    composer install
+    pre-commit run --all-files {{ args }}
