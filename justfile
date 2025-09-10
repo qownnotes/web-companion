@@ -99,5 +99,4 @@ format args='':
 # Format all files using pre-commit
 [group('linter')]
 format-all args='':
-    composer install
     pre-commit run --all-files {{ args }}
