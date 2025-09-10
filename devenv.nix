@@ -38,6 +38,11 @@
       ];
     };
 
+    #    # https://devenv.sh/reference/options/#git-hookshookseslint
+    #    eslint = {
+    #      enable = true;
+    #    };
+
     # https://devenv.sh/reference/options/#git-hookshooksdeadnix
     # https://github.com/astro/deadnix
     deadnix = {
