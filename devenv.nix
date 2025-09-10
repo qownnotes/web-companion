@@ -18,7 +18,7 @@
   ];
 
   enterShell = ''
-    echo "🛠️ QOwnNotes Web Component dev shell"
+    echo "🛠️ QOwnNotes Web Companion dev shell"
     echo "📦 Node version: $(node --version | head -n 1)"
   '';
 
