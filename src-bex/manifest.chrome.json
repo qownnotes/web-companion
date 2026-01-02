@@ -43,9 +43,9 @@
 
     "content_scripts": [
       {
-        "matches": [ "*://*/*" ],
-        "css": [ "assets/content.css" ],
-        "js": [ "my-content-script.js" ]
+        "matches": ["*://*/*"],
+        "css": ["assets/content.css"],
+        "js": ["my-content-script.js"]
       }
     ],
 
@@ -55,8 +55,8 @@
 
     "web_accessible_resources": [
       {
-        "resources": [ "*" ],
-        "matches": [ "*://*/*" ]
+        "resources": ["*"],
+        "matches": ["*://*/*"]
       }
     ]
   }
