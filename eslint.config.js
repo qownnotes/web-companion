@@ -35,12 +35,10 @@ export default [
   {
     ignores: [
       "node_modules/**",
-      "web/node_modules/**",
-      "web/dist/**",
-      "web/build/**",
-      "web/public/**",
+      "dist/**",
       ".devenv/**",
       ".direnv/**",
+      ".quasar/**",
       "bin/**",
     ],
   },
