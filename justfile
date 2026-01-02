@@ -1,6 +1,8 @@
 # Use `just <recipe>` to run a recipe
 # https://just.systems/man/en/
 
+import ".shared/common.just"
+
 # By default, run the `--list` command
 default:
     @just --list
@@ -14,7 +16,6 @@ transferDir := `if [ -d "$HOME/NextcloudPrivate/Transfer" ]; then echo "$HOME/Ne
 # Aliases
 
 alias dev := run
-alias fmt := format
 
 # Open a terminal with the project session
 [group('dev')]
@@ -90,13 +91,3 @@ run:
         echo "No script selected. Exiting."
         exit 1
     fi
-
-# Format all files
-[group('linter')]
-format args='':
-    treefmt {{ args }}
-
-# Format all files using pre-commit
-[group('linter')]
-format-all args='':
-    pre-commit run --all-files {{ args }}
