@@ -40,7 +40,6 @@ import { defineComponent } from "vue";
 import { getLocale } from "src/helpers/utils";
 
 export default defineComponent({
-  methods: { getLocale },
   setup() {
     const consentData = [
       getLocale("ConsentData1"),
@@ -66,6 +65,7 @@ export default defineComponent({
       consentData,
       doConsent,
       doUninstall,
+      getLocale,
     };
   },
 });

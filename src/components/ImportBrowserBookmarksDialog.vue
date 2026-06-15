@@ -37,7 +37,6 @@ import { Notify } from "quasar";
 
 export default defineComponent({
   name: "ImportBrowserBookmarksDialog",
-  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
@@ -103,6 +102,7 @@ export default defineComponent({
     return {
       dialog,
       importBookmarks,
+      getLocale,
     };
   },
   emits: ["cancel", "bookmarksImported"],

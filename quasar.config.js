@@ -10,6 +10,8 @@
 
 import { configure } from "quasar/wrappers";
 
+const srcPath = new URL("./src", import.meta.url).pathname;
+
 export default configure(function (/* ctx */) {
   return {
     eslint: {
@@ -69,7 +71,16 @@ export default configure(function (/* ctx */) {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
+      extendViteConf(viteConf) {
+        viteConf.resolve ??= {};
+        viteConf.resolve.alias = {
+          ...viteConf.resolve.alias,
+          src: srcPath,
+          components: `${srcPath}/components`,
+          layouts: `${srcPath}/layouts`,
+          pages: `${srcPath}/pages`,
+        };
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [],

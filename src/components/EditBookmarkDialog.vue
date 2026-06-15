@@ -49,7 +49,6 @@ import { useQuasar } from "quasar";
 
 export default defineComponent({
   name: "EditBookmarkDialog",
-  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
@@ -105,6 +104,7 @@ export default defineComponent({
       dialog,
       newMarkdown,
       storeBookmark,
+      getLocale,
     };
   },
   emits: ["cancel", "bookmarkEdited"],

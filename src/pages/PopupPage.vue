@@ -682,6 +682,8 @@ export default defineComponent({
       tagFilterFn,
       filteredTags,
       openFilteredBookmarks,
+      getLocale,
+      truncateText,
     };
   },
   components: {
@@ -692,7 +694,6 @@ export default defineComponent({
     ImportBrowserBookmarksDialog,
     InputTokenDialog,
   },
-  methods: { getLocale, truncateText },
 });
 
 // export default defineComponent({

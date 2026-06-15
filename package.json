@@ -1,6 +1,7 @@
 {
   "name": "qownnotes-web-companion",
   "version": "2026.6.0",
+  "type": "module",
   "description": "This is a companion extension for QOwnNotes to interact with the note taking desktop application.",
   "author": "Patrizio Bekerle <patrizio@bekerle.com>",
   "license": "GPL",
@@ -9,7 +10,7 @@
     "sass-embedded": "npm:sass@1.92.1"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.vue ./",
+    "lint": "eslint \"**/*.{js,vue}\"",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "link-firefox": "ln -sf ./manifest.firefox.json ./src-bex/manifest.json",
@@ -26,8 +27,8 @@
     "@quasar/extras": "^1.17.0",
     "events": "^3.3.0",
     "quasar": "^2.18.2",
-    "vue": "^3.2.29",
-    "vue-router": "^4.0.12"
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0"
   },
   "devDependencies": {
     "@quasar/app-vite": "^3.0.0-rc.2",
@@ -40,7 +41,7 @@
     "sass": "^1.92.1"
   },
   "engines": {
-    "node": "^20 || ^18 || ^16",
+    "node": "^30 || ^28 || ^26 || ^24 || ^22.22.0",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   }

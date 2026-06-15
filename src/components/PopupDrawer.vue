@@ -60,7 +60,6 @@ const linksList = [
 export default defineComponent({
   name: "PopupDrawer",
   components: { DrawerLink },
-  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
@@ -100,6 +99,7 @@ export default defineComponent({
       leftDrawerOpen,
       linksList,
       importBrowserBookmarksClicked,
+      getLocale,
     };
   },
   emits: [

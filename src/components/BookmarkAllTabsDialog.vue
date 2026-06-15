@@ -50,7 +50,6 @@ import { QWebSocket } from "src/services/qwebsocket";
 
 export default defineComponent({
   name: "BookmarkAllTabsDialog",
-  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
@@ -90,6 +89,7 @@ export default defineComponent({
       dialog,
       description,
       storeBookmarks,
+      getLocale,
     };
   },
   emits: ["cancel", "bookmarksStored"],

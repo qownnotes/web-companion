@@ -1,5 +1,12 @@
 # QOwnNotes Web Companion Changelog
 
+## 2026.6.0
+
+- The extension build tooling was updated to Quasar App Vite 3 / Rolldown
+- Vue and Vue Router were updated for the new Quasar toolchain
+- The extension popup was fixed for the updated Vue/Quasar build output
+- The dependencies were updated
+
 ## 2025.9.0
 
 - The extension was migrated to the latest version of Quasar to mitigate security issues

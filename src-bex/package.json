@@ -1,0 +1,7 @@
+{
+  "name": "quasar-bex-app",
+  "version": "1.0.0",
+  "description": "Quasar BEX Folder",
+  "private": true,
+  "type": "module"
+}

@@ -80,7 +80,6 @@ import { QWebSocket } from "src/services/qwebsocket";
 
 export default defineComponent({
   name: "AddBookmarkDialog",
-  methods: { getLocale },
   props: {
     model: {
       type: Boolean,
@@ -118,6 +117,7 @@ export default defineComponent({
       dialog,
       editedBookmark,
       storeBookmark,
+      getLocale,
     };
   },
   emits: ["cancel", "bookmarkStored"],

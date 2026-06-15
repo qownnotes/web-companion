@@ -38,7 +38,6 @@ import { getLocale } from "src/helpers/utils";
 import { defineComponent, onMounted, ref, watch } from "vue";
 
 export default defineComponent({
-  methods: { getLocale },
   setup() {
     const defaultSocketPort = 22222;
     let socketPort = ref(defaultSocketPort);
@@ -87,6 +86,7 @@ export default defineComponent({
       token,
       isPwd,
       socketPort,
+      getLocale,
     };
   },
 });
