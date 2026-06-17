@@ -1,5 +1,13 @@
 # QOwnNotes Web Companion Changelog
 
+## 2026.6.1
+
+- The extension popup no longer failed to open in Firefox after the Quasar 3 migration.
+  The background script still used the old `bexBackground()` wrapper, which became a
+  no-op in Quasar App Vite 3, so the background bridge was never created. The popup waited
+  forever for the bridge connection and therefore never mounted its UI. The background
+  script now uses the new `createBridge()` API
+
 ## 2026.6.0
 
 - The extension build tooling was updated to Quasar App Vite 3 / Rolldown

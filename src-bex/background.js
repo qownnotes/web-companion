@@ -1,67 +1,52 @@
-import { bexBackground } from "quasar/wrappers";
+// Quasar App Vite 3 replaced the old `bexBackground()` wrapper from
+// "quasar/wrappers" (which is now a no-op legacy stub) with an explicit
+// `createBridge()` call. The bridge MUST be created here so that the app and
+// content scripts can establish their connection. Without it, the popup hangs
+// on `await bex.promise` (it waits for the background to confirm the
+// connection) and the Vue app is never mounted, which is why the popup stopped
+// opening in Firefox after the Quasar 3 migration.
+import { createBridge } from "#q-app/bex/background";
 
-export default bexBackground((bridge /* , allActiveConnections */) => {
-  bridge.on("log", ({ data, respond }) => {
-    console.log(`[BEX] ${data.message}`, ...(data.data || []));
-    respond();
-  });
+const bridge = createBridge({ debug: false });
 
-  bridge.on("getTime", ({ respond }) => {
-    respond(Date.now());
-  });
-
-  bridge.on("storage.get", ({ data, respond }) => {
-    const { key } = data;
-    if (key === null) {
-      chrome.storage.local.get(null, (items) => {
-        // Group the values up into an array to take advantage of the bridge's chunk splitting.
-        respond(Object.values(items));
-      });
-    } else {
-      chrome.storage.local.get([key], (items) => {
-        respond(items[key]);
-      });
-    }
-  });
-  // Usage:
-  // const { data } = await bridge.send('storage.get', { key: 'someKey' })
-
-  bridge.on("storage.set", ({ data, respond }) => {
-    chrome.storage.local.set({ [data.key]: data.value }, () => {
-      respond();
-    });
-  });
-  // Usage:
-  // await bridge.send('storage.set', { key: 'someKey', value: 'someValue' })
-
-  bridge.on("storage.remove", ({ data, respond }) => {
-    chrome.storage.local.remove(data.key, () => {
-      respond();
-    });
-  });
-  // Usage:
-  // await bridge.send('storage.remove', { key: 'someKey' })
-
-  /*
-  // EXAMPLES
-  // Listen to a message from the client
-  bridge.on('test', d => {
-    console.log(d)
-  })
-
-  // Send a message to the client based on something happening.
-  chrome.tabs.onCreated.addListener(tab => {
-    bridge.send('browserTabCreated', { tab })
-  })
-
-  // Send a message to the client based on something happening.
-  chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.url) {
-      bridge.send('browserTabUpdated', { tab, changeInfo })
-    }
-  })
-   */
+bridge.on("log", ({ from, payload }) => {
+  console.log(`[BEX] @log from "${from}"`, payload);
 });
+
+bridge.on("getTime", () => {
+  return Date.now();
+});
+
+bridge.on("storage.get", ({ payload }) => {
+  const { promise, resolve } = Promise.withResolvers();
+  const key = payload?.key ?? null;
+  if (key === null) {
+    chrome.storage.local.get(null, (items) => {
+      // Group the values up into an array to take advantage of the bridge's
+      // chunk splitting.
+      resolve(Object.values(items));
+    });
+  } else {
+    chrome.storage.local.get([key], (items) => {
+      resolve(items[key]);
+    });
+  }
+  return promise;
+});
+// Usage:
+// const data = await bridge.send({ event: 'storage.get', to: 'background', payload: { key: 'someKey' } })
+
+bridge.on("storage.set", async ({ payload }) => {
+  await chrome.storage.local.set({ [payload.key]: payload.value });
+});
+// Usage:
+// await bridge.send({ event: 'storage.set', to: 'background', payload: { key: 'someKey', value: 'someValue' } })
+
+bridge.on("storage.remove", async ({ payload }) => {
+  await chrome.storage.local.remove(payload.key);
+});
+// Usage:
+// await bridge.send({ event: 'storage.remove', to: 'background', payload: { key: 'someKey' } })
 
 let ws = null;
 let connected = false;
