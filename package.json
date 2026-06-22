@@ -23,7 +23,7 @@
     "build-chrome": "npm run link-chrome && npm run build -- --target chrome"
   },
   "dependencies": {
-    "@quasar/cli": "^2.5.0",
+    "@quasar/cli": "^5.0.1",
     "@quasar/extras": "^1.17.0",
     "events": "^3.3.0",
     "quasar": "^2.18.2",
