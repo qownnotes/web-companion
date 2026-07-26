@@ -26,7 +26,7 @@
     "@quasar/cli": "^5.0.1",
     "@quasar/extras": "^1.17.0",
     "events": "^3.3.0",
-    "quasar": "^2.18.2",
+    "quasar": "^2.23.1",
     "vue": "^3.5.38",
     "vue-router": "^5.1.0"
   },
