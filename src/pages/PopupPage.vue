@@ -343,7 +343,7 @@ export default defineComponent({
       description: "",
     });
     let selectedTags = ref([]);
-    let webSocket = ref(new QWebSocket());
+    let webSocket = ref(null);
     const importBrowserBookmarksDialog = ref(false);
     // import { defineProps } from 'vue';
     // const { foo } = defineProps(['foo']);
@@ -517,65 +517,83 @@ export default defineComponent({
         nextTick(() => searchInput.value.select());
       });
 
-      webSocket.value = new QWebSocket((event) => {
-        const data = event.data;
+      webSocket.value = new QWebSocket(
+        (event) => {
+          const data = event.data;
 
-        if (typeof data === "string" || data instanceof String) {
-          // create a JSON object
-          const jsonObject = JSON.parse(data);
-          const type = jsonObject.type;
+          if (typeof data === "string" || data instanceof String) {
+            // create a JSON object
+            const jsonObject = JSON.parse(data);
+            const type = jsonObject.type;
 
-          console.log("Got a new message: " + jsonObject);
-          console.log("type", type);
+            console.log("Got a new message: " + jsonObject);
+            console.log("type", type);
 
-          if (type === "bookmarks") {
-            bookmarks.value = jsonObject.data;
-            console.log("bookmarks", bookmarks);
-            noteFolderName.value = jsonObject.noteFolderName;
-            noteFolders.value = jsonObject.noteFolders;
-            selectedNoteFolderIdWatchEnabled = false;
-            selectedNoteFolderId.value = jsonObject.noteFolderId;
-            selectedNoteFolderIdWatchEnabled = true;
-            loadingBookmarks.value = false;
-
-            chrome.storage.sync.get((data) => {
-              // console.log("after load");
-              console.log("data.pagination", data.pagination);
-              if (data.pagination) {
-                pagination.value = data.pagination;
-                pagination.value.page = 1;
-              }
-
-              let localSelectedTags = [];
-              const tags = allTags.value;
-              const dataSelectedTags = Object.values(data.selectedTags || []);
-
-              // check if we can add stored selected tags
-              if (
-                data.selectedTags !== undefined &&
-                dataSelectedTags.length > 0 &&
-                tags.length > 0
-              ) {
-                dataSelectedTags.forEach((tag) => {
-                  if (tags.indexOf(tag) > -1) {
-                    localSelectedTags.push(tag);
-                  }
-                });
-              }
-
-              selectedTags.value = localSelectedTags;
-            });
-          } else if (type === "switchedNoteFolder") {
-            if (jsonObject.data === false) {
+            if (type === "bookmarks") {
+              bookmarks.value = jsonObject.data;
+              console.log("bookmarks", bookmarks);
+              noteFolderName.value = jsonObject.noteFolderName;
+              noteFolders.value = jsonObject.noteFolders;
+              selectedNoteFolderIdWatchEnabled = false;
+              selectedNoteFolderId.value = jsonObject.noteFolderId;
+              selectedNoteFolderIdWatchEnabled = true;
               loadingBookmarks.value = false;
+
+              chrome.storage.sync.get((data) => {
+                // console.log("after load");
+                console.log("data.pagination", data.pagination);
+                if (data.pagination) {
+                  pagination.value = data.pagination;
+                  pagination.value.page = 1;
+                }
+
+                let localSelectedTags = [];
+                const tags = allTags.value;
+                const dataSelectedTags = Object.values(data.selectedTags || []);
+
+                // check if we can add stored selected tags
+                if (
+                  data.selectedTags !== undefined &&
+                  dataSelectedTags.length > 0 &&
+                  tags.length > 0
+                ) {
+                  dataSelectedTags.forEach((tag) => {
+                    if (tags.indexOf(tag) > -1) {
+                      localSelectedTags.push(tag);
+                    }
+                  });
+                }
+
+                selectedTags.value = localSelectedTags;
+              });
+            } else if (type === "switchedNoteFolder") {
+              if (jsonObject.data === false) {
+                loadingBookmarks.value = false;
+              }
+            } else if (type === "flashMessage") {
+              Notify.create(jsonObject.message);
+            } else if (type === "tokenQuery") {
+              inputTokenDialog.value = true;
             }
-          } else if (type === "flashMessage") {
-            Notify.create(jsonObject.message);
-          } else if (type === "tokenQuery") {
-            inputTokenDialog.value = true;
           }
-        }
-      });
+        },
+        (serverUrl) => {
+          loadingBookmarks.value = false;
+          $q.dialog({
+            title: getLocale("connectionFailed"),
+            message: getLocale("connectionFailedMessage", serverUrl),
+            ok: {
+              label: getLocale("OpenSettings"),
+              color: "primary",
+            },
+            cancel: {
+              label: getLocale("Close"),
+              flat: true,
+            },
+            persistent: true,
+          }).onOk(() => chrome.runtime.openOptionsPage());
+        },
+      );
 
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         defaultBookmark.name = tabs[0].title;

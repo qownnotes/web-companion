@@ -2,6 +2,8 @@
 
 ## 2026.8.0
 
+- An error dialog now explains how to resolve a failed connection to the QOwnNotes socket server
+  (for [#120](https://github.com/qownnotes/web-companion/issues/120))
 - The dependencies were updated
 
 ## 2026.6.1

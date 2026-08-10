@@ -1,6 +1,10 @@
 // app global css in SCSS form
 
-// This fixes the issue that the popup is getting tiny when a dialog is opened
-body.bex.q-body--prevent-scroll {
-  position: inherit !important;
+// While a dialog is open, Quasar locks scrolling by adding
+// `q-document--prevent-scroll` to the `html` element, which makes the `body`
+// `position: fixed`. A Chrome extension popup sizes itself from the document
+// content, so a fixed body leaves it only a few pixels high. Keep the body in
+// the normal document flow to preserve the popup dimensions.
+html.q-document--prevent-scroll body {
+  position: static !important;
 }

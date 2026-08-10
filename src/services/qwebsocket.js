@@ -1,13 +1,14 @@
 // import * as util from "../helpers/utils";
 
 export class QWebSocket {
-  constructor(messageCallback) {
+  constructor(messageCallback, errorCallback) {
     this.isConnected = false;
     this.socket = null;
     this.socketPort = 22222;
     this.sendQueue = "";
     this.token = "";
     this.messageCallback = messageCallback;
+    this.errorCallback = errorCallback;
 
     // ES5 workaround to access "this" in the "chrome.storage.sync.get" call
     var that = this;
@@ -34,11 +35,10 @@ export class QWebSocket {
 
       const ws = new WebSocket(that.getServerUrl());
       that.socket = ws;
-      ws.onerror = that.onError;
-      // ws.onmessage = that.onMessage;
+      ws.onerror = (event) => that.onError(event);
       ws.onmessage = messageCallback;
-      ws.onclose = that.onClose;
-      ws.onopen = that.onOpen();
+      ws.onclose = (event) => that.onClose(event);
+      ws.onopen = (event) => that.onOpen(event);
       console.log(that);
     });
   }
@@ -88,7 +88,12 @@ export class QWebSocket {
   }
 
   onError(event) {
-    alert("Socket error: " + event.data);
+    this.isConnected = false;
+    console.error("WebSocket connection failed:", this.getServerUrl(), event);
+
+    if (this.errorCallback !== undefined) {
+      this.errorCallback(this.getServerUrl());
+    }
   }
 
   getServerUrl() {

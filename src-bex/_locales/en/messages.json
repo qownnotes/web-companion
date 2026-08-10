@@ -21,6 +21,14 @@
   "connectionFailed": {
     "message": "Connection to QOwnNotes failed!"
   },
+  "connectionFailedMessage": {
+    "message": "The extension could not connect to QOwnNotes at $SERVER_URL$. Make sure QOwnNotes is running and its Web Companion socket server is enabled. Then verify that the socket server port in the extension settings matches the port in QOwnNotes.",
+    "placeholders": {
+      "server_url": {
+        "content": "$1"
+      }
+    }
+  },
   "popupHeadline": {
     "message": "Bookmarks"
   },
@@ -107,6 +115,9 @@
   },
   "Close": {
     "message": "Close"
+  },
+  "OpenSettings": {
+    "message": "Open settings"
   },
   "Tags": {
     "message": "Tags"
