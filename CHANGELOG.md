@@ -1,5 +1,9 @@
 # QOwnNotes Web Companion Changelog
 
+## 2026.8.0
+
+- The dependencies were updated
+
 ## 2026.6.1
 
 - The extension popup no longer failed to open in Firefox after the Quasar 3 migration.
