@@ -225,6 +225,18 @@
                     size="xs"
                     round
                     color="secondary"
+                    icon="content_copy"
+                    @click="copyBookmark(props.row.url)"
+                  >
+                    <q-tooltip class="bg-accent">{{
+                      getLocale("CopyBookmark")
+                    }}</q-tooltip>
+                  </q-btn>
+                  <q-btn
+                    v-if="props.row.markdown"
+                    size="xs"
+                    round
+                    color="secondary"
                     icon="delete"
                     @click="deleteBookmark(props.row.markdown)"
                   >
@@ -296,7 +308,7 @@ import { QWebSocket } from "../services/qwebsocket";
 import InputTokenDialog from "../components/InputTokenDialog.vue";
 import AddBookmarkDialog from "components/AddBookmarkDialog.vue";
 import EditBookmarkDialog from "components/EditBookmarkDialog.vue";
-import { Notify, useQuasar } from "quasar";
+import { copyToClipboard, Notify, useQuasar } from "quasar";
 import BookmarkAllTabsDialog from "components/BookmarkAllTabsDialog.vue";
 import ImportBrowserBookmarksDialog from "components/ImportBrowserBookmarksDialog.vue";
 import PopupDrawer from "components/PopupDrawer.vue";
@@ -489,6 +501,12 @@ export default defineComponent({
       console.log("markdown", markdown);
       editBookmarkMarkdown.value = markdown;
       editBookmarkDialog.value = true;
+    };
+
+    const copyBookmark = (markdown) => {
+      copyToClipboard(markdown).then(() => {
+        Notify.create(getLocale("BookmarkCopied"));
+      });
     };
 
     const openUrl = (url, event) => {
@@ -693,6 +711,7 @@ export default defineComponent({
       allTags,
       filteredBookmarks,
       openUrl,
+      copyBookmark,
       deleteBookmark,
       editBookmark,
       loadBookmarks,

@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## 2026.8.1
+
+- Bookmark links can now be copied from the bookmark list
+  (for [#121](https://github.com/qownnotes/web-companion/issues/121))
+
 ## 2026.8.0
 
 - An error dialog now explains how to resolve a failed connection to the QOwnNotes socket server

@@ -50,6 +50,12 @@
   "DeleteBookmark": {
     "message": "Delete bookmark"
   },
+  "CopyBookmark": {
+    "message": "Cop bookmark link"
+  },
+  "BookmarkCopied": {
+    "message": "Bookmark link copied"
+  },
   "DeleteBookmarkConfirmTitle": {
     "message": "Delete bookmark"
   },
