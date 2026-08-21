@@ -48,13 +48,13 @@ export default defineComponent({
       getLocale("ConsentData4"),
     ];
     const doConsent = () => {
-      chrome.storage.sync.set({ consent: true }, () => {
-        chrome.storage.sync.set({
+      chrome.storage.sync.set(
+        {
+          consent: true,
           userDataConsent: true,
-        });
-
-        window.close();
-      });
+        },
+        () => window.location.reload(),
+      );
     };
 
     const doUninstall = () => {

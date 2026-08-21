@@ -305,22 +305,26 @@ function getServerUrl() {
 }
 
 /**
- * Check if the consent was given and then run the real function
+ * Check if setup is complete and then run the real function
  *
  * @param info
  * @param tab
  * @param fun
  */
 function checkConsent(info, tab, fun) {
-  chrome.storage.sync.get(function (data) {
-    if (data.userDataConsent === true) {
-      fun(info, tab);
-    } else {
-      // This only works in Chrome
-      alert(
-        "You need to open the QOwnNotes Web Companion extension popup to allow data being sent to QOwnNotes!",
-      );
+  chrome.storage.sync.get(["userDataConsent", "token"], async function (data) {
+    if (data.userDataConsent !== true || !data.token) {
+      try {
+        await chrome.action.openPopup();
+      } catch (error) {
+        console.error("Could not open the extension setup popup:", error);
+      }
+      return;
     }
+
+    // Keep the token current when it was entered after the background started.
+    token = data.token;
+    fun(info, tab);
   });
 }
 

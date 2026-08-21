@@ -1,5 +1,10 @@
 # QOwnNotes Web Companion Changelog
 
+## Unreleased
+
+- Context-menu actions now open the setup popup when user data consent or the security token is missing
+  (for [#122](https://github.com/qownnotes/web-companion/issues/122))
+
 ## 2026.8.1
 
 - Bookmark links can now be copied from the bookmark list
