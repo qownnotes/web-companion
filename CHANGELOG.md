@@ -1,11 +1,12 @@
 # QOwnNotes Web Companion Changelog
 
-## Unreleased
+## 2026.10.0
 
 - Context-menu actions now open the setup popup when user data consent or the security token is missing
   (for [#122](https://github.com/qownnotes/web-companion/issues/122))
 - The extension popup now has a minimal height, so dialogs can be shown properly even if
   only a few or no bookmarks are listed, e.g. when a search term has no results
+- The dependencies were updated
 
 ## 2026.8.1
 
