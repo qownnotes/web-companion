@@ -89,6 +89,109 @@ jobs:
           asset_name: package-firefox.zip
           asset_content_type: application/zip
 
+      - name: "🗄️ Store packages for the store publishing jobs"
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: |
+            dist/package-chrome.zip
+            dist/package-firefox.zip
+          retention-days: 7
+
+  #
+  # Store publishing (only for the release branch)
+  #
+  publish-chrome:
+    name: "🌐 Publish to Chrome Web Store"
+    if: github.ref == 'refs/heads/release'
+    runs-on: ubuntu-latest
+    needs: build-package
+    env:
+      EXTENSION_ID: pkgkfnampapjbopomdpnkckbjdnpkbkp
+      PUBLISHER_ID: ${{ secrets.CHROME_PUBLISHER_ID }}
+      CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+      REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+    steps:
+      - name: "🔑 Check credentials"
+        id: check
+        run: |
+          if [ -z "$PUBLISHER_ID" ] || [ -z "$CLIENT_ID" ] || [ -z "$CLIENT_SECRET" ] || [ -z "$REFRESH_TOKEN" ]; then
+            echo "::warning::Chrome Web Store secrets are not set, skipping store upload"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: "⚙️ Set up Node.js"
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: "📥 Download packages"
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: packages
+          path: dist
+      - name: "📣 Upload and submit for review"
+        if: steps.check.outputs.skip != 'true'
+        run: npx --yes chrome-webstore-upload-cli@4 --source dist/package-chrome.zip
+
+  publish-firefox:
+    name: "🦊 Publish to Firefox Add-ons"
+    if: github.ref == 'refs/heads/release'
+    runs-on: ubuntu-latest
+    needs: build-package
+    env:
+      WEB_EXT_API_KEY: ${{ secrets.AMO_JWT_ISSUER }}
+      WEB_EXT_API_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+    steps:
+      - name: "🔑 Check credentials"
+        id: check
+        run: |
+          if [ -z "$WEB_EXT_API_KEY" ] || [ -z "$WEB_EXT_API_SECRET" ]; then
+            echo "::warning::Firefox Add-ons secrets are not set, skipping store upload"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: "🧰 Checkout"
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/checkout@v4
+      - name: "⚙️ Set up Node.js"
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: "📥 Download packages"
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: packages
+          path: dist
+      - name: "🗂️ Prepare extension, source code and metadata"
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          mkdir -p dist/firefox-extension
+          unzip -q dist/package-firefox.zip -d dist/firefox-extension
+          # Source code of exactly the commit that is being released, for the Mozilla reviewers
+          git archive --format=zip -o dist/sourcecode.zip HEAD
+          # Release notes from the changelog section of the current version
+          RELEASE_NOTES=$(awk -v v="## ${VERSION}" '$0 == v {f=1; next} /^## / {f=0} f' CHANGELOG.md | sed '/^$/d')
+          jq -n \
+            --arg notes "$RELEASE_NOTES" \
+            --arg approval "Build instructions: run 'npm install' and then './build.sh' (Node.js 24). The Firefox package will be at dist/package-firefox.zip." \
+            '{version: {release_notes: {"en-US": $notes}, approval_notes: $approval}}' \
+            > dist/amo-metadata.json
+          cat dist/amo-metadata.json
+      - name: "📣 Upload and submit for review"
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          npx --yes web-ext@8 sign \
+            --channel=listed \
+            --source-dir=dist/firefox-extension \
+            --artifacts-dir=dist/web-ext-artifacts \
+            --upload-source-code=dist/sourcecode.zip \
+            --amo-metadata=dist/amo-metadata.json \
+            --approval-timeout=0
+
   publish_release:
     name: 📣 Publish release
     runs-on: ubuntu-latest

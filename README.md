@@ -93,3 +93,10 @@ npm run dev-firefox
 ```bash
 ./build.sh
 ```
+
+## Releasing
+
+Pushing to the `release` branch builds the packages, creates a GitHub release
+and submits the new version to the Chrome Web Store and Firefox Add-ons.
+See [docs/store-publishing.md](docs/store-publishing.md) for the release steps
+and how to set up the store credentials.
