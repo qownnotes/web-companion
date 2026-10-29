@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="popup-layout">
     <q-header elevated class="bg-indigo-9">
       <q-toolbar>
         <q-btn
@@ -749,6 +749,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+/* The popup sizes itself from its content, so keep a minimal height to leave
+   enough room for dialogs, e.g. when a search term yields no results */
+.popup-layout {
+  min-height: 500px;
+}
+
 .header-search-bar {
   margin-top: 10px;
   display: flex;
